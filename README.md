@@ -28,48 +28,54 @@ A single feature branch should represent changes related to a single issue. If y
 
 ## Step by Step
 
-1.Fork on GitHub (click Fork button)
+1) Fork on GitHub (click Fork button)
 
-2. Clone to computer
+2) Clone to computer
+```
+$ git clone https://github.com/[you]/buixld.git
+```
 
-	$ git clone https://github.com/[you]/buixld.git
+3) Navigate to directory
+```
+$ cd buixld/
+```
+
+4) Set up remote upstream
+```
+$ git remote add upstream https://github.com/buixld/buixld.git
+```
+
+5) Checkout dev branch
+```
+$ git checkout dev
+```
+
+6) Start working on a new issue or feature
+```
+$ git checkout -b feature_reptar
+$ git checkout -b bugfix_reptar
+```
+
+7) Develop on the feature.
+
+8) Add files you want to commit
+```
+$ git add changed/file
+$ git add -A
+$ git add . 
+```
+
+9) Commit files
+```
+$ git commit -m "commit message"
+```
 
 
-3. Navigate to directory
+10) Push branch to your fork on GitHub
+```
+$ git push origin feature_reptar
+```
 
-	$ cd buixld/
-
-4. Set up remote upstream
-
-	$ git remote add upstream https://github.com/buixld/buixld.git
-
-
-5. Checkout dev branch
-
-	$ git checkout dev
-
-
-6. Start working on a new issue or feature
-
-	$ git checkout -b feature_reptar
-	$ git checkout -b bugfix_reptar
-
-7. Develop on the feature.
-
-8. Add files you want to commit
-
-	$ git add changed/file
-	$ git add -A
-	$ git add .
-
-9. Commit files
-
-	$ git commit -m "commit message"
-
-
-10. Push branch to your fork on GitHub
-
-	$ git push origin feature_reptar
 
 
 Issue pull request for feature branch (Click Pull Request button)
