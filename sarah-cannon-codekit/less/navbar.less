@@ -1,0 +1,318 @@
+/********************
+  Navigation
+********************/
+.navbar-sc {
+  display: block;
+  width: 100%;
+  max-width: @body-max-width;
+  background-color: rgba(255,255,255,0.95);
+  min-height: 70px;
+
+  margin-bottom: 0px;
+  border-bottom: 1px solid @border-color;
+
+  z-index: 2;
+}
+
+body.home .navbar-sc {
+  display: none;
+}
+
+
+// NAVBAR-BRAND
+//
+// Logo brand in navbar - Both top and sticky nav
+.navbar-sc .navbar-brand {
+  margin: 0;
+  padding: 10px 0px;
+
+  img {
+    @media @sm { width: 150px; }
+    @media @md { width: 200px; }
+    
+  }
+}
+
+
+// NAV ITEMS
+//
+// Navigation items
+.navbar-sc ul > li > a {
+  font-size: 1em;
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96ABB2;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+    color: darken(#96ABB2, 50%);
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  // Query
+  @media @xl {
+    font-size: 0.889em;
+  }
+}
+
+// ACTIVE DROPDOWN ITEM
+//
+// Item with open dropdown
+.navbar-sc li.open > a {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+// ACTION ITEMS ICONS
+//
+// Action icons in navigation
+.navbar-sc ul > li > a.nav-action {
+  font-size: 21px;
+  margin: 0;
+  //color: @brand-primary;
+  &:hover {
+    color: darken(@brand-primary, 25%);
+  }
+}
+
+/********************
+  Navigation - Top nav
+********************/
+.navbar-top {
+  // Nav main display:none for js to load after setTimeout
+
+  // Position at top
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+  padding-top: 30px;
+
+  // Remove defualt styles
+  background: transparent;
+  border: none;
+
+}
+
+
+body.home .navbar-top {
+  display: none;
+}
+
+// STICKY NAVS
+//
+.navbar-main .navbar-brand {
+  max-width: 170px;
+}
+
+// Sticky nav appears on scroll
+.navbar-main .sticky-main  {
+  opacity: 0;
+  .opacity(.14s);
+}
+// Slides nav down with opacity and ease
+.navbar-main .navbar-sticky-main {
+  top: -100px;
+  .opacity(.5s);
+}
+.navbar-main .sticky-main.is-sticky {
+  opacity: 1;
+}
+
+.navbar-sticky-main .navbar-brand {
+  height: auto;
+  width: auto;
+  padding: 5px 0 8px 14px;
+  img { max-width: 200px; }
+}
+
+
+
+/********************
+  Navigation - Dropdown menu
+********************/
+.navbar-sc .dropdown-menu {
+  // Reset all the BS
+  margin: 0;
+  padding: 120px 0 80px;
+  border: none;
+  box-shadow: 0 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.navbar-sc .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  top: -40px;
+
+  .transition(0.2s);
+}
+
+.navbar-sc .open > .dropdown-menu {
+  visibility: visible;
+
+  opacity: 1;
+  .opacity-ease(0.15s, 0.1s);
+  top: 0;
+}
+
+.navbar-sc .dropdown-bg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(144, 164, 174, 0.8);
+  position: fixed;
+  z-index: -4;
+
+  opacity: 0;
+  visibility: hidden;
+  .transition(0.2s);
+}
+
+.navbar-sc .open > .dropdown-bg {
+  opacity: 1;
+  visibility: visible;
+  .opacity-ease(0.15s, 0.1s);
+}
+
+
+/********************
+  Page Navigator
+********************/
+@navbar-page-nav-bg-color: #F5F5F5;
+
+.navbar-page-nav {
+  display: block;
+  background-color: @navbar-page-nav-bg-color;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1000;
+  top: 10px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.navbar-page-nav .navbar-collapse { padding: 0; }
+
+// TOGLLE ICON
+.navbar-page-nav .navbar-toggle {
+  font-size: 19px;
+  color: darken(@navbar-page-nav-bg-color,50%);
+  padding: 0;
+}
+.navbar-page-nav .navbar-toggle.collapsed {
+  i {
+    color: darken(@navbar-page-nav-bg-color,30%);
+  }
+}
+
+.navbar-page-nav ul > li.active {
+  background: #E0EDF6;
+  a { color: @brand-primary; }
+}
+
+.navbar-page-nav ul > li > a {
+  color: #9A9A9A;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 18px 13px;
+
+  &:hover {
+    background: #E0EDF6;
+    color: @brand-primary;
+  }
+
+  @media (min-width: @screen-md-min) {
+    font-size: 16px;
+    padding: 25px 30px;
+  }
+}
+
+.navbar-page-nav .navbar-nav {
+  display: table;
+  float: none;
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+// Variable number of list items
+.navbar-page-nav .navbar-nav.three li {
+  width: 33.33333%;
+}
+
+.navbar-page-nav .navbar-nav.four li {
+  width: 25%;
+}
+
+.navbar-page-nav .navbar-nav.five li {
+  width: 20%;
+}
+
+.navbar-page-nav .navbar-nav.six li {
+  width: 16.66666%;
+}
+
+.navbar-page-nav .navbar-nav li {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+
+#navbar-page-nav-sticky-wrapper {
+  // Auto height allows nav collapse to expand
+  height: auto !important;
+  min-height: 70px;
+}
+
+
+
+
+/********************
+  Nav line
+********************/
+.nav-line {
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 0;
+  padding: 0;
+
+  > li {
+    float: left;
+    display: inline;
+    padding: 10px 15px;
+  }
+
+  > li.active {
+    border-bottom: 4px solid @brand-primary;
+  }
+
+  > li > a {
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

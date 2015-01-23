@@ -1,0 +1,194 @@
+/********************
+  Hero Story on Pharma page
+********************/
+body.pharma {
+	// Story image of dude
+	#story-bg { background-image: url('../img/hero-pharma.png'); }
+}
+
+/********************
+  Clinical Trials search
+********************/
+#search-clinical {
+	.at2x('../img/find-a-doc-bg.jpg', 412px, 412px);
+ 	background-repeat: repeat;
+ 	padding: 25px 0 45px;
+
+	h3 {
+		font-family: @font-family-sans-serif;
+		font-size: 1em;
+	}
+	h4 {
+		font-family: @font-family-sans-serif;
+		font-size: 1.125em;
+		font-weight: 100;
+		margin-bottom: 17px;
+	}
+	.search-titles {
+		padding: 0 0 8px;
+	}
+	.container {
+		margin: 0 7%;
+
+		@media @sm {
+			margin: 0px auto;
+		}
+	}
+	.search-items {
+		background: @white;
+		padding: 45px 12%;
+
+		form {
+			display: block;
+			width: 100%;
+
+			.search-text-input {
+				width: 100%;
+				.border-gray;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				padding: 21px 15px;
+				color: @heading-color-dark;
+				font-weight: 100;
+				margin: 0 0 15px;
+
+				&::-webkit-input-placeholder  { color: @gray-dark; }
+				&:-moz-placeholder            { color: @gray-dark; }
+				&::-moz-placeholder           { color: @gray-dark; }
+				&:-ms-input-placeholder       { color: @gray-dark; }
+
+				@media @md {
+					margin: 0;
+				}
+			}
+			.search-button {
+				font-size: 1em;
+				padding: 21px 0;
+				border-radius: 3px;
+				letter-spacing: initial;
+				color: @white;
+				background-color: @bg-strong-blue;
+				border: none;
+				outline: none;
+				font-weight: 100;
+				width: 100%;
+				.transition(.2s);
+
+				// Query
+				@media @sm { font-size: 1.125em }
+				@media @xl { font-size: 1em; }
+
+				&:hover, 
+				&:focus {
+					background: @brand-primary;
+				}
+			}
+		}
+	} // .search-items
+
+	.search-advanced {
+		margin-top: 30px;
+
+		a {
+			width: 100%;
+			text-align: center;
+			background: @white-sub;
+			padding: 15px;
+			color: @gray-dark;
+			float: right;
+			margin: 0 0 15px;
+
+			&:first-child {
+				float: left;
+			}
+			&:hover {
+				background: @brand-primary;
+				color: @white;
+			}
+
+			@media @sm {
+				width: 46%;
+				margin: 0;
+			}
+			@media @md {
+				width: 100%;
+				max-width: 220px;
+				margin: 0 15px 0 0;
+				float: left;
+			}
+			@media @lg {
+				max-width: 275px;
+			}
+
+		}
+	}
+	.search-questions {
+		font-size: 1.125em;
+		font-weight: 100;
+		color: rgba(255, 255, 255, 0.9);
+		margin: 20px 0 -10px;
+		display: block;
+
+		&:hover {
+			color: @blue-soft;
+		}
+	}
+
+	// // Small section signifyer
+	// .section-title {
+	// 	font-size: 0.7em;
+	// }
+
+	// // Search clinical form
+	// #search-clinical-form {
+	// 	display: inline-block;
+	// 	width: 100%;
+	// 	padding-top: 20px;
+	// 	padding-bottom: 30px;
+
+	// 	// Basically title of form
+	// 	h3 {
+	// 		font-size: 1.2em;
+	// 		@media @sm { font-size: 1.6em; }
+	// 		@media @md { font-size: 1.8em; }
+	// 	}
+
+	// 	input.form-underline {
+	// 		width: 100%;
+	// 		padding-bottom: 10px;
+	// 		margin-top: 17px;
+	// 		font-weight: 100;
+			
+	// 		// Mixin o help pad
+	// 		.placeholder-stuff() {
+	// 			text-align: center;				
+	// 			font-weight: 100;
+	// 			text-transform: lowercase;
+	// 			font-size: 1.2em;
+	// 			@media @sm { font-size: 1.6em; }
+	// 			@media @md { font-size: 1.8em; }
+	// 		}
+
+	// 		&:-webkit-input-placeholder  { .placeholder-stuff(); }
+	// 	  &:-moz-placeholder           { .placeholder-stuff(); }
+	// 	  &:-moz-placeholder           { .placeholder-stuff(); }
+	// 	  &:-ms-input-placeholder      { .placeholder-stuff(); }
+	// 	}	
+
+	// } // End search clinical form
+
+} // End search clinical
+
+
+#partnerships-pharma {
+	.partner {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		max-width: 250px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+

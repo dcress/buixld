@@ -1,0 +1,109 @@
+/********************
+  Interior Info
+********************/
+.interior-info .content-main {
+  padding-top: 10px;
+
+  @media (min-width: @screen-md-min) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/********************
+  Info
+********************/
+.info-heading {
+  font-size: 21px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid @border-color;
+}
+
+.info-lead {
+  font-size: 21px;
+  line-height: 36px;
+  @media (min-width: @screen-sm-min) {
+    font-size: 31px;
+    line-height: 40px
+  }
+  font-weight: 300;
+  font-family: @font-family-serif;
+  color: @heading-color-dark;
+  margin-bottom: 25px;
+}
+
+.content-main .info-article {
+  padding-bottom: 30px;
+
+}
+
+/********************
+Breast diagram
+********************/
+#diagram-breast {
+  position: relative;
+  overflow: hidden;
+
+
+  &:after {
+    display: block;
+    content: '';
+    height: 100%;
+    width: 1200px;
+    position: absolute;
+
+
+    background-image: url(../img/diagram-breast.png);
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media (min-width: @screen-sm-min) {
+  #diagram-breast {
+    padding: 100px 0 350px;
+    &:after {
+      top: 260px;
+      left: -100px;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  #diagram-breast {
+    padding: 60px 0 260px;
+    &:after {
+      top: 220px;
+      left: -100px;
+    }
+  }
+}
+
+
+@media (min-width: @screen-lg-min) {
+  #diagram-breast {
+    padding: 120px 0 160px;
+    &:after {
+      top: 140px;
+      right: 0;
+      left: initial;
+    }
+  }
+}
+
+.diagram-title {
+  color: #fff;
+}
+
+.diagram-desc {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 41px;
+  font-family: @font-family-serif;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+

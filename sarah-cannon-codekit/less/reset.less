@@ -1,0 +1,40 @@
+/********************
+  Reset
+********************/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Images
+img { width: 100%; }
+
+// Anchor elements
+a {
+  .transition(.2s);
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+// Hover and focus and selection
+a:hover{
+  color: darken(@brand-primary, 20%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0 !important
+}
+
+::selection {
+  background: @brand-primary;
+  color: @white;
+}
+::-moz-selection {
+  background: @brand-primary;
+  color: @white;
+}

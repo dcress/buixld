@@ -1,0 +1,41 @@
+/********************
+  Headline Section
+********************/
+#headline {
+  border-bottom: 1px solid @border-color;
+  text-align: center;
+  
+  @media @sm {
+    padding: 0px 0 100px;
+  }
+
+  @media @md {
+    padding: 60px 0 180px;
+  }
+}
+
+#headline .headline-text {
+  font-size: 1.5em;
+  line-height: 28px;
+  color: @heading-color;
+
+  font-weight: 300;
+  margin-bottom: 50px;
+
+  // Initially 0 on page load
+  opacity: 0;
+  // JS changes opacity to 1 after ready
+  .opacity(.3s);
+
+  // Query
+  @media @sm {
+    font-size: 3.8em;
+    line-height: 1.15em;
+  }
+}
+
+#headline .headline-wrap {
+  float: none;
+  max-width: @screen-md-min;
+  margin: 0 auto;
+}
