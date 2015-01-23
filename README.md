@@ -28,7 +28,7 @@ A single feature branch should represent changes related to a single issue. If y
 
 ## Step by Step
 
-1.Fork on GitHub (click Fork button)
+1. Fork on GitHub (click Fork button)
 
 2. Clone to computer
 ```
