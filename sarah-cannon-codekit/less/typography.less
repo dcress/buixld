@@ -1,0 +1,107 @@
+/********************
+  Typeography
+********************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-serif;
+  color: @heading-color;
+}
+
+// Keyword for main header
+h1.keyword {
+  font-size: 2.857em;
+
+  @media (min-width: @screen-md-min) {
+    font-size: 3.438em;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  color: @heading-color-dark;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 300;
+
+}
+
+ul, ol {
+  line-height: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+.headline {
+  color: @heading-color-dark;
+  font-weight: 200;
+  font-size: 2em;
+  line-height: 1.3em;
+
+  a {
+    color: @brand-primary;
+    font: inherit;
+  }
+}
+// Sub headers used with page headers in hero areas
+.sub-header {
+  font-size: 1.125em;
+}
+
+// Titles for stories
+// Use on homepage for news item titles
+.header-title {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+/********************
+// Section and content headings
+********************/
+// Tagline for sections
+.section-tagline {
+  color: @heading-color-dark;
+  font-weight: 200;
+  font-size: 2.111em;
+  line-height: 1.5em;
+
+  // Small variant 
+  &.sm {
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+
+  a {
+    color: @brand-primary;
+    font: inherit;
+  }
+}
+
+// Article titles
+.section-subheader {
+  color: @body-font-color;
+  font-weight: 200;
+  font-size: 2.111em;
+  line-height: 1.5em;
+}
+
+.header-centered {
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 0;
+
+  @media @sm {
+    padding: 0 10%;
+  }
+  @media @md {
+    padding: 0 20%;
+  }
+}

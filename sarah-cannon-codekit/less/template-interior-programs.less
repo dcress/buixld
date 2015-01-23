@@ -1,0 +1,63 @@
+/********************
+	Interior programs 
+********************/
+body.interior-programs {
+
+	// Hero area for interior pages
+	#hero {
+		background: rgb(255,255,255);
+		background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, rgba(248,248,248,1) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(51%,rgba(255,255,255,1)), color-stop(100%,rgba(248,248,248,1)));
+		background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%,rgba(248,248,248,1) 100%);
+		background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%,rgba(248,248,248,1) 100%);
+		background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%,rgba(248,248,248,1) 100%);
+		background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%,rgba(248,248,248,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=1 );
+		max-height: 600px;
+	}
+
+	// Story image
+	#story-bg {
+		background: none;
+		background-position: 50% 0;
+		background-size: 750px auto;	
+		background-repeat: no-repeat;
+	}
+
+	#hero-story {
+		@media @md {
+			vertical-align: bottom;
+			padding-bottom: 150px;
+		}
+	}
+
+	// Heading for hero section story
+	#hero-story .heading {
+		font-family: @font-family-serif;
+		font-weight: 100;
+		font-size: 3em;
+		color: darken(@brand-primary, 10%);
+	}
+
+	// Story snippet
+	#hero-story .story-snip {
+		@media @md {
+			max-width: 400px;
+			color: @gray-dark;
+			font-size: 1em;
+		}
+	}
+
+
+	// Info section on interior-programs pages
+	.info {
+		padding: 120px 0;
+		text-align: center;
+	}
+	// Info section
+	.info .headline {
+		max-width: 860px;
+		margin: 0 auto 30px;
+	}
+
+}

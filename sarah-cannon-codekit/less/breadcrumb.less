@@ -1,0 +1,61 @@
+/********************
+  Breadcrumbs
+********************/
+// Breads in Hero info section
+.breadcrumb {
+  display: none; // on mobile
+
+  text-align: center;
+  position: absolute;
+  top: 135px;
+  background-color: transparent;
+  margin: 0;
+  z-index: 3;
+
+  li {
+    color: lighten(@brand-primary,10%);
+    &.active { color: #fff; }
+    font-size: 13px;
+  }
+
+  a { color: lighten(@brand-primary,20%); }
+
+  @media @sm {
+    display: block; // on larger screens
+    margin-left: -15px; // negative margin of default breadcrumb padding
+  }
+
+}
+
+.breadcrumb > li+li:before {
+  padding: 5px 10px;
+  color: lighten(@brand-primary,20%);
+  content: "//";
+}
+
+// Story page
+#hero.hero-sub {
+  .breadcrumb {
+    li {
+      &:first-child {
+        a {
+          color: @blue-soft;
+
+          &:hover {
+            color: @blue-dark;
+          }
+        }
+      }
+      a {
+        color: @body-font-color;
+
+        &:hover {
+          color: @blue-dark;
+        }
+      }
+    }
+    li.active {
+      color: @body-font-color;
+    }
+  }
+}

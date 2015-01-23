@@ -1,0 +1,94 @@
+/********************
+	Forms
+********************/
+
+// Form with no background and underline
+input.form-underline {
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: thin solid @white;
+  background: transparent;
+}
+
+// Placeholder color
+::-webkit-input-placeholder { color: @blue-soft; font-weight: 200; }
+:-moz-placeholder           { color: @blue-soft; font-weight: 200; }
+::-moz-placeholder          { color: @blue-soft; font-weight: 200; }
+:-ms-input-placeholder      { color: @blue-soft; font-weight: 200; }
+
+.nav-form-lg {
+  position: relative;
+  border-bottom: 2px solid @border-color;
+}
+
+.nav-form-lg .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+
+// LARGE NAV FORM
+.nav-form-lg .form-control {
+  border: none;
+  box-shadow: none;
+  height: 90px;
+  font-size: 56px;
+  font-weight: 100;
+  font-family: @font-family-serif;
+  letter-spacing: 0.02em;
+  padding: 0;
+  background-color: transparent;
+}
+
+.nav-form-lg .form-control {
+  // Mixin o help pad
+  .placeholder-stuff() {
+    color: lighten(@heading-color, 20%);
+    padding-left: 5px;
+  }
+
+  &::-webkit-input-placeholder {
+    .placeholder-stuff()
+  }
+
+  &:-moz-placeholder {
+     .placeholder-stuff()
+  }
+
+  &::-moz-placeholder {
+     .placeholder-stuff()
+  }
+
+  &:-ms-input-placeholder {
+    .placeholder-stuff()
+  }
+}
+
+.nav-form-lg .form-control:focus {
+  border-color: white;
+  box-shadow: 0 0;
+  .placeholder-stuff() {
+    color: lighten(@heading-color, 30%);
+    .transition(0.2s);
+  }
+
+  &::-webkit-input-placeholder {
+    .placeholder-stuff()
+  }
+
+  &:-moz-placeholder {
+     .placeholder-stuff()
+  }
+
+  &::-moz-placeholder {
+     .placeholder-stuff()
+  }
+
+  &:-ms-input-placeholder {
+    .placeholder-stuff()
+  }
+}

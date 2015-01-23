@@ -1,0 +1,115 @@
+/********************
+  Mobile navigation
+********************/
+#mobile-navigation .navbar-mobile {
+  background-color: @brand-primary;
+  color: #fff;
+  border: none;
+  display: none;
+}
+
+#mobile-navigation .navbar-mobile .navbar-brand {
+  color: #fff;
+}
+
+// Menu
+#mobile-navigation .navbar-mobile .navbar-nav {
+  padding: 5px 20px 0px 20px;
+  margin: 0 -15px;
+}
+
+// Nav logo
+#mobile-navigation .navbar-mobile .nav-logo {
+  max-width: 160px;
+  margin: 20px auto;
+}
+
+// Nav disclaimer
+#mobile-navigation .nav-disclaimer p {
+  color: @body-font-color;
+}
+
+// Menu items
+#mobile-navigation .navbar-mobile .navbar-nav>li>a{
+  font-size: 18px;
+  color: #999;
+  padding: 15px 0px 10px;
+  line-height: 21px;
+  background: none;
+
+  // No border on last child
+  border-bottom: 1px solid @border-color;
+  //&:last-child { border-bottom: 0; }
+
+  // Hover state
+  &:hover {
+    background-color: none;
+    color: @brand-primary;
+  }
+
+}
+
+// Toggle icon
+#mobile-navigation .navbar-fixed-bottom .navbar-collapse {
+  max-height: 485px;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+#mobile-navigation .navbar-mobile span.icon-bar {
+  height: 3px;
+  width: 20px;
+  background-color: #fff;
+  display: block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 0.15s linear;
+  -o-transition: -o-transform 0.15s linear;
+  -ms-transition: -ms-transform 0.15s linear;
+  -moz-transition: -moz-transform 0.15s linear;
+  transition: transform 0.15s linear;
+  -webkit-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+// Rotate first icon bar
+#mobile-navigation .navbar-header span.icon-bar:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate3d(5px, 5px, 0);
+  -o-transform: rotate(45deg) translate3d(5px, 5px, 0);
+  -ms-transform: rotate(45deg) translate3d(5px, 5px, 0);
+  -moz-transform: rotate(45deg) translate3d(5px, 5px, 0);
+  transform: rotate(45deg) translate3d(5px, 5px, 0);
+}
+
+// Hide second icon bar
+#mobile-navigation .navbar-header span.icon-bar:nth-child(2) {
+  opacity: 0;
+  .opacity(.10s);
+}
+
+// Rotate 3rd icon bar 45 degrees
+#mobile-navigation .navbar-header span.icon-bar:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+  -o-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+  -ms-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+  -moz-transform: rotate(-45deg) translate3d(5px, -5px, 0);
+  transform: rotate(-45deg) translate3d(5px, -5px, 0);
+}
+
+// Horizontal state of icon bars
+#mobile-navigation .navbar-header .collapsed span.icon-bar:nth-child(1) {
+  .rotate(0deg);
+}
+#mobile-navigation .navbar-header .collapsed span.icon-bar:nth-child(2) {
+  opacity: 1;
+}
+#mobile-navigation .navbar-header .collapsed span.icon-bar:nth-child(3) {
+  .rotate(0deg);
+}
+

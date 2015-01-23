@@ -1,0 +1,297 @@
+/********************
+  Hero Info
+  Hero area for Cancer Type, About .. etc
+********************/
+
+// Define some heights of the 'hero' area
+@xs-hero-info-height: 300px;
+@sm-hero-info-height: 360px;
+
+
+body.interior-info {
+  z-index: -5;
+
+  // Adds height with padding for fixed hero effect
+  padding-top: @xs-hero-info-height;
+  @media @sm {
+    padding-top: @sm-hero-info-height;
+  }
+}
+
+.hero-info-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.hero-info {
+  display: table;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  position: relative;
+  .bg-primary-grad;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+  vertical-align: middle;
+
+  z-index: -2;
+
+  position: fixed;
+  top: 0;
+  max-height: @xs-hero-info-height;
+}
+
+@media (min-width: @screen-sm-min) {
+  .hero-info {
+    max-height: @sm-hero-info-height;
+  }
+
+}
+
+.hero-info .info-text {
+  // If you want to vertically align
+  //
+  // display: table-cell;
+  // vertical-align: bottom;
+  // position: relative;
+
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+
+  color: lighten(@brand-primary, 25%);
+  
+}
+
+.hero-info .page-header {
+  color: #fff;
+  border-bottom: none;
+  font-size: 2.571em;
+  margin-bottom: 10px;
+
+  @media @sm {
+    font-size: 3.875em;
+    font-weight: 100;
+  }
+  @media @xl {
+    font-size: 3.444em;
+  }
+}
+
+.hero-info .navbar-sc ul > li > a {
+  color: #fff;
+}
+
+
+
+/********************
+  Hero
+  Main hero with image
+  Including, Home, Story and Pharma,Patient,Physician pages.
+********************/
+#hero {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  vertical-align: middle;
+  z-index: 1;
+  background-color: @bg-gray;
+
+  // Query
+  @media @sm { max-height: 600px; }
+  @media @lg { max-height: 750px; }
+}
+
+#hero.sub-hero {
+  height: 100%;
+
+  // Query
+  @media @sm {
+    max-height: 500px;
+  }
+  @media @lg {
+    max-height: 650px;
+  }
+}
+
+
+/********************
+  Hero Story
+********************/
+#story-bg {
+  // Add display:table-cell via js
+  display: none;
+
+  background-size: cover;
+  background-color: @bg-gray;
+  background-repeat: no-repeat;
+  background-position: 50% 25px;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+  vertical-align: middle;
+  z-index: 5;
+}
+
+@media (min-width: @screen-sm-min) {
+  #story-bg {
+    background-size: 720px auto;
+  }
+}
+@media (min-width: @screen-lg-min) {
+  #story-bg {
+    background-size: 960px auto;
+    background-attachment: fixed;
+    max-height: 100%;
+  }
+}
+
+/********************
+  Story Backgrounds
+********************/
+// Interchange story pictures with random class generation via js
+.story-bg-0  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-1  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-2  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-3  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-4  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-5  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-6  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-7  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-8  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-9  { background-image: url('../img/hero-story-amanda.jpg'); }
+.story-bg-10 { background-image: url('../img/hero-story-amanda.jpg'); }
+
+
+/********************
+  Hero story words
+********************/
+#hero-story {
+  // Add display:table via js
+  display: none;
+
+  // Positioned on the bottom with transparancy for mobile
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0;
+}
+
+// Align next to person for larger screens
+@media @md {
+  #hero-story {
+    position: relative;
+    vertical-align: middle;
+    z-index: 3;
+    background: none;
+  }
+}
+
+// Story signiture "Amanda"
+#hero-story .story-sig {
+  font-size: 50px;
+  max-width: 350px;
+  margin-left: -80px;
+
+  // Negative magin for correct Alignment
+  @media @md { margin-left: -50px; } // May need to remove with different names
+
+}
+
+
+// Sub Hero signature
+#hero.hero-sub {
+  //position: relative;
+
+  #hero-story-sub-name {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/story-sig-amanda.png) no-repeat 27% 50%;
+    display: none;
+
+    @media @md {
+      display: block;
+    }
+  }
+  #story-bg {
+    position: static;
+    z-index: 0;
+    background-attachment: initial;
+
+    @media @lg {
+      position: absolute;
+    }
+  }
+}
+
+// Story snippet words
+#hero-story .story-snip {
+  font-size: 0.929em;
+  margin-bottom: 0;
+
+  @media @md {
+    margin-bottom: 20px;
+    max-width: 325px;
+    font-size: 1.125em;
+  }
+  @media @lg {
+    max-width: 375px;
+  }
+}
+
+// More button for smaller screens
+#hero-story .more {
+  // Restrict container
+  max-width: 100px;
+  float: right;
+  
+  // Icon
+  i { font-size: 18px; }
+}
+
+
+/********************
+  Header banner - Logo mobile
+********************/
+.header-banner .logo {
+    max-width: 170px;
+    margin: 0 auto;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 1
+
+}
+.header-banner .logo {
+    max-width: 170px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1
+}
+
+.header-banner .home {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-right: 10px;
+
+  a {
+    color: darken(@brand-primary, 5%);
+    &:hover {
+      color: darken(@brand-primary, 15%);
+    }
+  }
+}
+

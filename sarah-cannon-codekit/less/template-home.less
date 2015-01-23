@@ -1,0 +1,244 @@
+/********************
+  Options
+********************/
+#options {
+  background-color: #FBFBFB;
+  padding: 20px 0 30px;
+}
+
+#options .info-row {
+  padding: 10px 0px;
+}
+
+#options .info-row .info-link {
+  padding-left: 0;
+}
+
+#options .info-row i {
+  font-size: 21px;
+  color: @brand-primary;
+}
+
+#options .info-row a {
+  display: block;
+  font-size: 18px;
+  color: @heading-color;
+  padding: 3px 0 18px;
+  border-bottom: 1px solid @border-color;
+}
+
+
+/********************
+  Patient Type
+********************/
+#patient-types {
+  background-color: @bg-gray;
+  padding: 20px 0;
+
+}
+
+.patient-type {
+  padding: 70px 45px;
+}
+
+.patient-type img {
+  padding: 10px;
+}
+
+
+/********************
+  Video
+********************/
+#video {
+  overflow: hidden;
+  max-height: 500px;
+  position: relative;
+  .transition(.3s);
+  .delay(.1s);
+}
+
+#video .video-mask {
+  background-color: @bg-gray;
+  background-position: center 0%;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background: url(../img/bg-video.jpg) #0370B1;
+
+  .transition(.8s);
+
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 0;
+  height: 0;
+  width: 100%;
+}
+
+#video.open {
+  max-height: 1000px;
+  .transition(.3s);
+  .delay(0s);
+
+  .video-mask {
+    .delay(.4s);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .video-object-container {
+    top: -10%;
+    .delay(0s);
+  }
+}
+
+// Overlay to vertically align things
+.video-text-overlay {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.video-object-container {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  margin-top: -96px;
+  width: 100%;
+  .transition(.35s);
+  .delay(.1s);
+}
+
+// Play icon
+.video-play {
+  font-size: 160px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+// Text
+.video-headline {
+  font-family: @font-family-sans-serif;
+  color: #026AA8;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 80px;
+  margin-top: 43px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+  @media @sm {
+    font-size: 80px;
+  }
+}
+
+// Video elements
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 0;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/********************
+// Video within content sections
+********************/
+// Padding
+.content-main #video {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+// Play button
+.content-main #video .video-play {
+  font-size: 120px;
+}
+
+.content-main #video .video-headline {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+.content-main #video .video-mask {
+  background: #e7e7e7;
+}
+
+
+
+/********************
+  Research
+********************/
+.research-item {
+  padding: 60px 0;
+  border-bottom: 1px solid @border-color;
+}
+
+
+/********************
+  News
+********************/
+#news h2.primary {
+  margin-bottom: 50px;
+  margin-top: 0px;
+  font-family: @font-family-sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+
+/********************
+  Partnerships
+********************/
+#partnerships {
+  background-color: @bg-gray;
+  padding: 50px 0;
+}
+
+
+
+/********************
+  Find A Doc
+********************/
+
+// this is temp code for Ryan's POC
+
+#find-a-doc {
+  .at2x('../img/find-a-doc-bg.jpg', 412px, 412px);
+  background-repeat: repeat;
+
+  .logo-mho {
+    
+    img {
+      width: 291px;
+    }
+  }
+  
+
+
+  // p {
+  //   color: @white;
+  //   margin: 35px 0 -25px;
+  // }
+
+}
+
+
+
+
+
+
+
+

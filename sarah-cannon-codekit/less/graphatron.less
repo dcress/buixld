@@ -1,0 +1,429 @@
+/********************
+  Gravatron.js
+********************/
+
+// Entity Brand
+@first: #038DE6;
+@second: #24bdef;
+@third: #0277BD;
+@heading-color: #52514f;
+@white: #fff;
+@border-color: #E7E7E7;
+@body-font-color: #859ca4;
+
+// Media Query
+@sm: ~"(min-width: 768px)";
+@md: ~"(min-width: 960px)";
+@lg: ~"(min-width: 1280px)";
+@xl: ~"(min-width: 1400px)";
+
+// Fonts {
+@font-family-serif: "lexia", "Lexia", "Times New Roman", Times, serif;
+@font-family-sans-serif:  "anivers", "Anivers", Helvetica, Arial, sans-serif;
+
+// Mixins 
+.border-gray {
+  border: 1px solid @border-color;
+}
+
+.border-gray-top {
+  border-top: 1px solid @border-color;
+}
+
+.border-gray-bottom {
+  border-bottom: 1px solid @border-color;
+}
+
+.border-gray-left {
+  border-left: 1px solid @border-color;
+}
+
+.border-gray-right {
+  border-right: 1px solid @border-color;
+}
+
+// General transition
+.transition(@time) {
+  -webkit-transition: all @time ease-in-out;
+  -moz-transition: all @time ease-in-out;
+  transition: all @time ease-in-out; 
+}
+
+// Delay
+.delay(@time) {
+  -webkit-transition-delay: @time;
+  -moz-transition-delay: @time;
+  transition-delay: @time;
+}
+
+// Transition with delay time
+.transition-width-delay(@time, @delay) {
+  -webkit-transition: all @time @delay;
+  -moz-transition: all @time @delay;
+  transition: all @time @delay;
+}
+
+.hidden-xs {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+.visible-xs {
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+
+/********************
+  Animated Graph
+********************/
+
+.graphatron {
+	.border-gray;
+	background: @white;
+	display: block;
+	margin: 40px 0 25px;
+
+	.graph-title {
+		width: 96%;
+		display: block;
+		.border-gray-bottom;
+		padding: 14px 2%;
+
+		h3 {
+			margin: 0;
+			padding: 0;
+			font-size: 1.556em;
+			color: @heading-color;
+			font-family: @font-family-serif;
+			font-weight: 100;
+		}
+	} // /.graph-title
+	.graph-footer {
+		background: @white;
+		display: block;
+		width: 96%;
+		padding: 5px 2%;
+
+		@media @sm {
+			.border-gray-top;
+		}
+
+		span {
+			font-size: 1em;
+
+			@media @sm {
+				font-size: 0.778em;
+			}
+		}
+	} // /.graph-footer
+} // /.graphatron
+
+// Graph Main Individual Holders
+.graph-main {
+	width: 100%;
+	display: table;
+	background: #fbfbfb;
+
+	.graph-divide {
+		display: none;
+		position: relative;
+		width: 3%;
+
+		@media @sm {
+			display: table-cell;
+		}
+
+		div {
+			position: absolute;
+			width: 4px;
+			background: @white;
+			.border-gray-left;
+			.border-gray-right;
+			left: 50%;
+			margin-left: -1px;
+			height: 100%;
+			top: 0;
+		}
+	}
+	> div {
+		display: block;
+
+		@media @sm {
+			display: table-cell;
+		}
+	}
+} // /.graph-main
+
+.graph-main.graph-bottom-labels {
+	.border-gray-top;
+	background: #f6f6f6;
+
+	.graph-container {
+
+		span {
+			display: block;
+			width: 100%;
+			text-align: center;
+			padding: 16px 0;
+			font-family: @font-family-serif;
+			font-size: 1.222em;
+			color: @heading-color;
+			font-weight: 100;
+		}
+	}
+	.graph-divide > div {
+		margin-top: -1px;
+	}
+} // /.graph-bottom-labels
+
+.graph-mobile-label	{
+	.border-gray-bottom;
+	background: #f6f6f6;
+	width: 100%;
+
+	span {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 16px 0;
+		font-family: @font-family-serif;
+		font-size: 1.222em;
+		color: @heading-color;
+		font-weight: 100;
+	}
+} // /.graph-mobile-label
+
+// Percent Bubble
+.graph-percent {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	margin: 0 0 40px;
+
+	> div {
+		background: #f6f6f6;
+		.border-gray;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		padding: 31% 0;
+		width: 62%;
+		height: auto;
+		position: relative;
+		margin: -86% auto 50%;
+		//margin: -36% auto 0;
+		text-align: center;
+		.delay(.2s);
+		.transition(.5s);
+
+		span {
+			position: absolute;
+			left: 0;
+			bottom: 19%;
+			width: 100%;
+			font-size: 2.1em;
+			color: @heading-color;
+			font-family: @font-family-serif;
+			font-weight: 100;
+
+			@media @sm {
+				font-size: 1.556em;
+			}
+		}
+	}
+} // /.graph-percent
+
+// Graph Bar Container 
+.graph-container {
+	
+	//pseduo	
+	&:first-child {
+		padding: 0;
+		
+		@media @sm {
+			padding-left: 1.5%;
+		}
+	}
+	&:last-child {
+		padding: 0;
+
+		@media @sm {
+			padding-right: 1.5%;
+		}
+	}
+
+	.graph-limit {
+		width: 100%;
+		max-width: 340px;
+		margin: 0px auto;
+	}
+	.graph-bar-container {
+		display: block;
+		width: 100%;
+		height: 320px;
+		position: relative;
+
+		> div {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+
+			.graph-bar-full {
+				top: 0;
+				height: 88%;
+			}
+			.graph-bar-label {
+				bottom: 0;
+				height: 12%;
+
+				span {
+					width: 100%;
+					text-align: center;
+					display: block;
+					margin: 4px 0 0;
+					font-size: 1.25em;
+
+					@media @sm {
+						font-size: 1em;
+					}
+				}
+			} // /.graph-bar-label
+			> div {
+				width: 100%;
+				padding: 0 10%;
+				display: block;
+				left: 0;
+				width: 100%;
+
+				> div {
+					width: 50%;
+					display: block;
+					float: left;
+					height: 100%;
+					position: relative;
+
+				}
+			}
+		} // />div
+	} // /.graph-bar-container
+} // /.graph-container
+
+// Graph Bars
+.bar {
+	width: 76%;
+	min-height: 1px;
+	margin: 0 12%;
+	float: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: visible;
+	.delay(.1s);
+	.transition(1s);
+	height: 0%;
+
+	span {
+		width: 160%;
+		text-align: center;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: -30px;
+		opacity: 0;
+		.transition-width-delay(.6s,1s);
+		font-size: 1.25em;
+		margin: 0 -30%;
+		font-family: @font-family-sans-serif;
+		color: @body-font-color;
+
+		@media @sm {
+			font-size: 1em;
+		}
+	}
+}// /.bar
+
+//default bar colors
+.bar-one {
+	background: @second;
+}
+.bar-two {
+	background: @first;
+}
+.bar-three {
+	background: @third;
+}
+
+// Different Graph Layouts
+.graphatron.two-graphs { // <- two graphs
+	width: 100%;
+	max-width: 640px;
+
+	.graph-main {
+		.graph-container {
+			width: 100%;
+
+			@media @sm {
+				width: 46.5%;
+			}
+		}
+	}
+
+}
+.graphatron.three-graphs { // <- three graphs
+	width: 100%;
+	max-width: 800px;
+
+	.graph-main {
+		.graph-container {
+			width: 100%;
+
+			@media @sm {
+				width: 30%;
+			}
+		}
+		//pseduo
+		.graph-container:nth-child(3) {
+			padding: 0;
+
+			@media @sm {
+				padding: 0 0.75%;
+			}
+		}
+	}
+}
+// different graph layouts
+.graphatron.two-bars { // <- two bars per graph
+	.graph-bar-container > div {
+		width: 80%;
+		margin: 0 10%;
+
+		> div > div {
+			width: 50%;
+		}
+	}
+}
+
+.graphatron.three-bars { // <- three bars per graph
+	.graph-bar-container > div {
+		width: 90%;
+		margin: 0 5%;
+
+		> div > div {
+			width: 33.3%;
+		}
+	}
+}
+
+// CSS3 Animation Styles
+.graphatron.animate {
+	.graph-percent {
+		> div {
+			margin: -36% auto 0;
+		}
+	}
+	.bar span {
+		opacity: 1;
+	}
+}

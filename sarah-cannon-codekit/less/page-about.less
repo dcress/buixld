@@ -1,0 +1,72 @@
+/********************
+  About page
+********************/
+
+/********************
+  Video Holder
+********************/
+
+.about .video-holder {
+	.at2x('../img/find-a-doc-bg.jpg', 412px, 412px);
+	background-repeat: repeat;
+	width: 100%;
+	height: 500px;
+	
+	// position: absolute;
+	// z-index: 1;
+	// padding-bottom: 56.25%; /* 16:9 */
+	// padding-top: 0;
+	// height: 0;
+	// width: 100%;
+}
+
+/********************
+	Leadership
+********************/
+.leadership {
+
+	a {
+		display: block;
+
+		// Selectors
+		&:hover {
+			.round-img {
+				margin: -8px auto 8px;
+				
+			}
+			p {
+				color: @blue-dark;
+			}
+			span {
+				
+			}
+		}
+		.round-img {
+			margin: 0;
+			.transition(.2s);
+		}
+
+		.round-img {
+			max-width: 260px;
+			margin: 0px auto;
+		}
+	}
+	.text-container {
+		float: left;
+		width: 100%;
+		text-align: center;
+		margin: 20px 0 40px;
+
+		p {
+			font-size: 1.2em;
+			color: @heading-color-dark;
+			font-family: @font-family-serif;
+			margin: 0;
+		}
+		span {
+			font-size: 1em;
+			color: @body-font-color;
+			line-height: 1.7em;
+		}
+	}
+}

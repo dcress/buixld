@@ -1,0 +1,266 @@
+/********************
+  Side Cards
+********************/
+
+/********************
+  Navigator/Story Side Card
+********************/
+
+.sidecard-main {
+	display: block;
+	width: 100%;
+	border: 1px solid @border-color;
+
+	> div {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid @border-color;
+		
+		&:last-child {
+			border-bottom-color: @white;
+			background: @brand-primary;
+			
+			.sidecard-link {
+
+				&:hover {
+					background: #0485d6;
+				}
+
+				h3 {
+					color: @white;
+				}
+				p {
+					color: @blue-soft;
+				}
+				.arrow-hover {
+					background: url(../img/sidecard-arrow-white.svg);
+				}
+			}
+		}
+		.sidecard-link {
+			padding: 23px 25px;
+			display: block;
+			.transition(.2s);
+			position: relative;
+			text-decoration: none;
+
+			&:hover {
+				background: #fbfbfb;
+
+				.arrow-hover {
+					margin-right: 0;
+					opacity: 1;
+				}
+			}
+
+			h3 {
+				font-size: 1.625em;
+				font-weight: 100;
+				font-family: @font-family-sans-serif;
+				color: @brand-primary;
+				margin: -3px 0 -4px;
+
+				@media @xl {
+					font-size: 1.444em;
+				}
+			}
+			p {
+				margin: 0;
+				color: @body-font-color;
+				font-size: 1em;
+
+				@media @xl {
+					font-size: 0.889em;
+				}
+			}
+			.arrow-hover {
+				width: 30px;
+				height: 27px;
+				background-image: url(../img/sidecard-arrow.svg);
+				background-size: 100% auto;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 26px;
+				right: 20px;
+				margin-right: -9px;
+				opacity: 0;
+				.transition(.35s);
+			}
+		}
+	}
+}/* /.sidecard-navigator */
+
+
+/********************
+  Navigator Side Card
+********************/
+
+.sidecard-main.sidecard-navigator {
+	> div {
+		&:first-child {
+			padding: 23px 25px;
+
+			.round-img {
+				width: 150px;
+				height: 150px;
+				margin: 5px auto 15px;
+			}
+			p {
+				font-size: 1em;
+
+				@media @xl {
+					font-size: 0.889em;
+				}
+			}
+		}
+	}
+}
+
+/********************
+  Glossary Side Card
+********************/
+
+.sidecard-glossary {
+	display: block;
+	width: 100%;
+	border: 1px solid @border-color;
+	margin-top: 40px;
+
+	> div {
+		width: 100%;
+		padding: 23px 25px;
+	}
+	.glossary-title {
+		background: @brand-primary;
+		border: 1px solid #fff;
+		padding: 12px 25px;
+
+		h4 {
+			font-size: 1em;
+			font-weight: bold;
+			font-family: @font-family-sans-serif;
+			color: @white;
+			margin: 3px 0 0;
+			float: left;
+		}
+		p {
+			float: right;
+			color: @blue-soft;
+			margin: 0;
+		}
+	}
+	.primary {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0 0 14px;
+
+			a {
+				color: @body-font-color;
+				.transition(.2s);
+
+				&:hover {
+					padding-left: 4px;
+					color: @blue-soft;
+				}
+			}
+			a.open {
+				color: @brand-primary;
+
+				&:hover {
+					padding-left: 0;
+				}
+			}
+			.sub {
+				list-style: none;
+				margin: 10px 0 0;
+
+				li {
+					margin: 0 0 4px;
+				}
+			}
+		}
+	}
+}
+
+#sidecard-mobile {
+	background: @white-sub;
+	padding: 3px 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		float: left;
+		width: 100%;
+
+		li {
+			float: left;
+			width: 100%;
+
+			&:last-child {
+				.right .text-container {
+					border-bottom: none;
+				}
+			}
+
+			a {
+				float: left;
+				width: 100%;
+
+				.left {
+					float: left;
+					width: 45px;
+
+					i {
+						font-size: 25px;
+						float: left;
+						margin: 18px 0 0;
+					}
+				}
+				.right {
+					float: right;
+					width: 100%;
+					display: block;
+					padding-left: 55px;
+					margin: 0 0 0 -50px;
+
+					.text-container {
+						width: 100%;
+						display: block;
+						padding-left: 10px;
+						float: left;
+						.border-gray-bottom;
+
+						span {
+							color: @body-font-color;
+							float: left;
+							margin: -5px 0 10px;
+						}
+						p {
+							margin: 5px 0 0;
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
