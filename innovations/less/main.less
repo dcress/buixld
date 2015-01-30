@@ -1,0 +1,89 @@
+/*
+	* Title: HCA Innovations
+	* Created: January 30, 2015
+	*
+	* Author: Eric Motil / Dan Cress
+	* Description: HCA Innovation website
+	* Version: v1.0
+  *
+*/
+
+
+// Imports
+@import '../bower_components/bootstrap/less/variables.less';
+@import '../bower_components/bootstrap/less/mixins.less';
+
+@import 'reset.less';
+@import 'helpers.less';
+
+// Brand
+@brand-primary: blue;
+@brand-secondary: teal;
+
+// Screen sizes
+@screen-sm-min: 768px;
+@screen-md-min: 960px;
+@screen-lg-min: 1200px;
+@screen-xl-min: 1400px;
+
+// Typography
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "lexia", "Lexia", "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@font-heading-color:      lighten(@brand-secondary, 5%);
+
+// Body basics
+@body-bg-color:   grey;
+@body-font-color: black;
+
+// Border
+@border-color: orange;
+
+
+/*---------------------
+	Main elements
+----------------------*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+	padding: 0;
+  background:  @body-bg-color;
+  color: @body-font-color;
+
+  font-family: @font-family-base;
+  font-size: 14px;
+  line-height: 24px;
+
+  // Font size changes
+  @media @sm { font-size: 16px; }
+  @media @xl { font-size: 18px; }
+}
+
+// Max width of parent
+img { max-width: 100%; }
+
+
+/*---------------------
+	Typography
+----------------------*/
+h1, h2, h3, h4, h5, h6 { color: @font-heading-color; }
+
+a {
+  .transition(.2s);
+  color: @brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(@brand-primary, 25%);
+    pointer: default;
+  }
+}

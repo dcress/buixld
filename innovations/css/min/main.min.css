@@ -1,0 +1,135 @@
+/*
+	* Title: HCA Innovations
+	* Created: January 30, 2015
+	*
+	* Author: Eric Motil / Dan Cress
+	* Description: HCA Innovation website
+	* Version: v1.0
+  *
+*/
+/*---------------------
+	Reset
+----------------------*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::selection {
+  background: #0000ff;
+  color: #fff;
+}
+::-moz-selection {
+  background: #0000ff;
+  color: #fff;
+}
+/*---------------------
+	Template
+----------------------*/
+.container-sm {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 768px;
+}
+.container-md {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 960px;
+}
+.container-lg {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+}
+.container-xl {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1400px;
+}
+.container-full {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+}
+.block-center {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*---------------------
+	Media
+----------------------*/
+/*---------------------
+	Transitions
+----------------------*/
+/*---------------------
+	Main elements
+----------------------*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding: 0;
+  background: #808080;
+  color: #000000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
+}
+img {
+  max-width: 100%;
+}
+/*---------------------
+	Typography
+----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #00999a;
+}
+a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #0000ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #000080;
+  pointer: default;
+}
