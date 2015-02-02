@@ -1,0 +1,160 @@
+/*
+	* Title: HCA Innovations
+	* Created: January 30, 2015
+	*
+	* Author: Eric Motil / Dan Cress
+	* Description: HCA Innovation website
+	* Version: v1.0
+  *
+*/
+
+
+// Imports
+@import '../bower_components/bootstrap/less/variables.less';
+@import '../bower_components/bootstrap/less/mixins.less';
+
+@import 'reset.less';
+@import 'helpers.less';
+@import 'buttons.less';
+
+// Brand
+@brand-primary: #29ABE2;
+@brand-secondary: teal;
+
+// Screen sizes
+@screen-sm-min: 768px;
+@screen-md-min: 960px;
+@screen-lg-min: 1200px;
+@screen-xl-min: 1400px;
+
+// Typography
+@font-family-sans-serif:  "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+@font-family-serif:       "lexia", "Lexia", "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@font-heading-color:      lighten(@brand-secondary, 5%);
+
+// Body basics
+@body-bg-color:   #fff;
+@body-font-color: black;
+
+// Border
+@border-color: #e7e7e7;
+
+
+/*---------------------
+	Main elements
+----------------------*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+	padding: 0;
+  background:  @body-bg-color;
+  color: @body-font-color;
+
+  font-family: @font-family-base;
+  font-size: 14px;
+  line-height: 24px;
+
+  // Font size changes
+  @media @sm { font-size: 16px; }
+  @media @xl { font-size: 18px; }
+}
+
+// Max width of parent
+img { max-width: 100%; }
+
+
+/*---------------------
+	Typography
+----------------------*/
+h1, h2, h3, h4, h5, h6 { color: @font-heading-color; }
+
+a {
+  .transition(.2s);
+  color: @brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(@brand-primary, 25%);
+    pointer: default;
+  }
+}
+
+
+/*---------------------
+  Navigation
+----------------------*/
+.navbar-ideas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fff;
+
+  .navbar-brand {
+    height: 65px;
+    max-width: 130px;
+    padding: 15px;
+  }
+
+  .navbar-nav { }
+
+  .navbar-nav>li>a {
+    line-height: 35px;
+    padding: 15px 40px;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .navbar-toggle { margin-top: 14px; }
+  .navbar-toggle .icon-bar { background: @brand-primary; }
+
+}
+
+.video-wrap {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  background-image: url('../../img/bg-man.jpg');
+  background-repeat: no-repeat;
+  background-position: 47% 20px;
+  background-size: cover;
+  @media @md { background-image: none; }
+}
+
+.video-content {
+  display: table-cell;
+  vertical-align: middle;
+
+  .slogan {
+    font-size: 2.8em;
+    @media @sm { font-size: 5.3em; }
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+  }
+}
+.video-absolute {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
