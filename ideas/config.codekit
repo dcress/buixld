@@ -4783,6 +4783,42 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/modal-log-in.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/modal-log-in.kit",
+		"outputAbbreviatedPath": "\/includes\/modal-log-in.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/modal-search.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/modal-search.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/modal-search.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/modal-search.kit",
+		"outputAbbreviatedPath": "\/includes\/modal-search.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/modal-sign-up.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/modal-sign-up.kit",
+		"outputAbbreviatedPath": "\/includes\/modal-sign-up.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -5000,6 +5036,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/Screenshot 2015-02-02 12.11.09.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 70701,
+		"inputAbbreviatedPath": "\/Screenshot 2015-02-02 12.11.09.png",
+		"outputAbbreviatedPath": "\/Screenshot 2015-02-02 12.11.09.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/Screenshot+2015-01-30+16.03.38(2).png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -5007,17 +5054,6 @@
 		"initialSize": 148593,
 		"inputAbbreviatedPath": "\/Screenshot+2015-01-30+16.03.38(2).png",
 		"outputAbbreviatedPath": "\/Screenshot+2015-01-30+16.03.38(2).png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/Screenshot+2015-02-02+12.11.09.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 22427,
-		"inputAbbreviatedPath": "\/Screenshot+2015-02-02+12.11.09.png",
-		"outputAbbreviatedPath": "\/Screenshot+2015-02-02+12.11.09.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

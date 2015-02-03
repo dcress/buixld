@@ -19,7 +19,7 @@
 
 // Brand
 @brand-primary: #29ABE2;
-@brand-secondary: teal;
+@brand-secondary: #394950;
 @brand-action: #4CB3E2;
 
 // Screen sizes
@@ -113,18 +113,34 @@ a {
   background-color: #fff;
 
   .navbar-brand {
-    height: 65px;
-    max-width: 130px;
-    padding: 15px;
+		height: 65px;
+		max-width: 145px;
+		padding: 15px;
+		padding-right: 40px;
   }
 
-  .navbar-nav { }
+  .navbar-nav {
+  	border-left: 1px solid @border-color;
+  	padding-left: 40px;
+  }
 
   .navbar-nav>li>a {
     line-height: 35px;
-    padding: 15px 40px;
     font-size: 0.9em;
     font-weight: 500;
+    color: #B1BEC4;
+    font-weight: 500;
+
+    &.create {
+    	color: @brand-primary;
+    	font-weight: 700;
+    }
+
+    &:hover, &:focus, &:active {
+    	cursor: pointer;
+    	background: none;
+    	color: darken(@brand-primary, 30%);
+    }
   }
 
   .navbar-toggle { margin-top: 14px; }
@@ -161,7 +177,7 @@ a {
   // Words
   .slogan {
     font-size: 2.8em;
-    @media @sm { font-size: 5.3em; }
+    @media @sm { font-size: 4.5em; }
     margin-top: 80px;
     margin-bottom: 40px;
     color: #fff;
@@ -207,6 +223,22 @@ a {
 	margin-bottom: 30px;
 }
 
+// Skin elements
+.card.cat-a {
+	.badge        { background-color: @cat-a; }
+	.progress-bar { background-color: @cat-a; }
+}
+
+.card.cat-b {
+	.badge        { background-color: @cat-b; }
+	.progress-bar { background-color: @cat-b; }
+}
+
+.card.cat-c {
+	.badge        { background-color: @cat-c; }
+	.progress-bar { background-color: @cat-c; }
+}
+
 
 // Card header
 .card-header {
@@ -219,11 +251,6 @@ a {
 		margin-bottom: -40px;
 		padding: 15px 20px;
 		font-size: 36px;
-
-		// Category styles
-		&.cat-a { background-color: @cat-a; }
-		&.cat-b { background-color: @cat-b; }
-		&.cat-c { background-color: @cat-c; }
 	}
 
 	.status {
@@ -315,10 +342,10 @@ a {
 		&:last-child { border-right: none; }
 
 		// Hover
-		@hover-bg: #EEEEEE;
+		@hover-bg: #90A4AD;
 		&:hover, &:focus, &:active {
 			cursor: pointer;
-			background: @brand-action;
+			background: @hover-bg;
 			text-decoration: none;
 			color: #fff;
 		}
@@ -337,17 +364,88 @@ a {
 }
 
 .card-footer {
-	padding-top: 15px;
+	padding-top: 10px;
 	font-weight: 500;
 	font-size: 0.75em;
 	color: #B1BEC4;
 	margin: 0;
+
+	.progress {
+		border-radius: 20px;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		height: 15px;
+	}
 
 	.percent {
 		font-weight: 700;
 		color: darken(#B1BEC4,50%);
 		margin-right: 2px;
 	}
+}
+
+/*---------------------
+	Modal
+----------------------*/
+// Background modal color
+.modal-backdrop { background-color: #fff; }
+.modal-backdrop.in {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+// Modal brand and close
+.modal-brand {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20px;
+	max-width: @screen-lg-min;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	.logo {
+		max-width: 80px;
+		padding: 15px 0;
+	}
+}
+
+// Close 'x'
+.modal .close {
+	font-size: 50px;
+	font-weight: 100;
+}
+
+
+// Modal header text
+.modal-header {
+	border: none;
+	padding-bottom: 0;
+
+	.heading {
+		font-size: 1.5em;
+		@media @sm { font-size: 1.7em; }
+		margin-bottom: 15px;
+	}
+}
+
+// Modal for additional contents
+.modal-full {
+	margin: 100px auto;
+	max-width: 480px;
+
+	.modal-body { padding-top: 0; }
+	.modal-content {
+		box-shadow: none;
+		border: none;
+	}
+}
+
+// Footer content for modals
+.modal-footer {
+	border: none;
+	padding: 5px 15px;
+	text-align: left;
 }
 
 
