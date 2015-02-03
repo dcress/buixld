@@ -23,14 +23,18 @@
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom -->
 	<link href="css/min/main.min.css" rel="stylesheet" type="text/css" media="screen">
-	
+
 	<!-- Typekit -->
 	<script src="//use.typekit.net/soa3cfv.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
+	<!-- Load svg plugin -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/effect1.css" />
+
+	<!-- Icon font -->
+	<link href="https://fontastic.s3.amazonaws.com/5jcggHNj5ezH6KbcFKyevF/icons.css" rel="stylesheet">
 
 	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -82,27 +86,26 @@
 			</div>
 		</section> <!-- /navigation -->
 
-		<div class="video-wrap">
+		<section class="video-wrap">
 			<div class="video-content">
 				<div class="container">
 					<h1 class="slogan">It's your ideas that<br /> shape the world</h1>
 					<button class="btn block-center btn-primary">I have an idea!</button>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Home video -->
-		<div class="video-absolute">
+		<section class="video-absolute">
 			<video autoplay="true" height="100%" loop="loop" onended="this.play()">
 				<source src="https://d3mlfyygrfdi2i.cloudfront.net/a144/hploop_0204.mp4" type="video/mp4">
 				<source src="https://d3mlfyygrfdi2i.cloudfront.net/90da/hploop_0204.webm" type="video/webm">
 				<img src="https://d3mlfyygrfdi2i.cloudfront.net/9d45/hploop_0204.jpg">
 				You need an HTML5 enabled browser to view this video.
 			</video>
-		</div>
+		</section>
 
-		<div id="ip-container" class="ip-container">
-			
+		<section id="ip-container" class="ip-container">
 			<!-- initial header -->
 			<header class="ip-header">
 				<h1 class="ip-logo">
@@ -133,7 +136,7 @@
 						<g>
 							<path d="M58.9,35.2h-4.1c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4h4.1c1.3,0,2.4,1.1,2.4,2.4C61.4,34.1,60.3,35.2,58.9,35.2z
 								"></path>
-						</g> 
+						</g>
 					</svg>
 				</h1>
 				<div class="ip-loader">
@@ -142,17 +145,141 @@
 						<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
 					</svg>
 				</div>
-
-
-
 			</header>
 
 			<!-- main content -->
 			<div class="ip-main">
-				<h2>Hello.</h2>
+
+				<!-- Featired Ideas -->
+				<section id="featured">
+					<div class="container">
+
+						<header class="text-center">
+							<h2 class="heading"></h2>
+						</header>
+
+						<div class="row">
+
+							<!-- Card -->
+							<div class="col-sm-4">
+								<div class="card">
+									<div class="card-header">
+										<div class="badge cat-a">
+											<i data-icon="a"></i>
+										</div>
+										<div class="status">
+											<span>In Action</span>
+										</div>
+									</div>
+									<div class="card-body">
+										<span class="card-cat">Quality and Safety</span>
+										<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+										<div class="user-info">
+											<img class="user-img" src="img/user-img.png"/>
+											<span class="user-name">Penelope Rothkowitz</span>
+											<span class="user-date">October 28, 2014</span>
+										</div>
+									</div>
+									<div class="card-action">
+										<a class="like">
+											<i data-icon="g"></i>
+										</a>
+										<a class="comments">
+											<span>43 comments</span>
+										</a>
+										<a class="views">
+											<span>187 views</span>
+										</a>
+									</div>
+									<div class="card-footer">
+										<p><span class="percent">28%</span> backed</p>
+									</div>
+								</div>
+							</div> <!-- /card -->
+
+							<!-- Card -->
+							<div class="col-sm-4">
+								<div class="card">
+									<div class="card-header">
+										<div class="badge cat-b">
+											<i data-icon="b"></i>
+										</div>
+										<div class="status">
+											<span>In Action</span>
+										</div>
+									</div>
+									<div class="card-body">
+										<span class="card-cat">Quality and Safety</span>
+										<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+										<div class="user-info">
+											<img class="user-img" src="img/user-img.png"/>
+											<span class="user-name">Penelope Rothkowitz</span>
+											<span class="user-date">October 28, 2014</span>
+										</div>
+									</div>
+									<div class="card-action">
+										<a class="like">
+											<i data-icon="g"></i>
+										</a>
+										<a class="comments">
+											<span>43 comments</span>
+										</a>
+										<a class="views">
+											<span>187 views</span>
+										</a>
+									</div>
+									<div class="card-footer">
+										<p><span class="percent">28%</span> backed</p>
+									</div>
+								</div>
+							</div> <!-- /card -->
+
+							<!-- Card -->
+							<div class="col-sm-4">
+								<div class="card">
+									<div class="card-header">
+										<div class="badge cat-c">
+											<i data-icon="c"></i>
+										</div>
+										<div class="status">
+											<span>In Action</span>
+										</div>
+									</div>
+									<div class="card-body">
+										<span class="card-cat">Quality and Safety</span>
+										<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+										<div class="user-info">
+											<img class="user-img" src="img/user-img.png"/>
+											<span class="user-name">Penelope Rothkowitz</span>
+											<span class="user-date">October 28, 2014</span>
+										</div>
+									</div>
+									<div class="card-action">
+										<a class="like">
+											<i data-icon="g"></i>
+										</a>
+										<a class="comments">
+											<span>43 comments</span>
+										</a>
+										<a class="views">
+											<span>187 views</span>
+										</a>
+									</div>
+									<div class="card-footer">
+										<p><span class="percent">28%</span> backed</p>
+									</div>
+								</div>
+							</div> <!-- /card -->
+
+
+						</div>
+
+					</div>
+				</section><!-- /featured -->
+
 			</div>
 
-		</div> <!-- /ip-container -->
+		</section> <!-- /ip-container -->
 
 		<!-- Footer -->
 		<footer>

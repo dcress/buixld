@@ -20,6 +20,7 @@
 // Brand
 @brand-primary: #29ABE2;
 @brand-secondary: teal;
+@brand-action: #4CB3E2;
 
 // Screen sizes
 @screen-sm-min: 768px;
@@ -40,6 +41,15 @@
 
 // Border
 @border-color: #e7e7e7;
+
+
+// Category
+@cat-a: #9CCD6B;
+@cat-b: #F06D42;
+@cat-c: @brand-primary;
+@cat-d:;
+@cat-e:;
+@cat-f:;
 
 
 /*---------------------
@@ -122,6 +132,11 @@ a {
 
 }
 
+
+/*---------------------
+  Video
+----------------------*/
+// Main hero wrapper
 .video-wrap {
   display: table;
   height: 100%;
@@ -129,17 +144,21 @@ a {
   overflow-x: hidden;
   overflow-y: hidden;
 
+  // Mobile do not show vid
   background-image: url('../../img/bg-man.jpg');
   background-repeat: no-repeat;
   background-position: 47% 20px;
   background-size: cover;
+  // Hide image on large screen for vid
   @media @md { background-image: none; }
 }
 
+// Vertically center content
 .video-content {
   display: table-cell;
   vertical-align: middle;
 
+  // Words
   .slogan {
     font-size: 2.8em;
     @media @sm { font-size: 5.3em; }
@@ -150,6 +169,8 @@ a {
     text-align: center;
   }
 }
+
+// Video hero
 .video-absolute {
   height: 100%;
   width: 100%;
@@ -158,3 +179,197 @@ a {
   z-index: -1;
   overflow: hidden;
 }
+
+
+/*---------------------
+  Card
+----------------------*/
+#featured {.section-padding;}
+
+// Card Helpers
+@card-padding: 30px;
+
+.card-flush-hor() {
+	margin-left: -@card-padding;
+	margin-right: -@card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+}
+
+// Card base
+.card {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	padding-top: @card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+}
+
+
+// Card header
+.card-header {
+	border-bottom: 1px solid @border-color;
+	.card-flush-hor();
+
+	// Idea image
+	.badge {
+		border-radius: 5px;
+		margin-bottom: -40px;
+		padding: 15px 20px;
+		font-size: 36px;
+
+		// Category styles
+		&.cat-a { background-color: @cat-a; }
+		&.cat-b { background-color: @cat-b; }
+		&.cat-c { background-color: @cat-c; }
+	}
+
+	.status {
+		float: right;
+		border-radius: 20px;
+		background: @brand-action;
+		padding: 0 12px;
+
+		font-size: 0.70em;
+		font-weight: 500;
+		line-height: 1.5em;
+		color: #fff;
+	}
+}
+
+
+// Card body
+.card-body {
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	// Catergory
+	.card-cat {
+		font-size: 1.08em;
+		font-weight: 500;
+		color: #A1B2BA;
+	}
+
+	// Title of Idea
+	.card-title {
+		font-size: 1.3em;
+		font-weight: 300;
+		color: #394950;
+		margin-top: 7px;
+		margin-bottom: 20px;
+	}
+}
+
+// Card user info
+.card-body .user-info {
+
+	.user-img {
+		max-width: 30px;
+		margin-right: 5px;
+	}
+
+	.user-name {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: #B1BEC4;
+		margin-right: 5px;
+	}
+
+	.user-date {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: lighten(#B1BEC4, 15%);
+	}
+
+}
+
+// Action itesm in card
+.card-action {
+	border-top: 1px solid @border-color;
+	border-bottom: 1px solid @border-color;
+	// Make border flush
+	.card-flush-hor();
+	.clearfix();
+	// Remove extra padding
+	padding: 0;
+
+	a {
+		// Display
+		float: left;
+
+		// Widths
+		&:nth-child(1) { width: 25.3%; }
+		&:nth-child(2) { width: 44.3%; }
+		&:nth-child(3) { width: 30.3%; }
+
+		// Format
+		padding: 15px;
+		text-align: center;
+		font-size: 0.8em;
+		color: #999;
+
+		// Hooplah
+		border-right: 1px solid @border-color;
+		&:last-child { border-right: none; }
+
+		// Hover
+		@hover-bg: #EEEEEE;
+		&:hover, &:focus, &:active {
+			cursor: pointer;
+			background: @brand-action;
+			text-decoration: none;
+			color: #fff;
+		}
+
+	} // a
+
+	// Like icon
+	.like {
+		padding: 15px 15px 10px;
+		font-size: 24px;
+	}
+
+	.comments {}
+
+	.views {}
+}
+
+.card-footer {
+	padding-top: 15px;
+	font-weight: 500;
+	font-size: 0.75em;
+	color: #B1BEC4;
+	margin: 0;
+
+	.percent {
+		font-weight: 700;
+		color: darken(#B1BEC4,50%);
+		margin-right: 2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

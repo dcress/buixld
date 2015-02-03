@@ -4645,6 +4645,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/badge.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4704,
+		"inputAbbreviatedPath": "\/img\/badge.png",
+		"outputAbbreviatedPath": "\/img\/badge.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg-computer.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -4730,6 +4741,17 @@
 		"initialSize": 15004,
 		"inputAbbreviatedPath": "\/img\/relatedposts\/HeaderEffects.jpg",
 		"outputAbbreviatedPath": "\/img\/relatedposts\/HeaderEffects.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/user-img.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73206,
+		"inputAbbreviatedPath": "\/img\/user-img.png",
+		"outputAbbreviatedPath": "\/img\/user-img.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4985,6 +5007,17 @@
 		"initialSize": 148593,
 		"inputAbbreviatedPath": "\/Screenshot+2015-01-30+16.03.38(2).png",
 		"outputAbbreviatedPath": "\/Screenshot+2015-01-30+16.03.38(2).png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/Screenshot+2015-02-02+12.11.09.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22427,
+		"inputAbbreviatedPath": "\/Screenshot+2015-02-02+12.11.09.png",
+		"outputAbbreviatedPath": "\/Screenshot+2015-02-02+12.11.09.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
