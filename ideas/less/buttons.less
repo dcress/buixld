@@ -1,0 +1,58 @@
+/*---------------------
+	Buttons
+----------------------*/
+.btn {
+	font-size: 1.2em;
+  padding: 17px 45px;
+  border-radius: 2px;
+  letter-spacing: initial;
+
+  .transition(.3s); 
+
+  // Query
+  @media @sm { font-size: 1.125em }
+  @media @xl { font-size: 1em; }
+
+}
+
+// When multiple buttons stacked
+.btn-stack {
+	.btn { margin-bottom: 15px;}
+}
+
+// Size on container
+.btn-full { width: 100%; }
+
+// Primary buttpon
+.btn-primary {
+	background-color: @brand-primary;
+	border-color: transparent;
+
+	&:hover, &:active, &:focus {
+		background-color: darken(@brand-primary, 25%);
+		border-color: darken(@brand-primary, 25%);
+	}
+}
+
+.btn-blank {
+	background-color: transparent;
+	border-color: none;
+
+	&:hover, &:active, &:focus {
+		background-color: transparent;	
+	}
+}
+
+// Border white button
+.btn-border-white {
+	background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+	&:hover, &:active, &:focus {
+    color: #333;
+    border-color: #fff;
+    background-color: #fff;
+  }
+}
+

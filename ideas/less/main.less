@@ -1,0 +1,375 @@
+/*
+	* Title: HCA Innovations
+	* Created: January 30, 2015
+	*
+	* Author: Eric Motil / Dan Cress
+	* Description: HCA Innovation website
+	* Version: v1.0
+  *
+*/
+
+
+// Imports
+@import '../bower_components/bootstrap/less/variables.less';
+@import '../bower_components/bootstrap/less/mixins.less';
+
+@import 'reset.less';
+@import 'helpers.less';
+@import 'buttons.less';
+
+// Brand
+@brand-primary: #29ABE2;
+@brand-secondary: teal;
+@brand-action: #4CB3E2;
+
+// Screen sizes
+@screen-sm-min: 768px;
+@screen-md-min: 960px;
+@screen-lg-min: 1200px;
+@screen-xl-min: 1400px;
+
+// Typography
+@font-family-sans-serif:  "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+@font-family-serif:       "lexia", "Lexia", "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@font-heading-color:      lighten(@brand-secondary, 5%);
+
+// Body basics
+@body-bg-color:   #fff;
+@body-font-color: black;
+
+// Border
+@border-color: #e7e7e7;
+
+
+// Category
+@cat-a: #9CCD6B;
+@cat-b: #F06D42;
+@cat-c: @brand-primary;
+@cat-d:;
+@cat-e:;
+@cat-f:;
+
+
+/*---------------------
+	Main elements
+----------------------*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+	padding: 0;
+  background:  @body-bg-color;
+  color: @body-font-color;
+
+  font-family: @font-family-base;
+  font-size: 14px;
+  line-height: 24px;
+
+  // Font size changes
+  @media @sm { font-size: 16px; }
+  @media @xl { font-size: 18px; }
+}
+
+// Max width of parent
+img { max-width: 100%; }
+
+
+/*---------------------
+	Typography
+----------------------*/
+h1, h2, h3, h4, h5, h6 { color: @font-heading-color; }
+
+a {
+  .transition(.2s);
+  color: @brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(@brand-primary, 25%);
+    pointer: default;
+  }
+}
+
+
+/*---------------------
+  Navigation
+----------------------*/
+.navbar-ideas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fff;
+
+  .navbar-brand {
+    height: 65px;
+    max-width: 130px;
+    padding: 15px;
+  }
+
+  .navbar-nav { }
+
+  .navbar-nav>li>a {
+    line-height: 35px;
+    padding: 15px 40px;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .navbar-toggle { margin-top: 14px; }
+  .navbar-toggle .icon-bar { background: @brand-primary; }
+
+}
+
+
+/*---------------------
+  Video
+----------------------*/
+// Main hero wrapper
+.video-wrap {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  // Mobile do not show vid
+  background-image: url('../../img/bg-man.jpg');
+  background-repeat: no-repeat;
+  background-position: 47% 20px;
+  background-size: cover;
+  // Hide image on large screen for vid
+  @media @md { background-image: none; }
+}
+
+// Vertically center content
+.video-content {
+  display: table-cell;
+  vertical-align: middle;
+
+  // Words
+  .slogan {
+    font-size: 2.8em;
+    @media @sm { font-size: 5.3em; }
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+  }
+}
+
+// Video hero
+.video-absolute {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+/*---------------------
+  Card
+----------------------*/
+#featured {.section-padding;}
+
+// Card Helpers
+@card-padding: 30px;
+
+.card-flush-hor() {
+	margin-left: -@card-padding;
+	margin-right: -@card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+}
+
+// Card base
+.card {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	padding-top: @card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+}
+
+
+// Card header
+.card-header {
+	border-bottom: 1px solid @border-color;
+	.card-flush-hor();
+
+	// Idea image
+	.badge {
+		border-radius: 5px;
+		margin-bottom: -40px;
+		padding: 15px 20px;
+		font-size: 36px;
+
+		// Category styles
+		&.cat-a { background-color: @cat-a; }
+		&.cat-b { background-color: @cat-b; }
+		&.cat-c { background-color: @cat-c; }
+	}
+
+	.status {
+		float: right;
+		border-radius: 20px;
+		background: @brand-action;
+		padding: 0 12px;
+
+		font-size: 0.70em;
+		font-weight: 500;
+		line-height: 1.5em;
+		color: #fff;
+	}
+}
+
+
+// Card body
+.card-body {
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	// Catergory
+	.card-cat {
+		font-size: 1.08em;
+		font-weight: 500;
+		color: #A1B2BA;
+	}
+
+	// Title of Idea
+	.card-title {
+		font-size: 1.3em;
+		font-weight: 300;
+		color: #394950;
+		margin-top: 7px;
+		margin-bottom: 20px;
+	}
+}
+
+// Card user info
+.card-body .user-info {
+
+	.user-img {
+		max-width: 30px;
+		margin-right: 5px;
+	}
+
+	.user-name {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: #B1BEC4;
+		margin-right: 5px;
+	}
+
+	.user-date {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: lighten(#B1BEC4, 15%);
+	}
+
+}
+
+// Action itesm in card
+.card-action {
+	border-top: 1px solid @border-color;
+	border-bottom: 1px solid @border-color;
+	// Make border flush
+	.card-flush-hor();
+	.clearfix();
+	// Remove extra padding
+	padding: 0;
+
+	a {
+		// Display
+		float: left;
+
+		// Widths
+		&:nth-child(1) { width: 25.3%; }
+		&:nth-child(2) { width: 44.3%; }
+		&:nth-child(3) { width: 30.3%; }
+
+		// Format
+		padding: 15px;
+		text-align: center;
+		font-size: 0.8em;
+		color: #999;
+
+		// Hooplah
+		border-right: 1px solid @border-color;
+		&:last-child { border-right: none; }
+
+		// Hover
+		@hover-bg: #EEEEEE;
+		&:hover, &:focus, &:active {
+			cursor: pointer;
+			background: @brand-action;
+			text-decoration: none;
+			color: #fff;
+		}
+
+	} // a
+
+	// Like icon
+	.like {
+		padding: 15px 15px 10px;
+		font-size: 24px;
+	}
+
+	.comments {}
+
+	.views {}
+}
+
+.card-footer {
+	padding-top: 15px;
+	font-weight: 500;
+	font-size: 0.75em;
+	color: #B1BEC4;
+	margin: 0;
+
+	.percent {
+		font-weight: 700;
+		color: darken(#B1BEC4,50%);
+		margin-right: 2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
