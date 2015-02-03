@@ -183,7 +183,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #00999a;
+  color: #44575f;
 }
 a {
   -webkit-transition: 0.2s;
@@ -213,14 +213,30 @@ a:hover {
 }
 .navbar-ideas .navbar-brand {
   height: 65px;
-  max-width: 130px;
+  max-width: 145px;
   padding: 15px;
+  padding-right: 40px;
+}
+.navbar-ideas .navbar-nav {
+  border-left: 1px solid #e7e7e7;
+  padding-left: 40px;
 }
 .navbar-ideas .navbar-nav > li > a {
   line-height: 35px;
-  padding: 15px 40px;
   font-size: 0.9em;
+  color: #B1BEC4;
   font-weight: 500;
+}
+.navbar-ideas .navbar-nav > li > a.create {
+  color: #29abe2;
+  font-weight: 700;
+}
+.navbar-ideas .navbar-nav > li > a:hover,
+.navbar-ideas .navbar-nav > li > a:focus,
+.navbar-ideas .navbar-nav > li > a:active {
+  cursor: pointer;
+  background: none;
+  color: #0e4b64;
 }
 .navbar-ideas .navbar-toggle {
   margin-top: 14px;
@@ -261,7 +277,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .video-content .slogan {
-    font-size: 5.3em;
+    font-size: 4.5em;
   }
 }
 .video-absolute {
@@ -288,6 +304,24 @@ a:hover {
   padding-bottom: 5px;
   margin-bottom: 30px;
 }
+.card.cat-a .badge {
+  background-color: #9ccd6b;
+}
+.card.cat-a .progress-bar {
+  background-color: #9ccd6b;
+}
+.card.cat-b .badge {
+  background-color: #f06d42;
+}
+.card.cat-b .progress-bar {
+  background-color: #f06d42;
+}
+.card.cat-c .badge {
+  background-color: #29abe2;
+}
+.card.cat-c .progress-bar {
+  background-color: #29abe2;
+}
 .card-header {
   border-bottom: 1px solid #e7e7e7;
   margin-left: -30px;
@@ -300,15 +334,6 @@ a:hover {
   margin-bottom: -40px;
   padding: 15px 20px;
   font-size: 36px;
-}
-.card-header .badge.cat-a {
-  background-color: #9ccd6b;
-}
-.card-header .badge.cat-b {
-  background-color: #f06d42;
-}
-.card-header .badge.cat-c {
-  background-color: #29abe2;
 }
 .card-header .status {
   float: right;
@@ -392,7 +417,7 @@ a:hover {
 .card-action a:focus,
 .card-action a:active {
   cursor: pointer;
-  background: #4cb3e2;
+  background: #90a4ad;
   text-decoration: none;
   color: #fff;
 }
@@ -401,14 +426,76 @@ a:hover {
   font-size: 24px;
 }
 .card-footer {
-  padding-top: 15px;
+  padding-top: 10px;
   font-weight: 500;
   font-size: 0.75em;
   color: #B1BEC4;
   margin: 0;
 }
+.card-footer .progress {
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  height: 15px;
+}
 .card-footer .percent {
   font-weight: 700;
   color: #333e43;
   margin-right: 2px;
+}
+/*---------------------
+	Modal
+----------------------*/
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.modal-brand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.modal-brand .logo {
+  max-width: 80px;
+  padding: 15px 0;
+}
+.modal .close {
+  font-size: 50px;
+  font-weight: 100;
+}
+.modal-header {
+  border: none;
+  padding-bottom: 0;
+}
+.modal-header .heading {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .modal-header .heading {
+    font-size: 1.7em;
+  }
+}
+.modal-full {
+  margin: 100px auto;
+  max-width: 480px;
+}
+.modal-full .modal-body {
+  padding-top: 0;
+}
+.modal-full .modal-content {
+  box-shadow: none;
+  border: none;
+}
+.modal-footer {
+  border: none;
+  padding: 5px 15px;
+  text-align: left;
 }
