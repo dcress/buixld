@@ -1,0 +1,58 @@
+footer {
+	
+	.footer-column {
+		width: 20%;
+		float: left;
+		margin: 0;
+		padding: 0 2%;
+		min-height: 50px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+
+		.icon-ideas {
+			text-align: center;
+			float: left;
+			width: 100%;
+			margin-top: -25px;
+
+			svg {
+				width: 50px;
+				height: 63px;
+
+				path {
+					fill: #01B2E4;
+				}
+			}
+		}
+		p {
+			font-size: .85em;
+			color: @heading-color-mid;
+		}
+		ul {
+			list-style: none;
+			margin: 10px 0 0;
+			padding: 0;
+
+			li {
+				float: left;
+				width: 100%;
+
+				a {
+					color: @body-font-color-light;
+					font-size: .85em;
+					padding: 2px 0;
+					float: left;
+
+					&:hover {
+						color: @brand-primary;
+					}
+				}
+			}
+		}
+	}
+}
