@@ -1,0 +1,240 @@
+
+<div class="container-sm ce-reg-form">
+
+<!-- multistep form -->
+<form id="msform">
+    <!-- progressbar -->
+
+    <!-- USE DATA TAGS FOR DOM HOOKS -->
+<!--     <ul id="progressbar">
+        <li class="active">Event Information</li>
+        <li >Your Information</li>
+        <li>Submit Registration</li>
+    </ul> -->
+
+    <div id="page-navigator" class="page-navigator clearfix">
+        <div class="content-inline">
+            <div class="page-options">
+                <div id="reg-one">
+                    <i class="fa fa-check-circle"></i>
+                </div>
+                <div id="reg-two">
+                    <i class="fa fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">EVENT INFORMATION</h2>
+
+        {% include ce-result-v2.html %}
+
+        <h2 class="fs-title">SESSIONS TO ATTEND FOR THIS EVENT</h2>
+
+        <div class="row">
+            <div class="col-sm-3">
+                {% include ce-little-calendar.html %}
+            </div>
+            <div class="col-sm-3">
+                {% include ce-little-calendar.html %}
+            </div>
+            <div class="col-sm-3">
+                {% include ce-little-calendar.html %}
+            </div>
+            <div class="col-sm-3">
+                {% include ce-little-calendar.html %}
+            </div>
+        </div>
+
+        <h2 class="fs-title">DESCRIPTION</h2>
+        <div class="ce-description-expanded">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, adipisci ullam possimus expedita mollitia reprehenderit sequi dolor eum vero cumque assumenda esse veritatis doloremque odit deserunt nobis praesentium. Suscipit, corrupti.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quae, fugiat, explicabo dolorum repudiandae eveniet delectus minima voluptates velit quis consectetur deserunt molestiae aliquid impedit praesentium. Consequatur, totam odio nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequuntur reprehenderit quos eaque distinctio quidem beatae recusandae eum veniam tenetur est rem cupiditate tempore asperiores in quibusdam ex architecto consequatur.</p>
+        </div>
+
+        <h2 class="fs-title">NOTES</h2>
+        <div id="ce-notes">
+            <p>We would appreciate your prompt attention to take the service monkey on the table top, with the encyclopedia on the shelf there is no reason to rain on a parade.</p>
+        </div>
+
+        <h2 class="fs-title">RELATED INFORMATION</h2>
+
+        <h4>ADD A GUEST</h4>
+        <div id="guestDiv">
+            <p>
+                <input type="text" id="guest" size="20" name="guest" class="form-control" value="" placeholder="Guest Name" />
+            </p>
+            <span class="add-guest"><a href="#" id="addGuest"> <i class="fa fa-plus-circle"></i> Add Another Guest</a></span>
+        </div>
+
+        <h4>PROVIDED INFORMATION</h4>
+
+        <div class="form-group row">
+            <div class="col-md-10 float-label">
+                <input type="text" class="form-control" id="firstName" placeholder="When is Your Due Date?">
+            </div>
+            <div class="col-md-10 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="firstName" placeholder="Is this your first pregnancy?">
+            </div>
+        </div>
+
+        <input type="button" name="fs-next" class="fs-next action-button btn btn-primary" value="Continue" />
+    </fieldset>
+    <fieldset>
+        <h2 class="fs-title">YOUR INFORMATION</h2>
+        <div class="form-group row">
+            <div class="col-md-10 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+            <div class="col-md-2 float-label">
+                <input type="text" class="form-control" id="midName" placeholder="Middle">
+            </div>
+            <div class="col-md-10 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+            <div class="col-md-2 float-label">
+                <input type="text" class="form-control" id="suffix" placeholder="Suffix">
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-exclamation-circle"></i>
+                <div id="date1" class="datefield">
+                    <input id="day" type="tel" maxlength="2" placeholder="DD"/>/
+                    <input id="month" type="tel" maxlength="2" placeholder="MM"/>/
+                    <input id="year" type="tel" maxlength="4" placeholder="YYYY"/>
+                </div>
+            </div>
+            <div class="col-md-2 float-label"><i class="fa fa-exclamation-circle"></i><input type="text" class="form-control" id="gender" placeholder="Gender">
+            </div>
+        </div>
+
+        <h2 class="fs-title">CONTACT INFORMATION</h2>
+        <div class="form-group row">
+
+            <div class="col-md-9 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="primaryPhone" placeholder="Primary Phone">
+            </div>
+
+            <div class="col-md-3">
+                <select name="phoneType" id="phoneType" class="form-control select-styled">
+                    <option value="">Phone Type</option>
+                    <option value="">Cell</option>
+                    <option value="">Home</option>
+                    <option value="">Work</option>
+                </select>
+            </div>
+
+            <div class="col-md-12 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="email" placeholder="Email">
+            </div>
+
+            <div class="col-md-12 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="confirmEmail" placeholder="Confirm Email">
+            </div>
+        </div>
+
+        <input type="checkbox" class="checkbox" name="notifyCheck" checked="checked">I want to be notified via email about events, seminars or services from [Facility].
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                <select name="phoneType" id="phoneType" class="form-control select-styled">
+                    <option value="">Contact Preference</option>
+                    <option value="">Email</option>
+                    <option value="">Phone</option>
+                </select>
+            </div>
+        </div>
+
+        <h2 class="fs-title">MAILING ADDRESS</h2>
+        <div class="form-group row">
+            <div class="col-md-12 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input type="text" class="form-control" id="address1" placeholder="Address 1">
+            </div>
+            <div class="col-md-12 float-label">
+                <input type="text" class="form-control" id="address2" placeholder="Address 2">
+            </div>
+            <div class="col-md-4 float-label">
+                <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+            <div class="col-md-2">
+                <select name="state" id="state" class="form-control select-styled">
+                    <option value="">State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="col-md-2 float-label">
+                <input type="text" pattern="[0-9]*" name="zip" id="zip" maxlength="5" required class="form-control" placeholder="Zip">
+            </div>
+        </div>
+
+
+        <input type="button" name="fs-previous" class="fs-previous action-button btn btn-primary" value="Previous" />
+        <input type="button" name="fs-next" class="fs-next action-button btn btn-primary" value="Next" />
+    </fieldset>
+    <fieldset>
+        <h2 class="fs-title">SUBMIT REGISTRATION</h2>
+        {% include ce-result-v2.html %}
+        <input type="button" name="fs-previous" class="fs-previous action-button btn btn-primary" value="Previous" />
+        <input type="submit" name="submit" class="submit action-button btn btn-primary" value="Submit" />
+    </fieldset>
+</form>
+</div>

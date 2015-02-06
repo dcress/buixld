@@ -1,0 +1,195 @@
+// Progress Bar
+
+// Wrapping element for progress bar
+// Color deinfed in entity branding
+.crm-progress-bar-container {
+    background-color: @brand-primary;
+    padding: 25px 0;
+    width: 100%;
+}
+
+.crm-progress-bar {
+	
+	// Remove shadow on BS3 button group
+	.btn:active, .btn.active { box-shadow: none; }
+	
+    // Shared styles for progress steps
+	#crm-progress-step-1,
+	#crm-progress-step-2,
+	#crm-progress-step-3 {
+		display: inline-block;
+		padding: 0;
+		
+		// Set the color of the inactive elements
+		span,
+		a {
+			color: #666;
+		}
+
+		.btn {
+			// Allows for seamless css arrow shape alignment
+			border: none;
+			
+			// Remove BS3 bullshit
+			.border-radius(0);
+			
+			// Size and shape
+			width: 100%;
+			padding: 16px 0;
+			
+			// Pointer-events disables click ability
+			pointer-events: none;
+        }
+
+        i {
+            font-size: 1.1em;
+            margin-right: 0.3em;
+        }
+    }
+
+    #crm-progress-step-1 {
+        width:30%;
+        z-index: 3;
+
+        .progress-step-rectangle {
+            background-color: #fff;
+        }
+
+        i {
+            color: @brand-success;
+        }
+
+    }
+    #crm-progress-step-2 {
+        margin-left: -10px;
+        width:37%;
+        z-index: 2;
+
+        .progress-step-rectangle {
+            background-color: #d5d5d5;
+        }
+    }
+
+    #crm-progress-step-3 {
+        // background-color: transparent;
+        background-color: #c4c4c4;
+        margin-left: -11px;
+        width: 32%;
+    }
+
+    // Arrows for the progress bar
+    #crm-progress-step-1 .btn:after,
+    #crm-progress-step-2 .btn:after {
+        border: solid transparent;
+        border-color: transparent;
+        border-width: 26px;
+        content: " ";
+        height: 0;
+        left: 100%;
+        margin-top: -26px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        width: 0;
+    }
+
+    // Color of arrows to match their respective rectangles
+    #crm-progress-step-1 .btn:after{
+        border-left-color: #fff;
+    }
+    #crm-progress-step-2 .btn:after{
+        border-left-color: #d5d5d5;
+    }
+
+    // Active states for form progression
+    #crm-progress-step-1 span.active {
+        background-color: #fff;
+        &:after {border-left-color: #fff;}
+
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+    #crm-progress-step-2 span.active {
+        background-color: #fff;
+        &:after {border-left-color: #fff;}
+
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+    #crm-progress-step-3 span.active {
+        background-color: #fff;
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+
+
+}
+
+
+
+//////////////
+// Alternate Progress bar
+//////////////
+
+/*progressbar*/
+// #progressbar {
+//     margin-bottom: 30px;
+//     overflow: hidden;
+//     /*CSS counters to number the steps*/
+//     counter-reset: step;
+// }
+// #progressbar li {
+//     list-style-type: none;
+//     text-transform: uppercase;
+//     font-size: 10px;
+//     width: 33.33%;
+//     float: left;
+//     position: relative;
+//     text-align: center;
+// }
+// #progressbar li:before {
+//     content: counter(step); //DOESN'T WORK IN IE
+//     counter-increment: step;
+//     width: 23px;
+//     line-height: 22px;
+//     display: block;
+//     font-size: 12px;
+//     border-radius: 26px;
+//     margin: 0 auto 0px auto;
+// }
+// /*progressbar connectors*/
+// #progressbar li:after {
+//     content: '';
+//     width: 100%;
+//     height: 2px;
+//     background: white;
+//     position: absolute;
+//     left: -50%;
+//     top: 9px;
+//     z-index: -1; /*put it behind the numbers*/
+// }
+// #progressbar li:first-child:after {
+//     /*connector not needed before the first step*/
+//     content: none;
+// }
+// /*marking active/completed steps green*/
+// /*The number of the step and the connector before it = green*/
+// #progressbar li.active:before,  #progressbar li.active:after{
+//     background: #27AE60;
+//     color: white;
+// }

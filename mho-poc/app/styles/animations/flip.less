@@ -1,0 +1,67 @@
+.flip-panel {
+-webkit-perspective: 600px;
+-moz-perspective: 600px;
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.flip-panel .front {
+z-index: 900;
+-webkit-transform: rotateX(0deg) rotateY(0deg);
+-moz-transform: rotateX(0deg) rotateY(0deg);
+transform: rotateX(0deg) rotateY(0deg);
+
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+
+/* -- transition is the magic sauce for animation -- */
+-webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+position: absolute;
+
+}
+
+.flip-panel.flip .front {
+z-index: 900;
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+.flip-panel .back {
+
+z-index: 800;
+
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+transform: rotateY(-179deg);
+
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+
+/* -- transition is the magic sauce for animation -- */
+-webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+position: absolute;
+
+}
+
+.flip-panel.flip .back {
+
+
+-webkit-transform: rotateX(0deg) rotateY(0deg);
+-moz-transform: rotateX(0deg) rotateY(0deg);
+transform: rotateX(0deg) rotateY(0deg);
+
+}

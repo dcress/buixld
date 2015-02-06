@@ -1,0 +1,75 @@
+<!--Physicians Card refactor attempt with rating stars-->
+	<div class="row result-wrap">
+
+		<!--col-2 is phys photo and rating stars-->
+		<div class="col-sm-2">
+			<img src="{{ page.base_url }}../img/profile-dr-jack-lg.jpg" class="phys-img img-circle" height="100">
+			<span class="star-rating">
+			  <input type="radio" name="rating" value="1"><i></i>
+			  <input type="radio" name="rating" value="2"><i></i>
+			  <input type="radio" name="rating" value="3"><i></i>
+			  <input type="radio" name="rating" value="4"><i></i>
+			  <input type="radio" name="rating" value="5"><i></i>
+			</span>
+			<span class="rate-caption">Avg. Rating</span>
+		</div>
+		<!--End Physicians Card ratings-->
+
+		<div class="col-sm-6">
+			<div class="center-mobile">
+				<h4 class="crm-title phys-name"><a href="#">Jack Trent, MD</a></h4>
+				<p class="crm-heading phys-specialty">Primary Care </p>
+			</div>
+
+				<!--Display this row on mobile-->
+				<div class="row phys-mobile">
+					<div class="col-xs-12 phys-detail">
+						<strong class="location-title">Location(s):</strong> 
+
+						<ul class="row mobile-location">
+							<li class="col-xs-7" id="location">
+								<a href="#">Centennial Medical</a>
+								<span class="hide-on-mobile">,</span>
+							</li>
+							<li class="col-xs-5" id="call-btn">
+								<button class="btn btn-primary call-btn" href="">
+									<i class="fa fa-phone call-icon"></i> 
+									<span class="call-word">Call</span>
+								</button>
+							</li>
+						</ul>
+
+						<ul class="row mobile-location">
+							<li class="col-xs-7" id="location">
+								<a href="#">Skyline Medical</a>
+								<span class="hide-on-mobile">,</span>
+							</li>
+							<li class="col-xs-5" id="call-btn">
+								<button class="btn btn-primary call-btn" href="">
+									<i class="fa fa-phone call-icon"></i> 
+									<span class="call-word">Call</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--End mobile only display-->
+
+
+			<!--Display only full width-->
+			<div class="phys-detail phys-full">
+				<p><strong>Location(s): </strong><a href="#">Centennial Medical Center</a>, <a href="#">Skyline Medical</a>
+				<p><strong>Insurance Accepted: </strong>Blue Cross Blue Shield, Cigna, Aetna</p>
+			</div>
+			<!--End display only full width-->
+
+		</div> <!--End col-sm-6 (name, specialty, detail) of main row-->
+
+		<!--Right side links for full width-->
+		<div class="col-sm-4 see-link">
+			<a class="hut-search-options-phys" data-toggle="tab" href="#hut-search-options-phys"><strong>&gt; Physicians:</strong> See all physicians(7)</a>
+		</div>
+		<!--End right side links for full width-->
+
+	</div> <!--End phys wrap-->
+	<hr>

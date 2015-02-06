@@ -1,0 +1,69 @@
+//
+// Recent Visits Appstack
+// ------------------
+
+.recent-visits-stack {
+
+    background-color: @gray-lightest;
+    text-align: center;
+    
+    h3 {
+        color: @hospital-primary;
+        padding-bottom: @padding-large-vertical;
+        text-transform: uppercase;
+    }
+    p {
+        color: @hospital-primary;
+        .small {
+            color: @brand-default;   
+        }
+    }
+
+    .recent-visits-stack-inner {
+        padding:@padding-large-vertical 0;
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            text-align: center;
+        }
+        li a:hover {
+            text-decoration: none;
+        }
+        img {
+            padding: @padding-base-vertical 0;
+        }
+        .cal-month {
+            background-color: @brand-default;
+            color: #FFF;
+            display: block;
+            font-size: @font-size-large;
+            margin: 0 auto;
+            padding: @padding-base-vertical 0;
+            text-transform: uppercase;
+            width: 75px;
+        }
+        .cal-date {
+            background-color: #FFF;
+            border-bottom: 3px solid @brand-primary;
+            color: #000;
+            display: block;
+            font-size: @font-size-h2;
+            margin: 0 auto @padding-large-vertical;
+            width: 75px;
+        }
+    }
+    // Small devices
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) { }
+
+    // Medium devices
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) { }
+
+    // Large devices
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) { }
+
+}

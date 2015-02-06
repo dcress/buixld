@@ -1,0 +1,40 @@
+//
+// Nav flyout
+//
+
+
+// Toggle butts
+.nav-flyout-toggles {
+	// Format
+	font-size: @crm-nav-icon-size;
+	margin: 0;
+}
+
+.nav-menu-toggle {
+	color: @crm-nav-icon-color;
+	line-height: @navbar-height;
+	
+	// Hover state of toggle
+	&:hover, &:focus {
+		color: darken(@crm-nav-icon-color, 20%);
+		text-decoration: none;
+	}
+}
+
+/* Small devices */
+@media (min-width: @screen-sm-min) {
+.nav-flyout-toggles {margin: 0 (@navbar-height / 2); }
+}
+
+// Displays both toggles on mobile
+.navbar-default .navbar-collapse { display: block; }
+
+
+// Display menu item toggles on mobile
+#mobile-menu-toggle { display: block; }
+
+// Hide on desktop
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+	#mobile-menu-toggle { display: none; }
+}

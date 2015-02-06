@@ -1,0 +1,86 @@
+// Buttons
+
+.btn-primary {
+    background-color: @hospital-primary;
+}
+
+.btn-primary-center {
+    margin:0px auto;
+}
+
+.btn-primary-100 {
+    width:100%;
+}
+
+.btn-primary-75 {
+    width:75%;
+}
+
+.btn-primary-50 {
+    width:50%;
+}
+
+.btn-primary-25 {
+    width:25%;
+}
+
+.btn-secondary {
+    color:#ffffff;
+    background-color: @hospital-secondary;
+}
+
+
+// FOR CENTERING BUTTONS
+// Button inline-block inside a text centered container
+.btn-center-wrap {
+    text-align: center;
+
+    .btn {
+        display: inline-block;
+    }
+}
+
+.btn-blank {
+    color: #666;
+    background-color: #fff;
+    border-color: #e7e7e7;
+}
+
+// For Upload Picture button
+/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+.change-image {
+    position: relative;
+    overflow: hidden;
+}
+/*Also*/
+.change-image input {
+    /*position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter:'alpha(opacity=0)';
+    font-size: 200px;*/
+    direction: ltr;
+    cursor: pointer;
+    margin:0 auto;
+}
+
+#back-to-new-account {
+    margin-top: 20px;
+}
+
+.additional-buttons {
+    .btn {
+        margin-top: 25px;
+    }
+
+    #resend-email {
+        background-color: @gray-button;
+        border: none;
+
+        &:hover, &:focus {
+            background-color: @gray-button-hover;
+        }
+    }
+}

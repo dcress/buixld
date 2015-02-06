@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lab Results Detail</title>
+        <meta name="description" content="">
+        <!-- To kick IE out of quirks mode so Respond.js works -->
+        <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../_bower_components/fontawesome/css/font-awesome.min.css" type='text/css'>
+
+<link rel="stylesheet" href="../_bower_components/pickadate/lib/themes/default.css" id="theme_base" type='text/css'>
+<link rel="stylesheet" href="../_bower_components/pickadate/lib/themes/default.date.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../_bower_components/pickadate/lib/themes/default.time.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../_bower_components/jquery-icheck/skins/square/grey.css">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="../styles/main.min.css" type='text/css'>
+
+<!-- IE CSS -->
+<!-- build:css(app) ../styles/ie.css -->
+ <!--[if IE]>
+   <link rel="stylesheet" type="text/css" href="../styles/ie.css"/>
+<![endif]-->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Respond JS for IE - DO NOT REMOVE -->
+<!-- To kick IE out of quirks mode so Respond.js works -->
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+
+<!-- contains html5shiv and selectivizr -->
+<!-- build:js(app) ../scripts/shims.js -->
+<!--[if IE]>
+<script src="../_bower_components/respond/dest/respond.min.js"></script>
+<script src="../_bower_components/selectivizr/selectivizr.js"></script>
+<script src="../_bower_components/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+        <!-- build:js(app) ../scripts/modernizr.js -->
+        <script src="../_bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+
+    <body id="cpp-default">
+        <div class="dash-container">
+            <div class="dash-clip">
+
+                <!-- Navigation -->
+                <!-- modals just here for demo purposes -->
+<div class="modal fade race-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Race</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>How is this different than Ethnicity? </h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Ham corned beef pig leberkas pork chop, turducken flank beef meatball ham hock t-bone cow hamburger filet mignon beef ribs. Biltong jerky doner, pastrami corned beef prosciutto swine jowl beef pork chop brisket hamburger pig meatloaf. Bacon tongue landjaeger salami ball tip pork loin bresaola meatloaf beef ribs porchetta capicola.</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thanks</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade clinical-vs-mh1-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Clinical Demographics vs. MyHealthOne Demographics</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>What's the difference? </h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Ham corned beef pig leberkas pork chop, turducken flank beef meatball ham hock t-bone cow hamburger filet mignon beef ribs. Biltong jerky doner, pastrami corned beef prosciutto swine jowl beef pork chop brisket hamburger pig meatloaf. Bacon tongue landjaeger salami ball tip pork loin bresaola meatloaf beef ribs porchetta capicola.</p>
+        <p>Ham corned beef pig leberkas pork chop, turducken flank beef meatball ham hock t-bone cow hamburger filet mignon beef ribs. Biltong jerky doner, pastrami corned beef prosciutto swine jowl beef pork chop brisket hamburger pig meatloaf.</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thanks</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade drug-detail-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Levofloxacin</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
+          <li><a href="#side-effects" role="tab" data-toggle="tab">Side Effects</a></li>
+          <li><a href="#notes" role="tab" data-toggle="tab">Notes</a></li>
+        </ul>
+
+        <!-- tab panes/content -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="description">
+            <p>Levofloxacin (trade names Levaquin (US), Tavanic (EU), and others) is a broad spectrum antibiotic of the fluoroquinolone drug class,[1] and the levo isomer of its predecessor ofloxacin. Its spectrum of activity includes most strains of bacterial pathogens responsible for respiratory, urinary tract, gastrointestinal, and abdominal infections, including Gram negative (Escherichia coli, Haemophilus influenzae, Klebsiella pneumoniae, Legionella pneumophila, Moraxella catarrhalis, Proteus mirabilis, and Pseudomonas aeruginosa), Gram positive (methicillin-sensitive but not methicillin-resistant Staphylococcus aureus, Streptococcus pneumoniae, Staphylococcus epidermidis, Enterococcus faecalis, and Streptococcus pyogenes), and atypical bacterial pathogens (Chlamydophila pneumoniae and Mycoplasma pneumoniae). Compared to earlier antibiotics of the fluoroquinoline class such as ciprofloxacin, levofloxacin exhibits greater activity toward Gram-(+) bacteria[2] but lesser activity toward Gram-(−) bacteria,[3] especially Pseudomonas aeruginosa. Levofloxacin and later generation fluoroquinolones are collectively referred to as "respiratory quinolones" to distinguish them from earlier fluoroquinolones which exhibited modest activity toward the important respiratory pathogen Streptococcus pneumoniae.</p>
+
+            <p>Levofloxacin and other fluoroquinolones are valued for their broad spectrum of activity, excellent tissue penetration, and for their availability in both oral and intravenous formulations.[5] Levafloxacin is used alone or in combination with other antibacterial drugs to treat certain bacterial infections including pneumonia,[6] urinary tract infections,[7][8] and abdominal infections.</p>
+
+            <p>Levofloxacin and other fluoroquinolones are generally well tolerated, but in rare instances have produced serious adverse reactions such as spontaneous tendon ruptures and irreversible peripheral neuropathy.[10] Tendon damage may manifest months after therapy had been completed. Levofloxacin may cause worsening of myasthenia gravis symptoms, including muscle weakness and breathing problems.</p>
+
+            <p>Levofloxacin (trade names Levaquin (US), Tavanic (EU), and others) is a broad spectrum antibiotic of the fluoroquinolone drug class,[1] and the levo isomer of its predecessor ofloxacin. Its spectrum of activity includes most strains of bacterial pathogens responsible for respiratory, urinary tract, gastrointestinal, and abdominal infections, including Gram negative (Escherichia coli, Haemophilus influenzae, Klebsiella pneumoniae, Legionella pneumophila, Moraxella catarrhalis, Proteus mirabilis, and Pseudomonas aeruginosa), Gram positive (methicillin-sensitive but not methicillin-resistant Staphylococcus aureus, Streptococcus pneumoniae, Staphylococcus epidermidis, Enterococcus faecalis, and Streptococcus pyogenes), and atypical bacterial pathogens (Chlamydophila pneumoniae and Mycoplasma pneumoniae). Compared to earlier antibiotics of the fluoroquinoline class such as ciprofloxacin, levofloxacin exhibits greater activity toward Gram-(+) bacteria[2] but lesser activity toward Gram-(−) bacteria,[3] especially Pseudomonas aeruginosa. Levofloxacin and later generation fluoroquinolones are collectively referred to as "respiratory quinolones" to distinguish them from earlier fluoroquinolones which exhibited modest activity toward the important respiratory pathogen Streptococcus pneumoniae.</p>
+
+            <p>Levofloxacin and other fluoroquinolones are valued for their broad spectrum of activity, excellent tissue penetration, and for their availability in both oral and intravenous formulations.[5] Levafloxacin is used alone or in combination with other antibacterial drugs to treat certain bacterial infections including pneumonia,[6] urinary tract infections,[7][8] and abdominal infections.</p>
+
+            <p>Levofloxacin and other fluoroquinolones are generally well tolerated, but in rare instances have produced serious adverse reactions such as spontaneous tendon ruptures and irreversible peripheral neuropathy.[10] Tendon damage may manifest months after therapy had been completed. Levofloxacin may cause worsening of myasthenia gravis symptoms, including muscle weakness and breathing problems.</p>
+
+          </div>
+
+          <div class="tab-pane" id="side-effects">
+            <p>Most adverse reactions are mild to moderate; however, sometimes serious adverse effects occur. There is some disagreement in the medical literature regarding whether and to what extent levofloxacin and other fluoroquinolones produce serious adverse effects more frequently than other broad spectrum antibacterial drugs.</p>
+
+            <p>In pooled results from 7537 patients exposed to levofloxcacin in 29 clinical trials, 4.3% discontinued treatment due to adverse drug reactions. The most common adverse reactions leading to discontinuation were gastrointestinal, including nausea, vomiting, and constipation. Overall, 7% of patients experienced nausea, 6% headache, 5% diarrhea, 4% insomnia, along with other adverse reactions experienced at lower rates.</p>
+
+            <p>Other less common but serious adverse effects have been observed both in clinical trials as well as in reviews of post-approval spontaneous adverse event reports. Prominent among these is the potential for tendon damage, including rupture of the Achilles tendon, which is the subject of a black box warning in the official prescribing informations for all fluoroquinolones in the United States. Injury, including tendon rupture, has been observed up to 6 months after cessation of treatment; the elderly, transplant patients, and those with a current or historical corticosteroid use are at elevated risk. A population-based study in the Netherlands estimated that between 1 and 15 fluoroquinolone-attributable tendon ruptures resulted from 318,000 fluoroquinoline prescriptions in 1996. A detailed overview of risk factors for fluoroquinolone-associated tendon rupture has been published; advanced age, concurrent treatment with corticosteroids, and higher doses of fluoroquinolone appear to be the most important risk factors. The U.S. label for levofloxacin also contains a black box warning for the exacerbation of the symptoms of the neurological disease myasthenia gravis.</p>
+
+            <p>Most adverse reactions are mild to moderate; however, sometimes serious adverse effects occur. There is some disagreement in the medical literature regarding whether and to what extent levofloxacin and other fluoroquinolones produce serious adverse effects more frequently than other broad spectrum antibacterial drugs.</p>
+
+            <p>In pooled results from 7537 patients exposed to levofloxcacin in 29 clinical trials, 4.3% discontinued treatment due to adverse drug reactions. The most common adverse reactions leading to discontinuation were gastrointestinal, including nausea, vomiting, and constipation. Overall, 7% of patients experienced nausea, 6% headache, 5% diarrhea, 4% insomnia, along with other adverse reactions experienced at lower rates.</p>
+
+            <p>Other less common but serious adverse effects have been observed both in clinical trials as well as in reviews of post-approval spontaneous adverse event reports. Prominent among these is the potential for tendon damage, including rupture of the Achilles tendon, which is the subject of a black box warning in the official prescribing informations for all fluoroquinolones in the United States. Injury, including tendon rupture, has been observed up to 6 months after cessation of treatment; the elderly, transplant patients, and those with a current or historical corticosteroid use are at elevated risk. A population-based study in the Netherlands estimated that between 1 and 15 fluoroquinolone-attributable tendon ruptures resulted from 318,000 fluoroquinoline prescriptions in 1996. A detailed overview of risk factors for fluoroquinolone-associated tendon rupture has been published; advanced age, concurrent treatment with corticosteroids, and higher doses of fluoroquinolone appear to be the most important risk factors. The U.S. label for levofloxacin also contains a black box warning for the exacerbation of the symptoms of the neurological disease myasthenia gravis.</p>
+          </div>
+
+          <div class="tab-pane" id="notes">
+            <p>Levofloxacin is marketed by Sanofi-Aventis under the trade name "Tavanic" in Europe, Africa, the Middle East and South America, and by the Ortho-McNeil Pharmaceuticals subsidiary of Johnson and Johnson in the United States.</p>
+
+            <p>Levofloxacin was first patented in 1987 (Levofloxacin European patent by Daiichi Pharmaceutical Co., Ltd.) and was approved by the United States Food and Drug Administration on 20 December 1996 for use in the United States to treat bacterial sinusitus, bacterial exacerbations of bronchitis, community-acquired pneumonia, uncomplicated skin infections, complicated urinary tract infections, and acute pyelonephritis.</p>
+
+            <p>The term of the levofloxacin United States patent was extended by the U.S. Patent and Trademark Office under the provisions of the Hatch Waxman Amendment. Under the terms of Hatch-Waxman, the patent terms of pharmaceutical products that contain a novel active ingredient are extended by up to five years to compensate the developer for the patent life lost while performing clinical trials and other activities required to fulfill regulatory requirements. This extension was challenged by generic drug manufacturer Lupin Pharmaceuticals who argued that since levofloxacin is a single isomer of the previously approved antibacterial ofloxacin, it is not a "novel active ingredient" and thus ineligible for patent term extension. The federal patent court ruled in favor of Ortho McNeil, and generic versions of levofloxacin did not enter the U.S. market until 2009.</p>
+
+            <p>Levofloxacin is marketed by Sanofi-Aventis under the trade name "Tavanic" in Europe, Africa, the Middle East and South America, and by the Ortho-McNeil Pharmaceuticals subsidiary of Johnson and Johnson in the United States.</p>
+
+            <p>Levofloxacin was first patented in 1987 (Levofloxacin European patent by Daiichi Pharmaceutical Co., Ltd.) and was approved by the United States Food and Drug Administration on 20 December 1996 for use in the United States to treat bacterial sinusitus, bacterial exacerbations of bronchitis, community-acquired pneumonia, uncomplicated skin infections, complicated urinary tract infections, and acute pyelonephritis.</p>
+
+            <p>The term of the levofloxacin United States patent was extended by the U.S. Patent and Trademark Office under the provisions of the Hatch Waxman Amendment. Under the terms of Hatch-Waxman, the patent terms of pharmaceutical products that contain a novel active ingredient are extended by up to five years to compensate the developer for the patent life lost while performing clinical trials and other activities required to fulfill regulatory requirements. This extension was challenged by generic drug manufacturer Lupin Pharmaceuticals who argued that since levofloxacin is a single isomer of the previously approved antibacterial ofloxacin, it is not a "novel active ingredient" and thus ineligible for patent term extension. The federal patent court ruled in favor of Ortho McNeil, and generic versions of levofloxacin did not enter the U.S. market until 2009.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade summary-vs-transition-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Summary of Care vs. <br>Transition of Care</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-folder-open fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>What's the difference? </h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Ham corned beef pig leberkas pork chop, turducken flank beef meatball ham hock t-bone cow hamburger filet mignon beef ribs. Biltong jerky doner, pastrami corned beef prosciutto swine jowl beef pork chop brisket hamburger pig meatloaf. Bacon tongue landjaeger salami ball tip pork loin bresaola meatloaf beef ribs porchetta capicola.</p>
+        <p>Ham corned beef pig leberkas pork chop, turducken flank beef meatball ham hock t-bone cow hamburger filet mignon beef ribs. Biltong jerky doner, pastrami corned beef prosciutto swine jowl beef pork chop brisket hamburger pig meatloaf.</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thanks</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade print-summary-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Summary Of Care</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-folder-open fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>Suzy Jenkins</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>The following document includes portions of your medical record including all of your allergies, conditions, recent lab results, medications, and health visits.</p>
+        <p>Are you sure you want to print your health record?</p>
+        <button type="button" class="btn btn-gray" data-dismiss="modal">No Thanks</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-print"></i>Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade transmit-summary-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Summary Of Care</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-folder-open fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>Suzy Jenkins</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>The following document includes portions of your medical record including all of your allergies, conditions, recent lab results, medications, and health visits.</p>
+        <p>Are you sure you want to transmit your health record?</p>
+        <button type="button" class="btn btn-gray" data-dismiss="modal">No Thanks</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-share"></i>Transmit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade transmit-form-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="race-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="race-modal-label">Transmit Summary Of Care</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>Suzy Jenkins</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Enter the information for the provider to which you want to transmit your summary of care.</p>
+        <form role="form">
+          <div class="form-group">
+            <!-- <label for="exampleInputEmail1">Email Address</label> -->
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <i class="fa fa-book"></i>
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Confirm Email</label> -->
+            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Confirm email">
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Subject</label> -->
+            <input type="subject" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Add Message</label> -->
+            <textarea class="form-control" id="exampleInputPassword1" rows="10" placeholder="Add message"></textarea>
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Subject</label> -->
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Send CCD for patient">
+          </div>
+          <button type="button" class="btn btn-gray" data-dismiss="modal">No Thanks</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-share"></i>Transmit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade download-summary-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="download-summary-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="download-summary-modal-label">Summary Of Care</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-folder-open fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>Suzy Jenkins</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>The following document includes portions of your medical record including all of your allergies, conditions, recent lab results, medications, and health visits.</p>
+        <p>Are you sure you want to download your health record?</p>
+        <button type="button" class="btn btn-gray" data-dismiss="modal">No Thanks</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-download"></i>Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade confirm-emulate" id="remove-proxy" tabindex="-1" role="dialog" aria-labelledby="remove-proxy-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="remove-proxy-label">You have selected to act on behalf of <i>Daphne</i>.</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-2">
+            <img src="../img/profile-mom-lg.jpg" data-src="" width="100" height="100" class="img-circle img-responsive lazy" id="">
+            <h3>Suzy Jenkins (you)</h3>
+          </div>
+          <div class="col-sm-2">
+            <!-- <i class="fa fa-arrow-right fa-lg"></i> -->
+            <i class="fa fa-ellipsis-h fa-2x"></i>
+            <i class="fa fa-chevron-right fa-2x"></i>
+          </div>
+          <div class="col-sm-3">
+            <img src="../img/profile-daughter-lg.jpg" data-src="" width="100" height="100" class="img-circle img-responsive lazy" id="">
+            <h3>Daphne Jenkins</h3>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <h3>Are you sure you want to become a proxy for <i>Daphne Jenkins?</i></h3>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="../patient-emulate/">
+          <button type="button" class="btn btn-secondary emulate-borders">Confirm</button>
+        </a>
+      </div> 
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade confirm-de-emulate" id="remove-proxy" tabindex="-1" role="dialog" aria-labelledby="remove-proxy-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="remove-proxy-label">You are about to stop acting on behalf of <i>Daphne</i>.</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-2">
+            <img src="../img/profile-mom-lg.jpg" data-src="" width="100" height="100" class="img-circle img-responsive lazy" id="">
+            <h3>Suzy Jenkins (you)</h3>
+          </div>
+          <div class="col-sm-2">
+            <i class="fa fa-times fa-2x"></i>
+          </div>
+          <div class="col-sm-3">
+            <img src="../img/profile-daughter-lg.jpg" data-src="" width="100" height="100" class="img-circle img-responsive lazy" id="">
+            <h3>Daphne Jenkins</h3>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <h3>Are you sure you want to quit acting as a proxy for <i>Daphne Jenkins?</i></h3>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-secondary de-emulate-borders">Stop Proxy</button>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="modal fade account-created-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="account-created-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="account-created-modal-label">Account Created</h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i>
+            </span>
+            <div class="un-pw">
+              <h2>johnsmith12345 </h2>
+              <h2>batmandandrobim12345</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Here is the text for the person on the end of the phone.  The user will be prompted on longin to create and save a new password.</p>
+        <a href="../support-console/search/results">
+          <button type="button" class="btn btn-gray">OK</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade reset-password-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="reset-password-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="reset-password-modal-label">Password Reset</h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <div class="">
+              <h2>Please enter an email address below.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <label class="sr-only" for="userName" aria-hidden="true">Enter Email Address</label>
+          <input type="email" class="form-control required" id="userName" name="username" placeholder="johnjacobsmith@gmail.com" >
+        <a data-dismiss="modal">
+          <button type="button" class="btn btn-gray-light">Skip</button>
+        </a>
+        <a data-dismiss="modal" data-toggle="modal" data-target=".reset-password-modal2">
+          <button type="button" class="btn btn-gray">Submit</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade reset-password-modal2" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="reset-password-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="reset-password-modal-label">Password Reset</h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <div class="">
+              <h2>johnjacobsmith@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>An email was sent to the email address above and contains a link that will provide the user with instructions to reset their password.</p>
+        <a data-dismiss="modal" data-toggle="modal" data-target=".reset-password-modal3">
+          <button type="button" class="btn btn-gray">OK</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade reset-password-modal3" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="reset-password-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="reset-password-modal-label">Temporary Password</h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <div class="">
+              <h2>batmanandrobim12345</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>This is a temporary password. The user will be prompted on login to create and save a new password.</p>
+        <a data-dismiss="modal">
+          <button type="button" class="btn btn-gray">OK</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade reset-password-modal3" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="reset-password-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="reset-password-modal-label">Temporary Password</h1>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <div class="">
+              <h2>batmanandrobim12345</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>This is a temporary password. The user will be prompted on login to create and save a new password.</p>
+        <a data-dismiss="modal">
+          <button type="button" class="btn btn-gray">OK</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade healthcheck-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="healthcheck-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <span class="healthcheck-icon"><i class="fa fa-heartbeat"></i></span>
+        <h1 class="modal-title" id="healthcheck-modal-label">Healthcheck</h1>
+        <h2>System Status as of 8:34 AM CST, 2/2/2015</h2>
+      </div>
+      <div class="modal-body">
+        <!-- table here -->
+        <article class="container-md">
+          <div class="log-table table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                </thead>
+
+                <tbody>
+                   <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>CareLink</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle system-down" aria-hidden="true"></i>HPF</td>
+                    <td>System down due to weather in Boise, ID.</td>
+                    <td>Parallon</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Initiate</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Class &amp; Events</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Find a Doctor</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Websphere</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IBM</td>
+                    <td>Chicago</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle system-down" aria-hidden="true"></i>MHO</td>
+                    <td>RSA tokens are improperly functioning.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Secure Messaging</td>
+                    <td>There are no issues at this time.</td>
+                    <td>Note-2-Doc</td>
+                    <td>Boston</td>
+                    <td>9:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>DotCMS</td>
+                    <td>There are no issues at this time.</td>
+                    <td>IT&amp;S</td>
+                    <td>Nashville</td>
+                    <td>8:34AM CST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="fa fa-circle online" aria-hidden="true"></i>Example</td>
+                    <td>There are no issues at this time.</td>
+                    <td>Vendor</td>
+                    <td>Pasadena</td>
+                    <td>6:34AM PST</td>
+                    <td>02/02/2015</td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+          </div> <!--end log-table div-->
+        </article>
+
+      </div>
+      <div class="modal-footer">
+        <!-- <label class="sr-only" for="userName" aria-hidden="true">Enter Email Address</label>
+          <input type="email" class="form-control required" id="userName" name="username" placeholder="johnjacobsmith@gmail.com" >
+        <a data-dismiss="modal">
+          <button type="button" class="btn btn-gray-light">Skip</button>
+        </a>
+        <a data-dismiss="modal" data-toggle="modal" data-target=".reset-password-modal2">
+          <button type="button" class="btn btn-gray">Submit</button>
+        </a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- EMULATION BORDERS - Activated WHEN USER IS PROXYING FOR ANOTHER USER. these can be included anywhere on page. -->
+<!-- de-emulate user button -->
+  <button class="btn btn-warning btn-de-emulate" data-toggle="modal" data-target=".confirm-de-emulate">
+
+    De-emulate User<i class="fa fa-chevron-right"></i>
+
+    <span class="quit-delegating-user-info">
+      <img src="../img/profile-daughter-sm.jpg" class="img-circle" width="30" height="30"><i>Daphne Jenkins</i>
+    </span>
+
+  </button>
+
+  <div id="border-top"></div>
+  <div id="border-bottom"></div>
+  <div id="border-left"></div>
+  <div id="border-right"></div>
+<!-- END EMULATION BORDERS -->
+<!-- <button class="btn btn-warning sc-btn-de-emulate" data-toggle="modal" data-target=".confirm-de-emulate">
+
+  De-emulate User<i class="fa fa-chevron-right"></i>
+
+</button>
+
+<div id="border-top"></div>
+<div id="border-bottom"></div>
+<div id="border-left"></div>
+<div id="border-right"></div> -->
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navigation-main">
+    <div class="navbar-fixed-holder">
+
+            <!-- triggers the panel -->
+        <div id="mobile-menu-toggle" class="nav-menu-toggle pull-left material-design-hamburger" href="#">
+            <button class="material-design-hamburger__icon">
+              <span class="material-design-hamburger__layer material-design-hamburger__icon--from-arrow"></span>
+            </button>
+        </div>
+        <!-- MyHealthONE Logo -->
+        
+        <!-- <a class="navbar-brand pull-left" href="../home/"><img src="../img/mho-logo-sm-retina.png" alt="MyHealthONE logo" width="200" height="29"></a> -->
+        <!-- <button class="btn" data-toggle="modal" data-target="#default-modal">Modal Test</button> -->
+        
+        <div class="navbar-tools" id="tools">
+          
+            <div class="panel navbar-search">
+                <a data-toggle="" data-parent="#tools" href="#search-bar" class="tools-trigger">
+                    <i class="fa fa-search" id="nav-search-toggle" aria-hidden="true" alt="Search icon"></i>
+                </a>
+
+                <!-- OLD SEARCH DROPDOWN -->
+                <!-- <a data-toggle="collapse" data-parent="#tools" href="#search-bar" class="tools-trigger collapsed"><i class="fa fa-search" aria-hidden="true" alt="Search icon"></i></a> -->
+                <!-- <div id="search-box" class="arrow-box collapse">
+                    <form action="../search-results" method="get" role="form">
+                        <div class="form-group has-feedback">
+                            <div class="col-xs-12 col-sm-12">
+                                <input type="search" class="form-control search-box" placeholder="Search"><i class="fa fa-search form-control-feedback" aria-hidden="Search icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6 col-sm-6">
+                                <button type="submit" class="btn btn-default">Advanced Search</button>
+                            </div>
+                            <div class="col-xs-6 col-sm-6">
+                                <button type="submit" class="btn">Search</button><img src="" alt="" width="0" height="0" />
+                            </div>
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+
+
+
+            <div class="panel navbar-profile">
+                <!-- <i class="fa fa-user"></i> -->
+                <!-- DYNAMIC NEEDED HERE TO REPLACE IMAGE WHEN USER UPLOADS PROFILE PIC -->
+                <!--
+                <a href="../create-profile/" class="tools-trigger"><img src="../img/profile-default-sm.png" alt="Profile Default Icon image in top nav" width="35" class="img-circle profile-default-img"></a>
+                -->
+                <a data-toggle="collapse" data-parent="#tools" href="#profile" class="tools-trigger collapsed">
+                    <img src="../img/profile-mom-sm.jpg" alt="Profile Default Icon image in top nav" width="35" class="img-circle profile-default-img">
+                </a>
+
+                <div id="profile" class="collapse">
+                    <h4>Profile</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../patient/profile-summary/edit-profile"><i class="fa fa-pencil-square-o"></i><p>Edit Profile</p></a>
+                        </li>
+                        <li>
+                            <a href="../activity-log/">
+                                <i class="fa fa-random"></i>
+                                <p>Activity Log</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out"></i>
+                                <p>Sign Out</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="panel navbar-notifications">
+                <a data-toggle="collapse" data-parent="#tools" href="#notifications" class="tools-trigger collapsed">
+                    <i class="fa fa-bell-o" aria-hidden="true" alt="Notifications icon"></i>
+                </a>
+
+                <div id="notifications" class="collapse">
+
+                    <h4>Your information</h4>
+                    <a href="#" class="add-tools">
+                        <i class="fa fa-plus-circle"></i> Add
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../patient/profile-summary/">
+                                <span><img src="../img/profile-mom-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Your Profile</p>
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="../activity-log/">
+                                <i class="fa fa-random"></i>
+                                <p>Activity Log</p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h4>Care members</h4>
+                    <a href="#" class="add-tools"><i class="fa fa-plus-circle"></i> Add</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../patient/profile-summary/">
+                                <span><img src="../img/profile-dad-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Jim Smith<br><small>Husband</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../patient/profile-summary/">
+                                <span><img src="../img/profile-son-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Jim Smith, Jr.<br><small>Son</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../patient/profile-summary/">
+                                <span><img src="../img/profile-daughter-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Lucy Smith<br><small>Daughter</small></p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4>Care team</h4>
+                    <a href="#" class="add-tools"><i class="fa fa-plus-circle"></i> Add</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="../img/profile-dr-jack-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Jack Trent<br><small>Primary Care</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="../img/profile-dr-kim-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Kim Swan<br><small>Specialist</small></p>
+                            </a>
+                        </li>
+                        <!-- commented out so that the menu doens't drop down as far. -->
+                        <!-- <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="../img/profile-dr-jack2-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Jack Kinder<br><small>Specialist</small></p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h4>Settings</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fa fa-gear"></i><p>MyHealth<em>One</em> Settings</p></a></li>
+                        <li><a href="#"><i class="fa fa-times-circle"></i><p>Logout</p></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- menu panel -->
+<nav class="menu-slider menu-left vertical" id="mobile-menu">
+    <div class="menu-slider-holder">
+
+        <div class="menu-header">
+            <h3>
+                <a href="../home/">
+                    <img src="../img/mho-heart-logo-70px.png" alt="MyHealthONE logo" width="35">
+                    <img src="../img/mho-text-only-70px.png" alt="MyHealthONE logo" height="30" class="mho-curtain-text">
+                </a>
+            </h3>
+        </div>
+
+        <noindex>
+            <ul id="accordion" class="nav-vertical nav">
+                <li>
+                    <a href="/home"><i class="fa fa-home" aria-hidden="true" alt="Dashboard icon"></i>Home Dashboard</a>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseRecords" class="collapsed">
+                            <i class="fa fa-medkit" aria-hidden="true" alt="Health Records icon"></i>Health Information<i class="fa fa-chevron-down" aria-hidden="true" alt="Health Records submenu"></i>
+                        </a>
+                    </div>
+                    <div id="collapseRecords" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li>
+                                <a href="../clinical-info">
+                                    <i class="fa fa-user" aria-hidden="true" alt="Demographics icon"></i>Demographics
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../clinical-info"><i class="fa fa-clipboard" aria-hidden="true" alt="Problems List icon"></i>Problems List
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../clinical-info"><i class="fa fa-ban" aria-hidden="true" alt="Allergies icon"></i>Allergies
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../clinical-info"><i class="fa fa-signal" aria-hidden="true" alt="Vitals icon"></i>Vitals
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../clinical-info"><i class="fa fa-bar-chart-o" aria-hidden="true" alt="Conditions icon"></i>Conditions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../clinical-info"><i class="fa fa-user" aria-hidden="true" alt="Medications icon"></i>Medications
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li>
+                    <a href="../health-visits/"><i class="fa fa-hospital-o" aria-hidden="true" alt="Health Visits icon"></i>Health Visits
+                    </a>
+                </li>
+
+                <li class="sr-only">
+                    <a href="http://www.buixld.com/provider-directory"><i class="fa fa-calendar" aria-hidden="true" alt="Appointments icon"></i>Appointments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../lab-results/"><i class="fa fa-flask" aria-hidden="true" alt="Lab Results icon"></i>Lab Results
+                    </a>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseWellness" class="collapsed"><i class="fa fa-book" aria-hidden="true" alt="Wellness & Education icon"></i>
+                            Wellness &amp; Education<i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseWellness" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li><a href="../crm-classes-events"><i class="fa fa-calendar-o" aria-hidden="true" alt="Class and Events icon"></i>Classes &amp; Events</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseProxy " class="collapsed"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>
+                            Proxy <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseProxy" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li>
+                                <a href="../proxy/select-proxy/"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>Proxy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../proxy/"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>Proxy  Blank
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <!-- <li><a href="../crm-classes-events"><i class="fa fa-book" aria-hidden="true" alt="Wellness & Education icon"></i>Wellness &amp; Education</a></li> -->
+
+                <!--Temporary hidden menu-->
+                <li class="panel temp-links">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTemp" class="collapsed">
+                            Temporary Links<i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseTemp" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <!-- modals menu -->
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseModals" class="collapsed">
+                                        <i class="fa fa-list-alt" aria-hidden="true" alt=""></i>Modals<i class="fa fa-chevron-down" aria-hidden="true" alt="Health Records submenu"></i>
+                                    </a>
+                                </div>
+                                <div id="collapseModals" class="panel-collapse collapse">
+                                    <ul class="panel-inner submenu">
+                                        <li>
+                                            <a>
+                                                <button class="btn btn-info" data-toggle="modal" data-target=".online-pre-registration-modal">OPR</button>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- end modals -->
+                            <li><a href="/support-console"><i class="fa fa-desktop" aria-hidden="true" alt="Dashboard icon"></i>Support Console</a></li>
+                            <li><a href="/emails"><i class="fa fa-envelope-o" aria-hidden="true" alt="mail icon"></i>Preview Emails</a></li>
+                            <li><a href="../online-pre-registration/">OPR</a></li>
+                            <li><a href="../site-map/">SiteMap</a></li>
+                            <li><a href="../home">Consumer Home</a></li>
+                            <li><a href="../patient/">Patient Home</a></li>
+                            <li><a href="../enrollment/">Enrollment</a></li>
+                            <li><a href="../create-profile/">Create Profile</a></li>
+                            <li><a href="../patient/profile-summary/">Profile Summary</a></li>
+                            <li><a href="../patient/profile-summary/edit-profile/">Edit Profile</a></li>
+                            <li><a href="../patient/patient-registration/">Patient Registration</a></li>
+                            <li><a href="../crm-classes-events/">Classes &amp; Events</a></li>
+                            <li><a href="../lab-results/">Lab Results</a></li>
+                            <li><a href="../lab-results-detail/">Lab Results Detail</a></li>
+                            <li><a href="../activity-log/">Activity Log</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/Temporary hidden menu-->
+            </ul>
+        </noindex>
+    </div>
+</nav>
+
+ <!--HUT Search bar section-->
+<section id="search-bar" class="crm-search">
+  <div class="container-sm">
+    
+    <div class="row">
+      
+    <!-- Search form -->
+      <div class="col-sm-9" id="main-search-form">
+        <form action="../search-results" method="get" id="portal-search" role="form">
+          <div class="form-group">
+            <label class="sr-only">Screen Reader Only</label>
+            <input class="form-control"
+              placeholder="Search by doctor's name, specialty, etc." 
+              type="search" id="portal-search"
+              name="keywords" title="Search">
+            <i class="form-icon fa fa-search right"></i>
+          </div>
+        </form>
+      </div>
+      
+    <!-- Submit button -->
+      <div class="col-sm-3">
+        <div class="form-group">
+          <button class="btn btn-primary" id="portal-search-submit" ><!-- href="../search-results"> -->Search
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- centered advanced search button row -->
+    <!-- <div class="row">
+      <div class="col-sm-12">
+        <a class="btn-adv-search"
+           id="advanced-search-toggle-nav" 
+           data-toggle="" 
+           data-target="#advanced-search">+ Advanced Search</a>
+      </div>
+    </div> -->
+
+  </div> <!--end container for main search form-->
+
+    <!-- Advanced search options row -->
+<!--   <section class="advanced-search-wrap" id="advanced-search-wrap-nav">
+    <div class="container-sm" id="advanced-search">
+      
+      <div class="row">
+        
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="adv-search-label">Additional Search Options</label>
+            <input class="form-control"
+              placeholder="Enter terms separated by comma" 
+              type="search" id=""
+              name="keywords" title="Search"
+              data-friendly="Keyword Search"
+              data-required="true"
+              data-validation="none"
+              data-set="">
+          </div>
+          <div class="form-group">
+          <label class="adv-search-label">Additional Search Options</label>
+          <input class="form-control"
+            placeholder="Enter terms separated by comma" 
+            type="search" id=""
+            name="keywords" title="Search"
+            data-friendly="Keyword Search"
+            data-required="true"
+            data-validation="none"
+            data-set="">
+          </div>
+          <div class="form-group">
+          <label class="adv-search-label">Additional Search Options</label>
+          <input class="form-control"
+            placeholder="Enter terms separated by comma" 
+            type="search" id=""
+            name="keywords" title="Search"
+            data-friendly="Keyword Search"
+            data-required="true"
+            data-validation="none"
+            data-set="">
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="adv-search-label">Additional Search Options</label>
+            <input class="form-control"
+              placeholder="Enter terms separated by comma" 
+              type="search" id=""
+              name="keywords" title="Search"
+              data-friendly="Keyword Search"
+              data-required="true"
+              data-validation="none"
+              data-set="">
+          </div>
+          <div class="form-group">
+          <label class="adv-search-label">Additional Search Options</label>
+          <input class="form-control"
+            placeholder="Enter terms separated by comma" 
+            type="search" id=""
+            name="keywords" title="Search"
+            data-friendly="Keyword Search"
+            data-required="true"
+            data-validation="none"
+            data-set="">
+          </div>
+          <div class="form-group">
+          <label class="adv-search-label">Additional Search Options</label>
+          <input class="form-control"
+            placeholder="Enter terms separated by comma" 
+            type="search" id=""
+            name="keywords" title="Search"
+            data-friendly="Keyword Search"
+            data-required="true"
+            data-validation="none"
+            data-set="">
+          </div>
+        </div>
+      </div>-->
+
+      <!-- Submit button -->
+<!--       <div class="row">
+        <div class="col-sm-3 btn-centered">
+          <div class="form-group">
+            <a class="btn btn-primary width100" href="">Search</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section> -->
+  <!--end advanced search section-->
+</section> <!--End #hut-search search bar section
+
+
+                <!-- Page Banner - can contain success messages for profile creation, progress bar, imagery on home page... etc -->
+                <div id="page-banner">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-sm-12">
+      <img src="../img/header/tristar-logo-large.png" alt="tristart logo" width="300" class="center-block">
+      </div>
+    </div>
+  </div>
+</div>
+
+                <!-- Page H1 in grey bar -->
+                
+<h1 class="heading-bar">Lab Results Detail</h1>
+
+
+
+                <!-- Message for those with JS disabled -->
+                <noscript>
+                    <div class="container alert alert-danger">
+                        <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+                    </div>
+                </noscript>
+                <!-- End JS disabled message -->
+
+                <!-- Main content -->
+                <div id="content-main">
+                    <div id="lab-results-detail">
+  <section class="lab-results-detail-header">
+    <div class="container-md">
+
+      <div class="row">
+        <div class="col-sm-9">
+
+          <!--Header row - result type/summary button  -->
+
+              <span class="fa-stack fa-5x lr-detail-icon">
+                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                <i class="fa fa-flask fa-stack-1x fa-inverse" aria-hidden="true" alt="flask icon"></i>
+              </span>
+
+              <div class="detail-title">
+                <h1 class="">Emergency Room</h1>
+                <h2 class="">Throat Culture</h2>
+              </div>
+
+        </div>
+
+
+        <div class="col-sm-3 btn-summary-detail">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-primary-100 btn-summary dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              Summary of Care 
+              <i class="fa fa-chevron-down" aria-hidden="true" alt="Summary of Care"></i>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" data-toggle="modal" data-target=".download-summary-modal"><i class="fa fa-download" aria-hidden="true"></i> Download</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".transmit-summary-modal"><i class="fa fa-share-square-o" aria-hidden="true"></i> Transmit</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".print-summary-modal"><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li class="divider"></li>
+              <li><a href="../../activity-log">Activity Log</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- End "header" row - result type and summary button -->
+
+    </div>
+  </section>
+  <!-- End lab-results-detail header section -->
+
+
+  <section class="lab-results-detail-content">
+    <div class="container-md">
+
+      <!-- buttons -->
+      <div class="row btn-row">
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="" class="btn btn-white">
+            <span class="btn-left"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</span>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2 col-sm-offset-8">
+          <a href="" class="btn btn-white right">
+            <span class="btn-right">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+
+      </div>
+      <!-- end row of buttons -->
+
+      <!-- start content -->
+      <div class="row">
+
+        <!-- left side cards/content -->
+        <aside class="col-sm-4">
+          <div class="crm-holder content-wrap-white" id="profile-slide-up">
+
+  <!-- profile pic and name -->
+  <div class="row">
+    <div class="col-xs-12 side-card-head">
+      <img src="../img/profile-mom-lg.jpg" data-src="" width="130" height="130" class="img-circle img-responsive lazy" id="clickme">
+      <span>Suzy</span>
+      <span>Jenkins</span>
+    </div>
+  </div>
+  <!-- end profile pic and name -->
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-side">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            <span>Patient Demographics</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-side" class="collapse in">
+      <section class="personal-info-wrap">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h5 class="lr-h5">Personal Information</h5>
+          </div>
+        </div>
+
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+            <span>Ethnicity</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>Non-Hispanic</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-female fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Gender</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>Female</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-comment fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Language</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>English</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Race</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>Caucasian</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-gift fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Birth</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>04/01/1972</span>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h5 class="lr-h5">Social History</h5>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-info fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Smoke Status</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>Non-Smoker</span>
+          </div>
+        </div>
+
+
+      </section>
+      <!-- end personal info wrap -->
+      <div class="row clinical-vs-mh1-demo">
+        <div class="col-sm-12">
+          <button class="btn-link width100" data-toggle="modal" data-target=".clinical-vs-mh1-modal">
+            <h5>Clinical Demographics vs <br> MyHealthOne Demographics <i class="fa fa-question-circle"></i></h5>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+<!-- end side card wrap -->
+ 
+
+          <!-- access options side card -->
+  <section class="crm-holder access-options">
+    <div class="row">
+      <div class="col-xs-12">
+        <h5 class="lr-h5">Access Your Summary Of Care</h5>
+      </div>
+    </div>
+
+    <!-- icon row -->
+    <div class="row">
+
+      <div class="col-xs-4">
+        <a>
+          <button class="btn-link width100" data-toggle="modal" data-target=".print-summary-modal">
+            <i class="fa fa-print fa-2x" aria-hidden="true"></i>
+            <span>Print</span>
+          </button>
+        </a>
+      </div>
+
+      <div class="col-xs-4">
+        <a>
+          <button class="btn-link width100" data-toggle="modal" data-target=".download-summary-modal">
+            <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+            <span>Download</span>
+          </button>
+        </a>
+      </div>
+
+      <div class="col-xs-4">
+        <a>
+          <button class="btn-link width100" data-toggle="modal" data-target=".transmit-summary-modal">
+            <i class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
+            <span>Transmit</span>
+          </button>
+        </a>
+      </div>
+
+    </div>
+    <div class="row summary-vs-transition">
+      <div class="col-sm-12">
+        <button class="btn-link width100" data-toggle="modal" data-target=".summary-vs-transition-modal">Summary of Care vs <br> Transition of Care <i class="fa fa-question-circle"></i></button>
+      </div>
+    </div>
+
+  </section>
+  <!-- end access-options side card -->
+        </aside>
+
+
+
+        <!-- main content right side -->
+        <div class="col-sm-8">
+          <div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Facility Information</h3>
+    </div>
+  </div>
+
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-facility-one">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-hospital-o fa-lg" aria-hidden="true"></i>
+            <span>Location</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+  <div id="collapse-facility-one" class="collapse in">
+    <div class="row lr-detail-facility-info">
+      <div class="col-sm-7">
+        <div class="row">
+
+          <div class="col-sm-4">
+            <img src="../img/result-locations/facility-stonecrest-3.jpg" data-src="" width="80" height="80" class="img-circle img-responsive lazy">
+          </div>
+
+          <div class="col-xs-12 col-sm-8 lr-detail-facility-address">
+            <h4>Stonecrest Medical Center</h4>
+            <a href="">
+              <p>Stonecrest Medical Center</p>
+              <p>Suite 460</p>
+              <p>123 Address Road</p>
+              <p>Nashville, TN 37203</p>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-5">
+            <p class="lr-h5">Contact</p>
+            <span><a href="">Larry Jahns</a></span>
+
+            <p class="lr-h5">Medical Director</p>
+            <span class=""><a href="http://buixld.com/provider-directory/provider-detail/">John Smith, II</a></span>
+      </div>
+
+    </div>
+
+    <div class="row lr-detail-facility-info">
+      <div class="col-xs-12">
+        <img src="../img/rectangle-map.png" data-src="" width="" height="" class="img-responsive lazy">
+      </div>
+    </div>
+  </div>
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-facility-two">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-user-md fa-lg" aria-hidden="true"></i>
+            <span>Ordered By</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+
+
+    <!-- pd panel body -->
+    <div id="collapse-facility-two" class="collapse in">
+      <div class="row ordered-by">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Name</p>
+          <span><a href="http://buixld.com/provider-directory/provider-detail/">Terry Christison, MD</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Role</p>
+          <span><a href="http://buixld.com/provider-directory/provider-detail/">Primary Care Physician</a></span>
+        </div>
+
+      </div>
+      
+    </div>
+
+
+</div>
+
+          <div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Results for CBC/Auto Diff</h3>
+    </div>
+  </div>
+
+  <div id="accordion-cbc">
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-cbc">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            <span>Specimen Info</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-cbc" class="collapse in">
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Source</p>
+          <span><a href="">Throat</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Collected</p>
+          <span><a href="">[source]</a></span>
+        </div>
+
+      </div>
+
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Condition</p>
+          <span><a href="">[condition]</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Results Posted</p>
+          <span><a href="">3/5/2014, 12:51 PM</a></span>
+        </div>
+
+      </div>
+
+      <!-- TABLE BEGIN -->
+      <div class="log-table cbc-table table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th></th>
+        <th>Value</th>
+        <th>Range</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <tr>
+        <td>WBC</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>5.0</td>
+        <td>4.8—10.8 K/mm3</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>RBC</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>3.0</td>
+        <td>4.2—5.4 M/mm3</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>HGB</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>10.0</td>
+        <td>12.0—16.0 gm/L</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>HCT</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>30.0</td>
+        <td>37.0—47.0 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>MCV</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>12.5</td>
+        <td>82.2—97.8 fL</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>MCH</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>4.0</td>
+        <td>27—33 pg</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>MCHC</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>6.9</td>
+        <td>33—37 g/dl</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>RDW</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>12.5</td>
+        <td>11.5—14.5 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>PLT</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>200</td>
+        <td>130—400 K/mm3</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>MPV</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>7</td>
+        <td>7.4—10.4 fl</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>GRAN &#37</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>93.0</td>
+        <td>42.2—75.2 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>LYMPH &#37</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>3.0</td>
+        <td>15—41 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>MONO &#37</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>4.0</td>
+        <td>1.7—9.3 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+    </div>
+
+  </div>
+  <!-- end accordion -->
+
+</div>
+
+          <div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Results for BMP</h3>
+    </div>
+  </div>
+
+  <div id="accordion-bmp">
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-bmp">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            <span>Specimen Info</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-bmp" class="collapse in">
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Source</p>
+          <span><a href="">Throat</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Collected</p>
+          <span><a href="">[source]</a></span>
+        </div>
+
+      </div>
+
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Condition</p>
+          <span><a href="">[condition]</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Results Posted</p>
+          <span><a href="">3/5/2014, 12:51 PM</a></span>
+        </div>
+
+      </div>
+
+      <!-- TABLE BEGIN -->
+      <div class="log-table cbc-table table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Test Name</th>
+        <th></th>
+        <th>Value</th>
+        <th>Range</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <tr>
+        <td>NA</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" ddata-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>140</td>
+        <td>4.8—10.8 K/mm3</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>K</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>5.0</td>
+        <td>4.2—5.4 M/mm3</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>CL</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>99</td>
+        <td>12.0—16.0 gm/L</td>
+        <td>3/5/2014</td>
+      </tr>
+
+      <tr>
+        <td>C02</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>25</td>
+        <td>37.0—47.0 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>ANION GAP</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>16</td>
+        <td>82.2—97.8 fL</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>GLUCOSE</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>70</td>
+        <td>27—33 pg</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>BUN</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>7</td>
+        <td>33—37 g/dl</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>CREATININE</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>1.0</td>
+        <td>11.5—14.5 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>TOTAL PROTEIN</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>7</td>
+        <td>130—400 K/mm3</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>ALBUMIN</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>4</td>
+        <td>7.4—10.4 fl</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>CALCIUM</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>3</td>
+        <td>42.2—75.2 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>BILIRUBIN TOTAL</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>9</td>
+        <td>15—41 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>SGOT / AST</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>0.2</td>
+        <td>1.7—9.3 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>SGPT / ALT</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>10</td>
+        <td>1.7—9.3 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+      <tr>
+        <td>ALK PHOS TOTAL</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>10</td>
+        <td>1.7—9.3 %</td>
+        <td>3/4/2014</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+    </div>
+
+  </div>
+  <!-- accordion end -->
+
+</div>
+
+          <div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Results for [Micro Test Name]</h3>
+    </div>
+  </div>
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-micro-one">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            <span>Specimen Info</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+  <div id="collapse-micro-one" class="collapse in">
+    <div class="row specimen-info">
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Source</p>
+        <span><a href="">Throat</a></span>
+      </div>
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Collected</p>
+        <span><a href="">[source]</a></span>
+      </div>
+
+    </div>
+
+    <div class="row specimen-info">
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Condition</p>
+        <span><a href="">[condition]</a></span>
+      </div>
+
+    </div>
+  </div>
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-micro-two">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-bar-chart-o fa-lg" aria-hidden="true"></i>
+            <span>Test Details for [Micro Test Name]</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-micro-two" class="collapse in">
+
+      <!-- <div class="medication-disclaimer">
+        <i class="fa fa-exclamation-circle"></i>
+        <p>If the directions regarding when you should take a medication differ from the directions provided with your prescription, please contact your physician for clarification.</p>
+      </div> -->
+
+      
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Status</p>
+          <span><a href="">[status]</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Results Posted</p>
+          <span><a href="">3/5/2014, 12:51 PM</a></span>
+        </div>
+
+      </div>
+
+      <div class="row specimen-info">
+        <div class="col-xs-12">
+          <p class="lr-h5">Result</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit in voluptate velit.
+          </p>
+        </div>
+
+        <div class="col-xs-12">
+          <h3>Finding</h3>
+          <p class="lr-h5">Remarks</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit in voluptate velit.
+          </p>
+        </div>
+      </div>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Antibiotics</th>
+        <th></th>
+        <th>Zone/Mic</th>
+        <th>Sensitivity</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       <tr>
+        <td>WBC</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>325 MG</td>
+        <td>Once daily</td>
+        <td>Active</td>
+      </tr>
+  
+      <tr>
+        <td>RBC</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>250 MG</td>
+        <td>Twice daily</td>
+        <td>Active</td>
+      </tr>
+
+      <tr>
+        <td>HGB</td>
+        <td>
+          <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+        </td>
+        <td>350 MG</td>
+        <td>Three times a day</td>
+        <td>Inactive</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+    </div>
+
+
+
+</div>
+        </div>
+
+
+      </div>
+      <!-- end row for all content -->
+    </div>
+    <!-- end container-md for content -->
+  </section>
+  <!-- End lab-results-detail-content section -->
+
+
+  <!-- Lab Results Footer -->
+  <!-- Used in lab-results, lab-results-detail, and activity-log -->
+<footer class="lr-footer">
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="../img/footer/footer-logo-tristar-centennial.png" class="img-responsive">
+    </div>
+  </div>
+
+  <div class="row footer-info">
+    <div class="col-sm-4">
+      &copy; 2014
+    </div>
+    <div class="col-sm-4">
+      <a href="">2300 Patterson St. Nashville, TN 37203</a>
+      <div class="row legal-links">
+        <div class="col-xs-4 col-xs-offset-2">
+          <a href="">Terms &amp; Conditions</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <a href="">(615) 342-1000</a>
+    </div>
+  </div>
+</footer>
+</div>
+                </div>
+
+                <!-- Footer -->
+                <!-- ADD ONLINE PRIVACY STATEMENT MODAL HERE -->
+
+                <!-- JavaScript -->
+                <!-- build:js(app) ../scripts/components.js -->
+<script src="../_bower_components/jquery/jquery.js"></script>
+<script src="../_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../_bower_components/pickadate/lib/picker.js"></script>
+<script src="../_bower_components/pickadate/lib/picker.date.js"></script>
+<script src="../_bower_components/pickadate/lib/picker.time.js"></script>
+<script src="../_bower_components/pickadate/lib/legacy.js"></script>
+<script src="../_bower_components/jquery-easing/jquery.easing.js"></script>
+<script src="../_bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../_bower_components/jquery-icheck/icheck.js"></script>
+<script src="../_bower_components/mailcheck/src/mailcheck.min.js"></script>
+<script src="../_bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="../_bower_components/jquery-validation/dist/additional-methods.js"></script>
+<script src="../_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="../_bower_components/handlebars/handlebars.runtime.min.js"></script>
+<script src="../_bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script src="../scripts/lazy-load.js"></script>
+<script src="../scripts/jQuery.headroom.js"></script>
+<script src="../scripts/headroom.js"></script>
+<!-- endbuild -->
+
+<!-- <script src="../scripts/form-slider.js"></script> -->
+
+<!-- build:js(app) ../scripts/main.js -->
+<script src="../scripts/plugins.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/class-listing.js"></script>
+<!-- endbuild -->
+
+<!--[if IE]>
+<script src="../scripts/ie.js"></script>
+<![endif]-->
+
+<script>
+  // FASTCLICK!!! for eliminating the ms delay for touch events
+  $(function() {
+      FastClick.attach(document.body);
+  });
+
+</script>
+
+
+                
+
+                
+            </div>
+        </div>
+
+    </body>
+</html>

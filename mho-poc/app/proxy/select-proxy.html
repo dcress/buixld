@@ -1,0 +1,74 @@
+---
+layout: default
+title: Delegate
+base_url: "../../"
+---
+
+
+<!-- MODALS advised to be added above all html by Bootstrap, can technically be included anywhere on page.-->
+{% include /modals/proxy-modal1.html %}
+{% include /modals/proxy-modal2.html %}
+{% include /modals/proxy-modal3.html %}
+{% include /modals/proxy-modal4.html %}
+{% include /modals/proxy-modal5.html %}
+{% include /modals/confirm-emulate-modal.html %}
+{% include /modals/confirm-de-emulate-modal.html %}
+{% include /modals/self-modal.html %}
+<!-- End MODALS -->
+
+
+
+
+
+<section id="proxy-active">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="section-summary">
+          Select one of the people below to act as their proxy. You can view their lab results, health records, and summary of care, as well as sign them up for doctor’s appointments, pay their bills, and many more features.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md" id="proxy-profiles">
+
+    <div class="row">
+      <div class="col-sm-4">
+        {% include proxy/profile-card.html %}
+      </div>
+
+      <div class="col-sm-4">
+        {% include proxy/profile-card2.html %}
+      </div>
+
+      <div class="col-sm-4">
+        {% include proxy/profile-card3.html %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        {% include proxy/profile-card4.html %}
+      </div>
+
+      <div class="col-sm-4">
+        {% include proxy/profile-card5.html %}
+      </div>
+
+      <div class="col-sm-4">
+       <!-- content tba -->
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</section>
+
+
+<!-- Lab Results Footer -->
+{% include footer-main.html %}
+<!-- end lab results footer -->

@@ -1,0 +1,69 @@
+  <!-- Request new account view -->
+  <div id="request-account-modal" class="flip-panel">
+  <div class="modal-dialog back">
+    <div class="modal-content gray-bg">
+        <div class="static-modal-header">
+          <button type="button" class="close cancel flip-item-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true" alt="X"></i></button>
+          <div class="brand-logo-white"></div>
+        </div>
+      <div class="static-modal-body">
+        <div class="col-sm-12 text-center"><h3>REQUEST A NEW ACCOUNT</h3></div>
+        <form action="verify-email/index.html" role="form" id="newAccount-form">
+          <div class="form-group row" id="emailAddress-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
+              <label for="email" class="email-suggestion help-block">Did you mean <a class="suggested-email"></a>?</label>
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control confirmEmail-tooltip" data-toggle="tooltip" id="confirm-email" placeholder="Confirm Email Address" name="confirmEmail" placement="top">
+            </div>
+          </div>
+          <div class="form-group row" id="userName-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control username-tooltip" id="newUsername" placeholder="User Name" name="username" data-toggle="tooltip">
+            </div>
+          </div>
+          <div class="form-group row" id="password-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control password-tooltip" data-toggle="tooltip" id="newPassword" placeholder="Password" name="newPassword">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control confirmPassword-tooltip" data-toggle="tooltip" id="confirm-password" placeholder="Confirm Password" name="confirmPassword">
+            </div>
+          </div>
+          <div class="terms-conditions row">
+            <div class="col-sm-12 text-center white-text">
+                <input type="checkbox" name="terms" id="terms"> I have read and agree to the <a href="#" class="white-text flip-terms">Terms &amp; Conditions</a>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTestAgain"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- on click javascript added for business demo.  reomve for prod.  -->
+              <button class="btn btn-success btn-block btn-primary-100 btn-primary-center" type="submit" id="sign-up" onclick="window.location='{{ page.base_url }}home/';"><i class="fa fa-check" aria-hidden="true" alt="Check"></i>Sign-Up and Confirm Email</button>
+            </div>
+          </div>
+        </form>
+          <div class="row">
+            <div class="col-sm-12 white-text text-center">An email will be sent to confirm your request for an account.</div>
+          </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="row">
+          <div class="center-block">
+            <button class="flip-item-back btn btn-link btn-block btn-primary-75 btn-primary-center" type="button" id="back-to-login">Back to Login Screen</button>
+          </div>
+            <!--<div class="col-sm-6">
+            <button class="btn btn-default btn-block" type="button" id="resend-email"><i class="fa fa-envelope-o"></i>Resend Verficiation Email</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

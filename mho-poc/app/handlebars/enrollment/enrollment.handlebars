@@ -1,0 +1,19 @@
+---
+layout: handlebars/enrollment
+title: Enrollment
+base_url: "../../"
+---
+<div class="static-modal" role="dialog">
+  <!-- Include login page modal -->
+    {% include enrollment/login-modal.html %}
+
+  <!-- Include Request a new account page modal -->
+    {% include enrollment/request-account-modal.html %}
+
+  <!-- Include terms and conditions modal -->
+    {% include enrollment/terms-modal.html %}
+
+  <!-- Include Trouble Logging In modal -->
+    {% include enrollment/login-trouble-modal.html %}
+
+</div>

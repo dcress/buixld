@@ -1,0 +1,361 @@
+/* ==========================================================================
+   Enrollment page base
+   ========================================================================== */
+
+// Clear background photo
+// Using linear gradient on top of image for black opacity overlay
+#cpp-enrollment {
+  min-height: 1200px;
+  background: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),url('../img/enrollment-bg.jpg') no-repeat center center fixed;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),url('../img/enrollment-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: @zindex-modal-background;
+}
+
+.mho-nav-container{
+	width:100%;
+}
+
+.mho-nav-logo-container{
+	text-align:center;
+}
+
+// CSS BLURED BACKGROUND PHOTO - ONLY WORKS ON WEBKIT...:(
+// #cpp-enrollment:before {
+//   content: "";
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   z-index: -1;
+
+//   display: block;
+//   background: url('../img/enrollment-bg1.jpg') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+//   height: 100%;
+
+//   -webkit-filter: blur(5px);
+//   -moz-filter: blur(5px);
+//   -o-filter: blur(5px);
+//   -ms-filter: blur(5px);
+//   filter: blur(5px);
+// }
+
+.remember-machine {
+    color: @brand-primary;
+
+    a {
+      cursor: pointer;
+	  position: relative;
+	  top: 2px;
+    }
+}
+
+.login-modal-text h2 {
+  font-size: 20px;
+}
+.login-trouble{height:32px;}
+.login-trouble a{
+	//position:relative;
+	top:6px;
+}
+.request-new-account {
+    //margin-top: 30px;
+}
+#newAccount-form {
+    .jvFloat {
+        .placeHolder {
+            width: auto;
+        }
+    }
+}
+.request-new-account h3, .request-new-account h4 {
+  color: @brand-primary;
+  font-size: 15px;
+  // text-transform: uppercase;
+  margin: 10px 0;
+}
+.request-new-account h4 {
+  font-size: 12px;
+  position: relative;
+}
+.request-new-account h4 span{
+	position:absolute;
+	top:4px;
+}
+#cpp-enrollment{ i.fa{margin-right: 10px;} }
+
+#new-account {
+    //margin-top: 20px;
+}
+
+.terms-conditions a {
+    text-decoration: underline;
+}
+
+#sign-up {
+    margin: 10px auto;
+}
+
+.white-bg {
+    background-color: @modal-content-bg;
+
+    .login-trouble {
+        padding: 6px 0;
+    }
+}
+
+.gray-bg {
+    background-color: #000;
+    border: medium none;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+
+    h3 {
+      /*color: #d4d4d4;*/
+      color: @nav-font-color;
+      /*font-weight: bold;*/
+      margin-bottom: 25px;
+    }
+
+    .static-modal-footer .btn-default {
+      background-color: @gray-button;
+      border: medium none;
+
+      &:hover {
+        background-color: @gray-button-hover;
+        opacity: 0.8;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+      }
+    }
+
+    .form-control:focus {
+      /*color: #0069bf;*/
+      opacity: 1;
+    }
+
+    .form-control:focus::-moz-placeholder {
+      color: @form-focus;
+    }
+    .form-control:focus::-ms-input-placeholder {
+      color: @form-focus;
+    }
+   .form-control:focus::-webkit-input-placeholder {
+      color: @form-focus;
+    }
+}
+
+.terms-text {
+    background: @body-bg;
+    border-radius: 5px;
+    max-height: 350px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+#cpp-enrollment footer {
+    margin-top: 500px;
+}
+
+#cpp-enrollment.reset-password footer {
+    margin-top: 550px;
+}
+
+#cpp-enrollment .static-modal-dialog {
+    left: 50%;
+    margin-left: -300px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//edits for mobile display
+#login-modal {
+  #brand-logo {
+    display: block;
+  }
+
+  .brand-logo-white {
+    display: none;
+  }
+
+  .btn-mobile-login {
+    display: none;
+  }
+}
+
+#cpp-mobile-logo {
+  display: none;
+}
+
+
+//re-style for mobile login
+//
+@media (max-width: 768px) {
+
+  #cpp-large-logo {
+    display: none;
+  }
+
+  #cpp-mobile-logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #enrollmentfooter {
+    display: none;
+  }
+
+  .login-modal-text {
+    display: none !important;
+  }
+
+  .gray-bg {
+    opacity: 1.0;
+  }
+
+  #request-account-modal, 
+  #login-trouble-modal,
+  #login-modal {
+
+    button {
+      margin-bottom: 10px;
+      border: none;
+      height: 40px;
+      font-size: @font-size-h4;
+    }
+
+    input {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-color: #fff;
+      padding-left: 5px;
+      background: transparent;
+      color: #fff;
+      box-shadow: none;
+      height: 40px;
+      font-size: @font-size-h4;
+
+      &:focus {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+      }
+    }
+
+    .modal-content {
+      margin-top: -50px;
+    }
+
+    .static-modal-body, .static-modal-footer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    .btn-login {
+      display: none;
+    }
+
+    .btn-mobile-login {
+      display: block;
+      background-color: rgba(255,255,255, .75);
+      color: #000;
+    }
+
+    input.form-control {
+      border-radius: 0;
+
+    }
+
+    #brand-logo {
+        display: none;
+      }
+
+      .brand-logo-white {
+        display: block;
+      }
+
+      .modal-content {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+      }
+
+      .login-trouble {
+        display: none;
+      }
+
+      .login-trouble-mobile {
+        padding-top: 10px;
+
+        .col-xs-7 {
+          text-align: left;
+        }
+
+        .col-xs-5 {
+          text-align: right;
+        }
+
+        a {
+          color: #fff;
+        }
+      }
+  }
+
+  .need-help {
+    text-transform: initial;
+
+    h5 {
+      font-size: @font-size-h6;
+      a {
+        color: #fff;
+      }
+
+      a span {
+        top: 0;
+        line-height: 16px;
+      }
+    }
+
+    .fa {
+      font-size: @font-size-h4;
+    }
+
+  }
+
+  .login-trouble {
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,367 @@
+<!-- modals just here for demo purposes -->
+{% include modals/race-modal.html %}
+{% include modals/clinical-vs-mh1-modal.html %}
+{% include modals/drug-detail-modal.html %}
+{% include modals/summary-vs-transition-modal.html %}
+{% include modals/print-summary-modal.html %}
+{% include modals/transmit-summary-modal.html %}
+{% include modals/transmit-form-modal.html %}
+{% include modals/download-summary-modal.html %}
+{% include modals/confirm-emulate-modal.html %}
+{% include modals/confirm-de-emulate-modal.html %}
+{% include modals/sc-account-created-modal.html %}
+{% include modals/sc-reset-password-modal.html %}
+{% include modals/sc-reset-password-modal2.html %}
+{% include modals/sc-reset-password-modal3.html %}
+{% include modals/sc-reset-password-modal3.html %}
+{% include modals/healthcheck-modal.html %}
+
+
+<!-- EMULATION BORDERS - Activated WHEN USER IS PROXYING FOR ANOTHER USER. these can be included anywhere on page. -->
+{% include proxy/emulation-borders.html %}
+{% include support-console/sc-emulation-borders.html %}
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navigation-main">
+    <div class="navbar-fixed-holder">
+
+            <!-- triggers the panel -->
+        <div id="mobile-menu-toggle" class="nav-menu-toggle pull-left material-design-hamburger" href="#">
+            <button class="material-design-hamburger__icon">
+              <span class="material-design-hamburger__layer material-design-hamburger__icon--from-arrow"></span>
+            </button>
+        </div>
+        <!-- MyHealthONE Logo -->
+        {% if page.url contains '/patient' || '/patient-emulate' %}
+        <!-- <a class="navbar-brand pull-left" href="{{ page.base_url }}patient/"><img src="{{ page.base_url }}img/mho-logo-sm-retina.png" alt="MyHealthONE logo" width="200" height="29"></a> -->
+        <!-- <button class="btn" data-toggle="modal" data-target="#default-modal">Modal Test</button> -->
+        {% else %}
+        <!-- <a class="navbar-brand pull-left" href="{{ page.base_url }}home/"><img src="{{ page.base_url }}img/mho-logo-sm-retina.png" alt="MyHealthONE logo" width="200" height="29"></a> -->
+        <!-- <button class="btn" data-toggle="modal" data-target="#default-modal">Modal Test</button> -->
+        {% endif %}
+        <div class="navbar-tools" id="tools">
+          {% if page.url contains '/support-console' %}
+            <div class="panel healthcheck-icon">
+              <a href="" data-toggle="modal" data-target=".healthcheck-modal">
+                <i class="fa fa-heartbeat"></i>
+              </a>
+            </div>
+          {% endif %}
+            <div class="panel navbar-search">
+                <a data-toggle="" data-parent="#tools" href="#search-bar" class="tools-trigger">
+                    <i class="fa fa-search" id="nav-search-toggle" aria-hidden="true" alt="Search icon"></i>
+                </a>
+
+                <!-- OLD SEARCH DROPDOWN -->
+                <!-- <a data-toggle="collapse" data-parent="#tools" href="#search-bar" class="tools-trigger collapsed"><i class="fa fa-search" aria-hidden="true" alt="Search icon"></i></a> -->
+                <!-- <div id="search-box" class="arrow-box collapse">
+                    <form action="{{ page.base_url }}search-results" method="get" role="form">
+                        <div class="form-group has-feedback">
+                            <div class="col-xs-12 col-sm-12">
+                                <input type="search" class="form-control search-box" placeholder="Search"><i class="fa fa-search form-control-feedback" aria-hidden="Search icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6 col-sm-6">
+                                <button type="submit" class="btn btn-default">Advanced Search</button>
+                            </div>
+                            <div class="col-xs-6 col-sm-6">
+                                <button type="submit" class="btn">Search</button><img src="" alt="" width="0" height="0" />
+                            </div>
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+
+
+
+            <div class="panel navbar-profile">
+                <!-- <i class="fa fa-user"></i> -->
+                <!-- DYNAMIC NEEDED HERE TO REPLACE IMAGE WHEN USER UPLOADS PROFILE PIC -->
+                <!--{% if page.url contains '/patient' %}
+                <a href="{{ page.base_url }}patient/profile-summary/" class="tools-trigger"><img src="{{ page.base_url }}img/profile-mom-sm.jpg" alt="User uploaded profile image" width="35" class="img-circle"></a>
+                {% else %}
+                <a href="{{ page.base_url }}create-profile/" class="tools-trigger"><img src="{{ page.base_url }}img/profile-default-sm.png" alt="Profile Default Icon image in top nav" width="35" class="img-circle profile-default-img"></a>
+                {% endif %}-->
+                <a data-toggle="collapse" data-parent="#tools" href="#profile" class="tools-trigger collapsed">
+                    <img src="{{ page.base_url }}img/profile-mom-sm.jpg" alt="Profile Default Icon image in top nav" width="35" class="img-circle profile-default-img">
+                </a>
+
+                <div id="profile" class="collapse">
+                    <h4>Profile</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ page.base_url }}patient/profile-summary/edit-profile"><i class="fa fa-pencil-square-o"></i><p>Edit Profile</p></a>
+                        </li>
+                        <li>
+                            <a href="{{ page.base_url }}activity-log/">
+                                <i class="fa fa-random"></i>
+                                <p>Activity Log</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out"></i>
+                                <p>Sign Out</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="panel navbar-notifications">
+                <a data-toggle="collapse" data-parent="#tools" href="#notifications" class="tools-trigger collapsed">
+                    <i class="fa fa-bell-o" aria-hidden="true" alt="Notifications icon"></i>
+                </a>
+
+                <div id="notifications" class="collapse">
+
+                    <h4>Your information</h4>
+                    <a href="#" class="add-tools">
+                        <i class="fa fa-plus-circle"></i> Add
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ page.base_url }}patient/profile-summary/">
+                                <span><img src="{{ page.base_url }}img/profile-mom-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Your Profile</p>
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="{{ page.base_url }}activity-log/">
+                                <i class="fa fa-random"></i>
+                                <p>Activity Log</p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h4>Care members</h4>
+                    <a href="#" class="add-tools"><i class="fa fa-plus-circle"></i> Add</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ page.base_url }}patient/profile-summary/">
+                                <span><img src="{{ page.base_url }}img/profile-dad-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Jim Smith<br><small>Husband</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ page.base_url }}patient/profile-summary/">
+                                <span><img src="{{ page.base_url }}img/profile-son-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Jim Smith, Jr.<br><small>Son</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ page.base_url }}patient/profile-summary/">
+                                <span><img src="{{ page.base_url }}img/profile-daughter-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Lucy Smith<br><small>Daughter</small></p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4>Care team</h4>
+                    <a href="#" class="add-tools"><i class="fa fa-plus-circle"></i> Add</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="{{ page.base_url }}img/profile-dr-jack-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Jack Trent<br><small>Primary Care</small></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="{{ page.base_url }}img/profile-dr-kim-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Kim Swan<br><small>Specialist</small></p>
+                            </a>
+                        </li>
+                        <!-- commented out so that the menu doens't drop down as far. -->
+                        <!-- <li>
+                            <a href="http://buixld.com/provider-directory/provider-detail/">
+                                <span><img src="{{ page.base_url }}img/profile-dr-jack2-sm.jpg" alt="User uploaded profile image" width="40" class="img-circle"></span>
+                                <p>Dr. Jack Kinder<br><small>Specialist</small></p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h4>Settings</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fa fa-gear"></i><p>MyHealth<em>One</em> Settings</p></a></li>
+                        <li><a href="#"><i class="fa fa-times-circle"></i><p>Logout</p></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- menu panel -->
+<nav class="menu-slider menu-left vertical" id="mobile-menu">
+    <div class="menu-slider-holder">
+
+        <div class="menu-header">
+            <h3>
+                <a href="{{ page.base_url }}home/">
+                    <img src="{{ page.base_url }}img/mho-heart-logo-70px.png" alt="MyHealthONE logo" width="35">
+                    <img src="{{ page.base_url }}img/mho-text-only-70px.png" alt="MyHealthONE logo" height="30" class="mho-curtain-text">
+                </a>
+            </h3>
+        </div>
+
+        <noindex>
+            <ul id="accordion" class="nav-vertical nav">
+                <li>
+                    <a href="/home"><i class="fa fa-home" aria-hidden="true" alt="Dashboard icon"></i>Home Dashboard</a>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseRecords" class="collapsed">
+                            <i class="fa fa-medkit" aria-hidden="true" alt="Health Records icon"></i>Health Information<i class="fa fa-chevron-down" aria-hidden="true" alt="Health Records submenu"></i>
+                        </a>
+                    </div>
+                    <div id="collapseRecords" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info">
+                                    <i class="fa fa-user" aria-hidden="true" alt="Demographics icon"></i>Demographics
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info"><i class="fa fa-clipboard" aria-hidden="true" alt="Problems List icon"></i>Problems List
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info"><i class="fa fa-ban" aria-hidden="true" alt="Allergies icon"></i>Allergies
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info"><i class="fa fa-signal" aria-hidden="true" alt="Vitals icon"></i>Vitals
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info"><i class="fa fa-bar-chart-o" aria-hidden="true" alt="Conditions icon"></i>Conditions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ page.base_url }}clinical-info"><i class="fa fa-user" aria-hidden="true" alt="Medications icon"></i>Medications
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li>
+                    <a href="{{ page.base_url }}health-visits/"><i class="fa fa-hospital-o" aria-hidden="true" alt="Health Visits icon"></i>Health Visits
+                    </a>
+                </li>
+
+                <li class="sr-only">
+                    <a href="http://www.buixld.com/provider-directory"><i class="fa fa-calendar" aria-hidden="true" alt="Appointments icon"></i>Appointments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ page.base_url }}lab-results/"><i class="fa fa-flask" aria-hidden="true" alt="Lab Results icon"></i>Lab Results
+                    </a>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseWellness" class="collapsed"><i class="fa fa-book" aria-hidden="true" alt="Wellness & Education icon"></i>
+                            Wellness &amp; Education<i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseWellness" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li><a href="{{ page.base_url }}crm-classes-events"><i class="fa fa-calendar-o" aria-hidden="true" alt="Class and Events icon"></i>Classes &amp; Events</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseProxy " class="collapsed"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>
+                            Proxy <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseProxy" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <li>
+                                <a href="{{ page.base_url }}proxy/select-proxy/"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>Proxy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ page.base_url }}proxy/"><i class="fa fa-link" aria-hidden="true" alt="Lab Results icon"></i>Proxy  Blank
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <!-- <li><a href="{{ page.base_url }}crm-classes-events"><i class="fa fa-book" aria-hidden="true" alt="Wellness & Education icon"></i>Wellness &amp; Education</a></li> -->
+
+                <!--Temporary hidden menu-->
+                <li class="panel temp-links">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTemp" class="collapsed">
+                            Temporary Links<i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseTemp" class="panel-collapse collapse">
+                        <ul class="panel-inner submenu">
+                            <!-- modals menu -->
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseModals" class="collapsed">
+                                        <i class="fa fa-list-alt" aria-hidden="true" alt=""></i>Modals<i class="fa fa-chevron-down" aria-hidden="true" alt="Health Records submenu"></i>
+                                    </a>
+                                </div>
+                                <div id="collapseModals" class="panel-collapse collapse">
+                                    <ul class="panel-inner submenu">
+                                        <li>
+                                            <a>
+                                                <button class="btn btn-info" data-toggle="modal" data-target=".online-pre-registration-modal">OPR</button>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- end modals -->
+                            <li><a href="/support-console"><i class="fa fa-desktop" aria-hidden="true" alt="Dashboard icon"></i>Support Console</a></li>
+                            <li><a href="/emails"><i class="fa fa-envelope-o" aria-hidden="true" alt="mail icon"></i>Preview Emails</a></li>
+                            <li><a href="{{ page.base_url }}online-pre-registration/">OPR</a></li>
+                            <li><a href="{{ page.base_url }}site-map/">SiteMap</a></li>
+                            <li><a href="{{ page.base_url }}home">Consumer Home</a></li>
+                            <li><a href="{{ page.base_url }}patient/">Patient Home</a></li>
+                            <li><a href="{{ page.base_url }}enrollment/">Enrollment</a></li>
+                            <li><a href="{{ page.base_url }}create-profile/">Create Profile</a></li>
+                            <li><a href="{{ page.base_url }}patient/profile-summary/">Profile Summary</a></li>
+                            <li><a href="{{ page.base_url }}patient/profile-summary/edit-profile/">Edit Profile</a></li>
+                            <li><a href="{{ page.base_url }}patient/patient-registration/">Patient Registration</a></li>
+                            <li><a href="{{ page.base_url }}crm-classes-events/">Classes &amp; Events</a></li>
+                            <li><a href="{{ page.base_url }}lab-results/">Lab Results</a></li>
+                            <li><a href="{{ page.base_url }}lab-results-detail/">Lab Results Detail</a></li>
+                            <li><a href="{{ page.base_url }}activity-log/">Activity Log</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/Temporary hidden menu-->
+            </ul>
+        </noindex>
+    </div>
+</nav>
+
+{% include search-bar.html %}

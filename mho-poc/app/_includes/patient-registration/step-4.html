@@ -1,0 +1,82 @@
+<div id="step-4" class="step-container">
+    <h3 class="text-center">Account Security Enrollment</h3>
+    <p class="text-center lg-brand-text">
+        Please select your preferred contact method.
+        We may need to contact you in the future if we identify a security risk with logging in.
+        We will not contact you during this enrollment process, but ask that you identify the
+        preferred contact method and confirm the phone number for future use.
+    </p>
+    <section class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-2 col-xs-4">
+                    <small class="required-note" id="contact_method"> <i class="fa fa-exclamation-circle" aria-hidden="true" alt="Denotes required field"></i> Denotes required field</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2 col-xs-3">
+                    <label>
+                        <input type="radio" name="group5" id="input" value="Call">
+                        Calling Me
+                    </label>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p>123-456-7890</p>
+                </div>
+                <div class="col-sm-2 col-xs-2">
+                    <p><a href="#">Edit</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-2 col-xs-3">
+                    <label>
+                        <input type="radio" name="group5" id="input" value="Text">
+                        Texting Me
+                    </label>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p>123-456-7890</p>
+                </div>
+                <div class="col-sm-2 col-xs-2">
+                    <p><a href="#">Edit</a></p>
+                </div>
+            </div>
+            <div class="checkbox text-center">
+                <label>
+                    <input type="checkbox" value="">
+                    Remember this computer
+                </label>
+            </div>
+            <div class="text-center">
+                <span class="info-link">
+                    <a data-toggle="modal" href='#security-description'>
+                        <i class="fa fa-question-circle" aria-hidden="true" alt="Link to description of account security enrollment"></i> What Does This Mean?
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+                    <!-- Check for bot -->
+                    <div class="form-group botTest-formgroup">
+                        <div class="col-sm-12">
+                            <label for="botTest" class="control-label">Leave This Field Blank</label>
+                            <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+                        </div>
+                    </div>
+</div>
+
+<!-- MODAL for Account security enrollment description -->
+<section class="modal fade" id="security-description">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Account Security Enrollment</h4>
+            </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p><p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            </div>
+            <div class="modal-footer"></div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</section><!-- /.modal -->

@@ -1,0 +1,182 @@
+//
+// Result listing for Classes and Events
+//
+
+// The outter container of the result is using the crm-holder
+.ce-result {}
+
+// Result Title
+.ce-result-title h3 { margin-top: 0; }
+
+// Result summary
+.ce-result-summary {
+	// Add negative margin to eliminate the space that occurs between border seperators
+	margin-top: -@crm-holder-space;
+
+	// Add appropriate padding to elements inside of main holder
+	padding-top: @crm-holder-space;
+	padding-bottom: @crm-holder-space;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	.ce-result-summary {
+		// Seperator added to inner content
+		border-right: 1px solid @crm-border-color;
+	}
+}
+
+// Result description
+// Text is truncated by jQuery
+.ce-result-description { margin-bottom: 10px; }
+
+// Result type
+.ce-result-type { color: @gray-light; }
+
+// Breathing room between icon and value
+.ce-result-type i { margin-right: 5px; }
+
+//
+// Location
+//
+.ce-result-location          { margin-top: @crm-holder-space; }
+.ce-result-location-info a p { 
+	color: @gray-light;
+	text-decoration: none; 
+}
+
+
+// Location info
+.ce-result-location-info p {
+	margin: 0;
+	color: @gray-light;
+}
+
+// Location image
+@ce-result-location-img-size: 40px;
+
+.ce-result-location-img {
+	height: @ce-result-location-img-size;
+	width: @ce-result-location-img-size;
+
+    // background-color: @brand-primary; // ENTITY BRANDING
+    // If border radius is half of size value it will always be ok
+    .border-radius(@ce-result-location-img-size / 2);
+}
+// Icon in circle
+.ce-result-location-img i {
+	display: block;
+	font-size: (@ce-result-location-img-size / 2) ;
+	line-height: @ce-result-location-img-size;
+	text-align: center; // Center element
+	color: white;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-xs-min) {
+
+	.ce-result-location-img {
+		height: @ce-result-location-img-size * 2;
+		width: @ce-result-location-img-size * 2 ;
+
+		// If border radius is half of size value it will always be ok
+        // but Eric, it doesn't work when the increased the dimensions for a selector
+        // do not persist beyond their scope, so the variable will still be the size you initially set it
+		.border-radius(@ce-result-location-img-size);
+	}
+	// Icon in circle
+	.ce-result-location-img i {
+		font-size: @ce-result-location-img-size;
+		line-height: @ce-result-location-img-size * 2;
+	}
+}
+
+//
+// Date and time
+//
+// Calendar and Time
+.ce-result-date-time {
+	padding: @crm-holder-space;
+	padding-top: 0;
+}
+.ce-result-calendar .crm-date-calendar,
+.ce-occurrences .crm-date-calendar {
+	margin: 0 auto;
+}
+
+// Show hide calendar in
+.ce-result-calendar { display: none; }
+@media (min-width: @screen-sm-min) {
+	.ce-result-calendar { display: block; }
+}
+
+// Time
+.ce-result-time p {
+	margin-top: 15px;
+	color: @gray-light;
+}
+
+@media (min-width: @screen-sm-min) {
+	.ce-result-time p { text-align: center; }
+}
+
+// Attribute
+.ce-result-attribute { padding: 10px; }
+
+// Attribute borders
+.ce-result-attributes {
+	border-top: 1px solid @crm-border-color;
+	padding: @crm-holder-space;
+	padding-bottom: 0;
+
+	// Negative margin make the border reach the edges of the container while padding adjusts content inwards
+	margin-left: -@crm-holder-space;
+	margin-right: -@crm-holder-space;
+}
+
+// Attribute - Details
+.ce-result-details:hover { cursor: pointer; }
+
+// Attribute icons
+.ce-result-attribute i {
+	font-size: @crm-icon-size;
+	margin-right: 5px;
+}
+
+.ce-result-cost .ce-discount { margin-left: 23px; }
+
+
+// CTA  - Conversion
+.ce-result-cta a,
+.ce-result-cta div
+ { width: 100%; }
+
+// CTA result buttons
+.ce-result-cta { float: none; }
+
+@media (min-width: @screen-sm-min) {
+	.ce-result-cta { float: right; }
+}
+
+.ce-result-cta a i {
+	float: left;
+	font-size: @crm-icon-size;
+	vertical-align: center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	// Calendars
+	.ce-result-calendar {
+		margin: 0 auto;
+		float: none;
+	}
+	.ce-result-calendar { display: block; }
+
+	// Date and Time
+	.ce-result-date-time { padding: @crm-holder-space;}
+
+	// Location
+	.ce-result-location-info { margin-top: 15px; }
+
+}

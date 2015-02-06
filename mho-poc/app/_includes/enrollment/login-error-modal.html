@@ -1,0 +1,78 @@
+  <div id="login-modal" class="flip-panel">
+  <div class="modal-dialog front">
+    <div class="modal-content white-bg">
+      <div class="static-modal-header">
+        <div id="brand-logo" class=""></div>
+      </div>
+      <div class="static-modal-body">
+        <!-- Removed method="post" from 'form' in order for prototype flow -->
+        <form class="form-horizontal" role="form" action="{{ page.base_url }}" id="Login-form" method="post">
+          <div class="form-group has-error">
+            <div class="col-sm-12 float-label">
+              <div class="alert alert-danger username-pwd-error">
+              <i class="icon-warning-sign"></i>Sorry, your username or password is incorrect. Please try again.
+                </div>
+              </div>
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control error" id="username" name="username" placeholder="Enter Username">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control error" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="col-sm-6">
+              <div class="remember-machine pull-left">
+                <input type="checkbox">
+                <a data-toggle="tooltip" href="#" data-original-title="Tooltip goes here. Please keep this short.">Remember This Computer</a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="login-trouble pull-right">
+                <a href="#" class="flip-login" data-toggle="tooltip" data-original-title="Please click here if you have forgotten your username, password or both."><i class="fa fa-question-circle"></i> Trouble Logging In ?</a>
+              </div>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button class="btn btn-primary btn-block" type="submit">LOGIN</button>
+            </div>
+          </div>
+        </form>
+        <div class="request-new-account">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center"><strong>DO MORE WITH AN ACCOUNT!</strong></h3>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="icon-beaker"></i>View Your Lab Results</h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="icon-medkit"></i>Review your Health Records</h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="icon-money"></i>Easy Access to your Accounts</h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="icon-calendar"></i>Request Appointments</h4>
+            </div>
+            <div class="col-sm-12">
+              <button class="flip-item btn btn-primary btn-block" type="button" id="new-account">Request a New Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="need-help text-center">
+          <div class="col-sm-12"><h5><a href="tel:18001234567"><i class="fa fa-question-circle"></i>NEED HELP? CALL 1-800-123-4567</a></h5> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

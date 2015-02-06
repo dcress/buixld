@@ -1,0 +1,45 @@
+---
+title: Classes & Events
+base_url: "../../"
+---
+
+{% raw %}
+{{#if result}}
+{% endraw %}
+<!-- Results listing -->
+<section id="ce-results-listing">
+
+  <!-- Results criteria -->
+  <article id="ce-results-criteria" class="container-sm">
+    {% include crm-ce/ce-result-criteria.html %}
+  </article>
+
+  <!-- Results -->
+  <section id="ce-result-container" class="container-sm">
+    {% include crm-ce/templates/ce-result-2.html %}
+    <!--{% include crm-ce/templates/ce-result-call.html %}-->
+    <!--{% include crm-ce/templates/ce-result-waitlist.html %}-->
+  </section>
+
+  <!-- Pagination -->
+  <div class="container-sm" style="text-align:center">
+    {% include crm-ce/ce-pagination.html %}
+  </div>
+
+  <!-- Modals -->
+  {% include crm-ce/ce-modal-withdrawal.html %}
+  {% include crm-ce/templates/ce-modal-result-details.html %}
+  <!--{% include crm-ce/templates/ce-modal-result-details-call.html %}-->
+  <!--{% include crm-ce/templates/ce-modal-result-details-waitlist.html %}-->
+  <!--{% include crm-ce/ce-modal-hps.html %}-->
+
+</section>
+{% raw %}
+{{else}}
+{% endraw %}
+
+<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i>Your search criteria yielded no results.</div>
+
+{% raw %}
+{{/if}}
+{% endraw %}

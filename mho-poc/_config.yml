@@ -1,0 +1,32 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: portal-v2
+description: Portal v2 Prototype
+author:
+  name: HCA
+  email: colin.ambrose@hcahealthcare.com
+
+# baseurl: http://buixld.com/myhealthone/
+
+# Grunt handles images and assets.
+exclude: ['img', 'styles', 'scripts', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: pretty
+paginate: 3
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: rdiscount
+#   extensions: []
+
+pygments: true

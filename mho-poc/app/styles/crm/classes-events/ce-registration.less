@@ -1,0 +1,180 @@
+//
+// Registration page
+//
+
+//
+// Occurances sessions
+//
+
+// Date time calendars in occurances
+.ce-occurrences .crm-date-calendar { margin: 0 auto; } // Center items
+// col-x is dynamiincally created
+
+
+//
+// Screening carosel
+//
+.ce-screenings .carousel-control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	font-size: 44px;
+	color: #000;
+}
+
+// Carosel control left and right
+.ce-screenings .carousel-control.left,
+.ce-screenings .carousel-control.right {
+	background-image: none;
+	width: 0;
+	top: 25px;
+}
+
+// Center radio buttons in carosoule
+.ce-screenings .radio {
+	padding-left: 0;
+
+	input[type="radio"] {
+		display: block;
+		float: none;
+		margin: 20px auto 0;
+		&:hover { cursor: pointer; }
+	}
+}
+
+// Carosell Controls
+//
+// Control previous
+.ce-screenings .carousel-control.left  { left: -60px; }
+// Control next
+.ce-screenings .carousel-control.right { right: -30px; }
+
+
+//
+// Register Form
+//
+#ce-reg-form {
+	position: relative;
+	width: 100%;
+}
+
+// Reg form Fieldsets
+#ce-reg-form fieldset {
+	// Reset
+	border: 0 none;
+	width: 100%;
+
+	// Position
+	top: 0;
+
+	// Space
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+// Hide all except first fieldset
+#ce-reg-form fieldset:not(:first-of-type) { display: none; }
+
+// Add Guest button
+.add-guest {
+    display: block;
+    margin-bottom: @crm-form-bottom;
+}
+
+//
+// Add and Remove toggles
+//
+.add-phone,
+.removePhone,
+.removeGuest {
+	width: 100%;
+    margin-bottom: @crm-form-bottom;
+
+	i { margin-right: 5px; }
+}
+
+//
+// Notify checkbox
+//
+.ce-form-notify {
+	color: @gray-light;
+	height: @form-height;
+	vertical-align: middle;
+}
+
+// DOB inputs
+.datefield {
+    border: 1px solid #ccc;
+    background: #FFF;
+    border-radius: 4px;
+    display: block;
+}
+
+.datefield * {
+    display: inline-block;
+}
+
+// .datefield input:first-child {
+//     margin-left: 20px;
+// }
+.datefield input {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 1.7em;
+}
+
+.datefield input#year { width:2.5em; }
+.datefield input:focus { outline:none; }
+
+//
+// Checkout and submit screen
+//
+.ce-checkout-item {}
+
+//
+// Checkout overview recap of data
+//
+.ce-checkout-overview {}
+
+// Center calendar and stuff
+.ce-checkout-date-calendar .crm-date-calendar { margin: 0 auto; }
+
+// Checkout cost in overview
+.ce-checkout-cost {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.ce-cost-review i { margin-right: 5px; }
+
+
+// Checkout help
+.ce-checkout-help {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	color: @gray-light;
+	padding: 10px 0;
+}
+
+
+.ce-checkout-additional-info {
+	color: @gray;
+
+	.crm-sub-heading { color: @gray-light; }
+}
+
+// Location in checkout overview
+.ce-checkout-location {
+	p { margin: 0; }
+}
+
+//
+// Confirmation
+//
+.crm-confirmation-number {
+	.crm-sub-heading { padding: 0; margin: 0; }
+}

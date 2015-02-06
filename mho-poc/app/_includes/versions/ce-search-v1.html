@@ -1,0 +1,115 @@
+<!-- Main search -->
+<section id="ce-search">
+	<div class="container-sm ce-search-form">
+		<form>
+			<input type="search" name="Search" id="inputSearch" class="form-control" required="required" title="Search" placeholder="Please Enter a Keyword or Class / Event Name"><i class="fa fa-search"></i>
+		</form>
+
+		<!-- Search toggle -->
+		<div class="ce-search-more-options-toggle">
+			<a class="collapsed" data-toggle="collapse" data-parent="ce-search-more-options" href="#ce-search-more-options">More Search Options <i class="fa fa-angle-down"></i>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Search options -->
+<section id="ce-search-more-options" class="collapse">
+	<div class="container-sm">
+
+		<!-- Search tabs -->
+		<div class="ce-search-tabs">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#ce-search-tab-location" data-toggle="tab">Search by Location</a></li>
+				<li><a href="#ce-search-tab-facility" data-toggle="tab">Search by Facility</a></li>
+			</ul>
+
+			<!-- Search tabbed content -->
+			<div class="tab-content">
+
+				<!-- Tab location content -->
+				<div id="ce-search-tab-location" class="tab-pane active">
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" class="form-control" placeholder="Zip Code">
+						</div>
+
+						<div class="col-sm-6">
+							<select name="facility" id="inputFacility" class="form-control select-styled" required="required">
+								<option value="">Distance</option>
+								<option value="">Within 10 Miles</option>
+								<option value="">Within 20 Miles</option>
+								<option value="">Within 30 Miles</option>
+								<option value="">Within 40 Miles</option>
+								<option value="">Within 50 Miles</option>
+							</select>
+						</div>
+					</div> <!-- row -->
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="region" id="inputRegion" class="form-control select-styled" required="required">
+								<option value="">Region</option>
+								<option value="">Region 1</option>
+								<option value="">Region 2</option>
+								<option value="">Region 3</option>
+								<option value="">Region 4</option>
+								<option value="">Region 5</option>
+							</select>
+						</div>
+
+                        <!-- PICKADATE -->
+						<div class="col-sm-6">
+							<input name="date" class="datepicker form-control" placeholder="Date">
+						</div>
+					</div> <!-- row -->
+				</div>
+
+				<!-- Tab facility content -->
+				<div id="ce-search-tab-facility" class="tab-pane">
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="facility" id="inputFacility" class="form-control select-styled" required="required">
+								<option value="">Facility Name</option>
+								<option value="">Facility 1</option>
+								<option value="">Facility 2</option>
+								<option value="">Facility 3</option>
+								<option value="">Facility 4</option>
+								<option value="">Facility 5</option>
+							</select>
+						</div>
+
+						<div class="col-sm-6">
+							<input type="text" class="form-control" placeholder="Zip Code">
+						</div>
+					</div> <!-- row -->
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="facility" id="inputFacility" class="form-control select-styled" required="required">
+								<option value="">Facility Name</option>
+								<option value="">Facility 1</option>
+								<option value="">Facility 2</option>
+								<option value="">Facility 3</option>
+								<option value="">Facility 4</option>
+								<option value="">Facility 5</option>
+							</select>
+						</div>
+						<div class="col-sm-6">
+							<select name="region" id="inputRegion" class="form-control select-styled" required="required">
+								<option value="">Region</option>
+								<option value="">Region 1</option>
+								<option value="">Region 2</option>
+								<option value="">Region 3</option>
+								<option value="">Region 4</option>
+								<option value="">Region 5</option>
+							</select>
+						</div>
+					</div> <!-- row -->
+				</div>
+
+			</div> <!-- /search tab content -->
+
+		</div> <!-- /ce-search-tabs -->
+
+	</div>
+</section>
+

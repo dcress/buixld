@@ -1,0 +1,159 @@
+// ER Wait time in header
+
+// Variables for ER Wait
+@er-wait-height: 70px; // Height of er wait div and circle timestamp
+@er-wait-width:  250px;
+
+
+//
+// Header ER wait time
+//
+// ER Wait time inner container
+#header-wait-times .er-wait-time {
+	max-width: @er-wait-width;
+	margin: 0 auto 30px;
+	font-size: 25px;
+	line-height: 1.1em;
+	height: @er-wait-height;
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: @screen-sm-min) {
+	#header-wait-times .er-wait-time {
+		max-width: 100%;
+		
+		// Computed margin for centering ER Wait time
+		margin-top: (@crm-header-height - @er-wait-height) / 2;
+	}
+}
+
+//
+// Circular ER Wait time display
+//
+// Circular wait time
+.time-display {
+	border: 5px solid;
+	border-radius: @er-wait-height / 2;
+	display: inline-block;
+	height: @er-wait-height;
+	text-align: center;
+	width: @er-wait-height;
+	margin-right: 15px;
+}
+
+// Time inside of circle
+#header-wait-times .time {
+	font-size: 31px;
+	margin-top: 9px;
+}
+	
+// Minutes inside circle
+#header-wait-times .mins {
+	clear: both;
+	display: block;
+	font-size: 14px;
+	line-height: 1em;
+}
+
+
+// ER Wait text including loading text
+.info-summary {
+	float: right;
+	text-align: left;
+	margin-top: 8px; // There's gotta be a better way to make this verticaly aligne in the middle
+}
+
+
+// Loading state for ER wait
+.loading {
+	span {
+		display: inline-block;
+		height: 5px;
+		margin-left: 3px;
+		margin-bottom: 5px;
+		width: 5px;
+		border-radius: 100%;
+		background-color: rgba(0,0,0,1);
+		-webkit-animation-name: loading;
+		-webkit-animation-duration:1.5s;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-function:linear;	
+	}
+	:nth-child(1){
+		margin-left: 0px;
+		margin-top:30px;
+		-webkit-animation-delay: 0.37s;
+	}
+	:nth-child(2){
+		-webkit-animation-delay: 0.5s;
+	}
+	:nth-child(3){
+		-webkit-animation-delay: 0.8s;
+	}
+}
+@-webkit-keyframes loading {
+	0%{
+		background-color: rgba(0,0,0,0.2);
+	}
+	50%{
+		background-color: rgba(0,0,0,1);
+	}
+	100%{
+		background-color: rgba(0,0,0,0.2);
+	}
+}
+
+#header-wait-times {
+	text-align: right;
+
+	.er-location { font-size: 18px; }
+	
+	.wait-time-header { display: inline-block; }
+	
+	i.icon-time {
+		float:left;
+		font-size: 3em;
+		height: auto;
+		margin-right: 0.2em;
+		width: auto;
+		color:@default-accent-gray;
+	}
+	
+	.published {
+		font-size: 14px;
+		a {
+			color:@default-text-gray;
+			text-decoration:underline;
+			span.pubtime{
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+// Shared styles
+.ehc-er-wait {
+	.loading, .retry, .error { display: none; }
+	
+	&.feed-loading,
+	&.feed-error {
+		.wait-time-header, .time, .mins, .published {
+			display:none !important;
+		}
+	}
+	&.feed-loading .loading {
+		display: block !important;
+	}
+	&.feed-loading{
+		.er-location{
+			color:#ffffff;
+		}
+	}
+	&.feed-error {
+		.retry,
+		.error {
+			display: inline-block !important;
+		}
+	}
+}

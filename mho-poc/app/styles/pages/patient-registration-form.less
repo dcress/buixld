@@ -1,0 +1,134 @@
+// Link Patient Record Form
+// -------------------
+
+// FOR TESTING OUT THE PROGRESS BAR APPROACH
+// -----------------------------------------
+#progressBarHolder {
+    width: 100%;
+    height: 40px;
+    background: #efefef;
+}
+#progressBar {
+    height: 40px;
+    background: #005baa;
+    width: 10%;
+}
+//------------------------------------------
+
+//Smart Wizard styles moved to smart-wizard.less
+
+// Individual Step Styles
+
+#patient-registration-wizard {
+
+    h3 {
+        color: @hospital-primary;
+        text-transform: uppercase;
+    }
+
+    .jvFloat .placeHolder{
+        top: 0.6em;
+    }
+
+    .radio label {
+        display: block;
+        margin: 25px 0;
+    }
+
+    .checkbox {
+        padding-left: 0;
+    }
+
+    label.error {
+        top: -5px;   
+    }
+
+    small.required-note {
+        margin: 0;
+        position: absolute;
+        top: -35px;
+    }
+
+    .float-label {
+        i.fa-exclamation-circle {
+            top: 10px;
+            padding-left: 5px;
+        }
+    }
+
+
+    #step-2 {
+
+        .msg_error {
+            position: absolute;
+            top: -5px;
+        }
+        .panel {
+            padding: 40px 0 30px 0;
+        }
+        .panel-body {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .info-link {
+            position: absolute;
+            top: -25px;
+            right: 0px;
+            color: @hospital-secondary;
+        }
+
+        i.fa-barcode {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 2em;
+        }
+    }
+
+    #step-3 {
+        .panel-body {
+            padding: 0 30px;
+            .msg_error {
+                color: #FF0000;
+            }
+            .required-note {
+                float: none;
+                padding-bottom: 5px;
+                position: relative;
+                top: auto;
+            }
+        }
+    }
+
+    #step-4 {
+        .panel-body {
+            color: @gray-light;
+            font-size: @font-size-large;
+            padding: 15px;
+            .checkbox {
+                font-size: @font-size-large;   
+            }
+            .info-link {
+                font-size: @font-size-base;
+            }
+            label {
+                font-weight: normal;
+            }
+            .required-note {
+                float: none;
+                font-size: @font-size-small;
+                margin-left: 7px;
+                position: relative;
+                top: auto;
+            }
+            .row {
+                padding-bottom:10px;   
+            }
+        }
+        .radio {
+            margin-bottom: 0;
+        }
+    }
+}
+

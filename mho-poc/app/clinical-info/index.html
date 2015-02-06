@@ -1,0 +1,45 @@
+---
+layout: default
+title: Clinical Information
+base_url: "../"
+---
+
+<div id="clinical-info">
+  <section class="lab-results-detail-content">
+    <div class="container-md">
+
+      <!-- buttons -->
+      <div class="row btn-row">
+
+      </div>
+      <!-- end row of buttons -->
+
+      <!-- start content -->
+      <div class="row">
+
+        <!-- left side cards/content -->
+        <aside class="col-sm-4">
+          {% include lab-results-detail/pi-side-card.html %} 
+
+          {% include lab-results-detail/access-options.html %}
+        </aside>
+
+
+
+        <!-- main content right side -->
+        <div class="col-sm-8">
+          {% include clinical-info/quick-links.html %}
+
+        </div>
+
+      </div>
+      <!-- end row for all content -->
+    </div>
+    <!-- end container-md for content -->
+  </section>
+  <!-- End lab-results-detail-content section -->
+
+
+  <!-- Lab Results Footer -->
+  {% include footer-main.html %}
+</div>

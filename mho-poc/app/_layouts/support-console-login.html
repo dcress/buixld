@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="">
+        <!-- To kick IE out of quirks mode so Respond.js works -->
+        <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+
+        <!-- CSS -->
+        {% include styles.html %}
+        <!-- build:js(app) {{ page.base_url }}scripts/modernizr.js -->
+        <script src="{{ page.base_url }}_bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+
+    <body class="support-console-login" id="support-console">
+        <div class="dash-container">
+            <div class="dash-clip">
+
+                <!-- Navigation -->
+                {% include navigation-main.html %}
+
+                <!-- Message for those with JS disabled -->
+                <noscript>
+                    <div class="container alert alert-danger">
+                        <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+                    </div>
+                </noscript>
+                <!-- End JS disabled message -->
+
+                <!-- Main content -->
+                <div id="content-main">
+                    {{ content }}
+                </div>
+
+                <!-- Footer -->
+                <!-- ADD ONLINE PRIVACY STATEMENT MODAL HERE -->
+
+                <!-- JavaScript -->
+                {% include scripts.html %}
+
+                {% if page.url == '/create-profile/' %}
+                <!-- build:js(app) {{ page.base_url }}scripts/validate.js -->
+                <script src="{{ page.base_url }}scripts/validate/create-profile.validate.js"></script>
+                <!-- endbuild -->
+                <!-- build:js(app) {{ page.base_url }}scripts/file-upload.js -->
+                <script src="{{ page.base_url }}scripts/file-upload.js"></script>
+                <!-- endbuild -->
+                {% elsif page.url == '/patient/profile-summary/edit-profile/' %}
+                <!-- build:js(app) {{ page.base_url }}scripts/validate.js -->
+                <script src="{{ page.base_url }}scripts/validate/create-profile.validate.js"></script>
+                <!-- endbuild -->
+                <!-- build:js(app) {{ page.base_url }}scripts/file-upload.js -->
+                <script src="{{ page.base_url }}scripts/file-upload.js"></script>
+                <!-- endbuild -->
+                {% elsif page.url == '/patient/patient-registration/' %}
+                <!-- build:js(app) {{ page.base_url }}scripts/smart-wizard.js -->
+                <script src="{{ page.base_url }}scripts/smart-wizard.js"></script>
+                <!-- endbuild -->
+                <!-- build:js(app) {{ page.base_url }}scripts/patient-registration.js -->
+                <script src="{{ page.base_url }}scripts/patient-registration.js"></script>
+                <!-- endbuild -->
+                <!-- build:js(app) {{ page.base_url }}scripts/validate.js -->
+                <script src="{{ page.base_url }}scripts/validate/patient-registration.validate.js"></script>
+                <!-- endbuild -->
+                {% endif %}
+                
+            </div>
+        </div>
+    </body>
+</html>
