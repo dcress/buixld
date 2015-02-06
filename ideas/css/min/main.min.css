@@ -258,6 +258,7 @@ a:hover {
   margin-bottom: 0;
   border-radius: 0;
   background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
 }
 .navbar-ideas .navbar-brand {
   height: 65px;
@@ -267,8 +268,8 @@ a:hover {
 }
 .navbar-ideas .navbar-nav {
   border-left: 1px solid #e7e7e7;
-  padding-left: 40px;
   float: right;
+  padding-left: 15px;
 }
 .navbar-ideas .navbar-nav > li > a {
   line-height: 35px;
@@ -284,6 +285,11 @@ a:hover {
   max-width: 35px;
   margin-left: 10px;
   border-radius: 50%;
+}
+.navbar-ideas .navbar-nav > li > a.search i {
+  font-size: 1.2em;
+  vertical-align: sub;
+  margin-right: 10px;
 }
 .navbar-ideas .navbar-nav > li > a:hover,
 .navbar-ideas .navbar-nav > li > a:focus,
@@ -312,7 +318,7 @@ a:hover {
   background-position: 47% 20px;
   background-size: cover;
 }
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
   .video-wrap {
     background-image: none;
   }
@@ -334,7 +340,8 @@ a:hover {
   }
 }
 .video-content .btn {
-  margin: 0 15px 0;
+  margin: 15px;
+  width: 220px;
 }
 .video-absolute {
   height: 100%;
@@ -373,10 +380,10 @@ a:hover {
   background-color: #f06d42;
 }
 .card.cat-c .badge {
-  background-color: #29abe2;
+  background-color: #9675cd;
 }
 .card.cat-c .progress-bar {
-  background-color: #29abe2;
+  background-color: #9675cd;
 }
 .card-header {
   border-bottom: 1px solid #e7e7e7;

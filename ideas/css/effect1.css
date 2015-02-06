@@ -68,7 +68,7 @@
 	transition: stroke-dashoffset 0.2s;
 	stroke: #2AA9E0;
 }
-
+/*
 .browser {
 	margin: 0 auto;
 	padding-top: 8%;
@@ -79,8 +79,8 @@
 	background: #fff url(../img/browser.png) no-repeat 50% 0;
 	background-size: 100%;
 	color: #d3d3d3;
-}
-
+}*/
+/*
 .box {
 	float: left;
 	padding: 3.5em;
@@ -124,7 +124,7 @@
 
 .icon-heart:before {
 	content: "\e024";
-}
+}*/
 
 /* Animations */
 
