@@ -268,6 +268,7 @@ a:hover {
 .navbar-ideas .navbar-nav {
   border-left: 1px solid #e7e7e7;
   padding-left: 40px;
+  float: right;
 }
 .navbar-ideas .navbar-nav > li > a {
   line-height: 35px;
@@ -560,4 +561,10 @@ a:hover {
 .modal-dashboard .modal-full,
 .modal-dashboard .modal-dialog {
   max-width: 1200px;
+}
+html.lt-ie9 .ip-header {
+  display: none;
+}
+html.lt-ie9 .video-absolute {
+  display: none;
 }
