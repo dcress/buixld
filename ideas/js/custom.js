@@ -13,8 +13,13 @@
 	Ready
 ----------------------*/
 $(document).ready(function() {
-  console.log("Ready");
+
+	// SVG fall back fro senior browsers
+	//svgeezy.init('nocheck', 'png');
+
 });
+
+svgeezy.init('nocheck', 'png');
 
 
 /*---------------------

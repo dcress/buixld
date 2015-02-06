@@ -123,6 +123,7 @@ a {
   .navbar-nav {
   	border-left: 1px solid @border-color;
   	padding-left: 40px;
+  	float: right;
   }
 
   .navbar-nav>li>a {
@@ -464,6 +465,12 @@ a {
 .modal-dashboard .modal-full,
 .modal-dashboard .modal-dialog {
 	max-width: @screen-lg-min;
+}
+
+
+html.lt-ie9 {
+	.ip-header { display: none; }
+	.video-absolute { display: none; }
 }
 
 
