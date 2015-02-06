@@ -77,18 +77,15 @@
 
 					<!-- Nav menu -->
 					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav navbar-left">
+
+						<ul class="nav navbar-nav">
 							<li>
 								<a class="search" data-toggle="modal" data-target=".modal-search">Search for Ideas</a>
-							</li>
-						</ul>
-
-						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a class="login" data-toggle="modal" data-target=".modal-log-in">Log In</a>
+								<a class="nav-mute" data-toggle="modal" data-target=".modal-dashboard">Dashboard</a>
 							</li>
 							<li>
-								<a class="create" data-toggle="modal" data-target=".modal-sign-up">Create Account</a>
+								<a href="#" class="user">H! Rihanna <img class="user-img" src="img/user-rihana.jpg" alt="User Profile Image"/></a>
 							</li>
 						</ul>
 					</div>
@@ -99,9 +96,10 @@
 
 		<section class="video-wrap">
 			<div class="video-content">
-				<div class="container">
-					<h1 class="slogan">It's your ideas that shape our world</h1>
-					<button class="btn block-center btn-primary">I have an idea!</button>
+				<div class="container-sm text-center">
+					<h1 class="slogan">It's your ideas that shape a heathier world</h1>
+					<button class="btn btn-primary">Share my !dea</button>
+					<button class="btn btn-primary">Search !deas</button>
 				</div>
 			</div>
 		</section>
@@ -191,13 +189,13 @@
 										</div>
 									</div>
 									<div class="card-action">
-										<a class="like">
+										<a href="#" class="like">
 											<i data-icon="d"></i>
 										</a>
-										<a class="comments">
+										<a href="#" class="comments">
 											<span>43 comments</span>
 										</a>
-										<a class="views">
+										<a href="#" class="views">
 											<span>187 views</span>
 										</a>
 									</div>
@@ -596,7 +594,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-		<div class="modal fade modal-log-in">
+		<div class="modal fade modal-dashboard">
 	<div class="modal-brand">
 		<img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -607,27 +605,261 @@
   <div class="modal-dialog modal-full">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="heading">Sign in to your account</h2>
+        <h2 class="heading">Dashboard</h2>
       </div>
 
       <div class="modal-body">
-        <form id="sign-up">
-        	<div class="form-stack">
-					  <div class="form-group">
-					    <label class="sr-only" for="logInEmailAddress">Your email address</label>
-					    <input type="text" class="form-control input-lg" id="longInEmailAddress" placeholder="Your email address">
-					  </div>
-					  <div class="form-group">
-					    <label class="sr-only" for="logInPassword">Your password</label>
-					    <input type="password" class="form-control input-lg" id="logInPassword" placeholder="Your password">
-					  </div>
-					 </div><!-- /form-stack -->
-				  <a href="user-profile.html" type="submit" class="btn btn-lg btn-full btn-primary">Sign In</a>
-      	</form>
+      	<div class="row">
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      		<!-- Card -->
+<div class="col-sm-6 col-md-4">
+	<div class="card cat-a">
+		<div class="card-header">
+			<div class="badge">
+				<i data-icon="a"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<span class="card-cat">Quality and Safety</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a class="like">
+				<i data-icon="d"></i>
+			</a>
+			<a class="comments">
+				<span>43 comments</span>
+			</a>
+			<a class="views">
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+				<span class="sr-only">28% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">28%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+      	</div>
       </div>
 
       <div class="modal-footer">
-				<a href="" class="sub-text">For your password?</a>
 			</div>
 
 			<!-- <div class="modal-header">

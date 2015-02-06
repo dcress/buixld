@@ -18,11 +18,11 @@
   box-sizing: border-box;
 }
 ::selection {
-  background: #337ab7;
+  background: #29abe2;
   color: #fff;
 }
 ::-moz-selection {
-  background: #337ab7;
+  background: #29abe2;
   color: #fff;
 }
 /*---------------------
@@ -40,7 +40,7 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 992px;
+  max-width: 960px;
 }
 .container-lg {
   margin-right: auto;
@@ -111,14 +111,14 @@
   width: 100%;
 }
 .btn-primary {
-  background-color: #337ab7;
+  background-color: #29abe2;
   border-color: transparent;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background-color: #183854;
-  border-color: #183854;
+  background-color: #115b7b;
+  border-color: #115b7b;
 }
 .btn-blank {
   background-color: transparent;
@@ -187,7 +187,7 @@ footer .footer-column ul li a {
   float: left;
 }
 footer .footer-column ul li a:hover {
-  color: #337ab7;
+  color: #29abe2;
 }
 /*---------------------
 	Main elements
@@ -205,7 +205,7 @@ body {
   padding: 0;
   background: #ffffff;
   color: #000000;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
@@ -240,11 +240,11 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #337ab7;
+  color: #29abe2;
   text-decoration: none;
 }
 a:hover {
-  color: #183854;
+  color: #115b7b;
   pointer: default;
 }
 /*---------------------
@@ -275,22 +275,27 @@ a:hover {
   color: #B1BEC4;
   font-weight: 500;
 }
-.navbar-ideas .navbar-nav > li > a.create {
-  color: #337ab7;
+.navbar-ideas .navbar-nav > li > a.user {
+  color: #29abe2;
   font-weight: 700;
+}
+.navbar-ideas .navbar-nav > li > a.user img {
+  max-width: 35px;
+  margin-left: 10px;
+  border-radius: 50%;
 }
 .navbar-ideas .navbar-nav > li > a:hover,
 .navbar-ideas .navbar-nav > li > a:focus,
 .navbar-ideas .navbar-nav > li > a:active {
   cursor: pointer;
   background: none;
-  color: #122b40;
+  color: #0e4b64;
 }
 .navbar-ideas .navbar-toggle {
   margin-top: 14px;
 }
 .navbar-ideas .navbar-toggle .icon-bar {
-  background: #337ab7;
+  background: #29abe2;
 }
 /*---------------------
   Video
@@ -320,13 +325,15 @@ a:hover {
   margin-top: 80px;
   margin-bottom: 40px;
   color: #fff;
-  font-weight: 100;
-  text-align: center;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .video-content .slogan {
-    font-size: 4.5em;
+    font-size: 4.0em;
   }
+}
+.video-content .btn {
+  margin: 0 15px 0;
 }
 .video-absolute {
   height: 100%;
@@ -365,10 +372,10 @@ a:hover {
   background-color: #f06d42;
 }
 .card.cat-c .badge {
-  background-color: #337ab7;
+  background-color: #29abe2;
 }
 .card.cat-c .progress-bar {
-  background-color: #337ab7;
+  background-color: #29abe2;
 }
 .card-header {
   border-bottom: 1px solid #e7e7e7;
@@ -542,8 +549,15 @@ a:hover {
   box-shadow: none;
   border: none;
 }
+.modal-dialog {
+  width: auto;
+}
 .modal-footer {
   border: none;
   padding: 5px 15px;
   text-align: left;
+}
+.modal-dashboard .modal-full,
+.modal-dashboard .modal-dialog {
+  max-width: 1200px;
 }
