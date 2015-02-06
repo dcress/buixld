@@ -8,8 +8,14 @@
   *
 */
 
+// Imports
+@import '../bower_components/bootstrap/less/variables.less';
+@import '../bower_components/bootstrap/less/mixins.less';
 
-
+@import 'reset.less';
+@import 'helpers.less';
+@import 'buttons.less';
+@import 'footer.less';
 
 // Brand
 @brand-primary: #29ABE2;
@@ -38,8 +44,6 @@
 // Border
 @border-color: #e7e7e7;
 
-
-
 // Category
 @cat-a: #9CCD6B;
 @cat-b: #F06D42;
@@ -47,17 +51,6 @@
 @cat-d:;
 @cat-e:;
 @cat-f:;
-
-
-
-// Imports
-@import '../bower_components/bootstrap/less/variables.less';
-@import '../bower_components/bootstrap/less/mixins.less';
-
-@import 'reset.less';
-@import 'helpers.less';
-@import 'buttons.less';
-@import 'footer.less';
 
 
 /*---------------------
@@ -139,9 +132,16 @@ a {
     color: #B1BEC4;
     font-weight: 500;
 
-    &.create {
+    &.user {
     	color: @brand-primary;
     	font-weight: 700;
+
+    	// User profile image
+    	img {
+    		max-width: 35px;
+    		margin-left: 10px;
+    		border-radius: 50%
+    	}
     }
 
     &:hover, &:focus, &:active {
@@ -185,13 +185,14 @@ a {
   // Words
   .slogan {
     font-size: 2.8em;
-    @media @sm { font-size: 4.5em; }
+    @media @sm { font-size: 4.0em; }
     margin-top: 80px;
     margin-bottom: 40px;
     color: #fff;
-    font-weight: 100;
-    text-align: center;
+    font-weight: 300;
   }
+
+  .btn { margin: 0 15px 0; }
 }
 
 // Video hero
@@ -449,11 +450,20 @@ a {
 	}
 }
 
+// Reset bootstrap fixed wifth for modal dialog
+.modal-dialog {width: auto;}
+
 // Footer content for modals
 .modal-footer {
 	border: none;
 	padding: 5px 15px;
 	text-align: left;
+}
+
+
+.modal-dashboard .modal-full,
+.modal-dashboard .modal-dialog {
+	max-width: @screen-lg-min;
 }
 
 
