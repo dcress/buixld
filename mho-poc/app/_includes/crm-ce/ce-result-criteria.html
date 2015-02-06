@@ -1,0 +1,28 @@
+<div class="row">
+	<!-- Resutls header section -->
+	<div class="col-md-12">
+		<h2>Class &amp; Events Search Results</h2>
+	</div>
+</div>
+		
+<div class="row btn-row">
+	<!-- Resutls sort button -->
+
+ 	<div class="col-xs-12 col-sm-4 left">
+		<select name="sort" id="select-sort" class="form-control select-styled" required="required">
+			<option value="startDateTime">Sort by: Start Date</option>
+			<option value="eventName">Sort by: Event Name</option>
+			<option value="eventClassType">Sort by: Event Type</option>
+			{% raw %}{{{createSelectOption '"distance"' 'Sort by: Distance' }}}{% endraw %} 
+		</select>
+	</div>
+	
+	<div class="col-xs-12 col-sm-2 right">
+		<div class="btn-group">
+			<select name="results" id="select-results" class="form-control select-styled" required="required">
+				<option value="10">10</option>
+				<option value="20">20</option>
+			</select>
+		</div>
+	</div>
+</div>

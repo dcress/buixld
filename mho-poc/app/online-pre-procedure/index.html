@@ -1,0 +1,26 @@
+---
+layout: default
+title: Online Pre-Procedure
+base_url: "../"
+---
+
+<section id="online-pre-procedure">
+  <!-- Smart Wizard -->
+  <div id="online-pre-procedure-wizard" class="swMain">
+    <input type="hidden" name="onlinePreProcedure" value="true">
+    {% include online-pre-procedure/progress-wizard-links.html %}
+    <div class="container-md">
+	    <div class="row">
+	    	<div class="col-sm-12">
+			    {% include online-pre-procedure/step-1.html %}
+			    {% include online-pre-procedure/step-2.html %}
+			    {% include online-pre-procedure/step-3.html %}
+			    {% include online-pre-procedure/step-4.html %}
+			 		{% include online-pre-procedure/step-5.html %}
+	 			</div>
+	 		</div>
+ 		</div>
+  </div>
+</section>
+
+{% include footer-main.html %}

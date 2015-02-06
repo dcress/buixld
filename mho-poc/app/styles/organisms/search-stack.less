@@ -1,0 +1,97 @@
+//
+// Search Appstack
+// ------------------
+
+.search-stack {
+
+    background-color: @hospital-primary;
+    text-align: center;
+
+    h3, p {
+        color: #fff;
+    }
+
+    // Search field
+    .search-stack-inner {
+        padding:@padding-large-vertical 0;
+        form {
+            margin: 0 auto;
+            max-width: 580px; //commented out per Logan's request for business demo
+            min-width: 340px;
+            width: 80%;
+            input { margin-bottom: 0; }
+            .form-group { margin-bottom: 5px; }
+            .search-box {
+                border: none;
+                border-radius: 3px 0 0 3px;
+                box-shadow: none;
+                color: @hospital-secondary;
+                display: inline;
+                vertical-align: bottom;
+                width: 90%;
+            }
+            ::-webkit-input-placeholder { color: @hospital-secondary; }
+            .fa-input {
+                background-color: #FFF;
+                border: none;
+                border-radius: 0 3px 3px 0;
+                color: #c0c0c0;
+                height: 34px;
+                width: 34px;
+            }
+        }
+
+        // inline list items below search field
+        .search-items {
+            padding: @padding-large-vertical 0;
+            >li {
+                color: @nav-font-color;
+                display: inline;
+                padding: 0 15px;
+            }
+            i {
+                display: inline;
+                padding-bottom: @padding-base-vertical;
+                padding-right: @padding-xs-horizontal;
+            }
+            .fa-angle-down {
+                padding-left: 5px;
+                position: relative;
+                top: 1px;
+            }
+            .btn {
+                float: none;
+                padding: 0;
+                vertical-align: inherit;
+            }
+            .btn-group {
+                vertical-align: inherit;
+            }
+            .btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+                background-color: transparent;
+                border: none;
+            }
+            .btn-group.open .dropdown-toggle, .btn-default:active {
+                box-shadow: none;   
+            }
+            .dropdown-menu {
+                left:10px;
+                margin-top: 8px;
+                text-align: left;
+            }
+        }
+    }
+
+    // Small devices
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) { }
+
+    // Medium devices
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) { }
+
+    // Large devices
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) { }
+
+}

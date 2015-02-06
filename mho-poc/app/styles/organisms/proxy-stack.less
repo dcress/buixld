@@ -1,0 +1,55 @@
+//
+// Proxy Appstack
+// ------------------
+
+.proxy-stack {
+
+    background-image: url('../img/banner-stonecrest.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/banner-stonecrest.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/banner-stonecrest.jpg', sizingMethod='scale')";
+    position: relative;
+    overflow: auto;
+    
+    .btn-primary {
+        background-color: @hospital-primary;
+        border: none;
+        font-size: @font-size-base;
+        margin-top: .5rem;
+        min-width: 160px;
+        width: 30%;
+    }
+    
+    .proxy-stack-inner {
+        padding: @padding-xl-vertical 0;
+        .text-center();
+    }
+
+    h3,
+    p {
+        color: #fff;
+    }
+    h3 {
+        font-size: @font-size-h3;
+        margin-top: 0;
+    }
+    p {
+        font-size: @font-size-large;
+    }
+
+    // Small devices
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) { }
+
+    // Medium devices
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) { }
+
+    // Large devices
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) { }
+
+}

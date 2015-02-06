@@ -1,0 +1,244 @@
+
+// Profile Management page
+
+#profile-form-container { //edit profile page
+  padding-bottom: 20px;
+}
+
+#profile-page {
+
+  //padding-top: 20px;
+
+  .profile-page-inner {
+    padding-bottom: @padding-xl-vertical;
+  }
+
+// Custom button for the edit profile - will prolly change to normal
+
+  #edit-profile {
+    text-align: right;
+    // padding-top: 30px;
+    padding-bottom: 10px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .edit-profile-btn {
+    font-size: 12px;
+    // margin-left: 10px;
+    padding: 2px 10px;
+    // border-radius: 20px 20px 0 0;
+    a {
+      text-decoration: none;
+      color: @nav-font-color;
+    }
+  }
+
+  .panel {
+    margin-bottom: 50px;
+  }
+
+  img,
+  input,
+  .panel-body {
+    .center-block();
+  }
+
+  h3 {
+    margin: 30px 0;
+    color: @hospital-primary;
+    text-transform: uppercase;
+    .text-center();
+  }
+
+  h4 {
+    margin-bottom: @padding-xl-horizontal;
+  }
+
+
+  h4,
+  .section-title,
+  .panel-body i.fa{
+    display: block;
+    .text-center();
+    text-transform: uppercase;
+  }
+
+  .panel-body p {
+    .text-center();
+  }
+
+  img {margin-bottom: 10px;}
+
+  // Icons within panels
+  .panel-body i {
+    margin: 35px 0;
+    color: @brand-primary;
+    font-size: 5em;
+  }
+
+  .panel-body img {
+    // margin: 35px 0; i dont know why this was here - david. 
+  }
+
+  .panel-footer {
+    padding: 20px 15px;
+    background-color: @body-bg;
+  }
+
+// Link Patient Account Panel
+  .link-account-panel {
+    padding: @padding-xl-horizontal;
+
+    .link-account-panel-inner {
+      width: 100%;
+      .center-block();
+    }
+
+    h4 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+    // Needed Item Task Icons
+    i {
+      .font-size(2.5);
+      margin-right: 5px;
+    }
+    // block button
+    a {
+      margin: 30px 0;
+    }
+    .need-help {
+      .center-block();
+    }
+  }
+
+  .btn-profile-confirm {
+    width: 230px;
+    .center-block();
+  }
+}
+
+
+//modal styles
+//
+#default-modal {
+
+  .modal-header {
+    button {
+      padding: 1px;
+    }
+
+    h4 {
+      text-align: center;
+      padding-top: 15px;
+      color: @close-color; 
+    }
+  }
+
+  .modal-body {
+    padding-top: 15px;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: @hospital-secondary;
+    }
+
+    i.fa-circle {
+      color: @hospital-secondary;
+    }
+
+    i.fa-folder-open {
+      padding-left: 12px; //for some reason this icon is naturally off center when stacking on circle icon
+    }
+
+  }
+
+  .modal-footer {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 15px;
+
+    p {
+      // text-align: left;
+      font-size: 20px; //none of the current variables were consistent with comp
+      color: @close-color;
+      margin-top: 0;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
+    .form-group input {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    i.fa-book {
+      float: right;
+      color: @hospital-secondary;
+      margin-top: -24px;
+      margin-right: 10px;
+    }
+
+    button {
+      font-size: @font-size-h5;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    button.btn-gray {
+      background: @gray-dark;
+      color: @nav-font-color;
+    }
+
+    .tab-content {
+      height: 400px;
+      overflow: scroll;
+    }
+
+    .tab-pane {
+      padding-top: 5px;
+    }
+
+    .tab-pane p {
+      padding-top: 5px;
+      padding-bottom: 0;
+      font-size: @font-size-h5;
+      text-align: left;
+    }
+  }
+
+}
+
+
+
+// Small devices
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #profile-page {
+    .link-account-panel {
+      .link-account-panel-inner {
+        width: 63%;
+      }
+    }
+  }
+
+}
+
+// Medium devices
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+// Large devices
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

@@ -1,0 +1,99 @@
+<div class="container-md">
+
+    <div class="row">
+      <div class="col-sm-12 form-disclaimers">
+        <p>&bull; &nbsp;Scheduled date must be at least 2 business days in the future.</p> <p><i class="fa fa-asterisk" aria-hidden="true"></i>Denotes required field.</p>
+      </div>
+    </div>
+
+    <div class="crm-holder">
+      <form action="{{ page.base_url }}online-pre-registration/patient-information" id="" class="container-sm">
+        <div class="profile-form-fields">
+          <fieldset class="inactive">
+
+            <h3>Visit Information</h3>
+            <div class="form-group row">
+                <div class="col-sm-6 float-label">
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="gender" class="sr-only">Reason for Visit</label>
+                  <select name="gender" id="gender" class="form-control select-styled required">
+                      <option value="" disabled selected>Reason for Visit</option>
+                      <option>Reason 1</option>
+                      <option>Reason 2</option>
+                      <option>Reason 3</option>
+                      <option>Reason 4</option>
+                      <option>Reason 5</option>
+                      <option>Reason 6</option>
+                      <option>Reason 7</option>
+                      <option>Reason 8</option>
+                      <option>Reason 9</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 float-label">
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="gender" class="sr-only">Visit Date</label>
+                  <input name="date" class="datepicker form-control picker__input" placeholder="Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+            </div>
+
+              <div class="form-group row">
+                <div class="col-sm-12 float-label">
+                  <label for="reason-description" class="sr-only">Reason Description</label>
+                  <input type="text" class="form-control required" id="" placeholder="Reason Description" value="">
+                </div>
+              </div>
+            </div>
+
+            <h3>Family Physician</h3>
+
+            <div class="form-group row">
+              <p class="label-row">Who is the patient's family physician?</p>
+              <div class="col-sm-6 float-label">
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="first-name1" class="sr-only">First Name</label>
+                  <input type="text" class="form-control required" id="" name="first1" placeholder="First Name">
+              </div>
+              <div class="col-sm-6 float-label">
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="last-name1" class="sr-only">Last Name</label>
+                  <input type="text" class="form-control required" id="" name="last1" placeholder="Last Name">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <p class="label-row">What physician requested the visit you are pre-registering for?</p>
+              <div class="col-sm-6 float-label">
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="first-name2" class="sr-only">First Name</label>
+                  <input type="text" class="form-control required" id="" name="first2" placeholder="First Name">
+              </div>
+              <div class="col-sm-6 float-label">
+                 <i class="fa fa-asterisk" aria-hidden="true"></i>
+                  <label for="last-name2" class="sr-only">Last Name</label>
+                  <input type="text" class="form-control required" id="" name="last2" placeholder="Last Name">
+              </div>
+            </div> 
+
+            <div class="row">
+              <div class="col-sm-12 disclaimer">
+                <p>The physicians listed above will receive copies of any test results.</p>
+              </div>
+            </div>
+
+
+            <div class="form-btn-options">
+              <button type="submit" class="btn btn-secondary">Continue</button>
+            </div>
+
+
+
+
+
+
+          </fieldset>
+        </div>
+      </form>
+    </div>
+    
+  </div>

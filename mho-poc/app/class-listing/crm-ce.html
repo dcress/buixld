@@ -1,0 +1,46 @@
+---
+layout: crm-ce
+title: Class and Events
+base_url: "../"
+---
+
+
+<!-- Main search for Classes and Events module -->
+<section id="ce-search">
+	{% include crm-ce/ce-search-tabs.html %}
+</section>
+
+
+<!-- Withdrawal band
+<section id="ce-withdrawal-band">
+</section> -->
+
+
+<!-- Results listing -->
+<section id="ce-results-listing">
+
+	<!-- Results criteria -->
+	<article id="ce-results-criteria" class="container-sm">
+		{% include crm-ce/ce-result-criteria.html %}
+	</article>
+
+	<!-- Results -->
+	<section id="ce-result-container" class="container-sm">
+		{% include crm-ce/ce-result.html %}
+		{% include crm-ce/ce-result-call.html %}
+		{% include crm-ce/ce-result-waitlist.html %}
+	</section>
+
+	<!-- Pagination -->
+	<div id="ce-pagination" class="container-sm">
+		{% include crm-ce/ce-pagination.html %}
+	</div>
+
+	<!-- Modals -->
+	{% include crm-ce/ce-modal-withdrawal.html %}
+	{% include crm-ce/ce-modal-result-details.html %}
+	{% include crm-ce/ce-modal-result-details-call.html %}
+	{% include crm-ce/ce-modal-result-details-waitlist.html %}
+	{% include crm-ce/ce-modal-hps.html %}
+
+</section>

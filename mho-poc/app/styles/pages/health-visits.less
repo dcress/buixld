@@ -1,0 +1,248 @@
+//health visits page
+//
+#health-visits {
+  .hv-result-time p {
+    font-size: @font-size-h6;
+    text-align: center;
+    padding: 0;
+    margin:0;
+  }
+
+  #lr-date-calendar {
+    padding-bottom: 10px;
+  }
+
+  .lr-patient-info {
+    text-align: left;
+  }
+
+}
+
+
+//health visits detail page
+//
+#health-visits-detail {
+
+  h4 {
+    text-transform: initial;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+
+  .lr-detail-facility-address {
+    h4 {
+      padding-left: 0;
+    }
+  }
+
+  .mobile-duration-of-stay {
+    display: none;
+  }
+
+
+
+@media screen and (max-width: @screen-xs-max) {
+
+  .duration-of-stay {
+    display: none;
+  }
+  .mobile-duration-of-stay {
+    display: block;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+
+    h1 {
+      text-transform: uppercase;
+      color: @hospital-secondary;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  //circle icons 
+  .fa-3x {
+    font-size: @font-size-h4;
+  }
+
+  .stat span {
+    font-size: @font-size-h4;
+  }
+
+}
+
+
+  .duration-of-stay {
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+
+
+    h1 {
+      text-transform: uppercase;
+      color: @hospital-secondary;
+      text-align: center;
+      font-weight: 300;
+      padding-top: 25px;
+      margin-bottom: -10px;
+    }
+
+    h5 {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .fa-stack {
+      display: block;
+      margin: 0 auto;
+      color: @hospital-secondary;
+      z-index: 1;
+    }
+
+    .line {
+      display: block;
+      border-bottom: 5px solid @hospital-secondary;
+      padding-top: 25px;
+      margin-left: -50px;
+      margin-right: -50px;
+    }
+  }
+
+  #collapse-medical-staff {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .medical-staff {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    span {
+      display: block;
+    }
+
+    img {
+      margin: 0 auto;
+
+    }
+
+    .doc-info {
+      padding-left: 0;
+      margin-left: -10px;
+      padding-top: 5px;
+    }
+
+    .doc-name {
+      font-size: @font-size-h4;
+      color: @hospital-secondary;
+      font-weight: 300;
+    }
+
+    .doc-status {
+      font-size: @font-size-h6;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .summary-panel {
+    padding-top: 10px;
+
+    .fa-stack {
+      display: block;
+      color: @hospital-secondary;
+      margin: 0 auto;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      color: @hospital-secondary;
+      text-align: center;
+    }
+
+    .summary-panel-info {
+      padding: 0 20px;
+      height: 175px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+
+
+  //Medical Visit Details 
+  .vitals-panel {
+    padding-bottom: 10px;
+
+    h5 {
+      color: @hospital-primary;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .fa-stack {
+      display: block;
+      color: @hospital-secondary;
+      margin: 0 auto;
+    }
+  }
+
+  .stat {
+    display: block;
+    font-size: @font-size-h2;
+    color: @hospital-primary;
+    padding-top: 15px;
+    padding-left: 0px;
+    margin-left: 0;
+  }
+
+
+}
+
+
+//global shiz
+//
+.centered-icon-stack {
+  h5 {
+    color: @hospital-primary;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .fa-stack {
+    display: block;
+    color: @hospital-secondary;
+    margin: 0 auto;
+  }
+}
+
+.sub-panel { 
+    color: @gray-light;
+  }
+
+
+#health-visits-detail,
+#clinical-info {
+  h4 {
+    text-transform: initial;
+    font-weight: 300;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

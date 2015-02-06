@@ -1,0 +1,87 @@
+<!-- 100% width for background image -->
+<div class="dashboard-stack" class="row">
+  <!-- Centered width for elements -->
+  <div class="dashboard-stack-inner container-md row">
+    <!-- OLD -->
+    <!-- <div class="pull-left dashboard-item">
+      <a href="" {% if page.url contains "/patient/" %}class="active"{% else %}class="disabled"{% endif %}><i class="fa fa-medkit" aria-hidden="true" alt="Health Records"></i><br> Health Records</a>
+    </div>
+
+    <div class="pull-left dashboard-item">
+      <a href="" {% if page.url contains "/patient/" %}class="active"{% else %}class="disabled"{% endif %}><i class="fa fa-hospital-o"></i><br> Health Visits</a>
+    </div>
+
+    <div class="pull-left dashboard-item">
+      <a href="" {% if page.url contains "/patient/" %}class="active"{% else %}class="disabled"{% endif %}><i class="fa fa-pencil-square-o"></i><br> Appointments</a>
+    </div>
+
+    <div class="pull-left dashboard-item">
+      <a href="" {% if page.url contains "/patient/" %}class="active"{% else %}class="disabled"{% endif %}><i class="fa fa-flask"></i><br> Lab Results</a>
+    </div>
+
+    <div class="pull-left dashboard-item">
+      <a href="{{ page.base_url }}crm-classes-events/" {% if page.url contains "/patient/" %}class="active"{% else %}class="disabled"{% endif %}><i class="fa fa-calendar"></i><br> Classes &amp; Events</a>
+    </div>
+    
+    <div class="pull-left dashboard-item">
+      <a href="" class="active"><i class="fa fa-book"></i><br> Wellness</a>
+    </div> -->
+
+    <!-- NEW WITH BS3 COLUMNS INSTEAD and flexslider added 8/6/14 by david -->
+
+    <div class="slider">
+      <div class="flexslider carousel">
+        <ul class="slides">
+
+          <!-- added new logic to some li's to remove from page if on consumer home 8/12/14 -david -->
+
+          <li {% if page.url contains "/patient/" %} class="dashboard-item" {% else %} class="remove" {% endif %}>
+            <a href="{{ page.base_url }}activity-log/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="disabled text-center"{% endif %}><i class="fa fa-medkit" aria-hidden="true" alt="Health Records"></i> <span>Health Records</span> </a>
+          </li>
+
+          <li {% if page.url contains "/patient/" %} class="dashboard-item" {% else %} class="remove" {% endif %}>
+            <a href="{{ page.base_url }}activity-log/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="disabled text-center"{% endif %}><i class="fa fa-hospital-o" aria-hidden="true" alt="Health Visits"></i> <span>Health Visits</span></a>
+          </li>
+
+          <li {% if page.url contains "/patient/" %} class="dashboard-item" {% else %} class="remove" {% endif %}>
+            <a href="http://buixld.com/provider-directory/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="disabled text-center"{% endif %}><i class="fa fa-calendar" aria-hidden="true" alt="Appointments"></i> <span>Appointments</span></a>
+          </li>
+
+          <li {% if page.url contains "/patient/" %} class="dashboard-item" {% else %} class="remove" {% endif %}>
+            <a href="{{ page.base_url }}lab-results/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="disabled text-center"{% endif %}><i class="fa fa-flask" aria-hidden="true" alt="Lab Results"></i> <span>Lab Results</span></a>
+          </li>
+
+          <li class="dashboard-item">
+            <a href="http://buixld.com/provider-directory/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="text-center"{% endif %}><i class="fa fa-user-md" aria-hidden="true" alt="Find a Doctor"></i> <span>Find a Doctor</span></a>
+          </li>
+
+          <li class="dashboard-item">
+            <a href="{{ page.base_url }}crm-classes-events/" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="text-center"{% endif %}><i class="fa fa-calendar-o" aria-hidden="true" alt="Classes and Events"></i> <span>Classes &amp; Events</span></a>
+          </li>
+
+          <li class="dashboard-item">
+            <a href="{{ page.base_url }}" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="text-center"{% endif %}><i class="fa fa-money" aria-hidden="true" alt="Bill and Pay"></i> <span>Bill &amp; Pay</span></a>
+          </li>
+
+          <li class="dashboard-item">
+            <a href="{{ page.base_url }}online-pre-registration" {% if page.url contains "/patient/" %}class="active text-center"{% else %}class="text-center"{% endif %}><i class="fa fa-list-alt" aria-hidden="true" alt="Online Pre-Registration"></i> <span>Pre-Registration</span></a>
+          </li>
+
+          <!-- <li class="dashboard-item">
+            <a href="{{ page.base_url }}under-construction" class="active text-center"><i class="fa fa-book" aria-hidden="true" alt="Wellness"></i><br> <span>Wellness</span></a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+
+  </div> <!-- dashboard-stack-inner -->
+  
+  <!-- Conditional Banner Message -->
+  {% if page.url != '/patient/' %}
+  <div class="access-banner">
+    <h3>Can&rsquo;t Access Everything? Want To Do More?</h3>
+    <p>Complete your profile today to experience all that MyHealth<em>One</em> has to offer!</p>
+  </div>
+  {% endif %}
+</div> <!-- dashboard-stack -->
+

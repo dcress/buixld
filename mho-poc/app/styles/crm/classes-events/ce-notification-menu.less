@@ -1,0 +1,353 @@
+/*
+	1  Preset / Resets
+		1.1  Imports
+		1.2  Mixsums
+		1.3  Bootstrap Overrides
+	
+	2  Notification Center, general
+		2.1  Notification Wrap
+		2.2  General elements & classes
+		
+	3  Specific Sections
+		3.1  Global Alert Notification	
+		3.2  ER Wait Notification
+		3.3  Social Media Notification
+		3.4  Recent News / Event Notification
+
+	4  Menu States
+	5  IE
+	6  Media Queries
+----------------------------------------------------------*/
+
+
+
+//	1.3  Bootstrap Overrides
+// .navbar .dropdown-menu.pull-right:before,
+// .navbar .dropdown-menu.pull-right:after {
+// 	right: 4px;
+// }
+.navbar .dropdown-menu:after {
+	border-bottom-color: @default-accent-gray;
+}
+
+//	IF FLASH MESSAGE, HIDE ALL SECTIONS
+.notification.flash.open section {
+	display: none;
+}
+
+//	2  Notification Center
+#notification-center {
+	padding: 0.5em 0 0.5em 0.5em;
+	width: 340px;
+	z-index: 1001;
+	color:@default-text-gray;
+	background: @default-background-gray;
+	.clearfix;
+	.rounded-corners(0);
+
+	
+//	2.1  Notification Wrap
+	#notification-wrap {
+		max-height: 460px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	
+//	2.2  General elements & classes
+	section { 
+		clear:both;
+		margin-right: 0.5em;
+		i{
+			font-size: 2.3em;
+			float: left;
+			clear: left;
+			line-height:1em;
+			margin-right: 0.3em;
+			//color:@default-accent-gray;
+		}
+		.update { 
+			// font-size: 0.8em; 
+			margin-left: 3em; 
+		}
+	}
+	section,
+	a {
+		white-space: normal;
+		word-wrap: break-word;
+	}
+	header { 
+		width: auto;
+		font-size:1em; 
+		strong{
+			font-weight:normal;
+			font-size:1.2em;
+			line-height:1.5em;
+		}
+	}
+	.btn {
+		width: auto;
+		height: auto;
+		padding: 5px 20px;
+		color: #fff;
+		clear:none;
+		float:right;
+		.rounded-corners(0);
+	}
+	li{
+		font-size: .8em;
+		list-style: disc;
+	}
+
+
+//	3  Specific Sections
+
+//	3.1  Global Alert Notification
+	#global-alert-notification {
+		color: #000;
+		background: @default-background-gray;
+		padding: .25em .5em;
+		.clearfix;
+		&.alert-danger {
+			color: #FFFFFF;
+			background: #f44d4f;
+		}
+		&.alert-warning {
+			color: #3B301D;
+			background-color: #FFC676;
+			border: 0.1em #afafaf solid;
+		}
+		&.alert-info {
+			color: #243944;
+			background-color: #88CBEC;
+			border: 0.1em #8FADB3 solid;
+		}
+		&.alert-all-clear,
+		&.alert-success {
+			color: #293C29;
+			background-color: #A7DD90;
+			border: 0.1em #96A589 solid;
+		}
+		i {
+			font-size: 2.5em;
+			float: left;
+			margin-right:0.2em;
+			margin-top: 0.1em;
+			text-align: center;
+			width: 0.9em;
+		}
+		.btn{
+			background: #535353;
+		}
+		.ehc-global-announcement-wrap,
+		.alert-message {
+			float: left;
+			width: 85%;
+			margin-top: 0.5em;
+			header { 
+				font-size: 1.3em ;
+				padding: 0.2em 0;
+				margin: 0 0 0.6em 0;
+			}
+			p { 
+				font-size: 0.8em;
+				line-height: 1.6em; 
+			}
+		}
+	}
+	
+//	3.2  ER Wait Notification
+	#er-wait-notification {
+		padding: 0.6em 0 0 0;
+		header {
+			color: @default-text-gray;
+			padding: 1.2em 0;
+			strong {  }
+			i {
+				// font-size: 1.6em;
+				color:@default-accent-gray;
+			}
+		}
+		.er-wait-time {
+			display: block;
+			height: auto;
+			overflow:hidden;
+			background: rgba(255, 255, 255, 0.5);
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			margin: 0.2em 0;
+			padding: .5em .3em;
+		}
+		.wait-time {
+			width: 20%;
+			float: left;
+			height: 100%;
+			text-align: center;
+			line-height: 1.5em;
+			// margin-top:.5em;
+			.time {
+				font-size: 1.2em;
+			}
+			.mins{
+				.font-size(1.7); 
+			}
+			.mins, .time{
+				line-height: 1.2em;
+			}
+		}
+		.location-details {
+			float: left;
+			text-align: right;
+			width: 78%;
+			.name { 
+				color: #424242; 
+				line-height:1.2em;
+				font-size:1.6rem;
+				}
+			.published { 
+				font-size: 0.6em; 
+				line-height:1.1em;
+			}
+			.pubdate, .pubtime { .font-size(1.2); }
+			.photo {
+				float: right;
+				margin-left: .5em;
+			}
+		}
+	}
+	
+//	3.3  Social Media Notification
+	#social-media-notification{
+		header{
+			color: @default-text-gray;
+			padding: 1.2em 0;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			i{
+				font-size: 1.8em;
+				color:@default-accent-gray;
+			}
+		}
+		.desc,
+		.update {
+			float: left;
+			width: 86%;
+		}
+		.feeds {
+			.facebook-latest, .twitter-latest, .rss-latest { 
+				overflow: hidden;
+				clear:both;
+				margin: 10px 0;
+			}
+			i{
+				line-height:1.8em;
+				color:@default-accent-gray;
+				margin-right:.2em;
+			}
+			.update{
+				margin-left:.4em;
+			}
+			.update a { 
+				.font-size(1.5);
+				line-height:1.5em;
+				padding: 0;
+				text-decoration:underline;
+			}
+		}
+	}
+	
+//	3.4  Recent News / Event Notification
+	#recent-news-notification, 
+	#calendar-event-notification{
+		header {
+			color: @default-text-gray;
+			padding: 1em 0;
+			// border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid @default-accent-gray;
+			margin-bottom: .5em;
+		}
+		i {
+			// font-size:1.8em;
+			// margin-right:.75em;
+			color:@default-accent-gray;
+		}
+		.update a { 
+			.font-size(1.5);
+			line-height:1.5em; 
+			padding: 0;
+			text-decoration:underline;
+		}
+		.desc { 
+			margin-bottom: 1em; 
+			text-decoration:none;
+			p{
+				font-size: 1em;
+				margin: 0;
+			}
+		}
+	}
+}
+
+//	4 Menu States
+//	ON SHOW MORE CLICK, HIDE ALL SECTIONS EXCEPT ER WAIT NOTIFICATION
+.group.notification.er.open section {
+	display: none;
+	&#er-wait-notification { display: block; }
+}
+
+
+//	5  IE
+html.lt-ie9 {
+	#notification-center #er-wait-notification header,
+	#notification-center #social-media-notification header,
+	#notification-center #recent-news-notification header, 
+	#notification-center #calendar-event-notification header{
+		margin: 0 5px;
+		width: 93%;
+	}
+	#notification-center #er-wait-notification .er-wait-time{
+		background-color:#f6f6f6;
+		border-color: @default-accent-gray;
+	}
+}
+
+//	6  Media Queries
+@media only screen and (max-width : 480px) and (orientation:portrait) {
+	#notification-center {
+		width: 320px;
+	}
+	#global-alert-notification .ehc-global-announcement-wrap, 
+	#global-alert-notification .alert-message{
+		width:90%;
+	}
+}
+@media only screen and (max-width : 480px) and (orientation:landscape) {
+	#notification-center {
+		width:320px;
+	}
+	#global-alert-notification .ehc-global-announcement-wrap, 
+	#global-alert-notification .alert-message{
+		width:92%;
+	}
+}
+
+/* Mobile 
+----------------------------------------------------------*/
+@media (max-width: 320px ) {
+}
+
+
+/* Landscape phone to portrait tablet 
+----------------------------------------------------------*/
+@media (max-width: 600px) {
+}
+
+/* Portrait tablet to landscape and desktop 
+----------------------------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/* Large desktop
+----------------------------------------------------------*/
+@media only screen and (min-width: 980px) {
+}
+
+@media only screen and (min-width: 1095px) {
+}

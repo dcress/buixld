@@ -1,0 +1,266 @@
+<div id="step-5">
+    <div class="row">
+        <div class="col-sm-12 form-disclaimers">
+          <!-- <p><i class="fa fa-asterisk" aria-hidden="true"></i>Denotes required field.</p> -->
+        </div>
+      </div>
+
+      <div class="crm-holder">
+        <form action="{{ page.base_url }}online-pre-registration/patient-information" id="" class="container-sm">
+          <div class="profile-form-fields">
+            <fieldset class="inactive">
+
+              <div class="row form-section-wrap">
+                <h3>Email Notification</h3>
+                <div class="col-sm-12">
+                  <p class="label-inline">Check box if you would like to receive email notifications.</p>
+                  <label class="radio-inline">
+                    <input type="radio" name="YoN15" id="activeCheck3" value="active"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="YoN15" id="activeCheck4" value="inactive"> No
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section-wrap">
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <label for="email" class="sr-only">Enter Email Address</label>
+                      <input type="email" class="form-control required" id="" placeholder="Enter Email Address" value="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <label for="email2" class="sr-only">Verify Email Address</label>
+                      <input type="email" class="form-control required" id="" placeholder="Verify Email Address" value="">
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="form-section-wrap">
+                <p class="label-inline">Is there anything else we should be aware of in preparation for your upcoming visit?</p>
+              </div>
+
+
+              <div class="form-group row">
+                <div class="col-sm-12 float-label">
+                    <label for="extraInfo" class="sr-only">Enter Information Here</label>
+                    <input type="text" class="form-control required" id="" placeholder="Enter Information Here" value="">
+                </div>
+              </div>
+
+
+
+              <div class="row form-section-wrap">
+                <h3>Procedure Registration</h3>
+                <div class="col-sm-12">
+                  <p class="label-inline">Are you registering for a procedure in the hospital?</p>
+                  <label class="radio-inline" id="procedure-yes">
+                    <input type="radio" name="procedureRegisterYoN" id="procedureRegisterYes" value="yes"> Yes
+                  </label>
+                  <label class="radio-inline" id="procedure-no">
+                    <input type="radio" name="procedureRegisterYoN" id="procedureRegisterNo" value="no"> No
+                  </label>
+                </div>
+              </div>
+
+
+              <!-- hide and show this section based on answer of above question -->
+              <div class="pre-procedure-questions">
+                <h5>Please answer the questions below.</h5>
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you become short of breath or develop chest pain when climbing a flight of stairs?</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <label class="radio-inline" id="chest-pain-yes">
+                      <input type="radio" name="chestPainYoN" id="chestPainYes" value="yes"> Yes
+                    </label>
+                    <label class="radio-inline" id="chest-pain-no">
+                      <input type="radio" name="chestPainYoN" id="chestPainNo" value="no"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="chest-pain-questions question-group-2">
+                  {% include online-pre-procedure/chest-pain-questions.html %}
+                </div>
+                <!-- end chest pain questions -->
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you have high blood pressure that requires two or more medications to control it?</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <label class="radio-inline" id="blood-pressure-yes">
+                      <input type="radio" name="bloodPressureYoN" id="bloodPressureYes" value="yes"> Yes
+                    </label>
+                    <label class="radio-inline" id="blood-pressure-no">
+                      <input type="radio" name="bloodPressureYoN" id="bloodPressureNo" value="no"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="blood-pressure-questions question-group-2">
+                  {% include online-pre-procedure/blood-pressure-questions.html %}
+                </div>
+
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Have you ever had heart disease, pacemaker/defibrillator, heart surgery, angioplasty, or a stent placed?</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <label class="radio-inline" id="heart-disease-yes">
+                      <input type="radio" name="heartDiseaseYoN" id="heartDiseaseYes" value="yes"> Yes
+                    </label>
+                    <label class="radio-inline" id="heart-disease-no">
+                      <input type="radio" name="heartDiseaseYoN" id="heartDiseaseNo" value="no"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Are you frequently taking blood thinners such as Coumadin (warfarin), Plavix (clopidogrel), Effient (prasugrel), Aspirin, etc?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN4" id="activeCheck9" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN4" id="activeCheck10" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Have you ever had blood clots, stroke, carotid artery blockage, or TIA (mine-strokes)?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN5" id="activeCheck12" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN5" id="activeCheck13" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you have a history of excessive bleeding or have you had to see a doctor due to problems with bleeding or clotting?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN6" id="activeCheck14" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN6" id="activeCheck15" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Are you more than 100lbs overweight?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN8" id="activeCheck15" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN8" id="activeCheck16" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you have asthma, chronic bronchitis, emphysema, or sleep apnea?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN9" id="activeCheck17" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN9" id="activeCheck18" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">In the last two years have you been on steriods like prednisone for a condition such as lupus, severe rheumatoid arthritis, chronic lung conditions, or hypopituitary conditon?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN10" id="activeCheck19" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN10" id="activeCheck20" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you have diabetes that requires insulin?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN12" id="activeCheck21" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN12" id="activeCheck22" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Do you have kidney problems and regularly see a nephrologist (kidney specialist) or receive dialysis?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN13" id="activeCheck23" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN13" id="activeCheck24" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p class="label-inline q-level-1">Have you been scheduled for a pre-admission testing visit?</p>
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN14" id="activeCheck25" value="active"> Yes
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="YoN14" id="activeCheck26" value="inactive"> No
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <!-- end pre-procedure section -->
+
+            </fieldset>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+    </div>

@@ -1,0 +1,56 @@
+  <!-- Trouble Logging In -->
+  <div id="login-trouble-modal" class="flip-panel">
+  <div class="modal-dialog back">
+    <div class="modal-content gray-bg">
+        <div class="static-modal-header">
+          <button type="button" class="close cancel flip-login-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa  fa-times-circle" aria-hidden="true" alt="X"></i></button>
+          <div class="brand-logo-white"></div>
+        </div>
+      <div class="static-modal-body">
+          <div class="row">
+            <div class="center-block white-text text-center">
+              <h3>TROUBLE LOGGING IN ?</h3>
+              <h3>Please select any of the following options and enter your email address to resolve the login issues.</h3>
+            </div>
+          </div>
+          <!-- Removed method="post" from 'form' in order for prototype flow -->
+        <form class="form-horizontal" role="form" action="login-trouble-reset/index.html" id="login-trouble-form">
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <select class="form-control select-styled" id="login-trouble-options" name="loginTroubleOptions">
+                <option>I forgot my username</option>
+                <option>I forgot my password</option>
+                <option>I forgot both my username and password</option>
+              </select>
+           </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control" id="login-trouble-email" placeholder="Email Address" name="email">
+              <label for="login-trouble-email" class="email-suggestion help-block">Did you mean <a class="suggested-email"></a>?</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary btn-block btn-primary-75 btn-primary-center">SUBMIT</button>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+        </form>
+      </div>
+      <div class="static-modal-footer">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            I agree to the terms. I dont need a checkmark!
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

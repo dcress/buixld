@@ -1,0 +1,1074 @@
+
+{{#if result}}
+
+<!-- Results listing -->
+<section id="ce-results-listing">
+
+  <!-- Results criteria -->
+  <article id="ce-results-criteria" class="container-sm">
+    <div class="row">
+	<!-- Resutls header section -->
+	<div class="col-md-12">
+		<h2>Class &amp; Events Search Results</h2>
+	</div>
+</div>
+		
+<div class="row">
+	<!-- Resutls sort button -->
+
+ 	<div class="col-xs-12 col-sm-4 left">
+		<select name="sort" id="select-sort" class="form-control select-styled" required="required">
+			<option value="startDateTime">Sort by: Start Date</option>
+			<option value="eventName">Sort by: Event Name</option>
+			<option value="eventClassType">Sort by: Event Type</option>
+			{{{createSelectOption '"distance"' 'Sort by: Distance' }}} 
+		</select>
+	</div>
+	
+	<div class="col-xs-12 col-sm-2 right">
+		<div class="btn-group">
+			<select name="results" id="select-results" class="form-control select-styled" required="required">
+				<option value="10">10</option>
+				<option value="20">20</option>
+			</select>
+		</div>
+	</div>
+</div>
+  </article>
+
+  <!-- Results -->
+  <section id="ce-result-container" class="container-sm">
+    
+{{#result}}
+
+<article class="ce-result">
+
+  <!-- Event title location date and time -->
+  <div id="ce-result-info" class="row">
+
+    <!-- Event Title -->
+    <div class="col-sm-8 ce-result-title">
+      <h3><a data-toggle="modal" data-target="#ce-modal-result-details{{ eventId}}">{{ eventName}}</a></h3>
+      <p class="eventDescription">{{truncate eventDescription 100}}</p>
+      <p><i class="fa fa-pencil"></i> <a>{{ eventClassType}}</a></p>
+
+      <!-- Location information -->
+      <div class="row ce-result-location">
+        <div class="col-xs-3 ce-result-location-img" >
+          <i class="fa fa-map-marker fa-4x" style="text-align: center; display: block;"></i>
+        </div>
+        <div class="col-sm-9 ce-result-location-info">
+          {{{truncateDistance distance}}}
+          {{{sessionLocation locationLat locationLong locationName locationStreetAddress locationCity locationState locationZipCode}}}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Calendar and Time -->
+    <div class="col-sm-4 ce-result-date-time">
+      <div class="row">
+        <div class="col-sm-12 ce-result-calendar"><div id="ce-date-calendar">
+	{{{calendarIcon startDateTime}}}
+</div></div>
+        <div class="col-sm-12 ce-result-time">
+          {{{eventDate startDateTime endDateTime}}} 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Result Attributes -->
+  <div id="ce-result-attributes" class="row">
+    <!-- Result details -->
+    <div class="col-sm-3 ce-result-attribute ce-result-details">
+      <a data-toggle="modal" data-target="#ce-modal-result-details{{ eventId}}"><i class="fa fa-calendar"></i> See Full Details</a>
+    </div>
+
+    <!-- Availability -->
+    <div class="col-sm-3 ce-result-attribute ce-result-available">
+      <span><i class="fa fa-check-circle"></i> {{available}}</span>
+    </div>
+
+    <!-- Cost -->
+    <div class="col-sm-2 ce-result-attribute ce-result-cost">
+      <span class="ce-alert-default"><i class="fa fa-money"></i> 
+        ${{registrationCost}}
+      </span>
+    </div>
+
+    <!-- Register for event -->
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+    </div>
+
+    <!-- Call to register
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-info"><i class="fa fa-phone"></i> Call: (123) 456-7890</a>
+    </div> -->
+
+    <!-- Joing waitlist
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+    </div> -->
+
+    <!-- Toggle payment modal
+    <div class="col-sm-4 ce-result-cta">
+      <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+    </div> -->
+
+  </div>
+
+</article>
+
+
+{{/result}}
+
+
+    <!--
+{{#classResults}}
+
+ {{#if callResult}} 
+<article class="ce-result">
+  
+  <!-- Event title location date and time -->
+  <div id="ce-result-info" class="row">
+
+    <!-- Event Title -->
+    <div class="col-sm-8 ce-result-title">
+      <h3><a data-toggle="modal" data-target="#ce-modal-result-details-call{{modalId}}"> {{resultName}} </a></h3>
+      <p> {{resultInfo}} </p>
+      <p><i class="fa fa-pencil"></i> <a> {{resultType}} </a></p>
+
+      <!-- Location information -->
+      <div class="row ce-result-location">
+        <div class="col-xs-3 ce-result-location-img">
+          <img src="../../img/result-locations/result-location-default.png" data-src="" width="80" height="80" class="img-circle lazy">
+        </div>
+        <div class="col-sm-9 ce-result-location-info">
+          <p><i class="fa fa-map-marker"></i>  {{distance}}  Miles Away</p>
+          <a href=" {{mapLink}} ">
+          <p> {{buildingName}} </p>
+          <p> {{buildingAddress}} </p>
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- Calendar and Time -->
+    <div class="col-sm-4 ce-result-date-time">
+      <div class="row">
+        <div class="col-sm-12 ce-result-calendar">
+          <div id="ce-date-calendar">
+            <div class="ce-date-month"><span> {{month}} </span></div>
+            <div class="ce-date-day"><span> {{day}} </span></div>
+            <div class="ce-date-time"><span> {{startTime}} </span></div>
+          </div>
+        </div>
+        <div class="col-sm-12 ce-result-time">
+          <p>{{expandedMonth}} {{day}}, {{year}}</p>
+          <p>{{startTime}} - {{endTime}} </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Result Attributes -->
+  <div id="ce-result-attributes" class="row">
+
+    <!-- Result details -->
+    <div class="col-sm-3 ce-result-attribute ce-result-details">
+      <a data-toggle="modal" data-target="#ce-modal-result-details-call{{modalId}}"><i class="fa fa-calendar"></i> See Full Details</a>
+    </div>
+
+    <!-- Availability -->
+    <div class="col-sm-3 ce-result-attribute ce-result-available">
+      <span class="ce-alert-warning"><i class="fa fa-check-circle"></i> {{emptySpots}} / {{totalSpots}}  Spots Open</span>
+    </div>
+
+    <!-- Cost -->
+    <div class="col-sm-2 ce-result-attribute ce-result-cost">
+      <span class="ce-alert-default"><i class="fa fa-money"></i> ${{amount}} </span>
+    </div>
+
+    <!-- Register for event
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+    </div>  -->
+
+    <!-- Call to register -->
+    <div class="col-sm-4 ce-result-cta">
+      <a class="btn btn-info"><i class="fa fa-phone"></i> Call: {{contactNumber}}</a>
+    </div>
+
+    <!-- Joing waitlist
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+    </div> -->
+
+    <!-- Toggle payment modal
+    <div class="col-sm-4 ce-result-cta">
+      <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+    </div> -->
+
+  </div>
+
+</article>
+ {{/if}} 
+
+{{/classResults}}
+
+-->
+    <!--
+{{#classResults}}
+
+ {{#if waitResult}} 
+<article class="ce-result">
+  <!-- Event title location date and time -->
+  <div id="ce-result-info" class="row">
+
+    <!-- Event Title -->
+    <div class="col-sm-8 ce-result-title">
+      <h3><a data-toggle="modal" data-target="#ce-modal-result-details-waitlist{{modalId}}"> {{resultName}} </a></h3>
+      <p> {{resultInfo}} </p>
+      <p><i class="fa fa-pencil"></i> <a> {{resultType}} </a></p>
+
+      <!-- Location information -->
+      <div class="row ce-result-location">
+        <div class="col-xs-3 ce-result-location-img">
+          <img src="../../img/result-locations/result-location-default.png" data-src="../../img/result-locations/facility-stonecrest-3.jpg" width="80" height="80" class="img-circle lazy">
+        </div>
+        <div class="col-sm-9 ce-result-location-info">
+          <p><i class="fa fa-map-marker"></i>  {{distance}}  Miles Away</p>
+          <a href=" {{mapLink}} ">
+          <p> {{buildingName}} </p>
+          <p> {{buildingAddress}} </p>
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- Calendar and Time -->
+    <div class="col-sm-4 ce-result-date-time">
+      <div class="row">
+        <div class="col-sm-12 ce-result-calendar">
+          <div id="ce-date-calendar">
+            <div class="ce-date-month"><span> {{month}} </span></div>
+            <div class="ce-date-day"><span> {{day}} </span></div>
+            <div class="ce-date-time"><span> {{startTime}} </span></div>
+          </div>
+        </div>
+        <div class="col-sm-12 ce-result-time">
+          <p>{{expandedMonth}} {{day}}, {{year}}</p>
+          <p>{{startTime}} - {{endTime}} </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Result Attributes -->
+  <div id="ce-result-attributes" class="row">
+
+    <!-- Result details -->
+    <div class="col-sm-3 ce-result-attribute ce-result-details">
+      <a data-toggle="modal" data-target="#ce-modal-result-details-waitlist{{modalId}}"><i class="fa fa-calendar"></i> See Full Details</a>
+    </div>
+
+    <!-- Availability -->
+    <div class="col-sm-3 ce-result-attribute ce-result-available">
+      <span class="ce-alert-danger"><i class="fa fa-check-circle"></i> {{emptySpots}} / {{totalSpots}}  Spots Open</span>
+    </div>
+
+    <!-- Cost -->
+    <div class="col-sm-2 ce-result-attribute ce-result-cost">
+      <span class="ce-alert-default"><i class="fa fa-money"></i> ${{amount}} </span>
+    </div>
+
+    <!-- Register for event
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+    </div>  -->
+
+    <!-- Call to register
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-info"><i class="fa fa-phone"></i> Call: (123) 456-7890</a>
+    </div> -->
+
+    <!-- Joing waitlist -->
+    <div class="col-sm-4 ce-result-cta">
+      <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+    </div>
+
+    <!-- Toggle payment modal
+    <div class="col-sm-4 ce-result-cta">
+      <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+    </div> -->
+
+  </div>
+
+</article>
+ {{/if}} 
+
+{{/classResults}}
+
+-->
+  </section>
+
+  <!-- Pagination -->
+  <div class="container-sm" style="text-align:center">
+    <ul id="ce-pagination" class="pagination"></ul>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal fade" id="ce-modal-withdrawal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+				<h3 class="modal-title" id="myModalLabel">You are withdrawing from</h3>
+			</div>
+
+			<div class="modal-body">
+				<!-- Result in body -->
+				<article class="ce-result">
+
+					<!-- Event title location date and time -->
+					<div id="ce-result-info" class="row">
+
+						<!-- Event Title -->
+						<div class="col-sm-8 ce-result-title">
+							<h3><a data-toggle="modal" data-target="#ce-modal-result-details">Centennial Bariatric (weight loss) Surgery Seminar</a></h3>
+							<p>Celebrate all that life has to offer and reclaim your power over food! Register now for a free informational seminar to begin your Centennial Experience today!</p>
+
+							<!-- Location information -->
+							<div class="row ce-result-location">
+								<div class="col-xs-3 ce-result-location-img">
+									<img class="img-circle" src="../../img/result-locations/facility-stonecrest-1.jpg">
+								</div>
+								<div class="col-sm-9 ce-result-location-info">
+									<p><i class="fa fa-map-marker"></i> 3.5 Miles Away</p>
+									<a href="https://www.google.com/maps/place/2200+Murphy+Ave/@36.1547456,-86.8060501,17z/data=!3m1!4b1!4m2!3m1!1s0x886466b8ca81945f:0x7192c427307a32a3">
+									<p>Tace Building</p>
+									<p>2200 Murphy Avenue Nashville TN 37203</p>
+									</a>
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+						<!-- Calendar and Time -->
+						<div class="col-sm-4 ce-result-date-time">
+							<div class="row">
+								<div class="col-sm-12 ce-result-calendar"><div id="ce-date-calendar">
+	{{{calendarIcon startDateTime}}}
+</div></div>
+								<div class="col-sm-12 ce-result-time">
+									<p>September 28, 2014</p>
+									<p>9:00am - 11:30am</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Result Attributes -->
+					<div id="ce-result-attributes" class="row">
+						<!-- Result details
+						<div class="col-sm-3 ce-result-attribute ce-result-details">
+						</div>  -->
+
+						<!-- Availability
+						<div class="col-sm-3 ce-result-attribute ce-result-available">
+							<span class="ce-alert-success"><i class="fa fa-check-circle"></i> 8/10 Spots Open</span>
+						</div>  -->
+
+						<!-- Cost -->
+						<div class="col-sm-2 ce-result-attribute ce-result-cost">
+							<span class="ce-alert-default"><i class="fa fa-money"></i> $100.00</span>
+						</div>
+
+						<!-- Register for event
+						<div class="col-sm-4 ce-result-cta">
+							<a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+						</div>  -->
+
+						<!-- Call to register
+						<div class="col-sm-4 ce-result-cta">
+							<a href="../../register/" class="btn btn-info"><i class="fa fa-phone"></i> Call: (123) 456-7890</a>
+						</div> -->
+
+						<!-- Joing waitlist
+						<div class="col-sm-4 ce-result-cta">
+							<a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+						</div> -->
+
+						<!-- Toggle payment modal
+						<div class="col-sm-4 ce-result-cta">
+							<a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+						</div> -->
+
+					</div>
+
+				</article>
+			</div>
+
+			<div class="modal-footer">
+				<p> I want to withdraw from this class and have $100 refunded</p>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<a href="../../withdrawal-confirmation/" type="button" class="btn btn-warning">Confirm Withdrawal</a>
+			</div>
+
+			<div class="modal-info">
+				<div class="modal-info-text">
+					<span><i class="fa fa-info-circle"></i> Need Help?</span>
+					<span class="modal-info-text-phone">1-800-123-4567</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  
+{{#result}}
+
+<div class="modal fade ce-modal-result-details" id="ce-modal-result-details{{eventId}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+        <h3 class="modal-title" id="myModalLabel">Event Details</h3>
+      </div>
+
+      <div class="modal-body">
+
+
+        <!-- Result -->
+        <article class="ce-result">
+
+          <!-- Event title location date and time -->
+          <div id="ce-result-info" class="row">
+
+            <!-- Event Title -->
+            <div class="col-sm-8 ce-result-title">
+              <h3><a data-toggle="modal" data-target="#ce-modal-result-details{{!-- {{sessions.0.eventId}} --}}">{{eventName}}</a></h3>
+              <p class="eventDescription">{{truncate eventDescription 100}}</p>
+              <p><i class="fa fa-pencil"></i> <a>{{eventClassType}}</a></p>
+
+              <!-- Location information -->
+            <div class="row ce-result-location">
+              <div class="col-xs-3 ce-result-location-img">
+                <i class="fa fa-map-marker fa-4x" style="text-align: center; display: block;"></i>
+              </div>
+              <div class="col-sm-9 ce-result-location-info">         
+                {{{truncateDistance distance}}}
+                {{{sessionLocation locationLat locationLong locationName locationStreetAddress locationCity locationState locationZipCode}}}
+              </div>
+              </div>
+
+            </div>
+
+           <!-- Calendar and Time -->
+            <div class="col-sm-4 ce-result-date-time">
+              <div class="row">
+                <div class="col-sm-12 ce-result-calendar"><div id="ce-date-calendar">
+	{{{calendarIcon startDateTime}}}
+</div></div>
+                <div class="col-sm-12 ce-result-time">
+                  {{{eventDate startDateTime endDateTime}}} 
+  
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Result Attributes -->
+          <div id="ce-result-attributes" class="row">
+            <!-- Result details -->
+            <div class="col-sm-3 ce-result-attribute ce-result-details">
+              <a data-toggle="modal" data-target="#ce-modal-result-details"><i class="fa fa-calendar"></i> See Full Details</a>
+            </div>
+
+            <!-- Availability -->
+            <div class="col-sm-3 ce-result-attribute ce-result-available">
+              <span class="ce-alert-success"><i class="fa fa-check-circle"></i> {{available}}</span>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-sm-2 ce-result-attribute ce-result-cost">
+              <span class="ce-alert-default"><i class="fa fa-money"></i> 
+                ${{registrationCost}}</span>
+            </div>
+
+            <!-- Register for event -->
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+            </div>
+
+            <!-- Call to register
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-info"><i class="fa fa-phone"></i> Call: (123) 456-7890</a>
+            </div> -->
+
+            <!-- Joing waitlist
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+            </div> -->
+
+            <!-- Toggle payment modal
+            <div class="col-sm-4 ce-result-cta">
+              <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+            </div> -->
+
+          </div>
+        </article>
+
+        <!-- Tabs for content -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+          <li><a href="#occurances" data-toggle="tab">Class Occurances</a></li>
+          <li><a href="#notes" data-toggle="tab">Notes</a></li>
+        </ul>
+        <!-- Tab content -->
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="description">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span> {{eventMainContactName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{eventClassType}}</p>
+            <p> {{eventDescription}} </p>
+          </div>
+          <div class="tab-pane fade" id="occurances">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span>{{eventMainContactName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{eventClassType}}</p>
+          <p>  {{eventDescription}}</p>
+          </div>
+          <div class="tab-pane fade" id="notes">
+            <p> {{eventEnrollmentCriteria}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <div class="modal-info-text">
+          <span><i class="fa fa-info-circle"></i> Need Help?</span>
+          <span class="modal-info-text-phone">{{eventEnrollmentPhoneNumber}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/result}}
+
+
+  <!--
+{{#classResults}}
+
+ {{#if callResult}} 
+<div class="modal fade ce-modal-result-details" id="ce-modal-result-details-call{{modalId}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+        <h3 class="modal-title" id="myModalLabel">Event Details</h3>
+      </div>
+
+      <div class="modal-body">
+
+
+        <!-- Result Call -->
+        <article class="ce-result">
+          <!-- Event title location date and time -->
+          <div id="ce-result-info" class="row">
+
+            <!-- Event Title -->
+            <div class="col-sm-8 ce-result-title">
+              <h3><a data-toggle="modal" data-target="#ce-modal-result-details{{modalId}}">{{resultName}}</a></h3>
+              <p> {{resultInfo}} </p>
+              <p><i class="fa fa-pencil"></i> <a> {{resultType}}</a></p>
+
+              <!-- Location information -->
+              <div class="row ce-result-location">
+                <div class="col-xs-3 ce-result-location-img">
+                  <img class="img-circle" src="../../img/result-locations/facility-stonecrest-4.jpg">
+                </div>
+                <div class="col-sm-9 ce-result-location-info">
+                  <p><i class="fa fa-map-marker"></i>  {{distance}}  Miles Away</p>
+                  <a href=" {{mapLink}} ">
+                  <p> {{buildingName}} </p>
+                  <p> {{buildingAddress}} </p>
+                  </a>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <!-- Calendar and Time -->
+            <div class="col-sm-4 ce-result-date-time">
+              <div class="row">
+                <div class="col-sm-12 ce-result-calendar">
+                 <div id="ce-date-calendar">
+                    <div class="ce-date-month"><span> {{month}} </span></div>
+                    <div class="ce-date-day"><span> {{day}} </span></div>
+                    <div class="ce-date-time"><span> {{startTime}} </span></div>
+                </div>
+                </div>
+                <div class="col-sm-12 ce-result-time">
+                  <p>{{expandedMonth}} {{day}}, {{year}}</p>
+                  <p>{{startTime}} - {{endTime}} </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Result Attributes -->
+          <div id="ce-result-attributes" class="row">
+
+            <!-- Result details -->
+            <div class="col-sm-3 ce-result-attribute ce-result-details">
+
+            </div>
+
+            <!-- Availability -->
+            <div class="col-sm-3 ce-result-attribute ce-result-available">
+              <span class="ce-alert-warning"><i class="fa fa-check-circle"></i> {{emptySpots}} / {{totalSpots}}  Spots Open</span>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-sm-2 ce-result-attribute ce-result-cost">
+              <span class="ce-alert-default"><i class="fa fa-money"></i> ${{amount}} </span>
+            </div>
+
+            <!-- Register for event
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+            </div>  -->
+
+            <!-- Call to register -->
+            <div class="col-sm-4 ce-result-cta">
+              <a class="btn btn-info"><i class="fa fa-phone"></i> Call: {{contactNumber}}</a>
+            </div>
+
+            <!-- Joing waitlist
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+            </div> -->
+
+            <!-- Toggle payment modal
+            <div class="col-sm-4 ce-result-cta">
+              <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+            </div> -->
+
+          </div>
+
+        </article>
+
+
+        <!-- Tabs for content -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+          <li><a href="#occurances" data-toggle="tab">Class Occurances</a></li>
+          <li><a href="#notes" data-toggle="tab">Notes</a></li>
+        </ul>
+        <!-- Tab content -->
+       <div class="tab-content">
+          <div class="tab-pane fade in active" id="description">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span> {{instructorName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{descriptionType}}</p>
+            <p> {{descriptionInfo}}</p>
+            <p> {{descriptionInfoAdditional}} </p>
+          </div>
+          <div class="tab-pane fade" id="occurances">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span>  {{instructorName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{descriptionType}}</p>
+          <p>  {{descriptionInfoAdditional}}</p>
+          </div>
+          <div class="tab-pane fade" id="notes">
+            <p> {{notes}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <div class="modal-info-text">
+          <span><i class="fa fa-info-circle"></i> Need Help?</span>
+          <span class="modal-info-text-phone"> {{facilityContact}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ {{/if}} 
+
+{{/classResults}}
+
+
+-->
+  <!--
+{{#classResults}}
+
+ {{#if waitResult}} 
+<div class="modal fade ce-modal-result-details" id="ce-modal-result-details-waitlist{{modalId}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+        <h3 class="modal-title" id="myModalLabel">Event Details</h3>
+      </div>
+
+      <div class="modal-body">
+
+
+        <!-- Result Waitlist -->
+        <article class="ce-result">
+          <!-- Event title location date and time -->
+          <div id="ce-result-info" class="row">
+
+            <!-- Event Title -->
+            <div class="col-sm-8 ce-result-title">
+              <h3><a data-toggle="modal" data-target="#ce-modal-result-details-waitlist{{modalId}}"> {{resultName}} </a></h3>
+              <p> {{resultInfo}} </p>
+              <p><i class="fa fa-pencil"></i> <a> {{resultType}} </a></p>
+
+              <!-- Location information -->
+              <div class="row ce-result-location">
+                <div class="col-xs-3 ce-result-location-img">
+                  <img class="img-circle" src="../../img/result-locations/facility-stonecrest-3.jpg">
+                </div>
+                <div class="col-sm-9 ce-result-location-info">
+                    <p><i class="fa fa-map-marker"></i>  {{distance}}  Miles Away</p>
+                    <a href=" {{mapLink}} ">
+                    <p> {{buildingName}} </p>
+                    <p> {{buildingAddress}} </p>
+                  </a>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <!-- Calendar and Time -->
+            <div class="col-sm-4 ce-result-date-time">
+              <div class="row">
+                <div class="col-sm-12 ce-result-calendar">
+                  <div id="ce-date-calendar">
+                    <div class="ce-date-month"><span> {{month}} </span></div>
+                    <div class="ce-date-day"><span> {{day}} </span></div>
+                    <div class="ce-date-time"><span> {{startTime}} </span></div>
+                  </div>
+                </div>
+                <div class="col-sm-12 ce-result-time">
+                  <p>{{expandedMonth}} {{day}}, {{year}}</p>
+                  <p>{{startTime}} - {{endTime}} </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Result Attributes -->
+          <div id="ce-result-attributes" class="row">
+
+            <!-- Result details -->
+            <div class="col-sm-3 ce-result-attribute ce-result-details">
+
+            </div>
+
+            <!-- Availability -->
+            <div class="col-sm-3 ce-result-attribute ce-result-available">
+                <span class="ce-alert-danger"><i class="fa fa-check-circle"></i> {{emptySpots}} / {{totalSpots}}  Spots Open</span>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-sm-2 ce-result-attribute ce-result-cost">
+              <span class="ce-alert-default"><i class="fa fa-money"></i> ${{amount}} </span>
+            </div>
+
+            <!-- Register for event
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+            </div>  -->
+
+            <!-- Call to register
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-info"><i class="fa fa-phone"></i> Call: (123) 456-7890</a>
+            </div> -->
+
+            <!-- Joing waitlist -->
+            <div class="col-sm-4 ce-result-cta">
+              <a href="../../register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+            </div>
+
+            <!-- Toggle payment modal
+            <div class="col-sm-4 ce-result-cta">
+              <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+            </div> -->
+
+          </div>
+
+        </article>
+
+
+        <!-- Tabs for content -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+          <li><a href="#occurances" data-toggle="tab">Class Occurances</a></li>
+          <li><a href="#notes" data-toggle="tab">Notes</a></li>
+        </ul>
+        <!-- Tab content -->
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="description">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span> {{instructorName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{descriptionType}}</p>
+            <p> {{descriptionInfo}}</p>
+            <p> {{descriptionInfoAdditional}} </p>
+          </div>
+          <div class="tab-pane fade" id="occurances">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span>  {{instructorName}}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {{descriptionType}}</p>
+          <p>  {{descriptionInfoAdditional}}</p>
+          </div>
+          <div class="tab-pane fade" id="notes">
+            <p> {{notes}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <div class="modal-info-text">
+          <span><i class="fa fa-info-circle"></i> Need Help?</span>
+          <span class="modal-info-text-phone">{{facilityContact}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ {{/if}} 
+
+{{/classResults}}
+
+-->
+  <!--<div class="modal fade" id="ce-modal-payment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+				<h3 class="modal-title" id="myModalLabel">Payment</h3>
+			</div>
+
+			<div class="modal-body">
+				<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="head"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><title>
+    HCA HPS - GL Payment Page
+    </title>
+    <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.creditCardValidator.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.formance.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.ba-postmessage.js" type="text/javascript"></script>
+    <script src="Scripts/PaymentForm.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function completepayment(hpsid) {
+    // Get the parent page URL as it was passed in, for browsers that don't support
+    // window.postMessage (this URL could be hard-coded).
+    var parent_url = decodeURIComponent(querySt('ref').replace(/^#/, ''));
+    $.postMessage(hpsid, parent_url, parent);
+    }
+    </script>
+    <link href="Styles/Default.css" rel="stylesheet" type="text/css" /></head>
+    <body class="hps-body">
+      <script src="Scripts/ClientScriptLibrary.js" type="text/javascript"></script>
+      <form name="portalPaymentForm" method="post" action="GlPayment.aspx?reqid=3769a34e-86d3-4f8e-a3e1-e5f48df4ccaf&amp;ref=http%3a%2f%2fnadcwdwebspw01.hcadev.corpaddev.net%2fHPSRetailClient%2fGlRequestPayment.aspx" id="portalPaymentForm" class="hps-form" autocomplete="&quot;off&quot;&quot;">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+        <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="o0Pqi1aCKO+sYrFm/J+SR7uVh8y3Vl3lqFECj3pIh4uIlD7RDgpZP+Rwa5mkXIK3tvt9gYxNEWvx/TfaicjIEDt9FPcItxVS5xiAP/Cljd4GxUfMKGNJvrvSxpYR7Aq+qY9HrYN1Zr77XrlRSwOFNqi5NxCYqlVYcq7vYSNsS4p8Sv2nstI/lj4U4jp7MtanH3M/wsHOzc90OzWEYfNoRKqG49FVhq7PMRnko1rx4/xMwjWhK3mr4QjBxNEZ23KzF+ya+/x1BDJdpQxJEwZ7lC5fNnFcxKTn0Ob8UwwCLMbqlQTW9igZayYZHOdTh3euxHH8siiyQgOAvm/EkmeaJIe3T4NB/4aXfNwTWGghYAQBg7ITlqqD56rty2zJS5gGzr0PkT48932hmCwE2Wqh3BQfuG8mYkdNK+7dMTgI82qRQ5rAqTLZHFBxGBkRFQoLrtOzvooyTGlvzRzamsmCwBgCv9822Vz5MxvdLqLc9rZSiyVpLU+hz27Ik7qHId6S91C20A==" />
+        <div id="hca-hps">
+
+          <div class="row card-payment-details">
+            <div class="col-md-12">
+              <h3 id="paymentinfo" class="left">Payment Details</h3>
+              <p class="right required-message"><i class="fa fa-exclamation-circle"></i> Denotes a required field</p>
+            </div>
+          </div>
+
+          <div class="row card-name">
+            <div id="nameDiv" class="col-md-12">
+              <i class="fa fa-exclamation-circle"></i>
+              <input class="form-control" name="cardNameTextBox" type="text" id="cardNameTextBox" placeholder="Name on Card" required="1" />
+            </div>
+          </div>
+
+          <div class="row card-number">
+            <div id="cardNumberTextBoxDiv" class="col-md-12 float-label">
+              <i class="fa fa-exclamation-circle"></i>
+              <input class="form-control" name="cardNumberTextBox" type="text" maxlength="16" size="22" id="cardNumberTextBox" tabindex="101" autocomplete="off" placeholder="Card Number" required="1" />
+            </div>
+          </div>
+
+          <div id="ccDetailsDiv" class="row card-info-details">
+
+            <div class="col-md-3 card-type">
+              <select name="card-type" class="form-control select-styled" required="required">
+                <option>
+                  <div class="CCType" id="divAE">
+                    <a id="AE" href="#" style="text-decoration: none; color: #000000;">American Express</a>
+                  </div>
+                </option>
+                <option>
+                  <div class="CCType"  id="divDS" style="z-index: 1002; vertical-align: top;">
+                    <a id="DS" href="#" style="text-decoration: none; color: #000000;">Discover</a>
+                  </div>
+                </option>
+                <option>
+                  <div class="CCType"  id="divMC" style="z-index: 1001; vertical-align: top;">
+                    <a id="MC" href="#" style="text-decoration: none; color: #000000;">MasterCard</a>
+                  </div>
+                </option>
+                <option>
+                  <div class="CCType"  id="divVI" style="z-index: 1000; vertical-align: top;">
+                    <a id="VI" href="#" style="text-decoration: none; color: #000000;">Visa</a>
+                  </div>
+                </option>
+              </select>
+            </div>
+
+            <div class="col-md-3 card-code">
+              <input name="cardSecurityCodeTextBox" class="form-control" type="text" maxlength="4" size="4" id="cardSecurityCodeTextBox" tabindex="104" autocomplete="off" placeholder="Security Code" required="1"/>
+              <a href="#" id="whatsthis" onclick="window.open('images/cvv-images.gif','Image','height=600, width=800, resizable=0');" >What is this?</a>
+            </div>
+
+            <div class="col-md-3 card-exp-month">
+              <select name="expMonthDropDown" id="expMonthDropDown" class="form-control select-styled" tabindex="102" placeholder="Expire Month" required="1">
+                <option selected="selected" value="">Expire Month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+
+            <div class="col-md-3 card-exp-year">
+              <select name="expYearDropDown" id="expYearDropDown" class="form-control select-styled" tabindex="103" placeholder="Expire Year" required="1">
+                <option selected="selected" value="">Expire Year</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row card-holder-info">
+            <div class="col-md-12">
+              <h3>Card Holder Information</h3>
+            </div>
+
+            <div id="billingInfoDiv" class="card-billing-address">
+              <div class="col-md-12 float-label">
+                <i class="fa fa-exclamation-circle"></i>
+                <input name="billingAddressTextBox" class="form-control" type="text" value="" id="billingAddressTextBox" tabindex="105" class="billingAddressTextBox" placeholder="Billing Address" required="1" />
+              </div>
+            </div>
+
+            <div id="billingInfoDiv2" class="card-billing-details">
+
+              <div class="col-md-2">
+                <input name="apt" class="form-control" type="text" id="apt" placeholder="APT #" />
+              </div>
+
+              <div class="col-md-4">
+                <i class="fa fa-exclamation-circle"></i>
+                <input name="billingCityTextBox" class="form-control" type="text" value="" id="billingCityTextBox" tabindex="106" placeholder="City" />
+              </div>
+
+              <div class="col-md-3">
+                <input name="billingStateTextBox" class="form-control" type="text" value="" maxlength="2" id="billingStateTextBox" tabindex="107" placeholder="State" />
+              </div>
+
+              <div class="col-md-3">
+                <input name="billingZipTextBox" class="form-control" type="text" value="" maxlength="5" id="billingZipTextBox" placeholder="Zip" required="1" />
+              </div>
+            </div>
+            </div>
+
+            <div id="actiondiv" class="card-submit">
+              <input type="submit" class="btn btn-success" name="submitButton" value="Process Payment" onclick="return validateForm();" language="javascript" id="submitButton" tabindex="109" />
+              <div id="processingMessageContainer" style="display: none;" class="">
+                <span>Your transaction is processing, please wait...</span>
+              </div>
+            </div>
+            </div>
+            <input type="hidden" name="StatusCode" id="StatusCode" />
+            <input type="hidden" name="HpsId" id="HpsId" />
+            <input type="hidden" name="Amount" id="Amount" />
+            <input type="hidden" name="AuthorizationCode" id="AuthorizationCode" />
+            <input type="hidden" name="EntryDateUtc" id="EntryDateUtc" />
+            <input type="hidden" name="Description" id="Description" />
+            <input type="hidden" name="CardType" id="CardType" />
+            <input type="hidden" name="CardSummary" id="CardSummary" />
+            <input type="hidden" name="RequestId" id="RequestId" />
+            <input type="hidden" name="ReceiptData" id="ReceiptData" />
+            <input type="hidden" name="PaymentMadeBy" id="PaymentMadeBy" />
+            <input type="submit" name="hiddenSubmitButton" value="" id="hiddenSubmitButton" style="display: none;" />
+            <input type="hidden" name="HiddenCreditCardType" id="HiddenCreditCardType" />
+            <input type="hidden" name="HiddenPaymentTypeVI" id="HiddenPaymentTypeVI" value="1" />
+            <input type="hidden" name="HiddenPaymentTypeMC" id="HiddenPaymentTypeMC" value="1" />
+            <input type="hidden" name="HiddenPaymentTypeDS" id="HiddenPaymentTypeDS" value="1" />
+            <input type="hidden" name="HiddenPaymentTypeAE" id="HiddenPaymentTypeAE" value="1" />
+            <input name="reqid" type="hidden" id="reqid" />
+          </form>
+        </body>
+      </html> -->
+
+			</div>
+
+			<div class="modal-info">
+				<div class="modal-info-text">
+					<span><i class="fa fa-info-circle"></i> Need Help?</span>
+					<span class="modal-info-text-phone">1-800-123-4567</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+</section>
+
+{{else}}
+
+
+<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i>Your search criteria yielded no results.</div>
+
+
+{{/if}}
+

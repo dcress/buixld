@@ -1,0 +1,53 @@
+<!-- 100% width for background image -->
+<div id="profile-status-stack">
+  <!-- Centered width for elements -->
+  <section class="profile-status-stack-inner container-md row">
+    <div class="col-sm-2 col-xs-2">
+    {% if page.url != '/patient-emulate/' %}
+      <img src="{{ page.base_url }}img/profile-default-lg.png" alt="Profile Default Logo" class="img-circle profile-default-img" width="130">
+    {% else %}
+      <img src="{{ page.base_url }}img/profile-daughter-lg.jpg" alt="Profile Mom image" class="img-circle" width="130">
+    {% endif %}
+    </div>
+    <div class="profile-status-todos col-sm-8 col-xs-8">
+    <!-- NEED VARIABLE HERE FOR CONSUMER NAME -->
+    {% if page.url != '/patient-emulate/' %}
+      <h1>Welcome <span>Daphne Jenkins!</span></h1>
+      <p>Your MyHealth<em>One</em> account is <b>25%</b> complete.</p>
+    {% else %}
+      <h1>Welcome Back <span>Daphne Jenkins!</span></h1>
+      <p>Your MyHealth<em>One</em> account is now <b>80%</b> complete.</p>
+    {% endif %}
+
+    {% if page.url != '/patient-emulate/' %}
+      <a href="{{ page.base_url }}create-profile/" class="btn btn-primary">
+        <i class="fa fa-check" aria-hidden="true" alt="Complete Profile"></i>&nbsp;
+          Complete Profile
+      </a>
+      {% else %}
+      <a href="{{ page.base_url }}crm-classes-events" class="btn btn-primary">
+        <i class="fa fa-check" aria-hidden="true" alt="Sign Up for a Class"></i>&nbsp;
+          Sign Up for a Class
+      </a>
+    {% endif %}
+    {% if page.url == '/patient-emulate/' %}
+    <a href="{{ page.base_url }}patient/profile-summary" class="btn btn-primary">
+      <i class="fa fa-check" aria-hidden="true" alt="Confirm Contact Info"></i>&nbsp;
+        Confirm Contact Info
+    </a>
+    <a href="" class="btn btn-primary">
+      <i class="fa fa-check" aria-hidden="true" alt="Add Family Member"></i>&nbsp;
+        Add Family Member
+    </a>
+    {% endif %}
+
+    </div>
+    <div class="col-sm-2 col-xs-2 profile-infographic">
+      {% if page.url != '/patient-emulate/' %}
+        <img src="{{ page.base_url }}img/25-percent.png" alt="Profile Percentage" class="pull-right" width="130">
+      {% else %}
+        <img src="{{ page.base_url }}img/80-percent.png" alt="Profile Percentage" class="pull-right" width="130">
+      {% endif %}
+    </div>
+  </section>
+</div>

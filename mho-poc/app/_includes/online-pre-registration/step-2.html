@@ -1,0 +1,467 @@
+<div id="step-2">
+
+      <div class="row">
+        <div class="col-sm-12 form-disclaimers">
+          <p><i class="fa fa-asterisk" aria-hidden="true"></i>Denotes required field.</p>
+        </div>
+      </div>
+
+      <div class="crm-holder">
+        <form action="{{ page.base_url }}online-pre-registration" id="" class="container-sm">
+          <div class="profile-form-fields">
+            <fieldset class="inactive">
+
+              <div class="form-section-wrap">
+                <h3>Patient Information</h3>
+
+                <div class="row form-section-wrap">
+                  <div class="col-sm-8">
+                    <label class="radio-inline radio-left">
+                      <input type="radio" name="verifyIdentity" id="activeCheck1" value="active"> I am the patient
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-5 float-label">
+                    <label for="reason-description" class="sr-only">First Name</label>
+                    <input type="text" class="form-control required" id="" placeholder="First Name" value="">
+                  </div>
+                  <div class="col-sm-2 float-label">
+                    <label for="reason-description" class="sr-only">Middle Initial</label>
+                    <input type="text" class="form-control required" id="" placeholder="M.I." value="">
+                  </div>
+                  <div class="col-sm-5 float-label">
+                    <label for="reason-description" class="sr-only">Last Name</label>
+                    <input type="text" class="form-control required" id="" placeholder="Last Name" value="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-3 float-label">
+                    <label for="reason-description" class="sr-only">Social Security Number</label>
+                    <input type="number" class="form-control required" id="" placeholder="Social Security #" value="">
+                  </div>
+
+                  <div class="col-sm-3 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="first-choice-date" class="sr-only">D.O.B.</label>
+                    <input name="date-of-birth" class="datepicker form-control picker__input" placeholder="D.O.B." type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="col-sm-2 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="gender" class="sr-only">Gender</label>
+                    <select name="gender" id="gender" class="form-control select-styled required">
+                        <option value="" disabled selected>Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-4 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="ethnicity" class="sr-only">Ethnicity</label>
+                    <select name="ethnicity" id="gender" class="form-control select-styled required">
+                        <option value="" disabled selected>Ethnicity</option>
+                        <option>African American</option>
+                        <option>Asian</option>
+                        <option>Latin American</option>
+                        <option>White</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-4 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="race" class="sr-only">Race</label>
+                    <select name="race" id="race" class="form-control select-styled required">
+                        <option value="" disabled selected>Race</option>
+                        <option>African American</option>
+                        <option>Asian</option>
+                        <option>Latin American</option>
+                        <option>White</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-4 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="additional-race" class="sr-only">Additional Race</label>
+                    <select name="additional-race" id="additional-race" class="form-control select-styled required">
+                        <option value="" disabled selected>Additional Race</option>
+                        <option>African American</option>
+                        <option>Asian</option>
+                        <option>Latin American</option>
+                        <option>White</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-4 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="language" class="sr-only">Preferred Language Spoken</label>
+                    <select name="language" id="language" class="form-control select-styled required">
+                        <option value="" disabled selected>Preferred Language Spoken</option>
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+              <!-- end Patient Information wrap -->
+
+              <div class="row form-section-wrap">
+                <div class="col-sm-12">
+                  <label class="radio-inline radio-left">
+                    <input type="radio" name="verifyAddress" id="activeCheck2" value="active"> This address is considered outside of the United States
+                  </label>
+                </div>
+              </div>
+
+
+
+              <div class="form-section-wrap">
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                      <label for="address1" class="sr-only">Address 1</label>
+                      <input type="text" class="form-control required" id="" name="address1" placeholder="Address 1">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                      <label for="address2" class="sr-only">Address 2</label>
+                      <input type="text" class="form-control required" id="" name="address2" placeholder="Address 2">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-5 float-label">
+                    <label for="city" class="sr-only">City</label>
+                    <input type="text" class="form-control required" id="" placeholder="City/Town" value="">
+                  </div>
+                  <div class="col-sm-3 float-label">
+                    <label for="state" class="sr-only">State</label>
+                    <select name="state" id="state" class="form-control select-styled required">
+                      <option value="" disabled selected>State</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4 float-label">
+                  <label for="zip" class="sr-only">Zip</label>
+                  <input type="text" pattern="[0-9]*" name="zip" id="zip" maxlength="5" class="form-control required" placeholder="Zip Code">
+                  </div> 
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="county" class="sr-only">County</label>
+                    <select name="county" id="county" class="form-control select-styled required">
+                        <option value="" disabled selected>County</option>
+                        <option>Davidson</option>
+                        <option>Williamson</option>
+                        <option>Etc.</option>
+                        <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="country" class="sr-only">Country</label>
+                    <select name="country" id="country" class="form-control select-styled required">
+                        <option value="" disabled selected>Country</option>
+                        <option>United States</option>
+                        <option>Other</option>
+                    </select>
+                  </div>   
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="phone1" class="sr-only">Primary Phone</label>
+                    <input type="tel" class="form-control required" id="" placeholder="Primary Phone" value="">
+                  </div>
+
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="phone-type1" class="sr-only">Phone Type</label>
+                    <select name="phone-type1" id="" class="form-control select-styled required">
+                        <option value="" disabled selected>Phone Type</option>
+                        <option>Cell</option>
+                        <option>Home</option>
+                        <option>Work</option>
+                        <option>Other</option>
+                    </select>
+                  </div>   
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="phone2" class="sr-only">Secondary Phone</label>
+                    <input type="tel" class="form-control required" id="" placeholder="Secondary Phone" value="">
+                  </div>
+
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="phone-type2" class="sr-only">Phone Type</label>
+                    <select name="phone-type2" id="" class="form-control select-styled required">
+                        <option value="" disabled selected>Phone Type</option>
+                        <option>Cell</option>
+                        <option>Home</option>
+                        <option>Work</option>
+                        <option>Other</option>
+                    </select>
+                  </div>   
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                    <label for="patient-email" class="sr-only">Last Name</label>
+                    <input type="email" class="form-control required" id="" placeholder="Email address" value="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section-wrap">
+                <h3>Employment Information</h3>
+
+                  <div class="row form-section-wrap">
+                    <div class="col-sm-8">
+                      <p class="label-inline">Is the patient currently employed?</p>
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN" id="activeCheck1" value="active" checked> Yes
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN" id="activeCheck2" value="inactive"> No
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 float-label">
+                      <label for="employer-name" class="sr-only">Employer Name</label>
+                      <input type="text" class="form-control required" id="" placeholder="Employer Name" value="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+                <div class="row form-section-wrap">
+                  <div class="col-sm-12">
+                    <label class="radio-inline radio-left">
+                      <input type="radio" name="verifyAddress2" id="activeCheck3" value="active"> This address is considered outside of the United States
+                    </label>
+                  </div>
+                </div>
+
+
+
+                <div class="form-section-wrap">
+                  <div class="form-group row">
+                    <div class="col-sm-12 float-label">
+                        <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                        <label for="EmpAddress1" class="sr-only">Address 1</label>
+                        <input type="text" class="form-control required" id="" name="EmpAddress1" placeholder="Address 1">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 float-label">
+                        <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                        <label for="EmpAddress2" class="sr-only">Address 2</label>
+                        <input type="text" class="form-control required" id="" name="EmpAddress2" placeholder="Address 2">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-5 float-label">
+                      <label for="EmpCity" class="sr-only">City</label>
+                      <input type="text" class="form-control required" id="" placeholder="City/Town" value="">
+                    </div>
+                    <div class="col-sm-3 float-label">
+                      <label for="EmpState" class="sr-only">State</label>
+                      <select name="EmpState" id="EmpState" class="form-control select-styled required">
+                        <option value="" disabled selected>State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4 float-label">
+                    <label for="EmpZip" class="sr-only">Zip</label>
+                    <input type="text" pattern="[0-9]*" name="EmpZip" id="EmpZip" maxlength="5" class="form-control required" placeholder="Zip Code">
+                    </div> 
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 float-label">
+                      <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                      <label for="EmpCounty" class="sr-only">County</label>
+                      <select name="EmpCounty" id="EmpCounty" class="form-control select-styled required">
+                          <option value="" disabled selected>County</option>
+                          <option>Davidson</option>
+                          <option>Williamson</option>
+                          <option>Etc.</option>
+                          <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-6 float-label">
+                      <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                      <label for="EmpCountry" class="sr-only">Country</label>
+                      <select name="EmpCountry" id="EmpCountry" class="form-control select-styled required">
+                          <option value="" disabled selected>Country</option>
+                          <option>United States</option>
+                          <option>Other</option>
+                      </select>
+                    </div>   
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 float-label">
+                        <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                        <label for="EmpPhone" class="sr-only">Employer Phone Number</label>
+                        <input type="number" class="form-control required" id="" name="EmpPhone" placeholder="Employer Phone Number">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="occupation" class="sr-only">Occupation</label>
+                    <input type="text" class="form-control required" id="" placeholder="Occupation" value="">
+                  </div>
+
+                  <div class="col-sm-6 float-label">
+                    <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+                    <label for="work-status" class="sr-only">Work Status</label>
+                    <select name="work-status" id="" class="form-control select-styled required">
+                        <option value="" disabled selected>Work Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>PTO</option>
+                        <option>Other</option>
+                    </select>
+                  </div>   
+                </div>
+
+
+
+            </fieldset>
+          </div>
+        </form>
+      </div>
+
+</div>

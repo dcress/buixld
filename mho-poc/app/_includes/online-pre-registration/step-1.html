@@ -1,0 +1,254 @@
+<div id="step-1">
+  <div class="row">
+    <div class="col-sm-12 form-disclaimers">
+      <p>&bull; &nbsp;Scheduled date must be at least 2 business days in the future.</p> <p><i class="fa fa-asterisk" aria-hidden="true"></i>Denotes required field.</p>
+    </div>
+  </div>
+
+  <div class="crm-holder">
+    <div action="{{ page.base_url }}online-pre-registration/patient-information" id="" class="container-sm">
+      <div class="profile-form-fields">
+        <fieldset class="inactive">
+
+          <h3>Visit Information</h3>
+          <div class="form-group row">
+              <div class="col-sm-6 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="visit-information" class="sr-only">Reason for Visit</label>
+                <select name="visit-information" id="visit-information" class="form-control select-styled required">
+                    <option value="" disabled selected>Reason for Visit</option>
+                    <option id="general-checkup-option">General Checkup</option>
+                    <option id="sports-physical-option">Sports Physical</option>
+                    <option id="labor-and-delivery-option">Labor/Delivery</option>
+                    <option id="mammogram-option">Mammogram</option>
+                    <option>Other</option>
+                </select>
+              </div>
+              <div class="col-sm-6 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="gender" class="sr-only">Visit Date</label>
+                <input name="date" class="datepicker form-control picker__input" placeholder="Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+          </div>
+
+            <div class="form-group row">
+              <div class="col-sm-12 float-label">
+                <label for="reason-description" class="sr-only">Reason Description</label>
+                <input type="text" class="form-control required" id="" placeholder="Reason Description" value="">
+              </div>
+            </div>
+          </div>
+
+          <h3>Family Physician</h3>
+
+          <div class="form-group row">
+            <p class="label-row">Who is the patient's family physician?</p>
+            <div class="col-sm-6 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="first-name1" class="sr-only">First Name</label>
+                <input type="text" class="form-control required" id="" name="first1" placeholder="First Name">
+            </div>
+            <div class="col-sm-6 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="last-name1" class="sr-only">Last Name</label>
+                <input type="text" class="form-control required" id="" name="last1" placeholder="Last Name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <p class="label-row">What physician requested the visit you are pre-registering for?</p>
+            <div class="col-sm-6 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="first-name2" class="sr-only">First Name</label>
+                <input type="text" class="form-control required" id="" name="first2" placeholder="First Name">
+            </div>
+            <div class="col-sm-6 float-label">
+               <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="last-name2" class="sr-only">Last Name</label>
+                <input type="text" class="form-control required" id="" name="last2" placeholder="Last Name">
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col-sm-12 disclaimer">
+              <p>The physicians listed above will receive copies of any test results.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- DISPLAY IF LABOR/DELIVERY CHECKED -->
+          <div id="labor-and-delivery">
+            <h3>Labor and Delivery Information</h3>
+
+              <div class="form-group row">
+                <div class="col-sm-6 float-label">
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    <label for="delivery-date" class="sr-only">Expected Delivery Date</label>
+                    <input name="date" class="datepicker form-control picker__input" placeholder="Expected Delivery Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+                <div class="col-sm-6 float-label">
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    <label for="cycle-date" class="sr-only">Last Menstrual Cycle Start Date</label>
+                    <input name="date" class="datepicker form-control picker__input" placeholder="Last Menstrual Cycle Start Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- DISPLAY IF MAMMOGRAM CHECKED -->
+            <div id="mammogram">
+              <div class="form-section-wrap">
+                <h3>Screening Mammogram Information</h3>
+                <div class="row">
+                  <div class="col-sm-8 col-sm-offset-2 disclaimer">
+                    <p>Mammograms should be scheduled at least 1 year and 1 day after patient's previous mammogram. Requested date must be at least 2 business days in the future.</p>
+                  </div>
+                </div>
+
+                <div class="row form-section-wrap">
+                  <div class="col-sm-8">
+                    <p class="label-inline">Preferred time of visit:</p>
+                    <label class="radio-inline">
+                      <input type="radio" name="selectTime" id="activeCheck1" value="active" checked> First available
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="selectTime" id="activeCheck2" value="inactive"> Select a time
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="form-section-wrap">
+                  <div class="form-group row">
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="first-choice-date" class="sr-only">First Choice Date</label>
+                        <input name="date" class="datepicker form-control picker__input" placeholder="First Choice Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="time1" class="sr-only">Time</label>
+                        <input name="time" class="timepicker form-control picker__input" placeholder="Time" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="second-choice-date" class="sr-only">Second Choice Date</label>
+                        <input name="date" class="datepicker form-control picker__input" placeholder="Second Choice Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="time2" class="sr-only">Time</label>
+                        <input name="time" class="timepicker form-control picker__input" placeholder="Time" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="first-choice-date" class="sr-only">Third Choice Date</label>
+                        <input name="date" class="datepicker form-control picker__input" placeholder="Third Choice Date" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-6 float-label">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                        <label for="time3" class="sr-only">Time</label>
+                        <input name="time" class="timepicker form-control picker__input" placeholder="Time" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p class="label-inline">Does the patient have breast problems?</p>
+                    </div>
+                    <div class="col-sm-3 float-label">
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN1" id="activeCheck1" value="active" checked> Yes
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN1" id="activeCheck2" value="inactive"> No
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p class="label-inline">Has the patient had prior breast surgeries?</p>
+                    </div>
+                    <div class="col-sm-3 float-label">
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN2" id="activeCheck1" value="active" checked> Yes
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN2" id="activeCheck2" value="inactive"> No
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p class="label-inline">Does the patient have implants?</p>
+                    </div>
+                    <div class="col-sm-3 float-label">
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN3" id="activeCheck1" value="active" checked> Yes
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="YoN3" id="activeCheck2" value="inactive"> No
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 float-label">
+                      <p>Where was the patient's most recent mamogram performed?</p>
+                      <label for="last-mamogram" class="sr-only"></label>
+                      <input type="text" class="form-control required" id="" placeholder="Mamogram Performed Location" value="">
+                    </div>
+                  </div>
+
+              </div>
+              <!-- end Mammogram Info wrap -->
+
+              <div class="form-section-wrap">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 form-cta">
+                    <p>On the day of the appointment, have the patient wear a two piece outfit. The patient should not wear any deodorant, body powder, perfume, or lotions between their waist and neck.</p>
+                    <p>Upon finalizing your pre-registration, expect a call from one of our representatives to confirm your appointment date and time.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- end id="mammogram" wrap -->
+
+
+
+
+
+        </fieldset>
+      </div>
+    </form>
+  </div>
+</div>

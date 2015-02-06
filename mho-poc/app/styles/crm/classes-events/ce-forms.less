@@ -1,0 +1,35 @@
+//
+// Forms for CRM
+//
+
+// Vars
+@crm-form-label-font-size: 12px;
+
+// Space between all form fields
+.form-control {
+	padding-left: 20px; //  Makes room for 'required' icon
+}
+
+.form-group {
+  position: relative; // Makes the wrapping div the parent for icons and such
+  margin-bottom: @crm-form-bottom; 
+}
+
+// Disable clash of BS3 style with Pickadate
+.form-control[readonly] {
+	background: #fff;
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.ce-checkbox { margin: 10px 0; }
+
+label {
+	font-size: @crm-form-label-font-size;
+	color: @gray-light;
+	text-transform: uppercase;
+}

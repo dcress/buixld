@@ -1,0 +1,57 @@
+#scroll-to-top {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	a {
+		background: @default-text-gray;
+		color: #ffffff;
+		display: block;
+		padding: 0 0.6em 0.4em 0.6em;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		&:hover{
+			background:@default-button-gray;
+		}
+	}
+	i {
+		font-size: 2em;
+		height: 24px;
+		width: 24px;
+	}
+}
+
+#scroll-to-top.block {
+	padding: 0 0.6em 0.4em 0.6em;
+	bottom: 10px;
+	right: 10px;
+}
+
+#scroll-to-top.horizontal {
+	bottom: 1px;
+	right: 8px;
+	a {
+    padding: 10px;
+	}
+	span{
+		line-height: 1.3em;
+		margin: .6em 0 .5em 0;
+		font-size: 1.7rem;
+    display: none;
+	}
+	span, i {
+		vertical-align: middle;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+  #scroll-to-top.horizontal {
+    
+    a {
+      width: 6.5em;
+    }
+    span {
+      display: inline;
+    }
+  }
+}
