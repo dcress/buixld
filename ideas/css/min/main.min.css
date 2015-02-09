@@ -1,0 +1,665 @@
+/*
+	* Title: HCA Innovations
+	* Created: January 30, 2015
+	*
+	* Author: Eric Motil / Dan Cress
+	* Description: HCA Innovation website
+	* Version: v1.0
+  *
+*/
+/*---------------------
+	Reset
+----------------------*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::selection {
+  background: #29abe2;
+  color: #fff;
+}
+::-moz-selection {
+  background: #29abe2;
+  color: #fff;
+}
+/*---------------------
+	Template
+----------------------*/
+.container-sm {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 768px;
+}
+.container-md {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 960px;
+}
+.container-lg {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+}
+.container-xl {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1400px;
+}
+.container-full {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+}
+.block-center {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/*---------------------
+	Media
+----------------------*/
+/*---------------------
+	Transitions
+----------------------*/
+/*---------------------
+	Buttons
+----------------------*/
+.btn {
+  font-size: 1.2em;
+  padding: 17px 45px;
+  border-radius: 2px;
+  letter-spacing: initial;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 1400px) {
+  .btn {
+    font-size: 1em;
+  }
+}
+.btn-stack .btn {
+  margin-bottom: 15px;
+}
+.btn-full {
+  width: 100%;
+}
+.btn-primary {
+  background-color: #29abe2;
+  border-color: transparent;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #115b7b;
+  border-color: #115b7b;
+}
+.btn-blank {
+  background-color: transparent;
+  border-color: none;
+}
+.btn-blank:hover,
+.btn-blank:active,
+.btn-blank:focus {
+  background-color: transparent;
+}
+.btn-border-white {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-border-white:hover,
+.btn-border-white:active,
+.btn-border-white:focus {
+  color: #333;
+  border-color: #fff;
+  background-color: #fff;
+}
+footer .footer-column {
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 0 2%;
+  min-height: 50px;
+}
+footer .footer-column:first-child {
+  padding-left: 0;
+}
+footer .footer-column:last-child {
+  padding-right: 0;
+}
+footer .footer-column .icon-ideas {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-top: -25px;
+}
+footer .footer-column .icon-ideas svg {
+  width: 50px;
+  height: 63px;
+}
+footer .footer-column .icon-ideas svg path {
+  fill: #01B2E4;
+}
+footer .footer-column p {
+  font-size: .85em;
+  color: #777777;
+}
+footer .footer-column ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+footer .footer-column ul li {
+  float: left;
+  width: 100%;
+}
+footer .footer-column ul li a {
+  color: #bbbbbb;
+  font-size: .85em;
+  padding: 2px 0;
+  float: left;
+}
+footer .footer-column ul li a:hover {
+  color: #29abe2;
+}
+.modal-search .btn {
+  padding: 0;
+  font-size: 1.8em;
+  color: #CED8DA;
+}
+.modal-search .btn i {
+  color: #CED8DA;
+}
+#modal-search {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+}
+.form-icon {
+  position: absolute;
+  right: 0;
+}
+.input-blank {
+  border: none;
+  box-shadow: 0 0;
+  border-radius: 0;
+  font-size: 2.8em;
+  font-weight: 500;
+  height: 60px;
+  padding: 0;
+}
+.input-blank:active,
+.input-blank:focus {
+  border: none;
+  box-shadow: 0 0;
+}
+/*---------------------
+  Navigation
+----------------------*/
+.navbar-ideas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+}
+.navbar-ideas .navbar-brand {
+  height: 65px;
+  max-width: 145px;
+  padding: 15px;
+  padding-right: 40px;
+}
+.navbar-ideas .navbar-nav {
+  border-left: 1px solid #e7e7e7;
+  float: right;
+  padding-left: 15px;
+}
+.navbar-ideas .navbar-nav > li > a {
+  line-height: 35px;
+  font-size: 0.9em;
+  color: #B1BEC4;
+  font-weight: 500;
+}
+.navbar-ideas .navbar-nav > li > a.user {
+  color: #29abe2;
+  font-weight: 700;
+}
+.navbar-ideas .navbar-nav > li > a.user img {
+  max-width: 35px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.navbar-ideas .navbar-nav > li > a.search i {
+  font-size: 1.2em;
+  vertical-align: sub;
+  margin-right: 10px;
+}
+.navbar-ideas .navbar-nav > li > a:hover,
+.navbar-ideas .navbar-nav > li > a:focus,
+.navbar-ideas .navbar-nav > li > a:active {
+  cursor: pointer;
+  background: none;
+  color: #0e4b64;
+}
+.navbar-ideas .navbar-toggle {
+  margin-top: 14px;
+}
+.navbar-ideas .navbar-toggle .icon-bar {
+  background: #29abe2;
+}
+/*---------------------
+  Video
+----------------------*/
+.video-wrap {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: url('../../img/bg-man.jpg');
+  background-repeat: no-repeat;
+  background-position: 47% 20px;
+  background-size: cover;
+}
+@media (min-width: 1280px) {
+  .video-wrap {
+    background-image: none;
+  }
+}
+.video-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.video-content .slogan {
+  font-size: 2.8em;
+  margin-top: 130px;
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .video-content .slogan {
+    font-size: 4.0em;
+  }
+}
+.video-content .btn {
+  margin: 0 15px 15px;
+  width: 220px;
+}
+.video-absolute {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+/*---------------------
+  Card
+----------------------*/
+#featured {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.card {
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+.card.cat-a .badge {
+  background-color: #9ccd6b;
+}
+.card.cat-a .progress-bar {
+  background-color: #9ccd6b;
+}
+.card.cat-b .badge {
+  background-color: #f06d42;
+}
+.card.cat-b .progress-bar {
+  background-color: #f06d42;
+}
+.card.cat-c .badge {
+  background-color: #9675cd;
+}
+.card.cat-c .progress-bar {
+  background-color: #9675cd;
+}
+.card-header {
+  border-bottom: 1px solid #e7e7e7;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.card-header .badge {
+  border-radius: 5px;
+  margin-bottom: -40px;
+  padding: 15px 20px;
+  font-size: 36px;
+}
+.card-header .status {
+  float: right;
+  border-radius: 20px;
+  background: #4cb3e2;
+  padding: 0 12px;
+  font-size: 0.70em;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #fff;
+}
+.card-body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.card-body .card-cat {
+  font-size: 1.08em;
+  font-weight: 500;
+  color: #A1B2BA;
+}
+.card-body .card-title {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #394950;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+.card-body .user-info .user-img {
+  max-width: 30px;
+  margin-right: 5px;
+}
+.card-body .user-info .user-name {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #B1BEC4;
+  margin-right: 5px;
+}
+.card-body .user-info .user-date {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #dde2e5;
+}
+.card-action {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding: 0;
+}
+.card-action:before,
+.card-action:after {
+  content: " ";
+  display: table;
+}
+.card-action:after {
+  clear: both;
+}
+.card-action a {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #999;
+  border-right: 1px solid #e7e7e7;
+}
+.card-action a:nth-child(1) {
+  width: 25.3%;
+}
+.card-action a:nth-child(2) {
+  width: 44.3%;
+}
+.card-action a:nth-child(3) {
+  width: 30.3%;
+}
+.card-action a:last-child {
+  border-right: none;
+}
+.card-action a:hover,
+.card-action a:focus,
+.card-action a:active {
+  cursor: pointer;
+  background: #90a4ad;
+  text-decoration: none;
+  color: #fff;
+}
+.card-action .like {
+  padding: 15px 15px 10px;
+  font-size: 24px;
+}
+.card-footer {
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 0.75em;
+  color: #B1BEC4;
+  margin: 0;
+}
+.card-footer .progress {
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  height: 15px;
+}
+.card-footer .percent {
+  font-weight: 700;
+  color: #333e43;
+  margin-right: 2px;
+}
+/*---------------------
+	Modal
+----------------------*/
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.modal-brand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.modal-brand .logo {
+  max-width: 80px;
+  padding: 15px 0;
+}
+.modal .close {
+  font-size: 50px;
+  font-weight: 100;
+}
+.modal-header {
+  border: none;
+  padding-bottom: 0;
+}
+.modal-header .heading {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .modal-header .heading {
+    font-size: 1.7em;
+  }
+}
+.modal-full {
+  margin: 100px auto;
+  max-width: 480px;
+}
+.modal-full .modal-body {
+  padding-top: 0;
+}
+.modal-full .modal-content {
+  box-shadow: none;
+  border: none;
+}
+.modal-dialog {
+  width: auto;
+}
+.modal-footer {
+  border: none;
+  padding: 5px 15px;
+  text-align: left;
+}
+.modal-full,
+.modal-dialog {
+  max-width: 960px;
+}
+body.sub {
+  background: #F0F0F0;
+}
+#share-progress .icon-share {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+#share-progress .icon-share svg {
+  width: 41px;
+}
+#share-progress .icon-share svg path {
+  fill: #4cb3e2;
+}
+#challenge {
+  text-align: center;
+}
+#challenge span {
+  padding: 15px 5px;
+  display: block;
+}
+#challenge p {
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+#challenge .btn {
+  padding: 15px 75px;
+  font-size: .8em;
+  margin-top: 10px;
+}
+#challenge i {
+  display: inline-block;
+  color: #fff;
+  background: #29abe2;
+  font-size: 40px;
+  padding: 15px;
+  border-radius: 100%;
+  margin-top: -20px;
+}
+#challenge .user-info {
+  padding-top: 20px;
+}
+#challenge .user-info .user-img {
+  display: inline-block;
+  max-width: 40px;
+}
+#challenge .user-info .descriptor {
+  display: inline-block;
+  font-style: italic;
+}
+/*---------------------
+	Main elements
+----------------------*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding: 0;
+  background: #ffffff;
+  color: black;
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
+}
+img {
+  max-width: 100%;
+}
+/*---------------------
+	Typography
+----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #44575f;
+}
+a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #29abe2;
+  text-decoration: none;
+}
+a:hover {
+  color: #115b7b;
+  pointer: default;
+}
+.heading {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.sub-heading {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 1 em;
+}
+.descriptor {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: .8em;
+  color: #bbbbbb;
+}
