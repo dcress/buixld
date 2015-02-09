@@ -1,0 +1,223 @@
+.icon-required {
+  position: absolute;
+  line-height: @input-height-base; // Ensures icon is centered with input height
+  color: @gray-light;
+  left: 20px;
+  bottom: 0;
+}
+
+.icon-required-select {
+	position: absolute;
+	line-height: @input-height-base;
+	color: @gray-light;
+	right: 40px;
+  bottom: 0;
+}
+
+.disclaimer-required-field {
+	i { color: @gray-light; }
+}
+
+body {
+	// Styles needed to push-nav to move body content when activated
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+span, p {
+	font-family: inherit !important;
+}
+//
+// Section
+.ce-section { margin-bottom: 50px; }
+
+a:hover { cursor: pointer; }
+
+.btn:hover { opacity: 0.8 !important;}
+
+
+
+// Background on all main content elements
+#ehc-ce-app { background: #F4F4F4; }
+
+
+
+//
+// Button things
+//
+
+// Icons that are floated in buttons
+.btn i.left,
+.btn i.right {
+	// Give them the line height of the icon size so that they center correctly vertically
+	line-height: @crm-icon-size;
+}
+
+.btn i { font-size: @crm-icon-size; }
+
+
+
+// Extra information
+.ce-extra-info {
+	color: @gray-light;
+	font-size: 16px;
+}
+.ce-extra-strong {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.ce-extra-header {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+//
+// Alerts
+//
+.ce-alert-default     { color: @brand-default; }
+.ce-alert-success     { color: @brand-success; }
+.ce-alert-warning     { color: @brand-warning; }
+.ce-alert-danger      { color: @brand-danger; }
+.ce-alert-info        { color: @brand-info; }
+
+.crm-alert-default    { color: @brand-default; }
+.crm-alert-success    { color: @brand-success; }
+.crm-alert-warning    { color: @brand-warning; }
+.crm-alert-danger     { color: @brand-danger; }
+.crm-alert-error      { color: @brand-danger; }
+.crm-alert-info       { color: @brand-info; }
+
+
+// Alert backgrounds
+// Mixin for lightening alert background
+.crm-alert-bg (@crm-alert-bg-color) { background: lighten(@crm-alert-bg-color, 0%); } 
+// Alert state backgrounds
+.crm-alert-bg-default { .crm-alert-bg(@brand-default); }
+.crm-alert-bg-primary { .crm-alert-bg(@brand-primary); }
+.crm-alert-bg-success { .crm-alert-bg(@brand-success);}
+.crm-alert-bg-warning { .crm-alert-bg(@brand-warning); }
+.crm-alert-bg-danger  { .crm-alert-bg(@brand-danger); }
+.crm-alert-bg-error   { .crm-alert-bg(@brand-danger); }
+.crm-alert-bg-info    { .crm-alert-bg(@brand-info); }
+
+
+// Error messages
+.error-message {
+  max-width: @screen-md;
+  margin: 0 auto;
+  padding: @crm-holder-space;
+  
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.error-message i { margin-right: 10px; }
+
+
+//
+// Containers
+//
+
+// Large containers
+.container-lg {
+	max-width: @screen-lg; // Defined in ce-variables
+	
+	.container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+	
+	// Resposiveness
+	@media (min-width: @screen-sm) {
+		width: @container-sm;
+	}
+	@media (min-width: @screen-md) {
+		width: @container-md;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-lg;
+	}
+}
+
+// Medium containers
+.container-md {
+	max-width: @screen-md; // Defined in ce-variables
+	
+	.container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+	
+	// Resposiveness
+	@media (min-width: @screen-sm) {
+		width: @container-sm;
+	}
+	@media (min-width: @screen-md) {
+		width: @container-md;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-lg;
+	}
+}
+
+// Small containers
+.container-sm {
+	max-width: @screen-sm; // Defined in ce-variables
+	
+	.container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+	
+	// Resposiveness
+	@media (min-width: @screen-sm) {
+		width: @container-sm;
+	}
+	@media (min-width: @screen-md) {
+		width: @container-md;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-lg;
+	}
+}
+
+// Small containers
+.container-xs {
+	max-width: @screen-xs; // Defined in ce-variables
+	
+	.container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+	
+	// Resposiveness
+	@media (min-width: @screen-sm) {
+		width: @container-sm;
+	}
+	@media (min-width: @screen-md) {
+		width: @container-md;
+	}
+	@media (min-width: @screen-lg-min) {
+		width: @container-lg;
+	}
+}
+
+//Centered elements
+.centered {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Floated elements
+.right { float: right; }
+.left  { float: left;}
+
+// Images
+img { max-width: 100%; }
+
+// Media Query breakpoints
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { }
+

@@ -1,0 +1,19 @@
+// Hide breadcrumbs on mobile
+#ce-page-breadcrumbs { display: none; }
+
+// Actions in bread crumb area
+#ce-page-breadcrumbs .ce-page-actions { margin: 15px 0; }
+
+#ce-page-breadcrumbs .ce-page-actions a {
+	font-size: 18px;
+	margin: 0 7px 0;
+	color: #999;
+	float: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	// Show breadcrumbs
+	#ce-page-breadcrumbs { display: block; }
+	#ce-page-breadcrumbs .breadcrumb { margin: 10px 0 10px 0; }
+}

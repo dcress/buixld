@@ -1,0 +1,92 @@
+---
+layout: default
+title: Online Pre-Registration
+base_url: "../../"
+---
+
+<section id="online-pre-registration">
+  <div class="container-md">
+    <div class="row">
+        <div class="col-sm-12 form-disclaimers">
+          <!-- <p><i class="fa fa-asterisk" aria-hidden="true"></i>Denotes required field.</p> -->
+        </div>
+      </div>
+
+      <div class="crm-holder">
+        <form action="{{ page.base_url }}online-pre-registration/patient-information" id="" class="container-sm">
+          <div class="profile-form-fields">
+            <fieldset class="inactive">
+
+              <div class="row form-section-wrap">
+                <h3>Email Notification</h3>
+                <div class="col-sm-12">
+                  <p class="label-inline">Check box if you would like to receive email notifications.</p>
+                  <label class="radio-inline">
+                    <input type="radio" name="YoN1" id="activeCheck1" value="active" checked> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="YoN1" id="activeCheck2" value="inactive"> No
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section-wrap">
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <label for="email" class="sr-only">Enter Email Address</label>
+                      <input type="email" class="form-control required" id="" placeholder="Enter Email Address" value="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 float-label">
+                      <label for="email2" class="sr-only">Verify Email Address</label>
+                      <input type="email" class="form-control required" id="" placeholder="Verify Email Address" value="">
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="form-section-wrap">
+                <p class="label-inline">Is there anything else we should be aware of in preparation for your upcoming visit?</p>
+              </div>
+
+
+              <div class="form-group row">
+                <div class="col-sm-12 float-label">
+                    <label for="extraInfo" class="sr-only">Enter Information Here</label>
+                    <input type="text" class="form-control required" id="" placeholder="Enter Information Here" value="">
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-sm-12 form-btn-options">
+                  <a href="{{ page.base_url }}online-pre-registration/insurance-information">
+                    <button type="button" class="btn btn-default">Previous</button>
+                  </a>
+                  <a href="{{ page.base_url }}online-pre-registration/registration-success">
+                    <button type="button" class="btn btn-secondary">Pre-Register</button>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+
+
+            </fieldset>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+    </div>
+  </section>
+
+  {% include footer-main.html %}

@@ -1,0 +1,210 @@
+//ONLINE PRE-REGISTRATION STYLES
+//
+
+//global timePicker styles
+.picker__list {
+	height: 500px;
+	overflow: scroll;
+}
+
+.picker__list-item {
+
+	small {
+		float: right;
+
+	}
+}
+
+//global class for removing padding left on radio buttons
+.radio-left {
+	padding-left: 0;
+}
+
+
+//Intro modal
+.online-pre-registration-modal {
+	.modal-title {
+		color: #000;
+		padding-top: 10px;
+	}
+
+	.modal-header, .modal-footer {
+		border: none;
+	}
+
+	.modal-body {
+
+		h2 {
+			color: @hospital-secondary;
+		}
+
+		ul {
+			text-align: left;
+			font-size: @font-size-h4;
+			padding-left: 30px;
+		}
+	}
+
+	.modal-info-wrap {
+		padding-bottom: 15px;
+	}
+
+}
+
+//global styles?
+//
+
+.form-disclaimers {
+	padding-top: 20px;
+	text-align: right;
+	font-size: 10px;
+	color: @hospital-primary;
+
+	p {
+		display: inline-block;
+		padding-left: 10px;
+	}
+
+	.fa {
+		padding-right: 3px;
+	}
+
+}
+
+
+.form-section-wrap {
+	padding-bottom: 20px;
+}
+
+
+.form-btn-options {
+	text-align: center;
+	button {
+		display: inline-block;
+		margin: 10px 10px;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+
+}
+
+.disclaimer {
+	padding-bottom: 10px;
+
+	p {
+		color: @hospital-primary;
+		font-size: @font-size-h6;
+		font-style: italic;
+		text-align: center;
+	}
+}
+
+.label-row {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.label-inline {
+	color: @gray-light;
+	display: inline;
+}
+
+.crm-holder {
+	margin-bottom: 40px;
+}
+//end global stuff
+
+
+
+#online-pre-registration, #online-pre-procedure {
+
+	input {
+		margin-bottom: 5px;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.float-label {
+		i.fa-asterisk {
+			color: @gray-light;
+			padding: 0 20px;
+			position: absolute;
+			top: 10px;
+			left: 0;
+		}
+
+		i.fa-calendar, i.fa-clock-o {
+			color: @gray-lighter;
+			padding: 0 30px;
+			position: absolute;
+			top: 10px;
+			right: 0;
+		}
+	}
+
+	.form-group {
+		p {
+			color: @gray-light;
+		}
+	}
+
+	.form-cta {
+		text-align: center;
+		font-size: 16px;
+	}
+
+	//hide and show sections based on selector input
+	#mammogram, #labor-and-delivery {
+		display: none;
+	}
+
+}
+
+
+
+//registration success page
+//
+.registration-success {
+	text-align: center;
+
+	.top-stack {
+		padding: 30px 0px;
+		background: @hospital-secondary;
+		color: #fff;
+
+		h1 {
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: @font-size-h4;
+		}
+
+		.fa-circle {
+			color: @hospital-primary;
+		}
+
+		.fa-thumbs-up {
+			color: #fff;
+		}
+	}
+
+	.bottom-stack {
+		padding: 30px 0px;
+
+		font-weight: bold;
+
+		ul {
+			list-style: none;
+		}
+	}
+}
+
+.pre-procedure-questions {
+	display: none;
+}
+

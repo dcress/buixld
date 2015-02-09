@@ -1,0 +1,42 @@
+//
+// CRM HUT style Header for modules
+//
+
+// Header height defined so centering and logo ratio can be determined
+@crm-header-height: 120px;
+
+#ce-module > h1 { //removes extra margin under grey bar on header 
+  margin-bottom: 0;
+}
+
+.crm-header {
+	line-height: @crm-header-height/2 ;
+	
+	// Add some padding becuase logo have no cropped space
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+// Adds space of navbar to header wrap on *fixed* navbar
+.header-inner-wrap {
+	margin-top: @navbar-height;
+	overflow: hidden;
+}
+
+#logo {
+	text-align: center; // center to logo within its divy
+	margin-bottom: 10px; 
+}
+
+#logo img {
+	display: none;
+}
+
+@media (min-width: @screen-sm-min) {
+	.crm-header {
+		line-height: @crm-header-height; // Same as height so vertically aligned elements will center
+	}
+}
+
+

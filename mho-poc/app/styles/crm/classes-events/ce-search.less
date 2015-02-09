@@ -1,0 +1,124 @@
+// Variables for search section
+@ce-search-bg-color:                 @brand-primary; // HCA default - Defined in entity brand
+@ce-search-more-options-bg-color:    #FFF;
+
+// Main search area
+//----------------------------------------
+#ce-search {
+	background: @ce-search-bg-color; // Defined in entity brand
+	position: relative;
+	padding: 2em 0 0;
+
+	// Different color float text when bg isn't white
+	.jvFloat .placeHolder.required { color: #fff; }
+
+	border-bottom: 1px solid #CBCBCB;
+}
+
+// Form - main search form
+.ce-search-form form i {
+	right: 10px;
+	line-height: @input-height-base;
+	color: @crm-icon-color; // Can be used across multiple different modules. in ce-variables.less
+}
+
+.ce-search-options-toggle i { margin-right: 5px; }
+
+// Search options - Nav tabs
+//----------------------------------------
+.ce-search-options { margin-top: 15px; }
+.ce-search-options .nav-tabs { border-bottom: 1px solid transparent }
+.ce-search-options .nav-tabs > li > a,
+.ce-search-options .nav-tabs > li.active > a {
+	.border-radius(0);
+	border: none;
+}
+
+.ce-search-options .nav-tabs > li > a {
+	color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+}
+
+// Search options - Tabs background
+.ce-search-options .nav-tabs > li.active > a {
+	background: @ce-search-more-options-bg-color; // Deifned in entity brand
+	color: @ce-search-bg-color;
+	//&:hover { color: white; }
+}
+
+// More search options section
+.ce-search-expanded { background: @ce-search-more-options-bg-color; } // Defined in entity brand
+
+// More search options tobble tabs
+.ce-search-more-options-toggle i {
+	vertical-align: bottom;
+	margin: 0 5px;
+}
+
+
+// Search options inside of 'More Options' tab
+//----------------------------------------
+#ce-search-more-options .ce-search-options .nav-tabs > li.active > a {
+	background: @ce-search-bg-color;
+}
+
+// Search expanded tabs
+.ce-search-expanded .ce-search-options .nav-tabs > li > a { color: @ce-search-bg-color; }
+.ce-search-expanded .ce-search-options .nav-tabs > li.active > a { color: #fff; }
+
+// Search options background inside of 'More Options' tab
+#ce-search-more-options .ce-search-options { padding: 2em 0; }
+#ce-search-more-options .ce-search-options .tab-content {
+	background: @ce-search-bg-color;
+	padding: 2em 2em 1em;
+}
+
+// Space in expanded content tabs
+.ce-search-expanded-content { padding: 2em 0; }
+
+
+// Search buttons
+//----------------------------------------
+// All search submit buttons
+#ce-search .btn {
+	//background: @ce-search-bg-color;
+	width: 100%;
+}
+
+// Main search field btn and icon
+#ce-search-basic-fieldset .btn i {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#ce-search .ce-search-options .btn-primary,
+#ce-search .ce-search-form .btn-primary { background: lighten(transparent, 20%); }
+
+.ce-search-submit i {
+	font-size: @crm-icon-size;
+	float: right;
+}
+
+
+// Need Help text
+//----------------------------------------
+.ce-search-help {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.ce-search-help i {
+	font-size: @crm-icon-size + 10;
+	color: @ce-search-bg-color;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.ce-search-help-phone {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+

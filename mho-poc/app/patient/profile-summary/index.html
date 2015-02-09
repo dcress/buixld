@@ -1,0 +1,174 @@
+---
+layout: default
+title: Profile Summary
+base_url: "../../"
+---
+
+<div id="profile-page" class="container-sm row">
+  <div class="col-sm-4 col-sm-offset-8" id="edit-profile">
+    <a href="{{ page.base_url }}patient/profile-summary/edit-profile/" class="edit-profile-btn"><i class="fa fa-pencil" aria-hidden="true" alt=""></i> Edit Profile Information</a>
+  </div>
+  <div class="profile-page-inner col-sm-12">
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-3">
+          <i class="fa fa-user" aria-hidden="true" alt=""></i>
+          <span class="section-title">User name</span>
+          <!-- need variable to bind for USERNAME -->
+          <p data-user-name="">sjenkins123</p>
+        </section>
+        <section class="col-sm-3">
+          <i class="fa fa-key" aria-hidden="true" alt=""></i>
+          <span class="section-title">Password</span>
+          <!-- need variable to bind for PASSWORD -->
+          <!-- perhaps a show/hide option here? -->
+          <p data-password="">********</p>
+        </section>
+        <section class="col-sm-3">
+          <i class="fa fa-pencil-square-o" aria-hidden="true" alt=""></i>
+          <span class="section-title">Account created</span>
+          <!-- need variable to bind for ACCOUNT CREATED -->
+          <p data-account-created="">10/17/14</p>
+        </section>
+        <section class="col-sm-3">
+          <i class="fa fa-hospital-o" aria-hidden="true" alt=""></i>
+          <span class="section-title">Preferred Facility</span>
+          <!-- need variable to bind for ACCOUNT CREATED -->
+          <p data-pefered-facility="">TriStar Centennial<br>Medical Center</p>
+        </section>
+      </div>
+    </section>
+    <h3>Personal information</h3>
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-2 col-sm-offset-1">
+          <img src="{{ page.base_url }}img/profile-mom-lg.jpg" alt="Profile Picture" width="70px" class="img-circle">
+          <span class="section-title">Name</span>
+          <!-- need variable to bind for patient FULLNAME -->
+          <p data-name="" id="patient_name">Suzy Jenkins</p>
+        </section>
+        <section class="col-sm-2">
+          <i class="fa fa-female" aria-hidden="true" alt=""></i>
+          <span class="section-title">Gender</span>
+          <!-- need variable to bind for GENDER -->
+          <p data-gender="">Female</p>
+        </section>
+        <section class="col-sm-2">
+          <i class="fa fa-gift" aria-hidden="true" alt=""></i>
+          <span class="section-title">Birthdate</span>
+          <!-- need variable to bind for BIRTHDATE -->
+          <p data-birthdate="{{birthdate}}">April 01, 1972</p>
+        </section>
+        <section class="col-sm-2">
+          <i class="fa fa-credit-card" aria-hidden="true" alt=""></i>
+          <span class="section-title">Primary Coverage</span>
+          <!-- need variable to bind for BIRTHDATE -->
+          <p data-primary-coverage="{{birthdate}}">Cigna</p>
+        </section>
+        <section class="col-sm-2">
+          <i class="fa fa-credit-card" aria-hidden="true" alt=""></i>
+          <span class="section-title">Secondary Coverage</span>
+          <!-- need variable to bind for BIRTHDATE -->
+          <p data-secondary-coverage="{{birthdate}}">Blue Cross <br> Blue Shield</p>
+        </section>
+      </div>
+    </section>
+    <h3>Contact Information</h3>
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-4">
+          <i class="fa fa-home" aria-hidden="true" alt=""></i>
+          <span class="section-title">Mailing Address</span>
+          <!-- need variable to bind for personal ADDRESS -->
+          <p>
+            123 Somewhere Over Street <br>
+            Atlanta, GA. 12345
+          </p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-phone-square" aria-hidden="true" alt=""></i>
+          <span class="section-title">Phone</span>
+          <!-- need variable to bind for PHONE number -->
+          <p>123-456-7890</p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-envelope-o" aria-hidden="true" alt=""></i>
+          <span class="section-title">Email</span>
+          <!-- need variable to bind for EMAIL -->
+          <p>sjenkins@aol.com</p>
+        </section>
+<!--       <div class="panel-footer col-sm-12">
+        <input type="checkbox" id="email-notification" checked>&nbsp;&nbsp;
+        <label for="email-notification">I want to be notified via email about events, seminars or services from [facility].</label>
+      </div> -->
+      </div>
+    </section>
+    <h3>Linked Patient Account</h3>
+    <section class="panel panel-default link-account-panel">
+      <h4 class="bold-text">You'll Need A Few Key Pieces of Information:</h4>
+      <div class="link-account-panel-inner">
+        <p class="hca-large-info"><i class="fa fa-thumbs-up" aria-hidden="true" alt=""></i> Have Your Social Security Number Ready</p>
+        <p class="hca-large-info"><i class="fa fa-barcode" aria-hidden="true" alt=""></i> Gather Your Medical Records Number</p>
+        <p class="hca-large-info"><i class="fa fa-key" aria-hidden="true" alt=""></i> Verify Your Identity</p>
+        <a href="{{ page.base_url }}patient/patient-registration/landing-page/" class="btn btn-large btn-block btn-primary">Save and Link Accounts</a>
+        <span class="need-help"><i class="fa fa-question-circle" aria-hidden="true" aria-hidden="true" alt=""></i> NEED HELP? CALL 1-800-123-4567</span>
+      </div>
+    </section>
+    <a href="{{ page.base_url }}patient/" class="btn btn-primary btn-profile-confirm">
+       Confirm Profile Information
+      <i class="fa fa-chevron-right pull-right" aria-hidden="true" alt="right arrow" aria-hidden="true" alt=""></i>
+    </a>
+  </div>
+</div>
+
+<!-- ON SUCCESS PROFILE CREATION MODAL -->
+<div class="modal fade" id="profile-create-modal">
+  <div class="modal-dialog container-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close cancel flip-terms-back" data-dismiss="modal" aria-hidden="true"><i class="fa  fa-times-circle" aria-hidden="true" alt="times icon for closing modal" aria-hidden="true" alt=""></i></button>
+        <h4 class="modal-title">Profile Creation Successfull!</h4>
+      </div>
+      <div class="modal-body">
+      <!-- might need variable to bind here for different message if profile
+          set up -->
+        <div class="text-center">
+          <i class="fa fa-thumbs-o-up large-icon btn-primary" aria-hidden="true" alt=""></i>
+          <h4 class="email-text">sjenkins@aol.com</h4>
+          <p>You have successfully created your profile for MyHealthONE!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-check" aria-hidden="true" alt="check mark" aria-hidden="true" alt=""></i> Confirm</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- ON EDIT/UPDATE SUCCESS PROFILE MODAL -->
+<div class="modal fade" id="profile-edit-modal">
+  <div class="modal-dialog container-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close cancel flip-terms-back" data-dismiss="modal" aria-hidden="true"><i class="fa  fa-times-circle" aria-hidden="true" alt="times icon for closing modal" aria-hidden="true" alt=""></i></button>
+        <h4 class="modal-title">Profile Update Completed!</h4>
+      </div>
+      <div class="modal-body">
+      <!-- might need variable to bind here for different message if profile
+          set up -->
+        <div class="text-center">
+          <i class="fa fa-thumbs-o-up large-icon btn-primary" aria-hidden="true" alt=""></i>
+          <h4 class="email-text">sjenkins@aol.com</h4>
+          <p>You have successfully updated your profile!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-check" aria-hidden="true" alt="check mark" aria-hidden="true" alt=""></i> Confirm</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% include footer-main.html %}
+
+

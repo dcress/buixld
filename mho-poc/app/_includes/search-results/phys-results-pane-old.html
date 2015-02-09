@@ -1,0 +1,86 @@
+<!-- Results summary -->
+    <div class="container-md summary-sort">
+      <div class="row">
+          
+            <div class="col-sm-12 results-summary">
+              <p>Found <strong><a href="#">13</a></strong> physicians for "your search term".</p>
+            </div>
+      </div>
+
+      <!-- Sort Buttons -->
+      <div class="row btn-row">
+        <div class="col-sm-3">
+
+          <!-- sort options for all search results -->
+          <ul class="nav sort-by-menu-hide" id="sort-by-menu-all">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Sort Physicians by: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li class="hut-search-options-phys">
+                  <a class="" 
+                     data-toggle="tab" 
+                     href="">Name</a>
+                </li>
+                <hr>
+                <li class="">
+                  <a class="" 
+                     data-toggle="tab" 
+                     href="">Location</a>
+                  </li>
+                  <hr>
+                  <li class="">
+                    <a class="" 
+                       data-toggle="tab" 
+                       href="">Specialty</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+        </div>
+
+
+          
+        <div class="col-sm-3 col-sm-offset-6">
+          <ul class="nav">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Show: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li><a href="#">5 results</a></li>
+                <hr>
+                <li><a href="#">10 results</a></li>
+                <hr>
+                <li><a href="#">25 results</a></li>
+                <hr>
+                <li><a href="#">100 results</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <!--end sort buttons row-->
+    </div>
+
+    <div class="container-md results-wrap">
+      <!-- <div class="tab-content"> -->
+          {% include search-results/phys-card.html %}
+          {% include search-results/phys-card.html %}
+          {% include search-results/phys-card.html %}
+          {% include search-results/phys-card.html %}
+          {% include search-results/phys-card.html %}
+      <!-- </div> -->
+
+      <!-- Pagination -->
+      <div class="row">
+        <div class="col-sm-12 pagination">
+          {% include search-results/crm-pagination.html %}
+        </div>
+      </div>
+      <!-- end pagination-->   
+
+
+    </div> 

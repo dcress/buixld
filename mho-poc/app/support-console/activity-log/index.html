@@ -1,0 +1,45 @@
+---
+layout: support-console
+title: Search
+base_url: "../../"
+---
+
+{% include support-console/search-bar.html %}
+
+<section id="sc-activity-log">
+  <div class="container-md">
+
+    <h3>Activity Log</h3>
+    
+    <div class="row btn-row">
+      <div class="col-sm-2">
+        <a href="javascript:history.back()">
+          <button class="btn btn-primary width100"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back</button>
+        </a>
+      </div>
+      <div class="col-sm-3 col-sm-offset-7">
+        <select name="sort" id="select-sort" class="form-control select-styled btn-text" required="required">
+          <option value="" class="option-title">Results Per Page:</option>
+          <option value="">5 Results</option>
+          <option value="">25 Results</option>
+          <option value="">50 Results</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        {% include support-console/activity-log-table.html %}
+      </div>
+    </div>
+
+
+    <div class="row text-center">
+      <div class="col-xs-12 lr-pagination">
+        {% include pagination.html %}
+      </div>
+    </div>
+
+
+  </div>
+</section>

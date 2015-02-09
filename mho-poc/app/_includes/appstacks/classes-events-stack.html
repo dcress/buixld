@@ -1,0 +1,29 @@
+<!-- 100% width for background image -->
+<div class="search-stack" class="row">
+    <!-- Centered width for elements -->
+    <section class="search-stack-inner container-sm row">
+        <h3>Classes &amp; Events</h3>
+        <form role="form" action="{{ page.base_url }}crm-classes-events" method="get">
+            <div class="form-group">
+                <input type="search" class="form-control search-box" placeholder="Enter Keyword or Class/Event Name"><input type="submit" class="fa fa-input" value="&#xf002;">
+            </div>
+        </form>
+        <ul class="list-inline search-items">
+            <li><i class="fa fa-times-circle-o" aria-hidden="true" alt="Withdraw from Class or Event"></i>Withdraw from Class or Event</li>
+            <li><i class="fa fa-calendar" aria-hidden="true" alt="Find an Event Registration"></i>Find an Event Registration</li>
+            <li class="btn-group">
+                <span class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    More Search Options <i class="fa fa-angle-down" aria-hidden="true" alt="More Search Options"></i>
+                </span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="search-option-menu">
+                    <li><a href="{{ page.base_url }}crm-classes-events">Search option 1</a></li>
+                    <li><a href="{{ page.base_url }}crm-classes-events">Search 2</a></li>
+                    <li><a href="{{ page.base_url }}crm-classes-events">Search option 3</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{ page.base_url }}crm-classes-events">Search 4</a></li>
+                    <li><a href="{{ page.base_url }}crm-classes-events">Search option 5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</div> <!-- search-stack -->

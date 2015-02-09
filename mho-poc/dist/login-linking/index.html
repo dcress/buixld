@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enrollment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../_bower_components/fontawesome/css/font-awesome.min.css" type='text/css'>
+
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.css" id="theme_base" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.date.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.time.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/jquery-icheck/skins/square/grey.css">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="../../styles/main.min.css" type='text/css'>
+
+<!-- IE CSS -->
+<!-- build:css(app) ../../styles/ie.css -->
+ <!--[if IE]>
+   <link rel="stylesheet" type="text/css" href="../../styles/ie.css"/>
+<![endif]-->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Respond JS for IE - DO NOT REMOVE -->
+<!-- To kick IE out of quirks mode so Respond.js works -->
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+
+<!-- contains html5shiv and selectivizr -->
+<!--[if IE]>
+<script src="../../scripts/shims.js"></script>
+<![endif]-->
+
+    <script src="../../scripts/modernizr.js"></script>
+
+    <script>
+        // For IE11. May we one day live without your BS.
+        Modernizr.addTest('preserve3d', function(){return Modernizr.testAllProps('transformStyle', 'preserve-3d');});
+    </script>
+  </head>
+  <body id="enrollment">
+    <div id="cpp-enrollment">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+    <div class="container mho-nav-container">
+        <div class="row">
+            <!-- <div class="col-sm-12 center-block"> -->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">LOGIN</a></p>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">ABOUT</a></p>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">TOUR</a></p> -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- </div> -->
+            <div class="col-sm-12 mho-nav-logo-container">
+                <img src="../../img/mho-logo-md.png" class="cpp-logo" id="cpp-large-logo" alt="CPP Logo">
+                <img src="../../img/MyHealthONE__Brandmark_White.png" class="cpp-logo" id="cpp-mobile-logo" alt="CPP Logo">
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+      <!-- Message for those with JS disabled -->
+      <noscript>
+        <div class="container alert alert-danger">
+          <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+        </div>
+      </noscript>
+      <!-- End JS disabled message -->
+
+      <!-- Main content -->
+      <div id="content-main" class="container">
+        <div class="login-modal-text white-text text-center">
+        <h1>Simplifying your health care begins with MyHealth<i>One</i></h1>
+        <h2>Create an account and start managing your health today.</h2>
+       </div>
+        <div class="static-modal" role="dialog">
+  <!-- Include login page modal -->
+      <div id="login-modal" class="flip-panel">
+  <div class="modal-dialog front">
+    <div class="modal-content white-bg">
+      <div class="static-modal-header">
+        <div id="brand-logo" class=""></div>
+      </div>
+      <div class="static-modal-body">
+        <!-- Removed method="post" from 'form' in order for prototype flow -->
+        <form class="form-horizontal" role="form" action="../../home/" method="get" id="Login-form">
+          <div class="form-group">
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="col-sm-6">
+              <!-- <div class="remember-machine pull-left">
+                <input type="checkbox">
+                <a data-toggle="tooltip" data-original-title="Save your username and password (not recommended for public/shared computers)">Remember This Computer</a>
+              </div> -->
+            </div>
+            <div class="col-sm-6">
+              <div class="login-trouble pull-right">
+                <a href="#" class="flip-login" data-toggle="tooltip" data-original-title=""><i class="fa fa-question-circle fa-lg" aria-hidden="true" alt="?"></i><span>Forgot username or password?</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <!-- remove onclick script for production. used for buisness demo only -->
+              <button class="btn btn-primary btn-block btn-primary-75 btn-primary-center" type="submit" onclick="window.location='../../linking-home';">Log in</button>
+            </div>
+          </div>
+        </form>
+        <div class="request-new-account">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center"><strong>DO MORE WITH AN ACCOUNT</strong></h3>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-flask fa-2x" aria-hidden="true" alt=""></i><span>View Your Lab Results</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-medkit fa-2x" aria-hidden="true" alt=""></i><span>Review your Health Records</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-money fa-2x" aria-hidden="true" alt=""></i><span>Manage Your Family's Care</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-calendar fa-2x" aria-hidden="true" alt=""></i><span>Schedule Appointments</span></h4>
+            </div>
+            <div class="col-sm-12">
+              <button class="flip-item btn btn-secondary btn-block btn-primary-75 btn-primary-center" type="button" id="new-account">Create an account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="need-help text-center">
+          <div class="col-sm-12"><h5><a href="tel:18001234567"><i class="fa fa-question-circle fa-2x" aria-hidden="true" alt="?"></i><span>Need help with your account? CALL 1-800-123-4567</span></a></h5> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <!-- Include Request a new account page modal -->
+      <!-- Request new account view -->
+  <div id="request-account-modal" class="flip-panel">
+  <div class="modal-dialog back">
+    <div class="modal-content gray-bg">
+        <div class="static-modal-header">
+          <button type="button" class="close cancel flip-item-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true" alt="X"></i></button>
+          <div class="brand-logo-white"></div>
+        </div>
+      <div class="static-modal-body">
+        <div class="col-sm-12 text-center"><h3>REQUEST A NEW ACCOUNT</h3></div>
+        <form action="verify-email/index.html" role="form" id="newAccount-form">
+          <div class="form-group row" id="emailAddress-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
+              <label for="email" class="email-suggestion help-block">Did you mean <a class="suggested-email"></a>?</label>
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control confirmEmail-tooltip" data-toggle="tooltip" id="confirm-email" placeholder="Confirm Email Address" name="confirmEmail" placement="top">
+            </div>
+          </div>
+          <div class="form-group row" id="userName-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control username-tooltip" id="newUsername" placeholder="User Name" name="username" data-toggle="tooltip">
+            </div>
+          </div>
+          <div class="form-group row" id="password-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control password-tooltip" data-toggle="tooltip" id="newPassword" placeholder="Password" name="newPassword">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control confirmPassword-tooltip" data-toggle="tooltip" id="confirm-password" placeholder="Confirm Password" name="confirmPassword">
+            </div>
+          </div>
+          <div class="terms-conditions row">
+            <div class="col-sm-12 text-center white-text">
+                <input type="checkbox" name="terms" id="terms"> I have read and agree to the <a href="#" class="white-text flip-terms">Terms &amp; Conditions</a>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTestAgain"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- on click javascript added for business demo.  reomve for prod.  -->
+              <button class="btn btn-success btn-block btn-primary-100 btn-primary-center" type="submit" id="sign-up" onclick="window.location='../../home/';"><i class="fa fa-check" aria-hidden="true" alt="Check"></i>Sign-Up and Confirm Email</button>
+            </div>
+          </div>
+        </form>
+          <div class="row">
+            <div class="col-sm-12 white-text text-center">An email will be sent to confirm your request for an account.</div>
+          </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="row">
+          <div class="center-block">
+            <button class="flip-item-back btn btn-link btn-block btn-primary-75 btn-primary-center" type="button" id="back-to-login">Back to Login Screen</button>
+          </div>
+            <!--<div class="col-sm-6">
+            <button class="btn btn-default btn-block" type="button" id="resend-email"><i class="fa fa-envelope-o"></i>Resend Verficiation Email</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Include terms and conditions modal -->
+    
+<!-- Terms and Conditions -->
+<div id="terms-modal" class="flip-panel flip">
+    <div class="modal-dialog front">
+        <div class="modal-content gray-bg">
+            <div class="static-modal-header">
+                <button type="button" class="close cancel flip-terms-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa  fa-times-circle" aria-hidden="true" alt="X"></i></button>
+                <div class="brand-logo-white"></div>
+            </div>
+            <div class="static-modal-body">
+                <div class="row">
+                    <div class="col-sm-12 text-center"><h3>Terms &amp; Conditions</h3></div>
+                </div>
+                <div class="row">
+                    <div class="terms-text center-block">
+                        <p>The owner and operator of this website and its afﬁliates (“Provider,” "we" or "us") provide a website offering you secure,
+                            private access to some of your records at Provider facilities, as well as certain internet-based services which may include,
+                            among other things, assistance in ﬁnding a doctor, assistance in scheduling appointments, the ability to register for classes
+                            and pre-register for procedures, and health and patient education materials (the “Portal”). These Terms and Conditions
+                            apply to the Portal and its services (the "Services"), for which you also must accept Provider’s Privacy Policy associated
+                            with the Portal. </p>
+                        <p>Please read the following information carefully. Your continued use of the Portal will indicate your agreement to be
+                            bound by these Terms and Conditions. If you do not agree to be bound by these Terms and Conditions, you may not access
+                            or use the Portal.</p>
+                        <h5>ELIGIBILITY</h5>
+                        <p>Please read the following information carefully. Your continued use of the Portal will indicate your agreement to be
+                            bound by these Terms and Conditions. If you do not agree to be bound by these Terms and Conditions, you may not access
+                            or use the Portal.</p>
+                        <p>Under state and Federal law, there are certain types of medical information that a parent or guardian of a minor patient
+                            may not view without consent of the minor patient. Because of these requirements, the Portal may not be available to
+                            parents or guardians for certain minor patient’s medical record without the minor patient’s authorization.</p>
+                        <p>Proxy Portal enrollment may under certain circumstances require in person enrollment or veriﬁcation and may require
+                            periodic re-conﬁrmation. By setting up a proxy account, you are attesting that (i) any necessary patient authorizations
+                            have been provided; (ii) you have completed and/or provided all required documentation to the applicable medical
+                            facility(ies); and (iii) your proxy access complies with applicable law and regulation</p>
+                        <h5>USE OF THE PORTAL</h5>
+                        <p>Only use the Portal if you understand and agree to all of the following:</p>
+                        <p>(a) The Portal is intended as a secure online means for you to access your conﬁdential medical record information. It is
+                            your responsibility to select a conﬁdential password, to authorize, monitor and control access to and use of your account,
+                            ID and password, and to promptly inform Portal technical support if you need to inactivate your account, ID or password
+                            for any reason. Please note that if you share your Portal user name and password with another person, this will allow that
+                            person to see your conﬁdential medical record information. Provider has no responsibility concerning any breach of your
+                            conﬁdential medical record information due to your sharing or losing your user name and password. Provider will not be
+                            liable for any loss that you may incur as a result of someone else using your password or account, either with or without
+                            your knowledge. However, you could be held liable for losses incurred by Provider or another party due to someone else
+                            using your account or password. You may not use anyone else's Portal account at any time, without the authorization of
+                            the account holder or in accordance with your rights as a personal representative under applicable law.</p>
+                        <p>The owner and operator of this website and its afﬁliates (“Provider,” "we" or "us") provide a website offering you secure,
+                            private access to some of your records at Provider facilities, as well as certain internet-based services which may include,
+                            among other things, assistance in ﬁnding a doctor, assistance in scheduling appointments, the ability to register for classes
+                            and pre-register for procedures, and health and patient education materials (the “Portal”). These Terms and Conditions
+                            apply to the Portal and its services (the "Services"), for which you also must accept Provider’s Privacy Policy associated
+                            with the Portal. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="static-modal-footer">
+                <!--<div class="row">
+                    <div class="col-sm-12 text-center white-text"><input type="checkbox" id="terms-agree"> I have read and agree to the Terms &amp; Conditions</div>
+                </div>-->
+                <div class="row">
+                    <div class="center-block">
+                        <button class="flip-terms-back btn btn-default btn-block btn-primary-50 btn-primary-center" type="button" id="back-to-new-account">Return to Sign Up Page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Include Trouble Logging In modal -->
+      <!-- Trouble Logging In -->
+  <div id="login-trouble-modal" class="flip-panel">
+  <div class="modal-dialog back">
+    <div class="modal-content gray-bg">
+        <div class="static-modal-header">
+          <button type="button" class="close cancel flip-login-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa  fa-times-circle" aria-hidden="true" alt="X"></i></button>
+          <div class="brand-logo-white"></div>
+        </div>
+      <div class="static-modal-body">
+          <div class="row">
+            <div class="center-block white-text text-center">
+              <h3>TROUBLE LOGGING IN ?</h3>
+              <h3>Please select any of the following options and enter your email address to resolve the login issues.</h3>
+            </div>
+          </div>
+          <!-- Removed method="post" from 'form' in order for prototype flow -->
+        <form class="form-horizontal" role="form" action="login-trouble-reset/index.html" id="login-trouble-form">
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <select class="form-control select-styled" id="login-trouble-options" name="loginTroubleOptions">
+                <option>I forgot my username</option>
+                <option>I forgot my password</option>
+                <option>I forgot both my username and password</option>
+              </select>
+           </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control" id="login-trouble-email" placeholder="Email Address" name="email">
+              <label for="login-trouble-email" class="email-suggestion help-block">Did you mean <a class="suggested-email"></a>?</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary btn-block btn-primary-75 btn-primary-center">SUBMIT</button>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+        </form>
+      </div>
+      <div class="static-modal-footer">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            I agree to the terms. I dont need a checkmark!
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+      </div>
+
+    <!-- Footer -->
+    <footer id="enrollmentfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 center-block">
+                <p class="footer-text"><a href="../../home/" class="navbar-link">Return To Hospital Home Page</a></p>
+                <p class="footer-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                <p class="footer-text"><a href="../../site-map" class="navbar-link">Sitemap</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 center-block">
+                    <p class="navbar-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                    <p class="navbar-text"><a href="#" class="navbar-link">Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ -->
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../../scripts/components.js"></script>
+
+<!-- <script src="../../scripts/form-slider.js"></script> -->
+
+<script src="../../scripts/main.js"></script>
+
+<!--[if IE]>
+<script src="../../scripts/ie.js"></script>
+<![endif]-->
+
+<script>
+  // FASTCLICK!!! for eliminating the ms delay for touch events
+  $(function() {
+      FastClick.attach(document.body);
+  });
+
+</script>
+
+    <!-- RESUME: FIGURE OUT WHY USEMIN WASN'T CREATING MY JS FILE FOR THIS BLOCK -->
+    <script src="../../scripts/validate/login-form.validate.js"></script>
+    <script src="../../scripts/enrollment.js"></script>
+  </body>
+
+</html>

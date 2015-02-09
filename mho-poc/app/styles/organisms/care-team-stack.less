@@ -1,0 +1,69 @@
+//
+// Care Team Appstack
+// ------------------
+
+.care-team-stack {
+
+    background-color: @brand-primary;
+    text-align: center;
+    
+    h3 {
+        color: #fff;
+        text-transform: uppercase;
+    }
+    p {
+        color: #fff;
+        .small {
+            color: @hospital-primary;   
+        }
+    }
+
+    .care-team-stack-inner {
+        padding:@padding-large-vertical 0;
+        img {
+            padding: @padding-base-vertical 0;
+        }
+        form {
+            margin: 0 auto;
+            max-width: 480px;
+            min-width: 340px;
+            width: 80%;
+            input { margin-bottom: 0; }
+            .form-group { margin-bottom: 5px; }
+        }
+
+        .care-team-items {
+            padding-bottom: @padding-large-vertical;
+            padding-top: @padding-large-vertical;
+            >li {
+                color: @nav-font-color;
+                display: inline;
+                padding: 0 @padding-xl-horizontal;
+            }
+            i {
+                display: inline;
+                padding-bottom: @padding-base-vertical;
+                padding-right: @padding-xs-horizontal;
+            }
+            a {
+                text-decoration: none;
+                color: @body-bg;
+            }
+                :hover {
+                    color: @hospital-primary;
+                }
+        }
+    }
+    // Small devices
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) { }
+
+    // Medium devices
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) { }
+
+    // Large devices
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) { }
+
+}

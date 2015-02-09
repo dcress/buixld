@@ -1,0 +1,90 @@
+---
+layout: default
+title: Health Visits
+base_url: "../"
+---
+
+<section id="health-visits" class="lr-listing">
+  <!-- summary and buttons -->
+  <article id="lr-criteria" class="container-sm">
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="section-summary">
+          Listed below is information about your most recent visits. Click links to access additional details about a specific visit. Click Summary of Care to access a list of all your visits to this facility and information about each.
+        </p>
+      </div>
+    </div>
+
+    <div class="row btn-row">
+      <div class="col-xs-12 col-sm-4 mobile-select">
+        <select name="sort" id="select-sort" class="form-control select-styled btn-text" required="required">
+          <option value="" class="option-title">Results Per Page:</option>
+          <option value="">5 Results</option>
+          <option value="">25 Results</option>
+          <option value="">50 Results</option>
+        </select>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 col-sm-offset-5">
+        <!-- Summary of care button button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary btn-primary-100 btn-summary dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            Summary of Care 
+            <i class="fa fa-chevron-down" aria-hidden="true" alt="Summary of Care"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download</a></li>
+            <li><a href="#"><i class="fa fa-share-square-o" aria-hidden="true"></i> Transmit</a></li>
+            <li><a href="#"><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ page.base_url }}../activity-log">Activity Log</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </article> 
+  <!--End container-sm for summary and buttons-->
+
+
+  <section id="lr-container" class="container-sm">
+
+    <!--using this just to show multiple versions of lab results. use lab-result-card.html for realz-->
+  
+    {% include health-visits/health-visit-card.html %}
+    {% include health-visits/health-visit-card.html %}
+    {% include health-visits/health-visit-card.html %}
+
+
+
+
+
+
+    <!-- pagination include -->
+    <div class="row text-center">
+      <div class="col-xs-12 lr-pagination">
+        {% include pagination.html %}
+      </div>
+    </div>
+
+
+  </section>
+  <!--end lr-results-container for all results-->
+
+</section> <!--End lab-results-listing section-->
+
+<!-- Lab Results Footer -->
+{% include footer-main.html %}
+<!-- end lab results footer -->
+
+
+
+
+
+
+
+
+
+
+

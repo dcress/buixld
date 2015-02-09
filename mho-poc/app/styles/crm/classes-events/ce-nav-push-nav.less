@@ -1,0 +1,59 @@
+// ==========================================================================
+// Navigation, Off Canvas, Pushes Content to Reveal - Theme Level
+// ==========================================================================
+
+//	Bootstrap Overrides
+.menu-slider {
+	.accordion-group,
+	.accordion-inner { border:none; }
+	ul { .nobullets; }
+}
+
+//	General styles
+.menu-slider { 
+	background: #47a3da;
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+	a,
+	a.accordion-toggle {
+		padding: 1em;
+	}
+	a{
+		display: block;
+		color: #fff;
+		font-size: 1.1em;
+		&:hover {
+			background: #258ecd;
+			text-decoration: none;
+		}
+	}
+	.submenu a {
+		padding-left: 1.6em;
+	}
+	.accordion-inner {
+		padding: 0;
+		background: #33759C;
+	}
+}
+
+//	Positioning
+.menu-left {
+	left: -240px;
+	&.menu-open { left: 0px; }
+}
+.menu-push-to-right,
+.menu-push-to-right .navbar-fixed-top { left: 240px; }
+
+
+//	Transitions
+.menu-slider,
+body.menu-hide,
+body.menu-push-to-right,
+.navbar-fixed-top {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}

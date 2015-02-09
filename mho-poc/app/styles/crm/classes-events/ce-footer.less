@@ -1,0 +1,260 @@
+// Footer
+
+// Footer variables
+@footer-text-color:        #FFF;
+@footer-background-color:   #333;
+
+// Main footer
+footer {
+	background: @footer-background-color;
+	color: @footer-text-color;
+	padding: 1em 0 0 0;
+}
+
+.footer-row {
+	padding: 2em 0;
+}
+
+// Footer groups in sections
+.footer-group {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+// Footer text
+footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+footer a {
+	color: @footer-text-color;
+	text-decoration: none;
+	&:hover {
+		color: @footer-text-color;
+		opacity: 0.5;
+	}
+}
+
+// Legal and social media
+.footer-legal {
+	color: #666;
+	text-align: center;
+	a { color: #666; }
+}
+
+.footer-social-icons {
+	margin: 0 auto;
+	float: none;
+}
+
+
+// Small devices (tablets, 768px and up)
+@media (min-width: @screen-sm-min) {
+	.footer-group { text-align: left; }
+	.footer-social-icons { float: left; margin: auto; }
+	.footer-legal { text-align: left; }
+}
+
+
+///////////////////////////////
+// Entity default colors
+// @default-text-gray:#333333;
+// @default-button-gray:#7c7c7c;
+// @default-accent-gray:#d6d6d6;
+// @default-background-gray: #ebebeb;
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer-wrap {
+	background:#252525;
+	padding: 0;
+	ul {
+		.nobullets();
+	}
+	footer {
+		width: 100%;
+		section {
+			clear: both;
+			margin: 1em auto 0 auto;
+			width: 100%;
+			.border-box();
+			padding:1.5em 0;
+			a{
+				color:#ffffff;
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+//	FOOTER SECTIONS
+#footer-wrap footer section {
+	//	SHARED STYLES
+	&.affiliations, &.awards-designations {
+		.font-size(1.4);
+		line-height: 1.5em;
+	}
+	&.site-info{
+		.font-size(1.6);
+		line-height: 1.5em;
+	}
+	&.affiliations, &.awards-designations {
+		border-top: 0.1em #fff solid;
+	}
+	header {
+		text-transform: uppercase;
+	}
+	.vcard {
+		float: left;
+		width:45.47619%;
+		.border-box();
+	}
+	.link-group {
+		display: inline-block;
+		margin: 0 0.6%;
+		vertical-align: text-top;
+		width: 25%;
+	}
+	//	SECTION SPECIFICS
+	&.site-info {
+		.vcard {
+			header { display: none; }
+			img.logo {
+				max-width: 230px;
+			}
+		}
+	}
+	&.affiliations {
+		li {
+			font-size:14px;
+			/*list-style-type:disc;*/
+		}
+		.vcard > a,  .vcard .fn {
+			float: left;
+		}
+		.vcard {
+			img.logo {
+				max-width: 160px;
+				padding-right: 1.5em;
+			}
+			span, a {
+				font-size: 14px;
+			}
+		}
+	}
+	&.awards-designations {
+		display:none; // just for now 
+		.clearfix();
+		.award {
+			float: left;
+		}
+	}
+	&.legal-info {
+		background: @default-text-gray;
+		color:@default-button-gray;
+		font-size: 14px;
+		padding: 0.8em 0;
+		width: 100%;
+		overflow:hidden;
+		span, a {
+			font-size: 14px;
+			color:@default-button-gray;
+		}
+		a:hover{
+			color:@default-accent-gray;
+		}
+		.legal{
+			float:left;
+		}
+		.social-media {
+			float:right;
+			a{
+				text-decoration:none;
+				i{
+					width: 25px;
+					height: 25px;
+					text-align: center;
+					margin: 0 .15em;
+					font-size:2em;
+				}
+			}
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet 
+----------------------------------------------------------*/
+@media (max-width: 980px) {
+	#footer-wrap footer section.legal-info {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+/* Mobile
+----------------------------------------------------------*/
+@media (max-width: 480px) {
+	#footer-wrap footer {
+		section.site-info {
+			overflow: auto;
+			text-align: center;
+			padding-top: 0;
+			.vcard {
+				text-align: center;
+				width: 100%;
+				float: none;
+				display: block;
+				margin: 0 0 20px 0;
+			}
+			.link-group {
+				width: 46%;
+				margin: 0 2% 0 2%;
+				float: left;
+			}
+		}
+		section.affiliations {
+			overflow: auto;
+			text-align: center;
+			.vcard {
+				text-align: center;
+				width: 100%;
+				float: none;
+				display: block;
+				margin: 0 0 20px 0;
+				a {
+					float: none;
+				}
+				.fn {
+					float: none;
+					clear: both;
+				}
+			}
+			.link-group {
+				width: 96%;
+				margin: 0 2% 0 2%;
+			}
+		}
+		section.legal-info {
+			text-align: center;
+			.social-media {
+				float: none;
+			}
+		}
+	}
+	#scroll-to-top.horizontal {
+		z-index: 9999;
+		a {
+			width: auto;
+		}
+		span {
+			display: none;
+		}
+	}
+}
+// end Mobile max-width: 767px
+
+

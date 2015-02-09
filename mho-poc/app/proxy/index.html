@@ -1,0 +1,56 @@
+---
+layout: default
+title: Proxy
+base_url: "../"
+---
+
+<!-- MODALS - advised to be added above all html by Bootstrap -->
+{% include /modals/blank-proxy-modal1.html %}
+{% include /modals/blank-proxy-modal2.html %}
+{% include /modals/blank-proxy-modal3.html %}
+{% include /modals/confirm-emulate-modal.html %}
+{% include /modals/confirm-de-emulate-modal.html %}
+{% include /modals/self-modal.html %}
+<!-- End MODALS -->
+
+
+
+
+<section id="proxy-blank">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="section-summary">
+          You can help manage the health care of individuals other than yourself by becoming their proxy. Through your MyHealth<i>One</i> account, you'll be able to view lab results and health records for individuals in your care, as well as schedule their appointments, pay their bills, and more. 
+        </p>
+
+        <p class="section-summary">Select an individual below to register as their proxy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md" id="proxy-profiles">
+
+    <div class="row">
+      <div class="col-sm-4">
+        {% include proxy/blank-profile-card.html %}
+      </div>
+
+      <div class="col-sm-4">
+        {% include proxy/blank-profile-card2.html %}
+      </div>
+
+      <div class="col-sm-4">
+        {% include proxy/blank-profile-card3.html %}
+      </div>
+    </div>
+
+  </div>
+
+
+
+</section>
+
+<!-- Lab Results Footer -->
+{% include footer-main.html %}
+<!-- end lab results footer -->

@@ -1,0 +1,208 @@
+<!-- Main search Version 2 -->
+<div class="container-sm ce-search-form">
+	<form class="float-label">
+		<input type="search" name="Search" id="inputSearch" class="form-control" required="required" title="Search" placeholder="Please Enter a Keyword or Class / Event Name"><i class="fa fa-search"></i>
+	</form>
+
+	<!-- Search toggle -->
+	<div class="row">
+		<div class="col-sm-5 ce-search-more-options-toggle toggle1">
+			<a class="collapsed" data-toggle="collapse" data-parent="#ce-search" href="#ce-search-withdrawal"><i class="fa fa-times-circle"></i> Withdraw from Class or Event
+			</a>
+		</div>
+		<div class="col-sm-3 ce-search-more-options-toggle toggle2">
+			<a class="collapsed" data-toggle="collapse" data-parent="#ce-search" href="#ce-search-event"><i class="fa fa-calendar"></i>Find Event
+			</a>
+		</div>
+			
+		<div class="col-sm-4 ce-search-more-options-toggle toggle3">
+			<a class="collapsed" data-toggle="collapse" data-parent="#ce-search" href="#ce-search-more-options"> More Search Options <i class="fa fa-angle-down"></i>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- Search - Withdrawal -->
+<section id="ce-search-withdrawal" class="ce-search-expanded expanded1 collapse">
+	<div class="container-sm">
+
+		<div class="ce-search-expanded-content">
+			<form>
+
+				<div class="row">
+					<div id="" class="col-md-12 float-label">
+						<i class="fa fa-exclamation-circle"></i>
+						<input class="form-control" name="" type="text" id="" tabindex="" placeholder="First Name" required="1" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div id="" class="col-md-12 float-label">
+						<i class="fa fa-exclamation-circle"></i>
+						<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Last Name" required="1" />
+					</div>
+				</div>
+
+				<div class="row">
+					<div id="" class="col-md-9 float-label">
+						<i class="fa fa-exclamation-circle"></i>
+						<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Confirmation Number" required="1" />
+					</div>
+					<div class="col-md-3 ce-search-submit">
+						<a data-toggle="modal" data-target="#ce-modal-withdrawal" class="btn btn-primary">Withdraw <i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 ce-search-help">
+						<span><i class="fa fa-question-circle"></i> Need Help?</span>
+						<span class="ce-search-help-phone">1-800-123-4567</span>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</section>
+
+<!-- Search - Find an Event -->
+<section id="ce-search-event" class="ce-search-expanded expanded2 collapse">
+	<div class="container-sm">
+
+		<div class="ce-search-expanded-content">
+			<div class="row">
+				<form>
+					<div class="row">
+						<div id="" class="col-md-6 float-label">
+							<i class="fa fa-exclamation-circle"></i>
+							<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Placeholder Text" required="1" />
+						</div>
+						<div id="" class="col-md-6 float-label">
+							<i class="fa fa-exclamation-circle"></i>
+							<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Placeholder Text" required="1" />
+						</div>
+					</div>
+					<div class="row">
+						<div id="" class="col-md-6 float-label">
+							<i class="fa fa-exclamation-circle"></i>
+							<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Placeholder Text" required="1" />
+						</div>
+						<div id="" class="col-md-6 float-label">
+							<i class="fa fa-exclamation-circle"></i>
+							<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Placeholder Text" required="1" />
+						</div>
+					</div>
+					<div class="row">
+						<div id="" class="col-md-9 float-label">
+							<i class="fa fa-exclamation-circle"></i>
+							<input class="form-control" name="" type="text" id="" tabindex="" placeholder="Placeholder Text" required="1" />
+						</div>
+						<div class="col-md-3 ce-search-submit">
+							<a href="" class="btn btn-primary">Search <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- Search - More options -->
+<section id="ce-search-more-options" class="ce-search-expanded expanded3 collapse">
+	<div class="container-sm">
+
+		<!-- Search tabs -->
+		<div class="ce-search-tabs">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#ce-search-tab-location" data-toggle="tab">Search by Location</a></li>
+				<li><a href="#ce-search-tab-facility" data-toggle="tab">Search by Facility</a></li>
+			</ul>
+
+			<!-- Search tabbed content -->
+			<div class="ce-search-expanded-content tab-content">
+
+				<!-- Tab location content -->
+				<div id="ce-search-tab-location" class="tab-pane active">
+					<div class="row">
+						<div class="col-sm-6 float-label">
+							<input type="text" class="form-control" placeholder="Zip Code">
+						</div>
+
+						<div class="col-sm-6">
+							<select name="facility" id="inputFacility" class="form-control select-styled" required="required">
+								<option value="">Distance</option>
+								<option value="">Within 10 Miles</option>
+								<option value="">Within 20 Miles</option>
+								<option value="">Within 30 Miles</option>
+								<option value="">Within 40 Miles</option>
+								<option value="">Within 50 Miles</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="region" id="inputRegion" class="form-control select-styled" required="required">
+								<option value="">Region</option>
+								<option value="">Region 1</option>
+								<option value="">Region 2</option>
+								<option value="">Region 3</option>
+								<option value="">Region 4</option>
+								<option value="">Region 5</option>
+							</select>
+						</div>
+
+                        <!-- PICKADATE -->
+						<div class="col-sm-6">
+							<input name="date" class="datepicker form-control" placeholder="Date">
+						</div>
+						<div class="col-md-6 ce-search-submit right">
+							<a href="" class="btn btn-primary">Search <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab facility content -->
+				<div id="ce-search-tab-facility" class="tab-pane">
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="facility" id="inputFacility" class="form-control select-styled" required="required">
+								<option value="">Facility Name</option>
+								<option value="">Facility 1</option>
+								<option value="">Facility 2</option>
+								<option value="">Facility 3</option>
+								<option value="">Facility 4</option>
+								<option value="">Facility 5</option>
+							</select>
+						</div>
+
+						<div class="col-sm-6">
+							<input type="text" class="form-control" placeholder="Zip Code">
+						</div>
+					</div> <!-- row -->
+					<div class="row">
+						<div class="col-sm-6">
+							<select name="region" id="inputRegion" class="form-control select-styled" required="required">
+								<option value="">Region</option>
+								<option value="">Region 1</option>
+								<option value="">Region 2</option>
+								<option value="">Region 3</option>
+								<option value="">Region 4</option>
+								<option value="">Region 5</option>
+							</select>
+						</div>
+						<div class="col-sm-6 ce-search-submit">
+							<a href="" class="btn btn-primary">Search <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- /search tab content -->
+
+		</div> <!-- /ce-search-tabs -->
+
+	</div>
+</section>
+

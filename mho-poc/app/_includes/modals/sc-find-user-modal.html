@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="modal fade sc-find-user-modal" id="sc-find-user-modal" tabindex="-1" role="dialog" aria-labelledby="sc-find-user-label" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-user fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-search-plus fa-stack-1x fa-inverse" aria-hidden="true" alt="find user icon"></i>
+        </span>
+        <h3 class="modal-title" id="sc-find-user-label">Find User</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <form class="form-horizontal" role="form">
+              <input type="text" class="form-control" id="MH1-ID" placeholder="MH1-ID">
+              <input type="email" class="form-control" id="email" placeholder="Email Address">
+              <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+            </form>
+          </div>
+
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="first-name" placeholder="First Name">
+            <input type="text" class="form-control" id="username" placeholder="Username">
+            <a href="{{ page.base_url }}support-console/search-results">
+              <button type="button" class="btn btn-primary width100"><i class="fa fa-search-plus fa-inverse" aria-hidden="true" alt="find user icon"></i>Find User</button>
+            </a>
+          </div>
+
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

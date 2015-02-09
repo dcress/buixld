@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enrollment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../_bower_components/fontawesome/css/font-awesome.min.css" type='text/css'>
+
+<link rel="stylesheet" href="../../../_bower_components/pickadate/lib/themes/default.css" id="theme_base" type='text/css'>
+<link rel="stylesheet" href="../../../_bower_components/pickadate/lib/themes/default.date.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../../_bower_components/pickadate/lib/themes/default.time.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../../_bower_components/jquery-icheck/skins/square/grey.css">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="../../../styles/main.min.css" type='text/css'>
+
+<!-- IE CSS -->
+<!-- build:css(app) ../../../styles/ie.css -->
+ <!--[if IE]>
+   <link rel="stylesheet" type="text/css" href="../../../styles/ie.css"/>
+<![endif]-->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Respond JS for IE - DO NOT REMOVE -->
+<!-- To kick IE out of quirks mode so Respond.js works -->
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+
+<!-- contains html5shiv and selectivizr -->
+<!--[if IE]>
+<script src="../../../scripts/shims.js"></script>
+<![endif]-->
+
+    <script src="../../../scripts/modernizr.js"></script>
+
+    <script>
+        // For IE11. May we one day live without your BS.
+        Modernizr.addTest('preserve3d', function(){return Modernizr.testAllProps('transformStyle', 'preserve-3d');});
+    </script>
+  </head>
+  <body>
+    <div id="cpp-enrollment" class="reset-password">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+    <div class="container mho-nav-container">
+        <div class="row">
+            <!-- <div class="col-sm-12 center-block"> -->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <p class="navbar-text navbar-right"><a href="../../../home/" class="navbar-link">LOGIN</a></p>
+                <p class="navbar-text navbar-right"><a href="../../../home/" class="navbar-link">ABOUT</a></p>
+                <p class="navbar-text navbar-right"><a href="../../../home/" class="navbar-link">TOUR</a></p> -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- </div> -->
+            <div class="col-sm-12 mho-nav-logo-container">
+                <img src="../../../img/mho-logo-md.png" class="cpp-logo" id="cpp-large-logo" alt="CPP Logo">
+                <img src="../../../img/MyHealthONE__Brandmark_White.png" class="cpp-logo" id="cpp-mobile-logo" alt="CPP Logo">
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+      <!-- Message for those with JS disabled -->
+      <noscript>
+        <div class="container alert alert-danger">
+          <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+        </div>
+      </noscript>
+      <!-- End JS disabled message -->
+
+      <!-- Main content -->
+      <div id="content-main" class="container">
+        <div class="login-modal-text white-text text-center">
+        <h1>Reset Password</h1>
+        <h2>Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h2>
+       </div>
+        <!-- Terms and Conditions -->
+<div id="reset-password-modal" class="notification-modal">
+    <div class="static-modal-dialog">
+        <div class="static-modal-content white-bg">
+            <div class="static-modal-header">
+                <div class="row">
+                    <div class="col-sm-12 text-center"><h3>PASSWORD RESET SUCCESSFUL</h3></div>
+                </div>
+            </div>
+            <div class="static-modal-body">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <i class="fa fa-envelope-o large-icon btn-primary"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="email-text"><h4>sjenkins@aol.com</h4></div>
+                    </div>
+                </div>
+            </div>
+            <div class="static-modal-footer">
+                <div class="row">
+                    <div class="col-sm-12 text-center center-block">
+                        <h4>THANK YOU</h4>
+                    </div>
+                </div>
+                <div class="additional-buttons">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="../../index.html" class="btn btn-primary btn-block btn-primary-75 btn-primary-center" role="button">Go to Log-in Screen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+      </div>
+
+    <!-- Footer -->
+    <footer id="enrollmentfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 center-block">
+                <p class="footer-text"><a href="../../../home/" class="navbar-link">Return To Hospital Home Page</a></p>
+                <p class="footer-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                <p class="footer-text"><a href="../../../site-map" class="navbar-link">Sitemap</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 center-block">
+                    <p class="navbar-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                    <p class="navbar-text"><a href="#" class="navbar-link">Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ -->
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../../../scripts/components.js"></script>
+
+<!-- <script src="../../../scripts/form-slider.js"></script> -->
+
+<script src="../../../scripts/main.js"></script>
+
+<!--[if IE]>
+<script src="../../../scripts/ie.js"></script>
+<![endif]-->
+
+<script>
+  // FASTCLICK!!! for eliminating the ms delay for touch events
+  $(function() {
+      FastClick.attach(document.body);
+  });
+
+</script>
+
+    <!-- RESUME: FIGURE OUT WHY USEMIN WASN'T CREATING MY JS FILE FOR THIS BLOCK -->
+    <script src="../../../scripts/validate/login-form.validate.js"></script>
+    <script src="../../../scripts/enrollment.js"></script>
+  </body>
+
+</html>

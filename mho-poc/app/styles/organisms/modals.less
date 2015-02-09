@@ -1,0 +1,135 @@
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 30px auto;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+   //.translate(0, 25%);
+  //  .transition-transform(~"0.3s ease-out");
+
+  }
+}
+
+// Modals
+@modal-width:             @screen-sm; // size of smaller screen before phone
+@modal-info-font-size:    18px; // Used for sizing icons
+
+// Modal header
+.modal-header {
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0.3em;
+  color: @hospital-primary;
+
+  h4 {
+    .font-size(3);
+  }
+}
+
+.modal-body h3, .modal-body h4 {
+  font-size: 16px;
+  color: @gray;
+  // text-transform: uppercase;
+  margin: 10px 0;
+}
+
+// Modal body
+.modal-body {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+// Tabbed content
+.modal-body .tab-content { padding: 20px 10px; }
+
+// Modal footer
+.modal-footer {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+// Modal more information
+.modal-info {
+  margin: 1em;
+  padding: 1em 0;
+  background: @gray-lighter;
+  text-align: center;
+}
+
+.modal-info-text {
+  margin: 0;
+  font-size: @modal-info-font-size;
+  text-transform: uppercase;
+}
+
+.modal-info-text i {
+  margin-right: 10px;
+  font-size: @modal-info-font-size + 8;
+  vertical-align: middle;
+}
+
+.modal-info-text-phone {
+  font-size: @modal-info-font-size + 2;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+// General Modal media query
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  // Modal dismiss
+  .ce-modal-dismiss i {
+    font-size: 24px;
+    color: white;
+  }
+
+  .modal-header .close {
+    margin: -5px; //changed from -3 because it was making header text off-center
+    .text-shadow(0 0);
+    opacity: 1;
+    color: @gray-dark;
+
+    &:hover {color: @gray-darker;}
+  }
+}
+
+// Withdraw Modal
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  #ce-modal-withdrawal .modal-dialog { width: @modal-width; }
+
+  #ce-modal-withdrawal .modal-footer {
+    margin: 0;
+    font-size: 18px;
+    color: @brand-warning;
+  }
+  #ce-modal-withdrawal .modal-footer p {
+    margin-bottom: 30px;
+  }
+}
+
+
+// Result Details Modal
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .ce-modal-result-details .modal-dialog { width: @screen-sm; }
+}
+
+
+
+

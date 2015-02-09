@@ -1,0 +1,28 @@
+---
+layout: default
+title: Link Patient Records
+base_url: "../../"
+---
+{% include modals/cancel-verification-modal.html %}
+{% include modals/verification-failure-modal.html %}
+{% include modals/failure-explanation-modal.html %}
+{% include modals/record-link-success-modal.html %}
+
+
+<div id="patient-verification">
+  {% comment %}{% include patient-verification/progress-bar.html %}{% endcomment %}
+  <!-- Smart Wizard -->
+  <form action="{{ page.base_url }}patient/" role="form" id="patient-verification-wizard" class="swMain">
+    <input type="hidden" name="patientVerification" value="true">
+    {% include patient-verification/progress-wizard-links.html %}
+   	<div class="container-sm">
+   		<div class="row">
+   			<div class="col-sm-12">
+			    {% include patient-verification/step-1.html %}
+			    {% include patient-verification/step-2.html %}
+			  </div>
+  		</div>
+  	</div>
+  </form>
+</div>
+{% include footer-main.html %}

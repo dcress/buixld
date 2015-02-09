@@ -1,0 +1,157 @@
+<!--shares classes and styles from lab-results-detail -->
+
+<div class="crm-holder content-wrap-white" id="profile-slide-up">
+
+  <!-- profile pic and name -->
+  <div class="row">
+    <div class="col-xs-12 side-card-head">
+      <img src="{{ page.base_url }}img/female-avatar-lg.jpg" data-src="" width="130" height="130" class="img-circle img-responsive lazy" id="">
+      <span>Jane</span>
+      <span>Doe</span>
+    </div>
+  </div>
+  <!-- end profile pic and name -->
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-one">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            <span>Patient Demographics</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-plus-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-one" class="collapse">
+      <section class="personal-info-wrap">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h5 class="lr-h5">Personal Information</h5>
+          </div>
+        </div>
+
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+            <span>Ethnicity</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-female fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Gender</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-comment fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Language</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Race</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-gift fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Birth</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h5 class="lr-h5">Social History</h5>
+          </div>
+        </div>
+
+        <div class="row pi-row">
+          <div class="col-xs-6 pi-type">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-info fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+            <span>Smoke Status</span>
+          </div>
+
+          <div class="col-xs-6">
+            <span>N/A</span>
+          </div>
+        </div>
+
+
+      </section>
+      <!-- end personal info wrap -->
+    </div>
+    <!-- end collapse -->
+
+    <div class="proxy-add-remove">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <button class="btn btn-primary btn-proxy" data-toggle="modal" data-target=".confirm-emulate">Proxy</button>
+        </div>
+      </div>
+      <div class="row remove-links">
+        <!-- <div class="col-xs-4 col-xs-offset-2">
+          <button href="#" class="btn btn-link" data-toggle="modal" data-target=".remove-proxy-me">Remove Self</button>
+        </div> -->
+        <div class="col-xs-12">
+          <button class="btn btn-link btn-remove" data-toggle="modal" data-target=".remove-proxy">Remove Proxy</button>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+<!-- end side card wrap-->

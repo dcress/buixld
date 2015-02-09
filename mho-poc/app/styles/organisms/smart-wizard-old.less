@@ -1,0 +1,359 @@
+/*
+SmartWizard 2.0 plugin
+jQuery Wizard control Plugin
+by Dipu
+
+http://www.techlaboratory.net
+http://tech-laboratory.blogspot.com
+*/
+.swMain {
+    position:relative;
+    display:block;
+    margin-bottom: 50px;
+    // padding-bottom: 50px;
+    border: 0 solid #CCC;
+    overflow:visible;
+    float:left;
+    width: 100%;
+    // background: #f4f4f4;
+}
+.swMain .stepContainer {
+    display:block;
+    position: relative;
+    margin: 0;
+    padding:0;
+    // border: 0 solid #CCC;
+    overflow: hidden;
+    clear:both;
+}
+
+.step-container {
+    // background-color: #fff;
+}
+
+.swMain .stepContainer div.content {
+    // display:block;
+    // position: absolute;
+    // float: left;
+    // padding: 20px;
+    // margin: 0;
+    // background-color:#fff;
+    // text-align: left;
+    // overflow: visible;
+    z-index:88;
+    .border-radius(@border-radius-base);
+    // clear:both;
+}
+
+.swMain div.actionBar {
+    // display:block;
+    position: relative;
+    // clear:both;
+    // margin:             3px 0 0 0;
+    // border:             1px solid #CCC;
+    // padding:            0;
+    // color:              #5A5655;
+    // background-color:   #F8F8F8;
+    // height:40px;
+    // text-align:left;
+    // overflow:auto;
+    // z-index:88;
+    .border-radius(@border-radius-base);
+    .center-block();
+    width: auto;
+    // left:0;
+}
+
+// .swMain .stepContainer .StepTitle {
+//   display:block;
+//   position: relative;
+//   margin:0;
+//   border:1px solid #E0E0E0;
+//   padding:5px;
+//   // font: bold 16px Verdana, Arial, Helvetica, sans-serif;
+//   color:#5A5655;
+//   background-color:#E0E0E0;
+//   clear:both;
+//   text-align:left;
+//   z-index:88;
+//   .border-radius(@border-radius-base);
+// }
+.swMain ul.anchor {
+    position: relative;
+    display: none;
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 40px 0;
+    clear: both;
+    border: 0 solid #CCCCCC;
+    background: transparent;
+    width: 100%;
+    // .center-block();
+}
+.swMain ul.anchor li{
+    position: relative;
+    display:block;
+    margin: 0 0 10px 0;
+    padding: 0 2px;
+    border: 0 solid #E0E0E0;
+    float: left;
+    width: 100%;
+    /* Anchor Element Style */
+    a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        text-decoration: none;
+        outline-style: none;
+        z-index: 99;
+        .center-block();
+        .border-radius(3px);
+        cursor: pointer;
+
+        i {
+            // float: right;
+            position: absolute;
+            top: 8px;
+            right: 5px;
+            .font-size(2.0);
+            // width: 40px;
+            // padding: 8px 0;
+        }
+    }
+    i.step-arrow {
+        display: none;
+        // position: absolute;
+        // top: 8px;
+        // right: -24px;
+        color: @gray-lighter;
+        font-size: 20px;
+        float: left;
+        margin: 8px 0 0 6px;
+    }
+}
+.swMain ul.anchor li a .stepNumber{
+    position: relative;
+    float: left;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    .font-size(2.5);
+}
+.swMain ul.anchor li a .stepDesc{
+    position: relative;
+    display: block;
+    float: left;
+    // text-align: center;
+    // .btn();
+    padding: 7px 28px 0 0;
+    //  BS3's btn padding size;
+    // padding: 6px 12px;
+}
+.swMain ul.anchor li a .stepDesc small{
+    .font-size(1.2);
+}
+
+i.completed{display: none;}
+i.active{display: none;}
+i.disabled{display: block;}
+
+.swMain ul.anchor li a.selected{
+    color: #fff;
+    cursor:text;
+    background: @hospital-secondary;
+    border: 1px solid @hospital-secondary;
+
+    i,
+    small {
+        color: #fff;
+    }
+
+    i.completed{display: none;}
+    i.active{display: block;}
+    i.disabled{display: none;}
+}
+
+.swMain ul.anchor li a.done {
+    position: relative;
+    color: #FFF;
+    z-index: 99;
+    background: @brand-success;
+    border: 1px solid @brand-success;
+
+    i,
+    small {
+        color: #fff;
+    }
+
+    i.disabled{display: none;}
+    i.completed{display: block;}
+}
+.swMain ul.anchor li a.done:hover {
+    color:#5A5655;
+    background: @brand-success;
+    border: 1px solid #5A5655;
+}
+.swMain ul.anchor li a.disabled {
+    color:#CCCCCC;
+    cursor: text;
+    background: #F8F8F8;
+    border: 1px solid #CCC;
+}
+.swMain ul.anchor li a.disabled:hover {
+    color: #CCCCCC;
+    background: #F8F8F8;
+}
+
+.swMain ul.anchor li a.error {
+    /*color:@brand-danger !important;*/
+    background: @brand-danger !important;
+    border: 1px solid @brand-danger !important;
+}
+.swMain ul.anchor li a.error:hover {
+    color:#000 !important;
+}
+
+
+// Next, Previous & Submit Buttons
+
+.actionBar {
+    a {
+        margin-right: 10px;
+    }
+}
+.swMain {
+    .buttonNext {
+        width:100px;
+        .border-radius(@border-radius-base);
+    }
+    .buttonDisabled {
+        color:#F8F8F8  !important;
+        background-color: #CCCCCC !important;
+        border: 1px solid #CCCCCC  !important;
+        cursor:text;
+    }
+    .buttonPrevious {
+        width: 100px;
+        .border-radius(@border-radius-base);
+    }
+    .buttonFinish {
+        width:100px;
+        .border-radius(@border-radius-base);
+    }
+}
+
+/* Form Styles */
+
+.txtBox {
+    border:1px solid #CCCCCC;
+    color:#5A5655;
+    font:13px Verdana,Arial,Helvetica,sans-serif;
+    padding:2px;
+    width:430px;
+}
+.txtBox:focus {
+    border:1px solid @hospital-primary;
+}
+
+.swMain {
+    .loader {
+        position:relative;
+        display:none;
+        float:left;
+        margin: 2px 0 0 2px;
+        padding:8px 10px 8px 40px;
+        border: 1px solid #FFD700;
+        // font: bold 13px Verdana, Arial, Helvetica, sans-serif;
+        color:#5A5655;
+        background: #FFF url(../img/loader.gif) no-repeat 5px;
+        -moz-border-radius  : 5px;
+        -webkit-border-radius: 5px;
+        z-index:998;
+    }
+    .msgBox {
+        position:absolute;
+        display:none;
+        float:left;
+        margin: 4px 0 0 0;
+        padding:5px;
+        /*border: 1px solid #FFD700;
+        background-color: #FFFFDD;*/
+        // font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+        color:#FF0000;
+        -moz-border-radius  : 5px;
+        -webkit-border-radius: 5px;
+        z-index:999;
+        min-width:200px;
+        width: 100%;
+        top: -66px;
+        .content {
+            // font: normal 12px Verdana,Arial,Helvetica,sans-serif;
+            display: inline-block;
+            padding: 5px 7px;
+            /*float:left;*/
+        }
+        .close {
+            background-color: #FFFFDD;
+            border: 1px solid #FFD700;
+            border-radius: 3px;
+            color:#FF0000;
+            display: inline-block;
+            float: none;
+            font-size: @font-size-base;
+            /*margin: 0 0 0 5px;
+            outline-style: none;*/
+            opacity: inherit;
+            padding: 5px 7px;
+            /*position: relative;
+            text-align: center;*/
+            text-decoration: none;
+        }
+        .close:hover{
+            color: @hospital-primary;
+            border: 1px solid @hospital-primary;
+        }
+    }
+    .placeholder-error::-webkit-input-placeholder { color: #FF0000; }
+
+    .msg_error {
+        color: #FF0000;
+    }
+}
+
+
+// Small devices
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .swMain ul.anchor {
+        display: block;
+        li {
+            // margin: 0 27px 0 0;
+            width: auto;
+
+            &:last-child {
+                margin: 0;
+            }
+            a {
+                width: auto;
+            }
+            i.step-arrow {
+                display: block;
+            }
+        }
+    }
+
+    .swMain div.actionBar {
+        // width: 47%;
+    }
+
+}
+
+// Medium devices
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+// Large devices
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

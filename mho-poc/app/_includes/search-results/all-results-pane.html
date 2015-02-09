@@ -1,0 +1,96 @@
+<!-- Results summary -->
+    <div class="container-md summary-sort">
+      <div class="row">
+          
+            <div class="col-sm-12 results-summary">
+              <p>Found <strong><a href="#">36</a></strong> results for "your search term".</p>
+            </div>
+      </div>
+
+      <!-- Sort Buttons -->
+      <div class="row btn-row">
+        <div class="col-sm-3">
+
+          <!-- sort options for all search results -->
+          <ul class="nav sort-by-menu-hide" id="sort-by-menu-all">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Sort All by: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li class="hut-search-options-phys">
+                  <a class="" 
+                     data-toggle="tab" 
+                     href="#hut-search-options-phys">Physicians (13)</a>
+                </li>
+                <hr>
+                <li class="">
+                  <a class="hut-search-options-serv" 
+                     data-toggle="tab" 
+                     href="#hut-search-options-serv">Services (7)</a>
+                  </li>
+                  <hr>
+                  <li class="">
+                    <a class="hut-search-options-art" 
+                       data-toggle="tab" 
+                       href="#hut-search-options-art">Articles (6)</a>
+                  </li>
+                  <hr>
+                  <li class="">
+                    <a class="hut-search-options-news" 
+                       data-toggle="tab" 
+                       href="#hut-search-options-news">News (10)</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+        </div>
+
+
+          
+        <div class="col-sm-3 col-sm-offset-6">
+          <ul class="nav">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Show: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li><a href="#">5 results</a></li>
+                <hr>
+                <li><a href="#">10 results</a></li>
+                <hr>
+                <li><a href="#">25 results</a></li>
+                <hr>
+                <li><a href="#">100 results</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <!--end sort buttons row-->
+    </div>
+
+    <div class="container-md results-wrap">
+      <!-- <div class="tab-content"> -->
+        <!-- ALL RESULTS -->
+          {% include search-results/phys-card-all.html %}
+
+          {% include search-results/ce-card-all.html %}
+
+          {% include search-results/news-card-all.html %}
+
+          {% include search-results/phys-card-all.html %}
+
+          {% include search-results/content-card-all.html %}
+      <!-- </div> -->
+
+      <!-- Pagination -->
+      <div class="row">
+        <div class="col-sm-12 pagination">
+          {% include search-results/crm-pagination.html %}
+        </div>
+      </div>
+      <!-- end pagination--> 
+
+    </div>

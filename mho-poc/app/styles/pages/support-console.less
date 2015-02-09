@@ -1,0 +1,664 @@
+//support console less
+//
+
+//variables
+
+@sc-primary: #343c44;
+@sc-nav-color: #2c2c2c;
+
+//login modal adjustments
+//
+.support-console-login {
+  .modal {
+    margin-top: 150px;
+  }
+}
+
+#support-console { //"global styles" applied to body of support-console _layout
+
+  .filler {
+    background: #fff;
+    min-height: 50px;
+  }
+
+  min-height: 750px;
+
+  .heading-bar {
+    margin-bottom: 0;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: @hospital-primary;
+    }
+
+  .menu-header h3 {
+    text-align: initial;
+  }
+
+  .btn-row i {
+    display: block;
+    float: left;
+  }
+
+
+  //main Nav bar adjustments
+  //
+  .navbar-default {
+    //background-color: @sc-nav-color;
+    border-bottom: none;
+  }
+
+  .navbar-fixed-holder {
+    background-color: @sc-primary;
+  }
+
+  .navbar-notifications,
+  .navbar-search,
+  .navbar-profile {
+    display: none;
+  }
+
+  .navbar-profile a.tools-trigger.collapsed{
+    background: @sc-nav-color;
+  }
+
+  //system check icon on support console
+  .healthcheck-icon {
+    .fa-heartbeat {
+      background: @brand-danger;
+      line-height: 22px;
+      padding: 6px;
+      border-radius: 50%;
+      margin-top: 7px;
+      font-size: 22px;
+      color: #fff;
+
+    }
+  }
+
+  //search bar and fields in header
+  //
+  #sc-search-bar {
+        background: @sc-primary;
+        padding-top: 40px;
+        padding-bottom: 40px;
+     }
+
+
+     .sc-search-form {
+      input {
+        margin-bottom: 0;
+      }
+
+      i {
+        float: right;
+        top: 0;
+        margin-top: -25px;
+        margin-right: 10px;
+        color: @gray-light;
+      }
+     }
+
+     .sc-search-fields {
+      background: @body-bg;
+      padding-top: 30px;
+     }
+
+
+  .modal-header {
+
+    .fa-stack {
+      color: @hospital-secondary;
+    }
+    .fa-search-plus {
+      margin-top: 13px;
+      margin-left: 10px;
+      font-size: 75%;
+    }
+  }
+
+  .modal-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .modal-body {
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-bottom: 25px;
+    }
+  }
+
+  .sc-find-user-modal {
+    .modal-content {
+      padding: 25px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .modal-sm {
+      width: 400px;
+    }
+
+    .sc-find-user-modal {
+      .modal-dialog {
+        width: @container-sm;
+      }
+    }
+  }
+
+
+//find user search results page
+//
+#sc-more-search-options {
+  background: @body-bg;
+ }
+
+  #sc-user-search-results {
+
+      //resets bootstrap styles on table
+      .table-striped > tbody > tr:nth-child(odd) > td,
+      .table-striped > tbody > tr:nth-child(odd) > th {
+        background-color: inherit;
+      }
+
+      //the magic that alternates the table row colors in groups of two
+      //on the search results page
+      table tr:nth-child(4n-1),
+      table tr:nth-child(4n) {
+        background: #f9f9f9;
+      }
+
+    .no-results-summary {
+      text-align: center;
+      padding-bottom: 15px;
+
+      h4 {
+        color: #000;
+        text-transform: initial;
+        padding-bottom: 10px;
+      }
+    }
+
+    .create-new-user {
+      margin-top: 25px;
+
+      .fa-stack {
+        display: block;
+        color: @hospital-secondary;
+        margin: 0 auto;
+      }
+    }
+
+    .log-table {
+      button i {
+        color: @nav-font-color;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .close-spin-toggle > td:nth-child(1) > i {
+        padding-right: 10px;
+      }
+
+    }
+  }
+
+  .sc-create-account-form {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    h3 {
+      padding-bottom: 25px;
+    }
+
+    input[type=email],
+    input[type=password] {
+      margin-bottom: 10px;
+    }
+
+    input[type=text] {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  //activity log page
+  //
+  .support-tech-action {
+    color: @brand-danger;
+  }
+
+
+  //green sign up and confirm email button
+  .btn-sc-sign-up-confirm {
+    padding-bottom: 30px;
+  }
+
+  .sc-create-account-actions {
+    .checkbox {
+      text-align: center;
+      padding-bottom: 5px;
+      padding-left: 0;
+
+      a {
+        color: @hospital-primary;
+        text-decoration: underline;
+      }
+
+      label {
+        color: @hospital-primary;
+        text-transform: initial;
+      }
+    }
+  }
+
+  //account created modal
+  .account-created-modal {
+    h1 {
+      color: #000;
+    }
+
+    .fa-thumbs-o-up { //centers icon with circle
+      padding-left: 37px;
+    }
+
+    .un-pw {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .modal-body {
+
+      padding-top: 0;
+
+      h2 {
+        color: @hospital-primary;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  //verify email screen
+  //
+  #sc-verify-email {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+
+    .fa-stack {
+      color: @hospital-secondary;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+
+    p {
+      width: 50%;
+      margin: 0 auto;
+      font-size: @font-size-h4;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .row {
+      h1 {
+        color: @hospital-primary;
+        text-transform: initial;
+      }
+    }
+
+    .btn-sc-go-to-login {
+      width: 40%;
+      display: block;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-left: auto;
+
+    }
+
+    .btn-sc-resend-email {
+      width: 30%;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-bottom: 30px;
+      margin-left: auto;
+    }
+  }
+
+
+  //user table collapse for showing/hiding buttons
+  .collapse {
+    display: none;
+  }
+
+
+} //end #support-console
+
+
+//manage user page
+//
+#manage-user {
+
+  .profile-form-fields {
+    padding-top: 15px;
+  }
+
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  input {
+    margin-bottom: 20px;
+  }
+
+  i.fa-calendar {
+    float: right;
+    margin-top: -44px;
+    margin-right: 7px;
+    color: @gray-light;
+  }
+
+  label {
+    text-transform: initial;
+    color: @hospital-secondary;
+  }
+
+  .radio-inline { //resets global padding on radio buttons
+    padding-left: 0;
+    color: @gray;
+  }
+
+  .radio-inline:first-of-type { //aligns left: radio buttons up with labels above them
+    margin-left: -5px;
+  }
+
+  .checkbox label {
+    color: @gray;
+  }
+
+  .profile-form-save .btn {
+    margin: 10px;
+  }
+
+  .acct-activity-popover,
+  .acct-status-popover { //for question-circle icon/button positioning
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+
+  //Popover styles - global?
+  .popover {
+    background: none;
+    border: none;
+    padding: 0;
+    max-width: 200px;
+  }
+
+  .popover.top > .arrow:after {
+    border-top-color: rgba(0,0,0,.85);
+  }
+
+  .popover-title {
+    background: rgba(0,0,0,.85);
+    color: @gray-lighter;
+    border: none;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    text-transform: initial;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .popover-content {
+    background: rgba(0,0,0,.85);
+    color: @gray-lighter;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+}
+
+
+//Modals
+//
+.enter-mrn-modal {
+
+  .required-note {
+    float: left;
+  }
+
+  .info-link {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    color: @hospital-secondary;
+  }
+
+  .float-label i.fa-exclamation-circle {
+    padding: 36px 7px;
+  }
+
+  i.fa-barcode {
+    position: absolute;
+    position: absolute;
+    right: 10px;
+    top: 42px;
+    font-size: 2em;
+  }
+
+}
+
+
+
+.denied-mrn-modal#default-modal,
+.linking-in-progress-modal#default-modal,
+.user-auth-failure-modal#default-modal,
+.cancel-verification-modal#default-modal,
+.verification-failure-modal#default-modal {
+
+  .modal-body i.fa-circle {
+    color: @brand-danger;
+  }
+
+}
+
+
+.reset-password-modal,
+.reset-password-modal2,
+.reset-password-modal3,
+.heathcheck-modal {
+  .modal-body {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    color: @hospital-primary;
+    padding-bottom: 15px;
+  }
+
+  a {
+    padding: 10px;
+    text-decoration: none;
+    color: @nav-font-color;
+  }
+}
+
+
+//Healtcheck modal
+//
+.healthcheck-modal {
+
+  .container-md {
+    width: 90%; //table was too wide and container-sm was too small.
+  }
+
+  .healthcheck-icon {
+    padding-right: 10px;
+  }
+
+  .online {
+    color: @brand-success !important;
+  }
+
+  .system-down {
+    color: @brand-danger !important;
+  }
+
+  .modal-dialog {
+    width: 70%;//had to make much larger to accomodate table.
+  }
+  .fa-heartbeat {
+    font-size: 17px;
+  }
+  h1 {
+    display: inline-block;
+
+  }
+  h2 {
+    color: @gray-light;
+    text-transform: initial;
+    margin-top: 0;
+  }
+
+  table {
+    text-align: left;
+
+    .fa {
+      padding-right: 5px;
+    }
+  }
+}
+
+
+.mrn-info {
+  padding-bottom: 20px;
+  z-index: -1;
+  background: url('../img/mrn-info.png') no-repeat fixed center;
+  height: 425px;
+  text-align: left;
+
+  h5 {
+    font-weight: bold;
+    margin-top: 0;
+  }
+}
+
+//overriding the flip.less for modal flips.
+#default-modal.flip-panel {
+  .front, .back {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+
+//profile summary page
+//
+#edit-profile > div:nth-child(1) {
+  text-align: left;
+}
+
+#edit-profile > div:nth-child(2) {
+  margin-top: 10px;
+}
+
+
+
+//login page background image
+.support-console-login {
+  background: -webkit-linear-gradient(
+    rgba(0, 0, 0, 0.50),
+    rgba(0, 0, 0, 0.50)
+  ),url('../img/support-console-bg.jpg') no-repeat center center fixed;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.50),
+    rgba(0, 0, 0, 0.50)
+  ),url('../img/support-console-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: @zindex-modal-background;
+}
+
+
+//login footer links
+//
+.support-console-footer {
+  margin-top: 700px;
+  // position: fixed;
+
+  ul {
+    color: @nav-font-color;
+    text-align: center;
+    font-size: @font-size-h6;
+    padding-left: 0;
+  }
+    li {
+      display: inline-block;
+      text-decoration: none;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    a {
+      color: @gray-light;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: @nav-font-color;
+    }
+}
+
+
+//support console footer
+.sc-footer {
+  background: @sc-primary;
+
+  padding-bottom: 10px;
+  // padding-top: 20px;
+
+  img {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+  }
+}
+
+
+#default-modal .modal-body {
+  padding-top: 0;
+}
+
+#default-modal .modal-title {
+  padding-top: 0;
+}
+
+
+
+

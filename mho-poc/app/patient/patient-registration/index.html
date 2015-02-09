@@ -1,0 +1,28 @@
+---
+layout: default
+title: Link Patient Records
+base_url: "../../"
+---
+<div id="patient-registration">
+  {% comment %}{% include patient-registration/progress-bar.html %}{% endcomment %}
+  <!-- Smart Wizard -->
+  <form action="{{ page.base_url }}patient/" role="form" id="patient-registration-wizard" class="swMain">
+    <input type="hidden" name="patientRegister" value="true">
+    {% include patient-registration/progress-wizard-links.html %}
+
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-sm-12">
+          {% include patient-registration/step-1.html %}
+          {% include patient-registration/step-2.html %}
+          {% include patient-registration/step-3.html %}
+          {% include patient-registration/step-4.html %}
+          {% comment %}{% include patient-registration/step-5.html %}{% endcomment %}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+{% include footer-main.html %}

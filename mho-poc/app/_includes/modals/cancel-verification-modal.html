@@ -1,0 +1,29 @@
+<div class="modal fade cancel-verification-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="cancel-verification-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="cancel-verification-modal-label">Registration Completion Needed</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>72 Hours to Complete</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>You will need to finish the record-linking process in the next 72 hours or your account will be converted back to a Consumer account.</p>
+
+        <a href="{{ page.base_url }}home/">
+          <button type="button" class="btn btn-default">Take Me Home</button>
+        </a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Registration</button>
+      </div>
+    </div>
+  </div>
+</div>

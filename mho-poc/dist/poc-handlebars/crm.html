@@ -1,0 +1,50 @@
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="handlebars.runtime.js"></script>
+    <script type="text/javascript" src="templates/crm-ce.js"></script>
+<div id="content"></div>
+
+<script>
+$(document).ready(function() {
+
+        var classResultsInfo = {
+
+         "classResults": [
+            {
+              "resultName": "Centennial Bariatric (weight loss) Surgery Seminar",
+              "resultInfo": "Celebrate all that life has to offer and reclaim your power over food! Register now for a free informational seminar to begin your Centennial Experience today!",
+               "resultType": "Bariatric Surgery",
+               "distance":" 3.5 Miles Away",
+               "buildingName": "Tace Building",
+               "buildingAddress":"2200 Murphy Avenue Nashville TN 37203",
+               "amount":"$100.00",
+               "month":"JAN",
+               "day":"14",
+               "year":"2014",
+               "time":"9:00am - 11:30 am"
+            },
+             {
+              "resultName": "Centennial Bariatric (weight loss) Surgery Seminar",
+              "resultInfo": "Celebrate all that life has to offer and reclaim your power over food! Register now for a free informational seminar to begin your Centennial Experience today!",
+               "resultType": "Bariatric Surgery",
+               "distance":" 3.5 Miles Away",
+               "buildingName": "Tace Building",
+               "buildingAddress":"2200 Murphy Avenue Nashville TN 37203",
+               "amount":"$100.00",
+               "month":"JAN",
+               "day":"14",
+               "year":"2014",
+               "time":"9:00am - 11:30 am"
+            }
+          ]
+        }
+
+
+        //var content = Handlebars.templates['ce-search-tabs'];
+        //$('#content').html(content);
+      //  $('#ce-search-options a.btn').on('click',function () {
+          var searchResults = Handlebars.templates['crm-ce'](classResultsInfo);
+        $('#content').append(searchResults);
+      // });
+
+      });
+</script>

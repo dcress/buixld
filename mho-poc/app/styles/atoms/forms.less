@@ -1,0 +1,132 @@
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+
+input, select {
+  margin-bottom: @form-bottom; // Defined in ce-variables
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+label {
+  color: @gray-light;
+}
+
+//placeholder padding override, makes room for 'required' icon
+.form-control {
+    padding-left: 20px;
+}
+
+//Disable clash of BS3 style with Pickadate
+.form-control[readonly] {
+    background: #fff;
+    cursor: pointer;
+}
+
+#enroll-create-account-form {
+  background-color: #fff;
+  .border-radius(3px);
+}
+
+// Required Field icon
+.float-label i.fa-exclamation-circle { //added .float-label selector becasue without was affeting this icon globally -david
+    color: @gray-light;
+    padding: 0 20px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+small.required-note{
+  float: right;
+  margin-bottom: 20px;
+  color: @gray-light;
+  i.fa-exclamation-circle {
+    position: relative;
+    top: 0;
+    padding: 0;
+  }
+}
+
+select.select-styled {
+    background: #ffffff;
+    .box-shadow(none);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    color: @gray-light;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: "";
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    width: 100%;
+}
+
+select.select-styled{
+    background: url("../img/select-arrow-36w.png") no-repeat right #fff;
+    -webkit-appearance: none;
+}
+
+.select-styled {
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.has-error .form-control {
+    border-color: @error-color;
+
+    &:focus {
+      border-color: @error-color;
+    }
+}
+
+.botTest-formgroup {
+    display: none;
+}
+
+/* Mailcheck feature */
+.help-block {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+
+.suggested-email {
+    color: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* login trouble modal select option color */
+#login-trouble-form {
+  select.select-styled {
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    opacity: 1;
+  }
+
+  option {
+    margin: 5px 5px 5px 20px;
+  }
+}
+
+.icheckbox_square-grey, .iradio_square-grey{
+	margin:5px;
+}
+
+#login-trouble-reset-modal {
+    .large-icon:hover {
+        background-color: #09387f;
+    }
+}
