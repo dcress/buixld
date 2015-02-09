@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enrollment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../_bower_components/fontawesome/css/font-awesome.min.css" type='text/css'>
+
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.css" id="theme_base" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.date.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/pickadate/lib/themes/default.time.css" id="theme_date" type='text/css'>
+<link rel="stylesheet" href="../../_bower_components/jquery-icheck/skins/square/grey.css">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="../../styles/main.min.css" type='text/css'>
+
+<!-- IE CSS -->
+<!-- build:css(app) ../../styles/ie.css -->
+ <!--[if IE]>
+   <link rel="stylesheet" type="text/css" href="../../styles/ie.css"/>
+<![endif]-->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Respond JS for IE - DO NOT REMOVE -->
+<!-- To kick IE out of quirks mode so Respond.js works -->
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+
+<!-- contains html5shiv and selectivizr -->
+<!-- build:js(app) ../../scripts/shims.js -->
+<!--[if IE]>
+<script src="../../_bower_components/respond/dest/respond.min.js"></script>
+<script src="../../_bower_components/selectivizr/selectivizr.js"></script>
+<script src="../../_bower_components/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+    <!-- build:js(app) ../../scripts/modernizr.js -->
+      <script src="../../_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        // For IE11. May we one day live without your BS.
+        Modernizr.addTest('preserve3d', function(){return Modernizr.testAllProps('transformStyle', 'preserve-3d');});
+    </script>
+  </head>
+  <body id="enrollment">
+    <div id="cpp-enrollment">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+    <div class="container mho-nav-container">
+        <div class="row">
+            <!-- <div class="col-sm-12 center-block"> -->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">LOGIN</a></p>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">ABOUT</a></p>
+                <p class="navbar-text navbar-right"><a href="../../home/" class="navbar-link">TOUR</a></p> -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- </div> -->
+            <div class="col-sm-12 mho-nav-logo-container">
+                <img src="../../img/mho-logo-md.png" class="cpp-logo" id="cpp-large-logo" alt="CPP Logo">
+                <img src="../../img/MyHealthONE__Brandmark_White.png" class="cpp-logo" id="cpp-mobile-logo" alt="CPP Logo">
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+      <!-- Message for those with JS disabled -->
+      <noscript>
+        <div class="container alert alert-danger">
+          <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+        </div>
+      </noscript>
+      <!-- End JS disabled message -->
+
+      <!-- Main content -->
+      <div id="content-main" class="container">
+        <div class="login-modal-text white-text text-center">
+        <h1>Simplifying your health care begins with MyHealth<i>One</i></h1>
+        <h2>Create an account and start managing your health today.</h2>
+       </div>
+        <style type="text/css">
+
+.panel {
+float: left;
+width: 200px;
+height: 200px;
+margin: 20px;
+position: relative;
+font-size: .8em;
+
+-webkit-perspective: 600px;
+-moz-perspective: 600px;
+perspective: 600px;
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.panel .front {
+float: none;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 900;
+width: inherit;
+height: inherit;
+border: 1px solid #ccc;
+background: #6b7077;
+text-align: center;
+box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+-webkit-transform: rotateX(0deg) rotateY(0deg);
+-moz-transform: rotateX(0deg) rotateY(0deg);
+transform: rotateX(0deg) rotateY(0deg);
+
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+
+/* -- transition is the magic sauce for animation -- */
+-webkit-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out;
+}
+.panel.flip .front {
+z-index: 900;
+border-color: #eee;
+background: #333;
+box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+.panel .back {
+float: none;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 800;
+width: inherit;
+height: inherit;
+border: 1px solid #ccc;
+background: #333;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+transform: rotateY(-179deg);
+
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+
+/* -- transition is the magic sauce for animation -- */
+-webkit-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out;
+}
+
+.panel.flip .back {
+z-index: 1000;
+background: #80868d;
+
+-webkit-transform: rotateX(0deg) rotateY(0deg);
+-moz-transform: rotateX(0deg) rotateY(0deg);
+transform: rotateX(0deg) rotateY(0deg);
+
+box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+/* -- cosmetics -- */
+.panel .pad {padding: 0 15px; }
+.panel.flip .action {display: none; }
+
+
+</style>
+
+
+
+
+
+
+
+
+<div class="contact panel">
+  <div class="front">
+
+      <p> <a class="action" href="#form">send us a message</a></p>
+    </div>
+<div class="back" id="contact">
+<div class="pad">
+<h3>Send us a Fake Message</h3>
+<form method="post">
+<p><input id="f-name" name="f-name" type="text" placeholder="name" /></p>
+<p><input id="f-email" name="f-email" type="text" placeholder="email" /></p>
+<p><select id="f-how" name="f-how"><option value="">How did you find us?</option><option value="internet">Internet</option></select></p>
+<p><textarea id="f-msg" name="f-msg" placeholder="Enter your message"> </textarea></p>
+<input type="submit" class="edit-submit" value="Fake Send Message" />
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+    <!-- Footer -->
+    <footer id="enrollmentfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 center-block">
+                <p class="footer-text"><a href="../../home/" class="navbar-link">Return To Hospital Home Page</a></p>
+                <p class="footer-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                <p class="footer-text"><a href="../../site-map" class="navbar-link">Sitemap</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 center-block">
+                    <p class="navbar-text"><a href="#" class="navbar-link">Terms & Privacy</a></p>
+                    <p class="navbar-text"><a href="#" class="navbar-link">Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ -->
+    </div>
+
+
+    <!-- JavaScript -->
+    <!-- build:js(app) ../../scripts/components.js -->
+<script src="../../_bower_components/jquery/jquery.js"></script>
+<script src="../../_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../_bower_components/pickadate/lib/picker.js"></script>
+<script src="../../_bower_components/pickadate/lib/picker.date.js"></script>
+<script src="../../_bower_components/pickadate/lib/picker.time.js"></script>
+<script src="../../_bower_components/pickadate/lib/legacy.js"></script>
+<script src="../../_bower_components/jquery-easing/jquery.easing.js"></script>
+<script src="../../_bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../../_bower_components/jquery-icheck/icheck.js"></script>
+<script src="../../_bower_components/mailcheck/src/mailcheck.min.js"></script>
+<script src="../../_bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="../../_bower_components/jquery-validation/dist/additional-methods.js"></script>
+<script src="../../_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="../../_bower_components/handlebars/handlebars.runtime.min.js"></script>
+<script src="../../_bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script src="../../scripts/lazy-load.js"></script>
+<script src="../../scripts/jQuery.headroom.js"></script>
+<script src="../../scripts/headroom.js"></script>
+<!-- endbuild -->
+
+<!-- <script src="../../scripts/form-slider.js"></script> -->
+
+<!-- build:js(app) ../../scripts/main.js -->
+<script src="../../scripts/plugins.js"></script>
+<script src="../../scripts/main.js"></script>
+<script src="../../scripts/class-listing.js"></script>
+<!-- endbuild -->
+
+<!--[if IE]>
+<script src="../../scripts/ie.js"></script>
+<![endif]-->
+
+<script>
+  // FASTCLICK!!! for eliminating the ms delay for touch events
+  $(function() {
+      FastClick.attach(document.body);
+  });
+
+</script>
+
+    <!-- RESUME: FIGURE OUT WHY USEMIN WASN'T CREATING MY JS FILE FOR THIS BLOCK -->
+    <script src="../../scripts/validate/login-form.validate.js"></script>
+    <script src="../../scripts/enrollment.js"></script>
+  </body>
+
+</html>

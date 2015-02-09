@@ -1,0 +1,191 @@
+/*---------------------
+  Card
+----------------------*/
+#featured {.section-padding;}
+
+// Card Helpers
+@card-padding: 30px;
+
+.card-flush-hor() {
+	margin-left: -@card-padding;
+	margin-right: -@card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+}
+
+// Card base
+.card {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	padding-top: @card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+}
+
+// Skin elements
+.card.cat-a {
+	.badge        { background-color: @cat-a; }
+	.progress-bar { background-color: @cat-a; }
+}
+
+.card.cat-b {
+	.badge        { background-color: @cat-b; }
+	.progress-bar { background-color: @cat-b; }
+}
+
+.card.cat-c {
+	.badge        { background-color: @cat-c; }
+	.progress-bar { background-color: @cat-c; }
+}
+
+
+// Card header
+.card-header {
+	border-bottom: 1px solid @border-color;
+	.card-flush-hor();
+
+	// Idea image
+	.badge {
+		border-radius: 5px;
+		margin-bottom: -40px;
+		padding: 15px 20px;
+		font-size: 36px;
+	}
+
+	.status {
+		float: right;
+		border-radius: 20px;
+		background: @brand-action;
+		padding: 0 12px;
+
+		font-size: 0.70em;
+		font-weight: 500;
+		line-height: 1.5em;
+		color: #fff;
+	}
+}
+
+
+// Card body
+.card-body {
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	// Catergory
+	.card-cat {
+		font-size: 1.08em;
+		font-weight: 500;
+		color: #A1B2BA;
+	}
+
+	// Title of Idea
+	.card-title {
+		font-size: 1.3em;
+		font-weight: 300;
+		color: #394950;
+		margin-top: 7px;
+		margin-bottom: 20px;
+	}
+}
+
+// Card user info
+.card-body .user-info {
+
+	.user-img {
+		max-width: 30px;
+		margin-right: 5px;
+	}
+
+	.user-name {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: #B1BEC4;
+		margin-right: 5px;
+	}
+
+	.user-date {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: lighten(#B1BEC4, 15%);
+	}
+
+}
+
+// Action itesm in card
+.card-action {
+	border-top: 1px solid @border-color;
+	border-bottom: 1px solid @border-color;
+	// Make border flush
+	.card-flush-hor();
+	.clearfix();
+	// Remove extra padding
+	padding: 0;
+
+	a {
+		// Display
+		float: left;
+
+		// Widths
+		&:nth-child(1) { width: 25.3%; }
+		&:nth-child(2) { width: 44.3%; }
+		&:nth-child(3) { width: 30.3%; }
+
+		// Format
+		padding: 15px;
+		text-align: center;
+		font-size: 0.8em;
+		color: #999;
+
+		// Hooplah
+		border-right: 1px solid @border-color;
+		&:last-child { border-right: none; }
+
+		// Hover
+		@hover-bg: #90A4AD;
+		&:hover, &:focus, &:active {
+			cursor: pointer;
+			background: @hover-bg;
+			text-decoration: none;
+			color: #fff;
+		}
+
+	} // a
+
+	// Like icon
+	.like {
+		padding: 15px 15px 10px;
+		font-size: 24px;
+	}
+
+	.comments {}
+
+	.views {}
+}
+
+// Card footer
+.card-footer {
+	padding-top: 10px;
+	font-weight: 500;
+	font-size: 0.75em;
+	color: #B1BEC4;
+	margin: 0;
+
+	.progress {
+		border-radius: 20px;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		height: 15px;
+	}
+
+	.percent {
+		font-weight: 700;
+		color: darken(#B1BEC4,50%);
+		margin-right: 2px;
+	}
+}
+
+
+
+

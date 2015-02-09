@@ -18,11 +18,11 @@
   box-sizing: border-box;
 }
 ::selection {
-  background: #337ab7;
+  background: #29abe2;
   color: #fff;
 }
 ::-moz-selection {
-  background: #337ab7;
+  background: #29abe2;
   color: #fff;
 }
 /*---------------------
@@ -40,7 +40,7 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 992px;
+  max-width: 960px;
 }
 .container-lg {
   margin-right: auto;
@@ -111,14 +111,14 @@
   width: 100%;
 }
 .btn-primary {
-  background-color: #337ab7;
+  background-color: #29abe2;
   border-color: transparent;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background-color: #183854;
-  border-color: #183854;
+  background-color: #115b7b;
+  border-color: #115b7b;
 }
 .btn-blank {
   background-color: transparent;
@@ -187,65 +187,10 @@ footer .footer-column ul li a {
   float: left;
 }
 footer .footer-column ul li a:hover {
-  color: #337ab7;
+  color: #29abe2;
 }
-/*---------------------
-	Main elements
-----------------------*/
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  padding: 0;
-  background: #ffffff;
-  color: #000000;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-}
-@media (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1400px) {
-  body {
-    font-size: 18px;
-  }
-}
-img {
-  max-width: 100%;
-}
-/*---------------------
-	Typography
-----------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #44575f;
-}
-a {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: #337ab7;
-  text-decoration: none;
-}
-a:hover {
-  color: #183854;
-  pointer: default;
+.form-group {
+  position: relative;
 }
 /*---------------------
   Navigation
@@ -258,6 +203,7 @@ a:hover {
   margin-bottom: 0;
   border-radius: 0;
   background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
 }
 .navbar-ideas .navbar-brand {
   height: 65px;
@@ -267,7 +213,8 @@ a:hover {
 }
 .navbar-ideas .navbar-nav {
   border-left: 1px solid #e7e7e7;
-  padding-left: 40px;
+  float: right;
+  padding-left: 15px;
 }
 .navbar-ideas .navbar-nav > li > a {
   line-height: 35px;
@@ -275,22 +222,32 @@ a:hover {
   color: #B1BEC4;
   font-weight: 500;
 }
-.navbar-ideas .navbar-nav > li > a.create {
-  color: #337ab7;
+.navbar-ideas .navbar-nav > li > a.user {
+  color: #29abe2;
   font-weight: 700;
+}
+.navbar-ideas .navbar-nav > li > a.user img {
+  max-width: 35px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.navbar-ideas .navbar-nav > li > a.search i {
+  font-size: 1.2em;
+  vertical-align: sub;
+  margin-right: 10px;
 }
 .navbar-ideas .navbar-nav > li > a:hover,
 .navbar-ideas .navbar-nav > li > a:focus,
 .navbar-ideas .navbar-nav > li > a:active {
   cursor: pointer;
   background: none;
-  color: #122b40;
+  color: #0e4b64;
 }
 .navbar-ideas .navbar-toggle {
   margin-top: 14px;
 }
 .navbar-ideas .navbar-toggle .icon-bar {
-  background: #337ab7;
+  background: #29abe2;
 }
 /*---------------------
   Video
@@ -306,7 +263,7 @@ a:hover {
   background-position: 47% 20px;
   background-size: cover;
 }
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
   .video-wrap {
     background-image: none;
   }
@@ -317,16 +274,19 @@ a:hover {
 }
 .video-content .slogan {
   font-size: 2.8em;
-  margin-top: 80px;
+  margin-top: 130px;
   margin-bottom: 40px;
   color: #fff;
-  font-weight: 100;
-  text-align: center;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .video-content .slogan {
-    font-size: 4.5em;
+    font-size: 4.0em;
   }
+}
+.video-content .btn {
+  margin: 0 15px 15px;
+  width: 220px;
 }
 .video-absolute {
   height: 100%;
@@ -365,10 +325,10 @@ a:hover {
   background-color: #f06d42;
 }
 .card.cat-c .badge {
-  background-color: #337ab7;
+  background-color: #9675cd;
 }
 .card.cat-c .progress-bar {
-  background-color: #337ab7;
+  background-color: #9675cd;
 }
 .card-header {
   border-bottom: 1px solid #e7e7e7;
@@ -491,59 +451,75 @@ a:hover {
   color: #333e43;
   margin-right: 2px;
 }
+body.sub {
+  background: #F0F0F0;
+}
+#share-progress .icon-share {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+#share-progress .icon-share svg {
+  width: 41px;
+}
+#share-progress .icon-share svg path {
+  fill: #4cb3e2;
+}
 /*---------------------
-	Modal
+	Main elements
 ----------------------*/
-.modal-backdrop {
-  background-color: #fff;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-.modal-backdrop.in {
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-.modal-brand {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-.modal-brand .logo {
-  max-width: 80px;
-  padding: 15px 0;
-}
-.modal .close {
-  font-size: 50px;
-  font-weight: 100;
-}
-.modal-header {
-  border: none;
-  padding-bottom: 0;
-}
-.modal-header .heading {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
 }
 @media (min-width: 768px) {
-  .modal-header .heading {
-    font-size: 1.7em;
+  body {
+    font-size: 16px;
   }
 }
-.modal-full {
-  margin: 100px auto;
-  max-width: 480px;
+@media (min-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
 }
-.modal-full .modal-body {
-  padding-top: 0;
+img {
+  max-width: 100%;
 }
-.modal-full .modal-content {
-  box-shadow: none;
-  border: none;
+/*---------------------
+	Typography
+----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #44575f;
 }
-.modal-footer {
-  border: none;
-  padding: 5px 15px;
-  text-align: left;
+a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #29abe2;
+  text-decoration: none;
+}
+a:hover {
+  color: #115b7b;
+  pointer: default;
 }

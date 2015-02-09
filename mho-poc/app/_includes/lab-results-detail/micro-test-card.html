@@ -1,0 +1,113 @@
+<div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Results for [Micro Test Name]</h3>
+    </div>
+  </div>
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-micro-one">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            <span>Specimen Info</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+  <div id="collapse-micro-one" class="collapse in">
+    <div class="row specimen-info">
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Source</p>
+        <span><a href="">Throat</a></span>
+      </div>
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Collected</p>
+        <span><a href="">[source]</a></span>
+      </div>
+
+    </div>
+
+    <div class="row specimen-info">
+
+      <div class="col-sm-5">
+        <p class="lr-h5">Specimen Condition</p>
+        <span><a href="">[condition]</a></span>
+      </div>
+
+    </div>
+  </div>
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-micro-two">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-bar-chart-o fa-lg" aria-hidden="true"></i>
+            <span>Test Details for [Micro Test Name]</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-micro-two" class="collapse in">
+
+      <!-- <div class="medication-disclaimer">
+        <i class="fa fa-exclamation-circle"></i>
+        <p>If the directions regarding when you should take a medication differ from the directions provided with your prescription, please contact your physician for clarification.</p>
+      </div> -->
+
+      
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Status</p>
+          <span><a href="">[status]</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Results Posted</p>
+          <span><a href="">3/5/2014, 12:51 PM</a></span>
+        </div>
+
+      </div>
+
+      <div class="row specimen-info">
+        <div class="col-xs-12">
+          <p class="lr-h5">Result</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit in voluptate velit.
+          </p>
+        </div>
+
+        <div class="col-xs-12">
+          <h3>Finding</h3>
+          <p class="lr-h5">Remarks</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit in voluptate velit.
+          </p>
+        </div>
+      </div>
+
+      <!-- micro test table of results/data -->
+      {% include lab-results-detail/micro-test-table.html %}
+    </div>
+
+
+
+</div>

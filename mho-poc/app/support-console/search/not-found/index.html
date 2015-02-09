@@ -1,0 +1,62 @@
+---
+layout: support-console
+title: Search Results - User not found
+base_url: "../../../"
+---
+<section id="sc-user-search-results">
+{% include support-console/search-bar.html %}
+{% include support-console/advanced-search-fields.html %}
+
+  <div class="container-md">
+    <h3>Search Results</h3>
+    <div class="crm-holder">
+
+      <div class="row">
+        <div class="col-sm-12 no-results-summary">
+          <h4>Sorry, we can't find that person in our system!</h4>
+          <h4>Try a new search to start over.</h4>
+        </div>
+      </div>
+
+      <div class="row create-new-user">
+        <div class="col-sm-4 col-sm-offset-4">
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle-o fa-stack-2x" aria-hidden="true"></i>
+            <i class="fa fa-heart fa-stack-1x" aria-hidden="true" alt="find user icon"></i>
+          </span>
+          <h3>Create New User</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <form role="form">
+          <div class="form-group">
+
+            <div class="col-sm-4 col-sm-offset-2">
+              <label class="sr-only" for="first-name">First Name</label>
+              <input type="text" class="form-control" id="first-name" placeholder="First Name">
+            </div>
+
+            <div class="col-sm-4">
+              <label class="sr-only" for="last-name">Last Name</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+            </div>
+
+            <div class="col-sm-4 col-sm-offset-2">
+              <label class="sr-only" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+
+            <div class="col-sm-4">
+             <!--  <a href="{{ page.base_url }}support-console/create-account"> -->
+                <button type="button" class="btn btn-primary width100" data-toggle="modal" data-target=".account-created-modal"><i class="fa fa-plus-circle" aria-hidden="true"></i>Create New User</button>
+              <!-- </a> -->
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

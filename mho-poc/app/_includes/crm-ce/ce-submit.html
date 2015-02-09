@@ -1,0 +1,132 @@
+<article id="ce-result-v2" class="ce-submit">
+    <div class="row">
+
+        <!-- Event title and short description -->
+        <div class="col-sm-9">
+            <div class="row ce-result">
+                <!-- Calendar and Time -->
+                <div class="col-sm-2 ce-result-date-time">
+                    <!-- <div class="row"> -->
+                        <div class="ce-result-calendar">{% include crm-ce/ce-little-calendar.html %}</div>
+                    <!-- </div> -->
+                </div>
+                <!-- Event Title -->
+                <div class="col-sm-7 ce-result-title">
+                    <h3><a data-toggle="modal" data-target="#modal-result-details">Centennial Bariatric (weight loss) Surgery Seminar</a></h3>
+
+                    <div class="row ce-result-location">
+                        <div class="col-sm-12 ce-result-time">
+                            <p>September 28, 2014</p>
+                            <p>9:00am - 11:30am</p>
+                            <div class="ce-result-location-info">
+                                <p><i class="fa fa-map-marker"></i> 3.5 Miles Away</p>
+                                <p>Stonecrest Medical Center</p>
+                                <p>123 Address Road Nashville TN 37203</p>
+                            </div>
+                            <div class="ce-result-attribute ce-result-details">
+                                <a data-toggle="modal" data-target="#modal-result-details" class="ce-att-details"><i class="fa fa-calendar"></i> See Full Details</a>
+                            </div>
+                            <hr>
+                            <div class="ce-event-info">
+                                <span>GUESTS:</span>
+                                <p data-added-guest="">Samantha Brown, Rob Brown</p>
+                                <span>PROVIDED INFO:</span>
+                                <p data-due-date="">Due August 01, 2014, First Time Pregnancy</p>
+                                <span>NOTE:</span>
+                                <p data-event-note="">We would appreciate your prompt attention to sending your fee. This will enable us to ensure your spot in the class.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ce-result-cost">
+                    <span class="ce-discount-line-thru">
+                        <span class="ce-cost-review"><i class="fa fa-money"></i> $100.00</span>
+                    </span>
+                    <div class="ce-discount">
+                        <span>$80.00</span><br>
+                        <span>With Discount</span>
+                    </div>
+                    <span class="ce-edit-info"><a href="{{ page.base_url }}register/"><i class="fa fa-pencil"></i> Edit Information</a></span>
+                </div>
+            </div> <!-- end row -->
+            <div class="row ce-result">
+                <!-- Calendar and Time -->
+                <div class="col-sm-2 ce-result-date-time">
+                    <!-- <div class="row"> -->
+                        <div class="ce-result-calendar">{% include crm-ce/ce-little-calendar.html %}</div>
+                    <!-- </div> -->
+                </div>
+                <!-- Event Title -->
+                <div class="col-sm-7 ce-result-title">
+                    <h3><a data-toggle="modal" data-target="#modal-result-details">Screening</a></h3>
+
+                    <div class="row ce-result-location">
+                        <div class="col-sm-12 ce-result-time">
+                            <p>September 28, 2014</p>
+                            <p>9:00am - 11:30am</p>
+                        <span>NOTE:</span>
+                        <p data-screen-note="">Do not eat or drink 24hrs prior</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ce-result-cost">
+                    <span><i class="fa fa-money"></i> FREE</span>
+                    <span class="ce-edit-info"><a href="{{ page.base_url }}register/"><i class="fa fa-pencil"></i> Edit Information</a></span>
+                </div>
+            </div> <!-- end row -->
+        </div> <!-- end col 12 -->
+        <div class="col-sm-3">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>SUMMARY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ce-cost">
+                        <th>Class/Event</th>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr class="ce-discount">
+                        <th>Discount</th>
+                        <td>-$20.00</td>
+                    </tr>
+                    <tr class="ce-sub-total">
+                        <th>Subtotal:</th>
+                        <td>$80.00</td>
+                    </tr>
+                    <tr class="ce-total-cost">
+                        <th>Total Cost:</th>
+                        <td>$80.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="ce-result-cta">
+                <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-primary"><i class="fa fa-check"></i> Check Out</a>
+            </div>
+        </div>
+    </div> <!-- end row -->
+</article>
+
+<div class="modal fade" id="ce-modal-payment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+                <h3 class="modal-title" id="myModalLabel">Payment</h3>
+            </div>
+
+            <div class="modal-body">
+                {% include crm-ce/ce-modal-hps-iframe.html %}
+            </div>
+
+            <div class="modal-info">
+                <div class="modal-info-text">
+                    <span><i class="fa fa-info-circle"></i> Need Help?</span>
+                    <span class="modal-info-text-phone">1-800-123-4567</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

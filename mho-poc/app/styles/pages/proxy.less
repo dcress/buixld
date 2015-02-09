@@ -1,0 +1,252 @@
+// less for all proxy pages 
+
+// Blank profile cards page - proxy index
+//
+#proxy-blank {
+
+  .lr-panel-subheader {
+    color: @gray-light;
+  }
+
+  #proxy-profiles {
+    margin-top: 25px; 
+  }
+
+  #proxy-profiles .side-card-head {
+    color: @gray-lighter;
+  }
+
+  #profile-slide-up > div.proxy-add-remove > div:nth-child(1) { //border above proxy buttons
+    border-top: 1px solid @border-color;
+  }
+
+  .proxy-add-remove button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .btn-proxy {
+    background: @gray-lighter;
+    border: none;
+  }
+
+  .proxy-add-remove .btn-link {
+    color: @gray-light;
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 0;
+    padding-bottom: 5px;
+    padding-left: 0;
+    font-size: 10px;
+  }
+
+  .remove-links > div:nth-child(2) { //removes padding left on remove button
+    padding-left: 0;
+  }
+
+}
+
+
+//select-proxy page profile card styles
+//
+#proxy-active {
+
+  .lr-panel-subheader {
+    color: @gray-light;
+  }
+
+  #proxy-profiles {
+    margin-top: 25px; 
+  }
+
+  #proxy-profiles .side-card-head {
+    color: @hospital-secondary;
+  }
+
+  #profile-slide-up > div.proxy-add-remove > div:nth-child(1) { //border above proxy buttons
+    border-top: 1px solid @border-color;
+  }
+
+  .proxy-add-remove button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .btn-proxy {
+    background: @hospital-secondary;
+    border: none;
+  }
+
+  .proxy-add-remove .btn-link {
+    color: @gray-light;
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 0;
+    padding-bottom: 5px;
+    padding-left: 0;
+    font-size: 10px;
+  }
+
+  .remove-links > div:nth-child(2) { //removes padding left on remove button
+    padding-left: 0;
+  }
+
+  .remove-links > div:nth-child(1) > button { //makes remove link red
+    color: @brand-danger;
+  }
+
+}
+
+//modal styles
+//
+#remove-proxy {
+
+  .modal-header {
+    button {
+      padding: 1px;
+    }
+
+    h4 {
+      padding-top: 15px;
+      color: @brand-warning;
+    }
+  }
+
+  .modal-body {
+    padding-top: 15px;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: @hospital-secondary;
+    }
+
+    i {
+      line-height: 4.75em;
+    }
+  }
+
+  .modal-footer {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 15px;
+
+    h3 {
+      color: #000;
+      margin-top: 0;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
+    button {
+      font-size: @font-size-h6;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+
+}
+
+
+//Emulate - fixed borders and button when clicking to proxy
+//
+.btn-de-emulate {
+  display: none;
+  position: fixed;
+  background-color: #c86932;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 0;
+  z-index: 100000000;
+
+}
+
+.btn-de-emulate:hover,
+.btn-de-emulate:active,
+.btn-de-emulate:focus {
+  background-color: #c86932;
+}
+
+#border-top,
+#border-bottom,
+#border-left,
+#border-right {
+  position: fixed;
+  background: #c86932;
+  display: none;
+  z-index: 100000000;
+}
+
+#border-top,
+#border-bottom {
+  left: 0;
+  width: 100%;
+  height: 7px;
+}
+
+#border-top {
+  top: 0;
+}
+
+#border-top span {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #c86932;
+  color: @nav-font-color;
+  text-align: center;
+}
+
+#border-bottom {
+  bottom: 0;
+}
+
+#border-left,
+#border-right {
+  top: 0;
+  height: 100%;
+  width: 7px;
+}
+
+#border-left {
+  left: 0;
+}
+
+#border-right {
+  right: 0;
+}
+
+.quit-delegating-user-info {
+  padding-left: 5px;
+}
+
+.btn-emulate { //global
+  background-color: @emulate-border-color;
+  color: @nav-font-color;
+}
+
+.btn-emulate:hover {
+    background-color: @emulate-hover;
+}
+
+
+.emulate {
+  .btn-de-emulate,
+  #border-top,
+  #border-bottom,
+  #border-left,
+  #border-right, {
+    display: initial;
+  }
+
+}

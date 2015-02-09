@@ -1,0 +1,505 @@
+//Lab Results Detail Page styles
+
+
+//Header section - service type and summary of care button
+//
+.lab-results-detail-header {
+  background: @hospital-secondary;
+  color: @body-bg;
+}
+
+.lr-detail-icon {
+  display: block;
+  float: left;
+  color: @hospital-primary;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: -5px;
+}
+
+
+.detail-title {
+  float: left;
+  padding-top: 30px;
+}
+
+.detail-title h1 {
+  margin-bottom: 0;
+}
+
+.detail-title h2 {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.btn-summary-detail {
+  line-height: 170px;
+}
+
+.btn-summary-detail .btn-group {
+  width: 100%;
+}
+
+.btn-summary-detail .btn-group .dropdown-menu {
+  width: 100%;
+}
+
+
+@media screen and (max-width: @screen-sm-max) {
+  .col-sm-3.btn-summary-detail { //takes some bootstrap padding away to make room for text/icons. -margin pulls back into grid. 
+    padding: 0 5px;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .lr-detail-icon {
+    display: none;
+  }
+
+  .detail-title {
+    float: none;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .btn-summary-detail {
+    line-height: inherit;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .col-sm-3.btn-summary-detail { 
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 0;
+  }
+}
+
+
+//Buttons - maybe make these global since we don't have white ones? 
+//
+.btn-white {
+  color: @gray-light;
+  background: @body-bg;
+  border: 1px solid @btn-default-border;
+}
+
+.btn-white:hover {
+  color: @brand-primary;
+}
+
+.btn-white i {
+  padding: 2px;
+}
+
+.btn-white span.btn-right {
+  padding-left: 10px;
+}
+
+.btn-white span.btn-left {
+  padding-right: 10px;
+}
+
+
+//Side card styles
+//
+.lab-results-detail-content .content-wrap-white {
+  margin-bottom: 20px;
+}
+
+  //profile pic and name
+.side-card-head {
+  padding-bottom: 20px;
+}
+
+.side-card-head img {
+  margin: 10px auto;
+}
+
+.side-card-head span {
+  display: block;
+  padding: 0;
+  margin-top: -5px;
+  text-align: center;
+  font-size: @font-size-h3;
+  font-weight: 300;
+}
+
+  //subheader with icons
+.lr-panel-subheader { //global
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px;
+  border-top: 1px solid @border-color;
+  // border-bottom: 1px solid @border-color; 
+  color: @brand-primary;
+
+  span {
+    padding-left: 5px;
+  }
+}
+
+.lr-panel-subheader .toggle-icon {
+  text-align: right;
+}
+
+@media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm) {
+  .lr-detail-facility-address {
+    padding-right: 0;
+  } 
+}
+
+.medication-disclaimer {
+  padding: 10px;
+  font-style: italic; 
+  font-weight: 700;
+
+
+  i {
+    display: inline-block;
+    float: left;
+    line-height: 20px;
+    padding-right: 5px;
+  }
+}
+
+
+  //personal info and social history section
+.personal-info-wrap {
+  color: @brand-primary;
+  padding-bottom: 10px;
+}
+
+.personal-info-wrap .lr-h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pi-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: @font-size-h6;
+}
+
+.pi-type {
+  text-transform: uppercase;
+  color: @gray-light;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm) {
+  .pi-row {
+    font-size: 11px; // drops font 1px on tablet only so no word wrapping happens
+  }
+}
+
+.pi-type i {
+  padding-right: 5px;
+}
+
+
+  //hack for sizing mini icon stacks
+.pi-type .fa-stack.fa-lg { //background circle
+  font-size: 8px;
+}
+
+.pi-type .fa-stack .fa-stack-1x { //icon 
+  font-size: 9px;
+  padding-left: 2px;
+  bottom: 1px;
+}
+
+//button for modal
+.clinical-vs-mh1-demo {
+  border-top: 1px solid @border-color;
+
+  button {
+    text-align: center;
+    text-transform: uppercase;
+    color: @hospital-secondary;
+  }
+
+  button:hover {
+    text-decoration: none;
+    // color: @hospital-secondary;
+  }
+
+}
+
+
+
+
+  //blue access/share card
+.access-options {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 2em;
+  border: 1px solid @border-color;
+  background: @hospital-secondary;
+  border-radius: @border-radius-base;
+}
+
+.access-options .lr-h5 {
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.access-options i {
+  display: block;
+}
+
+.access-options span {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.access-options a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.access-options .col-xs-4 { //adjusted col padding to prevent words from overflowing
+  padding: 0 5px;
+}
+
+.access-options button {
+  color: #fff;
+}
+
+.access-options button:hover {
+  text-decoration: none;
+}
+
+//button for modal
+.summary-vs-transition {
+  border-top: 1px solid #fff;
+  margin-top: 10px;
+
+  button {
+    padding-top: 10px;
+    margin-bottom: -10px;
+    font-size: @font-size-h5;
+    text-transform: uppercase;
+    color: #fff;
+
+    i {
+      display: inline;
+      color: #fff;
+    }
+
+  }
+
+  button:hover {
+  color: #fff;
+  text-decoration: none;
+  }
+
+
+}
+
+
+
+//Main content - right side styles
+//
+
+.lr-panel-header {
+  color: @brand-primary;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lr-panel-header h3 {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+
+  //facility info - pic, address, names, map
+.lr-detail-facility-info {
+  padding: 10px;
+}
+
+.lr-detail-facility-info img {
+  margin-top: 7px;
+}
+
+.lr-detail-facility-address {
+  padding-left: 0;
+}
+
+.lr-detail-facility-address h4 {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.lr-detail-facility-address p {
+  margin: 0;
+  color: @gray-light;
+  line-height: 1.2em;
+}
+
+p.lr-h5:nth-child(3) { //padding above Medical Director
+  padding-top: 20px;
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .lr-detail-facility-info img {
+    display: none;
+  }
+
+  .lr-detail-facility-address {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  p.lr-h5:nth-child(3) { //padding above Medical Director
+    padding-top: 0;
+  }
+
+  p.lr-h5:nth-child(1) {
+    padding-top: 10px;
+  }
+}
+
+.ordered-by {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+}
+
+.specimen-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.specimen-info h3 {
+  font-weight: 300;
+  color: @brand-primary;
+  padding-bottom: 10px;
+}
+
+div.specimen-info:nth-child(4) {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @border-color;
+}
+
+
+//cbc table - styles overriding log-table styles - maybe make the .log-table styles global?
+.cbc-table thead th {
+  color: @gray-light;
+}
+
+.cbc-table .table thead tr th {
+  border-bottom: none;
+}
+
+.cbc-table .table thead tr th:nth-child(1) {
+  // padding-left: 0;
+}
+
+.log-table.cbc-table {
+  color: @brand-primary;
+  border: none;
+}
+
+
+
+// Close Spin
+//
+
+// Adds the active class to the CSS property 
+// you want to apply the CSS3 effect to
+
+// Transition of icon on click adds class
+.close-spin-toggle.active .close-spin-icon,
+.close-spin-toggle.spin .close-spin-icon { //created "spin" class for table dropdowns that can't use bootstrap "active" class
+  // Rotation
+  -webkit-transform: rotateZ(135deg);
+  -moz-transform: rotateZ(135deg);  
+  -ms-transform: rotateZ(135deg); // IE 9
+  -o-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+  
+  // Transition when active is applied
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.close-spin-toggle .close-spin-icon {
+  // Transition when active is taken away
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+// Fade out
+// 
+
+
+
+
+
+
+#service-main-content button {
+  margin-bottom: 10px;
+  border-radius: 3px;
+  width: 100%;
+  text-align: left;
+  height: 60px;
+  line-height: 30px;
+}
+
+#service-main-content i {
+ font-size: 24px;
+}
+
+#service-main-content i.fa-user-md {
+  padding-top: 5px;
+}
+
+#service-main-content button i {
+  display: inline-block;
+  padding-right: 10px;
+  float: left;
+}
+
+//sets line height back to normal for this class
+// to be used when there are two lines of text
+#service-main-content .btn-texty { 
+  line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

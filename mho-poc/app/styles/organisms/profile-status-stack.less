@@ -1,0 +1,68 @@
+//
+// Profile Status Appstack
+// -----------------------
+
+#profile-status-stack {
+  background-image: url('../img/banner-bokeh.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/banner-bokeh.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/banner-bokeh.jpg', sizingMethod='scale')";
+  position: relative;
+  overflow: auto;
+  padding: @padding-xl-vertical 0;
+
+  img {
+    .center-block();
+  }
+
+  p,
+  h1 {
+    color: @hospital-primary;
+  }
+  h1 {
+    font-weight: 300;
+    span {
+      font-weight: 400;
+    }
+  }
+  p {
+    .font-size(1.8);
+  }
+  // ADD THIS BACK IF JOE WANTS BUTTON CENTERED FOR CONSUMER HOME PAGE
+  // button.center-block {
+  //   width: 300px;
+  //   margin: 0 auto;
+  // }
+  .btn {
+    margin-right: 5px;
+    width: auto;
+    .font-size(1.1);
+  }
+}
+
+.profile-status-stack-inner {
+  position: relative;
+  overflow: auto;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #profile-status-stack {
+    .btn {
+      margin-right: 20px;
+      width: auto;
+      .font-size(1.4);
+    }
+  }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

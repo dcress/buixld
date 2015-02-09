@@ -1,0 +1,28 @@
+<div class="modal fade finish-linking-modal" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="finish-linking-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="finish-linking-modal-label">Linking already in Progress</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>You're almost there! </h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Your account has been pre-linked by your MRN number. To complete the linking of your medical records please continue on to these last few steps!</p>
+        
+        <a href="{{ page.base_url }}patient/patient-verification">
+          <button type="button" class="btn btn-secondary">Finish Linking</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

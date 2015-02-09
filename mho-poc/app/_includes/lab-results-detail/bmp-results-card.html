@@ -1,0 +1,63 @@
+<div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Results for BMP</h3>
+    </div>
+  </div>
+
+  <div id="accordion-bmp">
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-bmp">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            <span>Specimen Info</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-bmp" class="collapse in">
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Source</p>
+          <span><a href="">Throat</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Collected</p>
+          <span><a href="">[source]</a></span>
+        </div>
+
+      </div>
+
+      <div class="row specimen-info">
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Specimen Condition</p>
+          <span><a href="">[condition]</a></span>
+        </div>
+
+        <div class="col-sm-5">
+          <p class="lr-h5">Results Posted</p>
+          <span><a href="">3/5/2014, 12:51 PM</a></span>
+        </div>
+
+      </div>
+
+      <!-- TABLE BEGIN -->
+      {% include lab-results-detail/bmp-table.html %}
+    </div>
+
+  </div>
+  <!-- accordion end -->
+
+</div>

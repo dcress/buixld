@@ -1,0 +1,157 @@
+//
+// HCA Static Modals (bootstrap modified Modal for modal 'look')
+// --------------------------------------------------
+
+// .static-modal-open      - body class for killing the scroll
+// .static-modal           - container to scroll within
+// .static-modal-dialog    - positioning shell for the actual modal
+// .static-modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.static-modal-open {
+  overflow: hidden;
+}
+
+// Container that the static-modal scrolls within
+.static-modal {
+  display: block;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal;
+  // -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the static-modal, animate it to slide down
+  &.fade .static-modal-dialog {
+    .translate(0, -25%);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in .static-modal-dialog { .translate(0, 0)}
+}
+
+// Shell div to position the static-modal with bottom padding
+.static-modal-dialog {
+  position: relative;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: scroll;
+  border-radius: @border-radius-large;
+  // -moz-box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5);
+  // -webkit-box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5);
+  //   box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  width: 600px;
+}
+
+
+
+// Actual static-modal
+.static-modal-content {
+  position: relative;
+  /*.box-shadow(0 3px 9px rgba(0,0,0,.5));*/
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: none;
+}
+
+// static-modal background
+.static-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal-background;
+  background-color: @modal-backdrop-bg;
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(@modal-backdrop-opacity); }
+}
+
+// static-modal header
+// Top section of the static-modal w/ title and dismiss
+.static-modal-header {
+  padding-top: 30px; //added for business demo by david
+  padding-bottom: @modal-title-padding;
+  border-bottom: 1px solid @modal-header-border-color;
+  min-height: (@modal-title-padding + @modal-title-line-height);
+}
+// Close icon
+.static-modal-header .close {
+  margin-top: -2px;
+}
+
+// Title text within header
+.static-modal-title {
+  margin: 0;
+  line-height: @modal-title-line-height;
+}
+
+// static-modal body
+// Where all static-modal content resides (sibling of .static-modal-header and .static-modal-footer)
+.static-modal-body {
+  position: relative;
+  // padding: @modal-inner-padding;
+  padding: 20px 50px;
+}
+
+// Footer (for actions)
+.static-modal-footer {
+  //margin-top: 15px;
+  // padding: (@modal-inner-padding - 10) @modal-inner-padding @modal-inner-padding;
+  padding: 0px 50px 20px 50px;
+  text-align: right; // right align buttons
+  border-top: 1px solid @modal-footer-border-color;
+  &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+.notification-modal {
+    .static-modal-content {
+     /* border-radius: 0px;*/
+    }
+
+    .static-modal-dialog {
+      overflow: hidden;
+      /*border-radius: 0;
+      box-shadow: none; */
+    }
+}
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+  // Automatically set static-modal's width for larger viewports
+  .static-modal-dialog {
+    width: @modal-md;
+    margin: 30px auto;
+  }
+
+
+  // Modal sizes
+  .static-modal-sm { width: @modal-sm; }
+}
+
+@media (min-width: @screen-md-min) {
+  .static-modal-lg { width: @modal-lg; }
+}

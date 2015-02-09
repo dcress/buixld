@@ -1,0 +1,177 @@
+//
+// Dashboard Appstack
+// ------------------
+
+.dashboard-stack {
+  background-color: @gray-lightest;
+
+  ul {
+    position: relative;
+
+    li {
+      float: left;
+      width: auto;
+      list-style-type: none;
+      padding: @padding-xl-horizontal;
+
+      a{text-decoration: none;}
+
+      i {
+        .center-block();
+        width: 20px;
+      }
+    }
+  }
+
+  .dashboard-stack-inner {
+    padding-top: 10px;
+
+  }
+
+  .dashboard-item {
+    padding: @padding-xl-horizontal;
+    // margin-right: 10px;
+    // width: auto;
+    a {
+      .center-block();
+      text-decoration: none;
+      .font-size(1.6);
+
+      i {
+        .text-center();
+        width: 100%;
+        .font-size(4);
+        padding-bottom: @padding-base-vertical;
+      }
+    }
+    a.disabled {
+      color: @disabled;
+      cursor: not-allowed;
+
+      i {
+        color: @disabled;
+      }
+    }
+    a.active {
+      color: @brand-default;
+
+      i {
+        color: @hospital-primary;
+      }
+    }
+
+    span {
+      display: block;
+      padding-top: 5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-item {
+      width: 115px !important;
+    }
+  }
+
+  .access-banner {
+    background-color: @hospital-secondary;
+    padding: @padding-xl-vertical;
+
+    h3,
+    p {
+      .text-center();
+      color: #fff;
+    }
+    h3 {
+      .font-size(2.6);
+      margin-top: 0;
+    }
+    p {
+      .font-size(2.3);
+    }
+  }
+
+  //flexslider style resets
+  .flexslider {
+    margin: auto;
+    max-width: 870px;
+    background: none;
+    border: none;
+    position: relative;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -o-border-radius: none;
+    border-radius: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    zoom: 1;
+
+    @media screen and (min-width: 990px) {
+      .flex-prev {
+        left: -20px;
+      }
+
+      .flex-next {
+        right: -20px;
+      }
+    }
+
+  }
+
+  .flex-direction-nav {
+    bottom: 55px;
+  }
+
+  .flex-control-nav {
+    bottom: -10px;
+  }
+
+  .no-flex-nav {
+    // padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+// Small devices
+/* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+
+    //.dashboard-item {
+      //margin-right: 18px;
+
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    //}
+  }
+
+// Medium devices
+/* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+
+    // .dashboard-item {
+    //   margin-right: 28px;
+
+    //   &:last-child {
+    //     margin-right: 0;
+    //   }
+    // }
+
+  }
+
+// Large devices
+/* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+
+    // .dashboard-item {
+    //   margin-right: 38px;
+
+    //   &:last-child {
+    //     margin-right: 0;
+    //   }
+    // }
+
+  }
+
+
+}//closes .dashboard-stack

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+
+    {% include styles.html %}
+
+    <!-- build:js(app) {{ page.base_url }}scripts/modernizr.js -->
+    <script src="{{ page.base_url }}_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+
+  </head>
+
+  <body id="ce-module">
+    <div class="dash-container">
+      <div class="dash-clip">
+
+        <!-- Navigation -->
+        {% include navigation-main.html %}
+
+        <!-- Page Banner - can contain success messages for profile creation, progress bar, imagery on home page... etc -->
+        {% include page-banner.html %}
+        <!-- Page H1 in grey bar -->
+        {% include heading-bar.html %}
+
+        <div id="error-message-wrap" class="alert-bg-error"></div>
+
+        <!-- Message for those with JS disabled -->
+        <noscript>
+          <div class="container alert alert-danger">
+            <p> For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" class="alert-link"> instructions how to enable JavaScript in your web browser</a></p>
+          </div>
+        </noscript>
+        <!-- End JS disabled message -->
+
+        <!-- Main content -->
+        <div id="ce-content">
+          {{ content }}
+        </div>
+
+        <!-- Footer -->
+        <div id="ce-footer">
+          {% include footer-main.html %}
+        </div>
+
+        <!-- JavaScript -->
+        {% include scripts.html %}
+      </div>
+    </div>
+  </body>
+</html>

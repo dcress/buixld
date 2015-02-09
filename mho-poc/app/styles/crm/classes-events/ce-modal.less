@@ -1,0 +1,98 @@
+//
+// Modals
+//
+
+//
+// My name is Eric Motil
+// You can call me Eric Modal
+//
+
+
+// Vars
+@modal-width:             @screen-sm; // Size of smaller screen before mobile
+@modal-info-font-size:    18px; // Used for sizing icons
+
+
+//
+// Modal width for all modals above tableeeetz
+// Small devices (tablets, 768px and up)
+//
+@media (min-width: @screen-sm-min) {
+	
+	// All modal width
+	.modal-dialog { width: @modal-width; }
+	
+}
+
+
+//
+// Modal header
+.modal-header {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.modal-body h4 {
+	font-size: 14px;
+	color: @gray;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+
+// Modal body
+.modal-body {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+// Tabbed content
+.modal-body .tab-content { padding: 20px 10px; }
+
+// Modal footer
+.modal-footer {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+// Modal more information
+.modal-info {
+	margin: 1em;
+	padding: 1em 0;
+	background: @gray-lighter;
+	text-align: center;
+}
+
+.modal-info-text {
+	margin: 0;
+	font-size: @modal-info-font-size;
+	text-transform: uppercase;
+}
+
+.modal-info-text i {
+	margin-right: 10px;
+	font-size: @modal-info-font-size + 8;
+	vertical-align: middle;
+}
+
+.modal-info-text-phone {
+	font-size: @modal-info-font-size + 2;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+//
+// Discount modal
+// 
+#ehc-ce-modal-discount .modal-dialog { max-width: @screen-xs; }
+//
+// HPS Payment modal
+//
+//
+// Modal iFrame
+//
+#process-enrollment-modal .modal-body iframe {
+	height: 450px;
+	width: 100%;
+	border: none;
+}
+#process-enrollment-modal .modal-dialog { max-width: @screen-xs; } // width

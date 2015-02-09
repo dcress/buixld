@@ -1,0 +1,304 @@
+//Lab Results page styles
+
+
+//buttons and paragraph above results
+//
+.section-summary { //global?
+  color: @gray-light;
+  text-align: center;
+  padding-top: 30px; //added after removing 1em margin bottom from heading-bar
+}
+
+.btn-row { //global?
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn-summary { // used on mulitple pages - Lab Results, Lab Detail, Activity Log
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+//mobile styles for dropdowns and buttons.
+@media screen and (max-width: @screen-xs-max) {
+  .mobile-select {
+    margin-bottom: 5px;
+
+  }
+
+
+  #lr-criteria, .activity-log {
+
+    .btn-group {
+      width: 100%;
+      
+      button, .dropdown-menu {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+//Lab Result Card
+//
+
+.content-wrap-white { //global? 
+  color: @gray-light;
+  margin-bottom: 2em;
+  padding: 0 1em;
+  border: 1px solid @border-color;
+  -o-border-radius: 3px;
+  border-radius: @border-radius-base;
+  -webkit-background-clip: padding-box;
+  background: @body-bg;
+}
+
+
+  //top left section of lab card
+#lr-info {
+  border-bottom: 1px solid @border-color;
+}
+
+.top-left-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-right: 1px solid @border-color;
+}
+
+.lr-icon {
+  color: @hospital-primary;
+  margin: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .lr-icon {
+    display: none;
+  }
+}
+
+.lr-visit-type {
+  font-size: @font-size-h2;
+  margin-bottom: 0;
+}
+
+.lr-test-type {
+  font-size: @font-size-h2;
+  font-weight: 300;
+  // color: @gray-light;
+  margin-top: 0;
+}
+
+.lr-order-info {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.lr-h5 {
+  text-transform: uppercase;
+  // color: @gray-light;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  line-height: 1em;
+}
+
+
+  //top right section - calendar 
+.top-right-info {
+  // border-left: 1px solid @border-color; added to top-left-info instead
+}
+
+.lr-calendar {
+  max-width: 140px;
+  margin: 40px auto;
+  float: none;
+}
+
+#lr-date-calendar {
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.lr-date-month {
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  font-size: @font-size-h2;
+  color: @body-bg;
+  background-color: @gray-light;
+
+}
+
+.lr-date-day {
+  font-size: 48px;
+  font-weight: 700;
+  color: @close-color;
+  background: @body-bg;
+}
+
+.lr-date-time {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: @font-size-h5;
+  color: @body-bg;
+  background: @brand-primary;
+}
+
+.mobile-date-time {
+  display: none;
+}
+
+  //mobile styles for calendar
+@media screen and (max-width: @screen-xs-max) {
+  .lr-calendar {
+    display: none; 
+  }
+
+  .lr-order-info {
+    padding-top: 0;
+  }
+
+  .mobile-date-time {
+    display: initial;
+    padding-left: 0;
+  }
+
+  .lr-calendar-mobile #lr-date-calendar {
+    text-align: left;
+  }
+
+  .lr-date-month,
+  .lr-date-day,
+  .lr-date-time {
+    font-size: 14px;
+    display: inline;
+    background: transparent;
+    color: @hospital-primary;
+    padding: 0;
+  }
+
+  .lr-date-day {
+    padding-left: 5px;
+  }
+
+  .lr-date-time {
+    float: right;
+  }
+
+  .lr-visit-type {
+    margin-top: 0;
+  }
+}
+
+
+  //Bottom right side of lab result - patient info
+.lr-facility-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid @border-color;
+}
+
+.lr-facility-info .row {
+  padding: 10px;
+}
+
+.lr-facility-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.facility-img {
+  margin-left: 10px;
+}
+
+.facility-address {
+  padding-left: 0;
+}
+
+.lr-patient-info {
+  padding-top: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.lr-patient-info-mobile {
+  display: none;
+}
+
+  //mobile styles for facility and patient info
+@media screen and (max-width: @screen-xs-max) {
+  .lr-facility-info {
+    padding: 0;
+  }
+
+  .lr-order-info {
+    padding-bottom: 0;
+  }
+
+  .lr-patient-info {
+    display: none;
+  }
+
+  .lr-patient-info-mobile {
+    display: initial;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .facility-address h5,
+  .facility-address a {
+    right: 0;
+  }
+}
+
+//pagination styles
+.lr-pagination {
+  padding-bottom: 20px;
+}
+
+.lr-pagination ul {
+  background: @body-bg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

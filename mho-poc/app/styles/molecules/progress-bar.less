@@ -1,0 +1,135 @@
+// Progress Bar
+
+// wrapping element for progress-bar
+#page-band {
+    background-color: @brand-primary;
+    padding: 25px 0;
+    width: 100%;
+}
+
+#hca-progress-bar {
+    // background: #c4c4c4;
+    background: transparent;
+    width: 100%;
+
+    .btn:active, .btn.active {
+        box-shadow: none;
+    }
+    // shared styles for progress steps
+    #progress-step-1,
+    #progress-step-2,
+    #progress-step-3 {
+        display: inline-block;
+        padding: 0;
+
+        span,
+        a {
+            color: #666;
+        }
+
+        .btn {
+            // border none allows for seamless css arrow shape alignment
+            border: none;
+            border-radius: 0;
+            padding: 16px 0;
+            // pointer-events disables click ability
+            pointer-events: none;
+            width: 100%;
+        }
+
+        i {
+            font-size: 1.1em;
+            margin-right: 0.3em;
+        }
+    }
+
+    #progress-step-1{
+        width:30%;
+        z-index: 3;
+
+        .progress-step-rectangle {
+            background-color: #fff;
+        }
+
+        i {
+            color: @brand-success;
+        }
+
+    }
+    #progress-step-2{
+        margin-left: -10px;
+        width:37%;
+        z-index: 2;
+
+        .progress-step-rectangle {
+            background-color: #d5d5d5;
+        }
+    }
+
+    #progress-step-3 {
+        // background-color: transparent;
+        background-color: #c4c4c4;
+        margin-left: -11px;
+        width: 32%;
+    }
+
+    // Arrows for the progress bar
+    #progress-step-1 .btn:after,
+    #progress-step-2 .btn:after {
+        border: solid transparent;
+        border-color: transparent;
+        border-width: 26px;
+        content: " ";
+        height: 0;
+        left: 100%;
+        margin-top: -26px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        width: 0;
+    }
+
+    // Color of arrows to match their respective rectangles
+    #progress-step-1 .btn:after{
+        border-left-color: #fff;
+    }
+    #progress-step-2 .btn:after{
+        border-left-color: #d5d5d5;
+    }
+
+    // Active states for form progression
+    #progress-step-1 span.active {
+        background-color: #fff;
+        &:after {border-left-color: #fff;}
+
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+    #progress-step-2 span.active {
+        background-color: #fff;
+        &:after {border-left-color: #fff;}
+
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+    #progress-step-3 span.active {
+        background-color: #fff;
+        i {
+            color: @brand-success;
+        }
+
+        a {
+            color: @brand-primary;
+        }
+    }
+}

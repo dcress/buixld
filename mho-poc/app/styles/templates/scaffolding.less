@@ -1,0 +1,140 @@
+// Base scaffolding elements
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  left: 0;
+  background-color: #F4F4F4;
+}
+
+#content-main {
+  background: inherit;
+}
+
+a:hover { cursor: pointer; }
+
+// Background on all main content elements
+#cpp-content { background: #F4F4F4; }
+
+// Extra information
+.extra-info {
+  color: @gray-light;
+  font-size: 16px;
+}
+.extra-strong {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.extra-header {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// Alerts
+.cpp-alert-default   { color: @brand-default; }
+.cpp-alert-success   { color: @brand-success; }
+.cpp-alert-warning   { color: @brand-warning; }
+.cpp-alert-danger    { color: @brand-danger; }
+.cpp-alert-info      { color: @brand-info; }
+
+
+// Large containers
+.container-lg {
+  max-width: @screen-lg; // Defined in ce-variables
+
+  .container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+
+  // Resposiveness
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+// Medium containers
+.container-md {
+  max-width: @screen-md; // Defined in ce-variables
+
+  .container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+
+  // Resposiveness
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+// Small containers
+.container-sm {
+  max-width: @screen-sm; // Defined in ce-variables
+
+  .container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+
+  // Resposiveness
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+// Small containers
+.container-xs {
+  max-width: @screen-xs; // Defined in ce-variables
+
+  .container-fixed(); // In Bootstrap mixins. Adds gutter pading according to gutter variables and centers
+
+  // Resposiveness
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+//Centered elements
+.centered {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// Floated elements
+.right { float: right; }
+.left  { float: left;}
+
+// Images
+img { max-width: 100%; }
+
+// Media Query breakpoints
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { }
+
+

@@ -1,0 +1,84 @@
+<div id="step-1">
+  <div id="profile-page">
+    <h3>Profile Summary</h3>
+    <div id="edit-profile">
+      <a href="{{ page.base_url }}patient/profile-summary/edit-profile/" class="btn btn-default edit-profile-btn"><i class="fa fa-pencil" aria-hidden="true" alt="Pencil icon for Edit profile link"></i> Edit Profile</a>
+    </div>
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-4">
+          <i class="fa fa-user" aria-hidden="true" alt="User icon for Username"></i>
+          <h4>User name</h4>
+          <!-- need variable to bind for USERNAME -->
+          <p data-user-name="">sjenkins123</p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-key" aria-hidden="true" alt="Password"></i>
+          <h4>Password</h4>
+          <!-- need variable to bind for PASSWORD -->
+          <!-- perhaps a show/hide option here? -->
+          <p data-password="">********</p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-pencil-square-o" aria-hidden="true" alt="Pencil icon for Account creation date"></i>
+          <h4>Account created</h4>
+          <!-- need variable to bind for ACCOUNT CREATED -->
+          <p data-account-created="">10/17/14</p>
+        </section>
+      </div>
+    </section>
+    <h3>Personal information</h3>
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-4">
+          <i class="fa fa-female" aria-hidden="true" alt="Female icon for Gender"></i>
+          <h4>Gender</h4>
+          <!-- need variable to bind for GENDER -->
+          <p data-gender="">Female</p>
+        </section>
+        <section class="col-sm-4">
+          <img src="{{ page.base_url }}img/profile-mom-lg.jpg" alt="Profile Picture" width="130px" class="img-circle">
+          <h4>Name</h4>
+          <!-- need variable to bind for patient FULLNAME -->
+          <p data-name="" id="patient_name">Suzy Jenkins</p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-gift" aria-hidden="true" alt="Gift icon for Birthdate"></i>
+          <h4>Birthdate</h4>
+          <!-- need variable to bind for BIRTHDATE -->
+          <p data-birthdate="">April 01, 1972</p>
+        </section>
+      </div>
+    </section>
+    <h3>Contact Information</h3>
+    <section class="panel panel-default">
+      <div class="panel-body row">
+        <section class="col-sm-4">
+          <i class="fa fa-home" aria-hidden="true" alt="Home icon for Mailing address"></i>
+          <h4>Mailing Address</h4>
+          <!-- need variable to bind for personal ADDRESS -->
+          <p>
+          123 Somewhere Over Street <br>
+          Atlanta, GA. 12345
+          </p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-phone-square" aria-hidden="true" alt="Phone icon for Phone number"></i>
+          <h4>Phone</h4>
+          <!-- need variable to bind for PHONE number -->
+          <p>123-456-7890</p>
+        </section>
+        <section class="col-sm-4">
+          <i class="fa fa-envelope-o" aria-hidden="true" alt="Envelope icon for Email address"></i>
+          <h4>Email</h4>
+          <!-- need variable to bind for EMAIL -->
+          <p>sjenkins@aol.com</p>
+        </section>
+      </div>
+    </section>
+<!--     <a href="{{ page.base_url }}patient/profile-summary/edit-profile" class="btn btn-default profile-edit-btn">
+      <i class="fa fa-pencil" aria-hidden="true" alt="Edit Profile"></i>
+       Edit Profile
+    </a> -->
+  </div>
+</div>

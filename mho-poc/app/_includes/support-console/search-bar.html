@@ -1,0 +1,19 @@
+{% include heading-bar.html %}
+
+<div id="sc-search-bar">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col-sm-9">
+        <form action="{{ page.base_url }}support-console/search/not-found" method="get" role="form" class="sc-search-form">
+          <a class="tooltip-info" data-toggle="tooltip" data-placement="top" title="Search by MyHealthOne ID or use our advanced search options below.">
+            <input type="search" name="Search" id="inputSearch" class="form-control" required="required" title="Search" placeholder="MyHealthOne ID" >
+            <a href="{{ page.base_url }}support-console/search/not-found"><i class="fa fa-search"></i></a>
+          </a>
+        </form>
+      </div>
+      <div class="col-sm-3">
+        <a href="{{ page.base_url }}support-console/search/not-found" class="btn btn-secondary width100"> Search</a>
+      </div>
+    </div>
+  </div>
+</div>

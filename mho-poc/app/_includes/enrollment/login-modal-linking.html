@@ -1,0 +1,75 @@
+  <div id="login-modal" class="flip-panel">
+  <div class="modal-dialog front">
+    <div class="modal-content white-bg">
+      <div class="static-modal-header">
+        <div id="brand-logo" class=""></div>
+      </div>
+      <div class="static-modal-body">
+        <!-- Removed method="post" from 'form' in order for prototype flow -->
+        <form class="form-horizontal" role="form" action="{{ page.base_url }}home/" method="get" id="Login-form">
+          <div class="form-group">
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+            </div>
+            <div class="col-sm-6">
+              <!-- <div class="remember-machine pull-left">
+                <input type="checkbox">
+                <a data-toggle="tooltip" data-original-title="Save your username and password (not recommended for public/shared computers)">Remember This Computer</a>
+              </div> -->
+            </div>
+            <div class="col-sm-6">
+              <div class="login-trouble pull-right">
+                <a href="#" class="flip-login" data-toggle="tooltip" data-original-title=""><i class="fa fa-question-circle fa-lg" aria-hidden="true" alt="?"></i><span>Forgot username or password?</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTest"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <!-- remove onclick script for production. used for buisness demo only -->
+              <button class="btn btn-primary btn-block btn-primary-75 btn-primary-center" type="submit" onclick="window.location='{{ page.base_url }}linking-home';">Log in</button>
+            </div>
+          </div>
+        </form>
+        <div class="request-new-account">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center"><strong>DO MORE WITH AN ACCOUNT</strong></h3>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-flask fa-2x" aria-hidden="true" alt=""></i><span>View Your Lab Results</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-medkit fa-2x" aria-hidden="true" alt=""></i><span>Review your Health Records</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-money fa-2x" aria-hidden="true" alt=""></i><span>Manage Your Family's Care</span></h4>
+            </div>
+            <div class="col-sm-6">
+              <h4><i class="fa fa-calendar fa-2x" aria-hidden="true" alt=""></i><span>Schedule Appointments</span></h4>
+            </div>
+            <div class="col-sm-12">
+              <button class="flip-item btn btn-secondary btn-block btn-primary-75 btn-primary-center" type="button" id="new-account">Create an account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="need-help text-center">
+          <div class="col-sm-12"><h5><a href="tel:18001234567"><i class="fa fa-question-circle fa-2x" aria-hidden="true" alt="?"></i><span>Need help with your account? CALL 1-800-123-4567</span></a></h5> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

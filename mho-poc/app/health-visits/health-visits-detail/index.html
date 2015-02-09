@@ -1,0 +1,107 @@
+---
+layout: default
+title: Health Visits Detail
+base_url: "../../"
+---
+
+<div id="health-visits-detail">
+  <section class="lab-results-detail-header">
+    <div class="container-md">
+
+      <div class="row">
+        <div class="col-sm-9">
+
+          <!--Header row - result type/summary button  -->
+
+              <span class="fa-stack fa-5x lr-detail-icon">
+                <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                <i class="fa fa-hospital-o fa-stack-1x fa-inverse" aria-hidden="true" alt="flask icon"></i>
+              </span>
+
+              <div class="detail-title">
+                <h1 class="">3/7/2013 - Child Birth</h1>
+                <h2 class="">Suzy Jenkins</h2>
+              </div>
+
+        </div>
+
+
+        <div class="col-sm-3 btn-summary-detail">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-primary-100 btn-summary dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              Summary of Care 
+              <i class="fa fa-chevron-down" aria-hidden="true" alt="Summary of Care"></i>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" data-toggle="modal" data-target=".download-summary-modal"><i class="fa fa-download" aria-hidden="true"></i> Download</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".transmit-summary-modal"><i class="fa fa-share-square-o" aria-hidden="true"></i> Transmit</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".print-summary-modal"><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ page.base_url }}../health-visits">Health Visits</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- End "header" row - result type and summary button -->
+
+    </div>
+  </section>
+  <!-- End lab-results-detail header section -->
+
+
+  <section class="lab-results-detail-content">
+    <div class="container-md">
+
+      <!-- buttons -->
+      <div class="row btn-row">
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="javascript:history.back()" class="btn btn-white">
+            <span class="btn-left"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</span>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2 col-sm-offset-8">
+          <a href="javascript:history.forward()" class="btn btn-white right">
+            <span class="btn-right">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+
+      </div>
+      <!-- end row of buttons -->
+
+      <!-- start content -->
+      <div class="row">
+
+        <!-- left side cards/content -->
+        <aside class="col-sm-4">
+          {% include lab-results-detail/pi-side-card.html %} 
+
+          {% include lab-results-detail/access-options.html %}
+        </aside>
+
+
+
+        <!-- main content right side -->
+        <div class="col-sm-8">
+          {% include health-visits/health-visits-detail/admission-information.html %}
+
+          {% include health-visits/health-visits-detail/summary-of-visit.html %}
+
+          {% include health-visits/health-visits-detail/medical-visit-details.html %}
+
+        </div>
+
+      </div>
+      <!-- end row for all content -->
+    </div>
+    <!-- end container-md for content -->
+  </section>
+  <!-- End lab-results-detail-content section -->
+
+
+  <!-- Lab Results Footer -->
+  {% include footer-main.html %}
+</div>

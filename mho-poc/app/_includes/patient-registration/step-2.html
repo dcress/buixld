@@ -1,0 +1,65 @@
+<div id="step-2" class="step-container">
+    <div id="ss-number">
+        <h3 class="text-center">Social Security Number</h3>
+        <p class="text-center lg-brand-text">Please enter your Social Security Number in order to link your patient health records!</p>
+        <section class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4 testy">
+                        <small class="required-note" data-toggle="tooltip"> <i class="fa fa-exclamation-circle" aria-hidden="true" alt="Denotes required field"></i> Denotes required field</small>
+                    </div>
+                </div>
+
+                <div class="float-label">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true" alt="Denotes required field"></i>
+                    <input type="text" class="form-control required" id="ssn" name="ssn" placeholder="Enter Your Social Security Number"><!--<span id="msg_ssn"class="msg_error"></span>-->
+                    <i class="fa fa-barcode" aria-hidden="true" alt="Barcode Icon for Social Security input field"></i>
+                </div>
+
+                <button type="button" class="btn btn-default center-block" id="check-ssn" disabled="disabled">Check Social Security Number <i class="fa fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </div> <!-- Social Security Number -->
+
+    <div id="mrn-number" style="display:none;">
+        <h3 class="text-center">Medical Record Number</h3>
+        <p class="text-center lg-brand-text">Please enter your Medical Record Number in order to link your patient health records!</p>
+        <section class="panel panel-default" style="padding-bottom:64px;"> <!-- additional 34px padding for commented Link MRN button -->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4 testy">
+                        <small class="required-note" data-toggle="tooltip"> <i class="fa fa-exclamation-circle" aria-hidden="true" alt="Denotes required field"></i> Denotes required field</small>
+                    </div>
+                </div>
+                <div class="float-label">
+                    <span class="info-link">
+                        <a data-toggle="modal" href='#mrn-description'>
+                            <i class="fa fa-question-circle" aria-hidden="true" alt="Link to description of medical record number"></i> What's This?
+                        </a>
+                    </span>
+                    <i class="fa fa-exclamation-circle" aria-hidden="true" alt="Denotes required field"></i>
+                    <input type="text" class="form-control required" id="mrn" name="mrn" placeholder="Enter Your Medical Record Number">
+                    <i class="fa fa-barcode" aria-hidden="true" alt="Barcode Icon for Medical Records input field"></i>
+                </div>
+                <button type="button" class="btn btn-default center-block" id="link-mrn">Link Medical Records Number <i class="fa fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </div> <!-- Medical Records Number -->
+
+</div> <!-- step-2 -->
+
+<!-- MODAL for Medical Record Number description -->
+<section class="modal fade" id="mrn-description">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Medical Records Number</h4>
+            </div>
+            <div class="modal-body">
+                <img src="{{ page.base_url }}img/mrn.jpg" alt="Medical Records Number Image" width="530">
+            </div>
+            <div class="modal-footer"></div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</section><!-- /.modal -->

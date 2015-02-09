@@ -1,0 +1,29 @@
+<div class="modal fade verification-failure-modal flip-panel" id="default-modal" tabindex="-1" role="dialog" aria-labelledby="verification-failure-modal-label" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog front">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle fa-lg"></i><span class="sr-only">Close</span></button> -->
+        <h4 class="modal-title" id="verification-failure-modal-label">CANNOT AUTHENTICATE PATIENT</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-frown-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <h1>Patient Linking unsuccessful.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Hmm, we’re sorry. We weren’t able to verify your identity. You may attempt to link your patient medical records in 72 hours. </p>
+        
+        <button type="button" class="btn btn-secondary flip-item">Explain Further</button>
+        <a href="{{ page.base_url }}home/">
+          <button type="button" class="btn btn-default">Home</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

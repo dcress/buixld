@@ -1,0 +1,27 @@
+---
+layout: default
+title: Online Pre-Registration
+base_url: "../"
+---
+
+{%comment%}{% include modals/online-pre-registration-modal.html %}{%endcomment%}
+<section id="online-pre-registration">
+  <!-- Smart Wizard -->
+  <div id="online-pre-registration-wizard" class="swMain">
+    <input type="hidden" name="onlinePreRegister" value="true">
+    {% include online-pre-registration/progress-wizard-links.html %}
+    <div class="container-md">
+	    <div class="row">
+	    	<div class="col-sm-12">
+			    {% include online-pre-registration/step-1.html %}
+			    {% include online-pre-registration/step-2.html %}
+			    {% include online-pre-registration/step-3.html %}
+			    {% include online-pre-registration/step-4.html %}
+			 		{% include online-pre-registration/step-5.html %}
+	 			</div>
+	 		</div>
+ 		</div>
+  </div>
+</section>
+
+{% include footer-main.html %}

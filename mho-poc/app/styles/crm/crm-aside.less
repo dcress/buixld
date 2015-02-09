@@ -1,0 +1,87 @@
+//
+// CRM Aside
+//
+
+// Vars
+@crm-aside-panel-height: 50px;
+
+
+.crm-aside {
+	display: inline-block; // Inherits the containing elements junk
+	width: 100%; // Width of parent defined by col-x
+}
+
+
+//
+// Aside panels
+//
+.crm-aside-panel {
+	display: block;
+	clear: both;
+	position: relative;
+	
+	// Define height so we can center text elements
+	height: @crm-aside-panel-height;
+	line-height: @crm-aside-panel-height;
+	vertical-align: middle;
+	
+	// Border seperating all elements except last element
+	border-top: 1px solid @crm-border-color;
+		&:first-child { border-top: none; }
+}
+
+
+// Aside panel title
+.crm-aside-panel-title {
+	
+	h1,h2,h3,h4,p,span {
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @gray;
+	
+		margin-top: 5px;
+		padding-bottom: 10px;
+	
+		//border-bottom: 1px solid @crm-border-color;
+	}
+}
+
+
+// Aside panel name
+.crm-aside-panel-name {
+	position: absolute;
+	left: 0;
+	
+	h1,h2,h3,h4,p,span {
+		margin: 0;
+		font-size: 14px;
+		line-height: @crm-aside-panel-height; // Line height of panel ensures vertical center
+		color: @gray-light;
+	}
+}
+
+// Aside panel value
+.crm-aside-panel-value {
+	position: absolute;
+	right: 0;
+}
+
+// Total for checkout process
+.crm-aside-panel-total {
+	
+	h1,h2,h3,h4,p,span {
+		font-size: 21px;
+		font-weight: bold;
+		color: #376E9E;
+	}
+}
+
+
+//
+// Aside call to action
+//
+.crm-aside-cta .btn {
+	width: 100%;
+	margin-bottom: 15px;
+}

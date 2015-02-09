@@ -1,0 +1,33 @@
+// Widthdrawl band
+@withdrawal-band-height:   50px;
+@withdrawal-bg-color:      #ffffff;
+@withdrawal-icon-color:    #428BCA;
+
+#ce-withdrawal-band {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid @ce-border-color;
+	border-bottom: 1px solid @ce-border-color;
+	
+	a {
+		color: @withdrawal-icon-color;
+		&:hover { cursor: pointer; }
+	}
+	
+	i.ce-withdrawal-band-icon {
+		font-size: 2em;
+		color: @withdrawal-icon-color;
+		margin: 0 10px 0 0;
+		line-height: @withdrawal-band-height;
+		vertical-align: middle;
+	}
+	
+	p { margin: 0; }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-xs-min) {
+	#ce-withdrawal-band {
+		p { line-height: @withdrawal-band-height; }
+	}
+}

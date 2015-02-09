@@ -1,0 +1,517 @@
+<div class="crm-holder content-wrap-white">
+
+  <div class="row">
+    <div class="col-sm-12 lr-panel-header">
+      <h3>Quick Links</h3>
+    </div>
+  </div>
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-vital-signs-recorded">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-dashboard fa-lg" aria-hidden="true"></i>
+            <span>Vital Signs Recorded</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+  <div id="collapse-vital-signs-recorded" class="collapse in">
+    <h4>Vital Signs at Discharge</h4>
+    <div class="row">
+      <div class="col-xs-3 centered-icon-stack vitals-panel">
+        <span class="fa-stack fa-3x">
+          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-sort-amount-asc fa-stack-1x fa-inverse" aria-hidden="true" alt="height icon"></i>
+        </span>
+        <h5>Height</h5>
+        </div>
+
+      <div class="col-xs-3 centered-icon-stack vitals-panel">
+        <span class="fa-stack fa-3x">
+          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-anchor fa-stack-1x fa-inverse" aria-hidden="true" alt="height icon"></i>
+        </span>
+        <h5>Weight</h5>
+      </div>
+
+      <div class="col-xs-3 centered-icon-stack vitals-panel">
+        <span class="fa-stack fa-3x">
+          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-tint fa-stack-1x fa-inverse" aria-hidden="true" alt="height icon"></i>
+        </span>
+        <h5>Blood Pressure</h5>
+      </div>
+
+      <div class="col-xs-3 centered-icon-stack vitals-panel">
+        <span class="fa-stack fa-3x">
+          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-bar-chart-o fa-stack-1x fa-inverse" aria-hidden="true" alt="height icon"></i>
+        </span>
+        <h5>BMI</h5>
+      </div>
+
+    </div>
+  </div>
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-medications">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-medkit fa-lg" aria-hidden="true"></i>
+            <span>Medications</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-medications" class="collapse in">
+
+      <div class="medication-disclaimer">
+        <i class="fa fa-exclamation-circle"></i>
+        <p>If the directions regarding when you should take a medication differ from the directions provided with your prescription, please contact your physician for clarification.</p>
+      </div>
+      
+      <h4>Active Medications</h4>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th></th>
+              <th>Route</th>
+              <th>Frequency</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr>
+              <td>Cefepime 20mg/ml</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Once daily</td>
+              <td>10/22/2011</td>
+            </tr>
+        
+            <tr>
+              <td>Cephalexin 500 mg</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Twice daily</td>
+              <td>8/4/2012</td>
+            </tr>
+
+            <tr>
+              <td>Fluoxetine 40 mg</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Three times a day</td>
+              <td>2/15/2014</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Inactive Medications</h4>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th></th>
+              <th>Route</th>
+              <th>Frequency</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr>
+              <td>Cefepime 20mg/ml</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Once daily</td>
+              <td>10/22/2011</td>
+            </tr>
+        
+            <tr>
+              <td>Cephalexin 500 mg</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Twice daily</td>
+              <td>8/4/2012</td>
+            </tr>
+
+            <tr>
+              <td>Fluoxetine 40 mg</td>
+              <td>
+                <i class="fa fa-question-circle fa-lg info-button-popover popover-dismiss" aria-hidden="true" data-toggle="modal" data-target=".drug-detail-modal"></i>
+              </td>
+              <td>Oral</td>
+              <td>Three times a day</td>
+              <td>2/15/2014</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+    <!-- end collapse -->
+
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-known-allergies">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
+            <span>Known Allergies</span>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-known-allergies" class="collapse in">
+      <h4>Known Medication Allergies</h4>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Drug Name</th>
+              <th>Reaction</th>
+              <th>Severity</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr>
+              <td>Penicillin V</td>
+              <td>Dizzyness</td>
+              <td>High</td>
+              <td>10/22/2011</td>
+            </tr>
+        
+            <tr>
+              <td>Hydrocodine</td>
+              <td>Rash</td>
+              <td>Medium</td>
+              <td>8/4/2012</td>
+            </tr>
+
+            <tr>
+              <td>Doxycycline</td>
+              <td>Vomiting</td>
+              <td>High</td>
+              <td>2/15/2014</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Known Food Allergies</h4>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Reaction</th>
+              <th>Severity</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr>
+              <td>Peanuts</td>
+              <td>Tightening of throat</td>
+              <td>Medium</td>
+              <td>10/22/2011</td>
+            </tr>
+        
+            <tr>
+              <td>Poppy Seeds</td>
+              <td>Vomiting</td>
+              <td>Medium</td>
+              <td>8/4/2012</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Known Other Allergies</h4>
+
+      <!-- micro test table of results/data -->
+      <div class="log-table cbc-table table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Reaction</th>
+              <th>Severity</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr>
+              <td>Latex</td>
+              <td>Intense swelling</td>
+              <td>High</td>
+              <td>10/22/2011</td>
+            </tr>
+        
+            <tr>
+              <td>Nickel</td>
+              <td>Rash</td>
+              <td>Medium</td>
+              <td>8/4/2012</td>
+            </tr>
+
+            <tr>
+              <td>Red dye</td>
+              <td>Ears turn red</td>
+              <td>High</td>
+              <td>2/15/2014</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+    <!-- end collapse -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- lab results panel subheader - toggle switch to hide and show content -->
+    <a data-toggle="collapse" data-target="#collapse-related-lab-results">
+      <div class="row lr-panel-subheader close-spin-toggle">
+
+        <div class="col-xs-10">
+            <i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i>
+            <span>Problem List</span>
+            <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </div>
+
+        <div class="col-xs-2 toggle-icon">
+            <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+        </div>
+
+      </div>
+    </a>
+    <!-- end lab results panel subheader -->
+
+    <div id="collapse-related-lab-results" class="collapse in">
+      <!-- lab results panel subheader - toggle switch to hide and show content -->
+      <a data-toggle="collapse" data-target="#collapse-problem-1">
+        <div class="row lr-panel-subheader close-spin-toggle">
+
+          <div class="col-xs-10">
+              <span class="sub-panel">Coronary Arteriosclerosis</span>
+          </div>
+
+          <div class="col-xs-2 toggle-icon">
+              <i class="fa fa-plus-circle fa-lg close-spin-icon sub-panel" aria-hidden="true"></i>
+          </div>
+
+        </div>
+      </a>
+      <!-- end lab results panel subheader -->
+
+      <div id="collapse-problem-1" class="collapse">
+        <div class="row ordered-by">
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Last Documented Status</p>
+            <span><a>Active</a></span>
+          </div>
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Onset Date</p>
+            <span><a>10/22/2011</a></span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a data-toggle="collapse" data-target="#collapse-problem-2">
+        <div class="row lr-panel-subheader close-spin-toggle">
+
+          <div class="col-xs-10">
+              <span class="sub-panel">Benign Prostatic Hyperplasia</span>
+          </div>
+
+          <div class="col-xs-2 toggle-icon">
+              <i class="fa fa-plus-circle fa-lg close-spin-icon sub-panel" aria-hidden="true"></i>
+          </div>
+
+        </div>
+      </a>
+      <!-- end lab results panel subheader -->
+
+      <div id="collapse-problem-2" class="collapse">
+
+        <div class="row ordered-by">
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Last Documented Status</p>
+            <span><a>Active</a></span>
+          </div>
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Onset Date</p>
+            <span><a>10/22/2011</a></span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a data-toggle="collapse" data-target="#collapse-problem-3">
+        <div class="row lr-panel-subheader close-spin-toggle">
+
+          <div class="col-xs-10">
+              <span class="">Hypertension</span>
+          </div>
+
+          <div class="col-xs-2 toggle-icon">
+              <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+          </div>
+
+        </div>
+      </a>
+      <!-- end lab results panel subheader -->
+
+      <div id="collapse-problem-3" class="collapse in">
+
+        <div class="row ordered-by">
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Last Documented Status</p>
+            <span><a>Active</a></span>
+          </div>
+
+          <div class="col-xs-5">
+            <p class="lr-h5">Onset Date</p>
+            <span><a>10/22/2011</a></span>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+    <!-- end related lab results accordion -->
+
+    <a data-toggle="collapse" data-target="#collapse-procedures-performed">
+        <div class="row lr-panel-subheader close-spin-toggle">
+
+          <div class="col-xs-10">
+              <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+              <span>Immunizations</span>
+          </div>
+
+          <div class="col-xs-2 toggle-icon">
+              <i class="fa fa-times-circle fa-lg close-spin-icon" aria-hidden="true"></i>
+          </div>
+
+        </div>
+      </a>
+      <!-- end lab results panel subheader -->
+
+      <div id="collapse-procedures-performed" class="collapse in">
+
+        <div class="log-table cbc-table table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Date Received</th>
+              </tr>
+            </thead>
+
+            <tbody class="procedures-table-body">
+               <tr>
+                <td>Polio </td>
+                <td>10/22/2013</td>
+              </tr>
+          
+              <tr>
+                <td>Tuberculosis</td>
+                <td>10/22/2013</td>
+              </tr>
+
+              <tr>
+                <td>Tetanus</td>
+                <td>9/19/2013</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>

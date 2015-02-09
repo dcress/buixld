@@ -1,0 +1,146 @@
+{% raw %}
+{{#classResults}}
+{% endraw %}
+{% raw %} {{#if callResult}} {% endraw %}
+<div class="modal fade ce-modal-result-details" id="ce-modal-result-details-call{% raw %}{{modalId}}{% endraw %}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="ce-modal-dismiss close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></button>
+        <h3 class="modal-title" id="myModalLabel">Event Details</h3>
+      </div>
+
+      <div class="modal-body">
+
+
+        <!-- Result Call -->
+        <article class="ce-result">
+          <!-- Event title location date and time -->
+          <div id="ce-result-info" class="row">
+
+            <!-- Event Title -->
+            <div class="col-sm-8 ce-result-title">
+              <h3><a data-toggle="modal" data-target="#ce-modal-result-details{% raw %}{{modalId}}{% endraw %}">{% raw %}{{resultName}}{% endraw %}</a></h3>
+              <p>{% raw %} {{resultInfo}} {% endraw %}</p>
+              <p><i class="fa fa-pencil"></i> <a> {% raw %}{{resultType}}{% endraw %}</a></p>
+
+              <!-- Location information -->
+              <div class="row ce-result-location">
+                <div class="col-xs-3 ce-result-location-img">
+                  <img class="img-circle" src="{{ page.base_url }}img/result-locations/facility-stonecrest-4.jpg">
+                </div>
+                <div class="col-sm-9 ce-result-location-info">
+                  <p><i class="fa fa-map-marker"></i> {% raw %} {{distance}} {% endraw %} Miles Away</p>
+                  <a href="{% raw %} {{mapLink}} {% endraw %}">
+                  <p>{% raw %} {{buildingName}} {% endraw %}</p>
+                  <p>{% raw %} {{buildingAddress}} {% endraw %}</p>
+                  </a>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <!-- Calendar and Time -->
+            <div class="col-sm-4 ce-result-date-time">
+              <div class="row">
+                <div class="col-sm-12 ce-result-calendar">
+                 <div id="ce-date-calendar">
+                    <div class="ce-date-month"><span>{% raw %} {{month}} {% endraw %}</span></div>
+                    <div class="ce-date-day"><span>{% raw %} {{day}} {% endraw %}</span></div>
+                    <div class="ce-date-time"><span>{% raw %} {{startTime}} {% endraw %}</span></div>
+                </div>
+                </div>
+                <div class="col-sm-12 ce-result-time">
+                  <p>{% raw %}{{expandedMonth}} {{day}}, {{year}}{% endraw %}</p>
+                  <p>{% raw %}{{startTime}} - {{endTime}}{%endraw %} </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Result Attributes -->
+          <div id="ce-result-attributes" class="row">
+
+            <!-- Result details -->
+            <div class="col-sm-3 ce-result-attribute ce-result-details">
+
+            </div>
+
+            <!-- Availability -->
+            <div class="col-sm-3 ce-result-attribute ce-result-available">
+              <span class="ce-alert-warning"><i class="fa fa-check-circle"></i> {% raw %}{{emptySpots}}{%endraw %} / {% raw %}{{totalSpots}}{%endraw %}  Spots Open</span>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-sm-2 ce-result-attribute ce-result-cost">
+              <span class="ce-alert-default"><i class="fa fa-money"></i> ${% raw %}{{amount}}{%endraw %} </span>
+            </div>
+
+            <!-- Register for event
+            <div class="col-sm-4 ce-result-cta">
+              <a href="{{ page.base_url }}register/" class="btn btn-success"><i class="fa fa-check"></i> Register for Event</a>
+            </div>  -->
+
+            <!-- Call to register -->
+            <div class="col-sm-4 ce-result-cta">
+              <a class="btn btn-info"><i class="fa fa-phone"></i> Call: {% raw %}{{contactNumber}}{%endraw %}</a>
+            </div>
+
+            <!-- Joing waitlist
+            <div class="col-sm-4 ce-result-cta">
+              <a href="{{ page.base_url }}register/" class="btn btn-default"><i class="fa fa-flag"></i> Join Waitlist</a>
+            </div> -->
+
+            <!-- Toggle payment modal
+            <div class="col-sm-4 ce-result-cta">
+              <a data-toggle="modal" data-target="#ce-modal-payment" class="btn btn-success"><i class="fa fa-check"></i> Toggle Payment Modal</a>
+            </div> -->
+
+          </div>
+
+        </article>
+
+
+        <!-- Tabs for content -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+          <li><a href="#occurances" data-toggle="tab">Class Occurances</a></li>
+          <li><a href="#notes" data-toggle="tab">Notes</a></li>
+        </ul>
+        <!-- Tab content -->
+       <div class="tab-content">
+          <div class="tab-pane fade in active" id="description">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span> {% raw %}{{instructorName}}{%endraw %}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {% raw %}{{descriptionType}}{%endraw %}</p>
+            <p> {% raw %}{{descriptionInfo}}{%endraw %}</p>
+            <p> {% raw %}{{descriptionInfoAdditional}}{%endraw %} </p>
+          </div>
+          <div class="tab-pane fade" id="occurances">
+            <p class="ce-extra-info"><span class="ce-extra-header">INSTRUCTOR:</span>  {% raw %}{{instructorName}}{%endraw %}</p>
+            <p class="ce-extra-info"><span class="ce-extra-header">TYPE:</span>  {% raw %}{{descriptionType}}{%endraw %}</p>
+          <p>  {% raw %}{{descriptionInfoAdditional}}{%endraw %}</p>
+          </div>
+          <div class="tab-pane fade" id="notes">
+            <p> {% raw %}{{notes}}{%endraw %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <div class="modal-info-text">
+          <span><i class="fa fa-info-circle"></i> Need Help?</span>
+          <span class="modal-info-text-phone"> {% raw %}{{facilityContact}}{%endraw %}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% raw %} {{/if}} {% endraw %}
+{% raw %}
+{{/classResults}}
+{% endraw %}
+

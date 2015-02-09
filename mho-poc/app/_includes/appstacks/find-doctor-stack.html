@@ -1,0 +1,30 @@
+<!-- 100% width for background image -->
+<div class="search-stack" class="row">
+    <!-- Centered width for elements -->
+    <section class="search-stack-inner container-sm row">
+        <h3>Find a Doctor</h3>
+        <form role="form" action="http://buixld.com/provider-directory/" method="get">
+            <div class="form-group">
+                <input type="search" class="form-control search-box" placeholder="Search by doctor&rsquo;s name, specialty (and keyword)"><input type="submit" class="fa fa-input" value="&#xf002;">
+            </div>
+        </form>
+        <ul class="list-inline search-items">
+            <li><i class="fa fa-ambulance" aria-hidden="true" alt="Came from an ER?"></i>Came from an ER?</li>
+            <li><i class="fa fa-user-md" aria-hidden="true" alt="Search by Doctor Last Name"></i>Search by Doctor Last Name</li>
+            <li class="btn-group">
+                <span class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    More Search Options <i class="fa fa-angle-down" aria-hidden="true" alt="More Search Options"></i>
+                </span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="search-option-menu">
+                    <li><a href="{{ page.base_url }}search-results">Physicians</a></li>
+                    <li><a href="{{ page.base_url }}search-results">Services</a></li>
+                    <li><a href="{{ page.base_url }}search-results">Articles</a></li>
+                    <li><a href="{{ page.base_url }}search-results">News</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{ page.base_url }}search-results">Search option 5</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </section>
+</div> <!-- search-stack -->

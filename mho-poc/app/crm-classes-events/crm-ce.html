@@ -1,0 +1,310 @@
+---
+layout: crm-ce
+title: Class and Events
+base_url: "../../"
+---
+<script src="{{ page.base_url }}_bower_components/jquery/jquery.js"></script>
+<!-- This page is the portlet jsp -->
+
+<div id="searchArea"></div>
+<div id="resultsListing"></div>
+
+<script>
+$(document).ready(function() {
+
+
+
+       /*var classResultsInfo = {
+
+         "classResults": [
+            {
+              "normalResult": true,
+              "callResult": false,
+              "waitResult": false,
+              "modalId": "1",
+              "resultName": "Centennial Bariatric (weight loss) Surgery Seminar",
+              "resultInfo": "Celebrate all that life has to offer and reclaim your power over food! Register now for a free informational seminar to begin your Centennial Experience today!",
+               "resultType": "Bariatric Surgery",
+               "distance":"3.5",
+               "buildingName": "Tace Building",
+               "buildingAddress":"2200 Murphy Avenue Nashville TN 37203",
+               "mapLink": "https://www.google.com/maps/place/2200+Murphy+Ave/@36.1547456,-86.8060501,17z/data=!3m1!4b1!4m2!3m1!1s0x886466b8ca81945f:0x7192c427307a32a3",
+               "amount":"100.00",
+               "month":"JAN",
+               "expandedMonth": "January",
+               "day":"14",
+               "year":"2014",
+               "startTime":"9:00am",
+               "endTime":"11:30 am",
+               "emptySpots": "8",
+               "totalSpots": "10",
+               "contactNumber": "",
+               "facilityContact": "1-800-123-4567",
+               "instructorName": "Lisa Hinshaw",
+               "descriptionType": "Prenatal Education Course 123 Address Road Nashville TN, 37069",
+               "descriptionInfo": "This class covers the basics of pregnancy and childbirth. Information will include the physical and emotional changes during pregnancy, preparation for labor, pain relief measures, medical inter-ventions, and possible complications. Basic relaxation and coping skills will be covered, but cou-and nursery will include all sort of details",
+              "descriptionInfoAdditional": "Planning to have unmedicated birth may want to attend and additional class that will pro. See Full Details 10/10 Spots Open $100.00 Register for Event vide a greater focus on this. Postpartum and newborn care will also be covered. And education booklet will be provided. Please dress in loose and comfortable clothing and bring 2 bed pillows. A tour will also be provided. We would appreciate your prompt attention to sending in your fee. This will enable us to insure your spot in the class. Payment can be made via credit/debit card by calling MedLine. ",
+              "notes": "Event Name Title Goes Here payment has already been processed via credit/debit card, your receipt will be attached. If youery will include all sort of details StoneCrest Medical Center Attn: Lisa Hinshaw, Education Coordinator 200 StoneCrest"
+            },
+             {
+             "normalResult": false,
+              "callResult": true,
+              "waitResult": false,
+               "modalId": "2",
+              "resultName": "Smoking Cessation Clinic",
+              "resultInfo": "A step by step process for gaining freedom from tobacco use is presented. The pros and cons of quitting are considered along with collecting reasons to quit to build motivation.",
+               "resultType": "Smoking",
+               "distance":"4.6",
+               "buildingName": "TriStar Centennial Sports Medicine Wellness Gym",
+               "buildingAddress":"2410 Patterson Street Nashville TN 37203",
+               "mapLink": "https://www.google.com/maps/place/2410+Patterson+St/@36.1518953,-86.8096567,17z/data=!3m1!4b1!4m2!3m1!1s0x886466b996132f5d:0x143fd441da06527a",
+               "amount":"50.00",
+               "month":"FEB",
+               "expandedMonth": "February",
+               "day":"2",
+               "year":"2014",
+               "startTime":"11:00 am",
+               "endTime":"2:30 pm",
+               "emptySpots": "3",
+               "totalSpots": "10",
+               "contactNumber": "(615) 342-1919",
+               "facilityContact": "1-800-123-4567",
+               "instructorName": "Lisa Hinshaw",
+               "descriptionType": "Prenatal Education Course 123 Address Road Nashville TN, 37069",
+               "descriptionInfo": "This class covers the basics of pregnancy and childbirth. Information will include the physical and emotional changes during pregnancy, preparation for labor, pain relief measures, medical inter-ventions, and possible complications. Basic relaxation and coping skills will be covered, but cou-and nursery will include all sort of details",
+              "descriptionInfoAdditional": "Planning to have unmedicated birth may want to attend and additional class that will pro. See Full Details 10/10 Spots Open $100.00 Register for Event vide a greater focus on this. Postpartum and newborn care will also be covered. And education booklet will be provided. Please dress in loose and comfortable clothing and bring 2 bed pillows. A tour will also be provided. We would appreciate your prompt attention to sending in your fee. This will enable us to insure your spot in the class. Payment can be made via credit/debit card by calling MedLine. ",
+              "notes": "Event Name Title Goes Here payment has already been processed via credit/debit card, your receipt will be attached. If youery will include all sort of details StoneCrest Medical Center Attn: Lisa Hinshaw, Education Coordinator 200 StoneCrest"
+            },
+            {
+             "normalResult": false,
+              "callResult": false,
+              "waitResult": true,
+               "modalId": "3",
+              "resultName": "2014 TriStar Cardiovascular Focus on Heart",
+              "resultInfo": "TriStar Cardiovascular Focus on Heart",
+               "resultType": "Cardiovascular and Heart Disease",
+               "distance":"3.5",
+               "buildingName": "First Center",
+               "buildingAddress":"919 Broadway Nashville TN 37203",
+               "mapLink": "https://www.google.com/maps/place/919+Broadway/@36.1580529,-86.7838565,17z/data=!3m1!4b1!4m2!3m1!1s0x886466f5af3c0911:0xf094a0f0ff4f7c3d",
+               "amount":"100.00",
+               "month":"MAR",
+               "expandedMonth": "March",
+               "day":"16",
+               "year":"2014",
+               "startTime":"9:00 am",
+               "endTime":"11:30 am",
+               "emptySpots": "0",
+               "totalSpots": "10",
+               "contactNumber": "(615) 342-1919",
+               "facilityContact": "1-800-123-4567",
+               "instructorName": "Lisa Hinshaw",
+               "descriptionType": "Prenatal Education Course 123 Address Road Nashville TN, 37069",
+               "descriptionInfo": "This class covers the basics of pregnancy and childbirth. Information will include the physical and emotional changes during pregnancy, preparation for labor, pain relief measures, medical inter-ventions, and possible complications. Basic relaxation and coping skills will be covered, but cou-and nursery will include all sort of details",
+              "descriptionInfoAdditional": "Planning to have unmedicated birth may want to attend and additional class that will pro. See Full Details 10/10 Spots Open $100.00 Register for Event vide a greater focus on this. Postpartum and newborn care will also be covered. And education booklet will be provided. Please dress in loose and comfortable clothing and bring 2 bed pillows. A tour will also be provided. We would appreciate your prompt attention to sending in your fee. This will enable us to insure your spot in the class. Payment can be made via credit/debit card by calling MedLine. ",
+              "notes": "Event Name Title Goes Here payment has already been processed via credit/debit card, your receipt will be attached. If youery will include all sort of details StoneCrest Medical Center Attn: Lisa Hinshaw, Education Coordinator 200 StoneCrest"
+            }
+          ]
+        }*/
+
+        var searchURI = {
+                 "searchHomeViewModel":{
+                      "basicSearchUri": "http://whatever/rest/generatedbyportalserver"
+                }
+          }
+
+          var searchResultListings = {
+            "Status": {
+                "Status": 200,
+                "StatusCode": "Success",
+                "Response": {}
+            },
+        "resultsFound": null,
+        "result": [{
+            "sponsoringFacilityName": "TriStar Centennial Womens and Childrens",
+            "sessions": [{
+                "waitListed": "0",
+                "type": "Session",
+                "startDateTime": "2014-04-12T09:00",
+                "sessionMemo": "<span style=\"color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif; background-color: rgb(255, 255, 255); \">This class meets in theåÊ2nd floor classroom at Women's & Children's Hospital at Centennial Lobby.åÊ</span>",
+                "sessionId": "a0sU0000004xx0vIAA",
+                "screenings": [],
+                "registrationCost": "195.00",
+                "refundPolicy": null,
+                "refundAvailableUntil": "2014-04-10T10:00:00",
+                "preRegistrationCost": null,
+                "parentSession": null,
+                "parentEvent": null,
+                "occurrences": [{
+                    "startDateTime": "2014-04-12T09:00",
+                    "sessionOccurrenceId": "a0rU0000000JxsQIAS",
+                    "endDateTime": "2014-04-12T18:00"
+                }],
+                "numberOfOccurrences": "1",
+                "name": "Labor of Love (04/12/2014)",
+                "locationZipCode": "37203",
+                "locationStreetAddress": "2221 Murphy Avenue",
+                "locationState": "TN",
+                "locationName": "TriStar Centennial Womens and Childrens",
+                "locationLong": "-86.80658477",
+                "locationLat": "36.15438544",
+                "locationCity": "Nashville",
+                "instructorName": "Jill Boes",
+                "inquiryOnly": "false",
+                "guestsPerEnrollee": "0",
+                "enrollmentStatus": "Register for Event",
+                "enrolled": "3",
+                "endDateTime": "2014-04-12T18:00",
+                "enableOnlineEnrollment": "true",
+                "distance": null,
+                "discounts": [{
+                    "value": "15.00",
+                    "name": "Test Amount",
+                    "id": "a0PJ0000002xA2fMAE",
+                    "expiryDays": "1",
+                    "discountType": "Early Registration",
+                    "discountAmount": null,
+                    "description": null,
+                    "code": "ABC",
+                    "calculationType": "Amount"
+                }],
+                "discountAmount": "15.00",
+                "collectFee": "Optional",
+                "closingDateTime": "2014-04-12T00:00",
+                "capacity": "12",
+                "available": "Available",
+                "amountDue": "80.00"
+            },
+            {
+                "waitListed": "0",
+                "type": "Session",
+                "startDateTime": "2014-04-12T09:00",
+                "sessionMemo": "<span style=\"color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif; background-color: rgb(255, 255, 255); \">This class meets in theåÊ2nd floor classroom at Women's & Children's Hospital at Centennial Lobby.åÊ</span>",
+                "sessionId": "a0sU0000004xx0vIAA",
+                "screenings": [],
+                "registrationCost": "95.00",
+                "refundPolicy": null,
+                "refundAvailableUntil": "2014-04-10T10:00:00",
+                "preRegistrationCost": null,
+                "parentSession": null,
+                "parentEvent": null,
+                "occurrences": [{
+                    "startDateTime": "2014-04-12T09:00",
+                    "sessionOccurrenceId": "a0rU0000000JxsQIAS",
+                    "endDateTime": "2014-04-12T18:00"
+                }],
+                "numberOfOccurrences": "1",
+                "name": "Labor of Love (04/12/2014)",
+                "locationZipCode": "37203",
+                "locationStreetAddress": "2221 Murphy Avenue",
+                "locationState": "TN",
+                "locationName": "TriStar Centennial Womens and Childrens",
+                "locationLong": "-86.80658477",
+                "locationLat": "36.15438544",
+                "locationCity": "Nashville",
+                "instructorName": "Jill Boes",
+                "inquiryOnly": "false",
+                "guestsPerEnrollee": "0",
+                "enrollmentStatus": "Register for Event",
+                "enrolled": "3",
+                "endDateTime": "2014-04-12T18:00",
+                "enableOnlineEnrollment": "true",
+                "distance": null,
+                "discounts": [{
+                    "value": "15.00",
+                    "name": "Test Amount",
+                    "id": "a0PJ0000002xA2fMAE",
+                    "expiryDays": "1",
+                    "discountType": "Early Registration",
+                    "discountAmount": null,
+                    "description": null,
+                    "code": "ABC",
+                    "calculationType": "Amount"
+                }],
+                "discountAmount": "15.00",
+                "collectFee": "Optional",
+                "closingDateTime": "2014-04-12T00:00",
+                "capacity": "12",
+                "available": "Available",
+                "amountDue": "80.00"
+            }],
+            "eventUnitNumber": null,
+            "eventShortDescription": "...",
+            "eventScreeningIncluded": "false",
+            "eventName": "Labor of Love",
+            "eventMainContactName": "Jill Boes",
+            "eventId": "a0TU0000001xs66MAA",
+            "eventGLAccount": null,
+            "eventEnrollmentPhoneNumber": "615-342-1919",
+            "eventEnrollmentCriteriaArray": null,
+            "eventEnrollmentCriteria": "Who is your delivering physician?\r\n\r\nName of support person:\r\n\r\nWhat is your due date?\r\n\r\nHow was payment made?:\r\n\r\nNotes:",
+            "eventDescription": "<div>\n\t<div>\n\t\tThis series includes a variety of topics, some of which include signs and stages of labor, pushing positions and techniques, comfort measures, pain relief options, variations in labor and delivery, routines after delivery, postpartum care and instructions in relaxation and breathing techniques.åÊ</div>\n\t<div>\n\t\tåÊ</div>\n\t<div>\n\t\tPayment can be made via credit/debit card by calling MedLine. If your payment has already been processed via credit/debit card, your receipt will be attached. If you prefer to mail your payment in please send your class fee in the form of a check or money order made payable to \"The Women's Hospital at Centennial\", indicating the class name and date on check/money order. åÊWhen mailing your payment, remit to:</div>\n\t<div>\n\t\tåÊ</div>\n\t<div>\n\t\tThe Women's Hospital at Centennial - CBE Dept</div>\n\t<div>\n\t\t2300 Patterson Street</div>\n\t<div>\n\t\tåÊNashville, TN åÊ37203</div>\n\t<div>\n\t\tåÊ</div>\n\t<div>\n\t\tIf you are registered for more than one class please submit separate checks for each class, but you may mail them in the same envelope. Because there are waiting lists for most classes, please confirm your attendance with payment. åÊIf for any reason you are unable to attend, please contact TriStar MedLine at 800-242-5662. åÊåÊ</div>\n\t<div>\n\t\tåÊ</div>\n\t<div>\n\t\tPlease bring 1-2 pillows with you and wear comfortable clothing for class. If inclement weather is a factor, please call 615-342-5661 two hours prior to your class start time to learn if class will be postponed. If class is postponed, your instructor will contact you to inform you of the make-up day and time.</div>\n</div>\n<br>",
+            "eventClassType": "Prenatal Education Course"
+        }]
+    }
+
+//Truncates event description - An handlebars helper
+Handlebars.registerHelper ( 'truncate', function ( str, len ) {
+    if (str.length > len) {
+        var new_str = str.substr ( 0, len+1 );
+        while ( new_str.length )
+        {
+            var ch = new_str.substr ( -1 );
+            new_str = new_str.substr ( 0, -1 );
+            if ( ch == ' ' )
+            {
+                break;
+            }
+        }
+        if ( new_str == '' )
+        {
+            new_str = str.substr ( 0, len );
+        }
+        return  ( new_str +'...' );
+    }
+    return str;
+});
+
+        //Show only search area on page load with searchURI
+        var content = Handlebars.templates['ce-search-tabs'];
+        $('#searchArea').html(content);
+
+        // Validate search field
+        function searchFieldValidate() {
+          var searchString = $('#inputSearch').val();
+              if(searchString == '') {
+                $('#resultsListing').empty();
+                $('form').append('<div class="search-error">Please enter a valid search keyword</div>');
+                $('.search-error').css({
+                    "margin-top": "-15px",
+                    "color": "red",
+                    "float": "left"
+                });
+              }
+              else {
+                $('.search-error').remove();
+                //Do ajax call here.
+                var searchResults = Handlebars.templates['ce-search-results'](searchResultListings); //Inject json data into template
+                $('#resultsListing').empty().append(searchResults);
+                  $('html, body').animate({
+                    scrollTop: $("#resultsListing").offset().top
+                  });
+              }
+        }
+
+        //On click of submit button, show the results. Will have to make ajax call here to retrieve the results.
+        $('.basic-search').on('click',function (event) {
+            searchFieldValidate();
+        });
+
+        //On enter of search field
+        $('#inputSearch').on('keypress',function(event) {
+          if ( event.which == 13 ) {
+            event.preventDefault();
+            searchFieldValidate();
+           }
+        });
+  });
+
+
+</script>

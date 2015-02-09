@@ -1,0 +1,38 @@
+//
+// Top nav adjustments
+//
+
+
+// Navigation items font size
+// Slightly bigger for HUT sites
+.navbar-nav > li > a { font-size: @crm-nav-font-size; }
+
+// Dropdown menu
+.submenu-links { min-width: 225px }
+.submenu-links a { 
+	font-size: @crm-nav-font-size;
+	line-height: 1.8em; 
+	padding: 10px 20px;
+}
+
+// Replicate the padding of the navigation items for dropdown items
+.dropdown-menu > li > a { padding: @nav-link-padding; }
+
+//
+// Adjustments to hide show and hover appropriate things for nav
+//
+// Hides dropdown menus on mobile
+// If this is uncommented the actual navbarcontainer will till show on mobile
+.navbar-default .navbar-collapse .navbar-nav { display:none;}
+
+// Displays dropdown menue on hover
+.navbar-nav li.dropdown:hover ul.dropdown-menu { display: block; }
+
+//Small devices (tablets, 768px and up)
+ @media (min-width: @screen-sm-min) {
+    #header-wrap .navbar .narbar-nav { display: none; }
+}
+// Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md-min) {
+    #header-wrap .navbar .navbar-nav { display: block; }
+}

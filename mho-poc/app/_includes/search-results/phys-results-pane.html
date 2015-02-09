@@ -1,0 +1,164 @@
+<section id="ce-phys-listing">
+
+<!-- Results criteria -->
+  <div class="row btn-row container-sm">
+        <div class="col-sm-3">
+
+          <!-- sort options for all search results -->
+          <ul class="nav sort-by-menu-hide" id="sort-by-menu-all">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Sort by: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li class="hut-search-options-phys">
+                  <a class="" 
+                     data-toggle="tab" 
+                     href="">Name</a>
+                </li>
+                <hr>
+                <li class="">
+                  <a class="" 
+                     data-toggle="tab" 
+                     href="">Location</a>
+                  </li>
+                  <hr>
+                  <li class="">
+                    <a class="" 
+                       data-toggle="tab" 
+                       href="">Specialty</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+        </div>
+
+
+        <div class="col-sm-3 col-sm-offset-6">
+          <ul class="nav">
+            <li class="dropdown sort-btn">
+              <a class="dropdown-toggle sort-toggle" data-toggle="dropdown" href="#">
+                Show: <i class="fa fa-angle-down fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu sort-by-menu">
+                <li><a href="#">5 results</a></li>
+                <hr>
+                <li><a href="#">10 results</a></li>
+                <hr>
+                <li><a href="#">25 results</a></li>
+                <hr>
+                <li><a href="#">100 results</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div> 
+      <!--end sort buttons row-->
+
+      <div class="container-sm">
+
+      {% include search-results/phys-card.html %}
+      {% include search-results/phys-card.html %}
+
+
+<!-- copied and pasted -->
+    <div class="crm-holder" itemscope="" itemtype="">
+
+      <!-- Result header -->
+      <div class="row pd-result-header">
+        <div class="col-sm-2">
+          <div class="pd-result-provider-img">
+            <img src="{{ page.base_url }}../img/profile-dr-jack-lg.jpg" class="phys-img img-circle" height="100">
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <div class="pd-result-heading">
+            <h2 class="pd-result-title">
+              <a href="" itemprop="name">Frank A Greco, MD</a>
+            </h2>
+          </div>
+          <div class="pd-result-specialty" itemprop="medicalSpecialty">
+            <span>Medical Oncology</span>
+          </div>
+          <div class="pd-result-meta pd-result-location-list">
+            <p><span class="strong">Location:</span> Tennessee Oncology - 25th Avenue</p>
+          </div>
+          <div class="pd-result-meta pd-result-insurance-accepted">
+            <p><span class="strong">Insurance Accepted:</span> <span>Aetna, Medicaid</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Provider directory panel -->
+      <div class="panel-group" id="result4-accordion3">
+      
+        <!-- pd panel -->
+        <div class="pd-panel">
+          <!-- pd panel heading -->
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#result4-accordion3" href="#result4-location1" class="close-spin-toggle spin">
+                <i class="fa fa-info-circle left"></i>
+                <span>Tennessee Oncology - 25th Avenue - 250 25th Avenue North                    Suite 100</span>
+                <i class="fa fa-plus-circle close-spin-icon right"></i>
+              </a>
+            </h4>
+          </div>
+
+          <!-- pd panel body -->
+          <div id="result4-location3" class="collapse in">
+            <div class="panel-body">
+              
+              <!-- pd panel location info -->
+              <div class="pd-location-appointment" itemprop="hospitalAffiliation">
+                <div class="row" itemscope="" itemtype="">
+                  <div class="col-xs-2">
+                    <div class="crm-result-location-img">
+                      <img src="../img/result-locations/result-location-default.png" data-src="" width="100" height="100" class="img-circle img-responsive lazy facility-img">
+                    </div>
+                  </div>
+                  <div class="col-xs-10 col-sm-6 pd-result-location">
+                    <div class="pd-location-distance" itemscope="" itemtype="">
+                      <span>
+                        <a href="https://www.google.com/maps/place/250+25th+Avenue+North++++++++++++++++++++Suite+100+Nashville+TN+37203" target="_blank" itemprop="address" itemscope="" itemtype="/PostalAddress">
+                          <span itemprop="name">Tennessee Oncology - 25th Avenue</span><br>
+                          <span itemprop="streetAddress">250 25th Avenue North                    Suite 100</span>, <span itemprop="addressLocality">Nashville</span>, <span itemprop="addressRegion">TN</span> <span itemprop="postalCode">37203</span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="pd-result-cta">
+                      <a class="btn btn-primary" itemprop="map" href="https://www.google.com/maps/place/250+25th+Avenue+North++++++++++++++++++++Suite+100+Nashville+TN+37203" target="_blank"><i class="fa fa-map-marker"></i> Map it</a>
+                      <a href="tel:6153421919" class="btn btn-cta btn-switch btn-secondary" data-switch="(615) 342-1919" itemprop="telephone"><i class="fa fa-phone"></i> Call for Appointments</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /end pd panel-body -->
+          </div><!-- /end pd panel -->
+        </div><!-- /end panel-group -->
+          
+      </div>
+      <!-- end panel group -->
+    </div>
+<!-- end copied and pasted -->
+
+
+
+
+
+
+
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="row">
+        <div class="col-sm-12 pagination">
+          {% include search-results/crm-pagination.html %}
+        </div>
+      </div>
+
+</section>

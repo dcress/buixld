@@ -1,0 +1,73 @@
+  <!-- Request new account view -->
+  <div id="request-account-modal" class="flip-panel">
+  <div class="modal-dialog back">
+    <div class="modal-content gray-bg">
+        <div class="static-modal-header">
+          <button type="button" class="close cancel flip-item-back" data-dismiss="static-modal" aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true" alt="X"></i></button>
+          <div class="brand-logo-white"></div>
+        </div>
+      <div class="static-modal-body">
+        <div class="col-sm-12 text-center"><h3>REQUEST A NEW ACCOUNT</h3></div>
+        <form action="" method="POST" role="form" id="newAccount-form">
+          <div class="form-group row">
+           <div class="col-sm-12 float-label">
+              <div class="alert alert-danger username-pwd-error">
+              <i class="icon-warning-sign"></i>Sorry, that username is already taken. Please enter a new one.
+                </div>
+              </div>
+            </div>
+          <div class="form-group row" id="emailAddress-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
+              <label for="email" class="email-suggestion help-block">Did you mean <a class="suggested-email"></a>?</label>
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="email" class="form-control confirmEmail-tooltip" data-toggle="tooltip" id="confirm-email" placeholder="Confirm Email Address" name="confirmEmail">
+            </div>
+          </div>
+          <div class="form-group row has-error" id="userName-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="text" class="form-control username-tooltip error" id="newUsername" placeholder="User Name" name="username" data-toggle="tooltip">
+            </div>
+          </div>
+          <div class="form-group row" id="password-formgroup">
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control password-tooltip" data-toggle="tooltip" id="newPassword" placeholder="Password" name="password">
+            </div>
+            <div class="col-sm-12 float-label">
+              <input type="password" class="form-control confirmPassword-tooltip" data-toggle="tooltip" id="confirm-password" placeholder="Confirm Password" name="confirmPassword">
+            </div>
+          </div>
+          <div class="terms-conditions row">
+            <div class="col-sm-12 text-center white-text"><input type="checkbox" name="terms" id="terms"> I have read and agree to the <a href="#" class="white-text flip-terms">Terms & Conditions</a></div>
+          </div>
+          <!-- Check for bot -->
+          <div class="form-group botTest-formgroup">
+            <div class="col-sm-12">
+              <label for="botTest" class="control-label">Leave This Field Blank</label>
+              <input type="text"  id="botTestAgain"  name="bot-test" class="form-control" placeholder="Leave This Field Blank" value="">
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <button class="btn btn-success btn-block" type="submit" id="sign-up"><i class="fa fa-check" aria-hidden="true" alt=""></i>Sign-Up and Confirm Email</button>
+            </div>
+          </div>
+        </form>
+          <div class="row">
+            <div class="col-sm-12 white-text text-center">An email will be sent to confirm your request for an account.</div>
+          </div>
+      </div>
+      <div class="static-modal-footer">
+        <div class="row">
+          <div class="col-sm-6 center-block">
+            <button class="flip-item-back btn btn-default btn-block" type="button" id="back-to-login">Back to Login Screen</button>
+          </div>
+            <!--<div class="col-sm-6">
+            <button class="btn btn-default btn-block" type="button" id="resend-email"><i class="fa fa-envelope-o"></i>Resend Verficiation Email</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

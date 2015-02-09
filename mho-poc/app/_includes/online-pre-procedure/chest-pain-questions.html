@@ -1,0 +1,264 @@
+<div class="form-section-wrap">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Cardiac (Heart)</h4>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Have you had an abnormal or irregular heart beat/rhythm?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="heart-beat-yes">
+            <input type="radio" name="heartBeatYoN" id="heartBeatYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="heart-beat-no">
+            <input type="radio" name="heartBeatYoN" id="heartBeatNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="heart-beat-questions">
+        <div class="form-group row">
+          <div class="col-sm-9">
+            <p class="label-inline">Do you own a pacemaker?</p>
+          </div>
+          <div class="col-sm-3">
+            <label class="radio-inline" id="pacemaker-yes">
+              <input type="radio" name="pacemakerYoN" id="pacemakerYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline" id="pacemaker-no">
+              <input type="radio" name="pacemakerYoN" id="pacemakerNo" value="no"> No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <p class="label-row">Pacemaker Manufacturer?</p>
+          <div class="col-sm-12 float-label">
+              <label for="pacemaker-manufacturer" class="sr-only">Pacemaker Manufacturer</label>
+              <input type="text" class="form-control required" id="pacemaker-manufacturer" name="pacemaker-manufacturer" placeholder="Enter Manufacturer (if applicable)">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-9">
+            <p class="label-inline">Do you have or have you had an Implanted Cardiac Defibrillator (ICD or AICD)?</p>
+          </div>
+          <div class="col-sm-3">
+            <label class="radio-inline" id="implanted-defib-yes">
+              <input type="radio" name="implantedDefibYoN" id="implantedDefibYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline" id="implanted-defib-no">
+              <input type="radio" name="implantedDefibYoN" id="implantedDefibNo" value="no"> No
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- end irregular heart beat questions -->
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Do you have or have you had high cholesterol or lipids?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="cholesterol-yes">
+            <input type="radio" name="cholesterolYoN" id="cholesterolYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="cholesterol-no">
+            <input type="radio" name="cholesterolYoN" id="cholesterolNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Do you have or have you had Coronary Artery Disease (CAD)?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="cad-yes">
+            <input type="radio" name="cadYoN" id="cadYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="cad-no">
+            <input type="radio" name="cadYoN" id="cadNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="cad-questions">
+
+        <div class="form-group row">
+          <div class="col-sm-9">
+            <p class="label-inline">Have you had a coronary angiogram?</p>
+          </div>
+          <div class="col-sm-3">
+            <label class="radio-inline" id="coronary-angiogram-yes">
+              <input type="radio" name="coronary-angiogramYoN" id="coronary-angiogramYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline" id="coronary-angiogram-no">
+              <input type="radio" name="coronary-angiogramYoN" id="coronary-angiogramNo" value="no"> No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-9">
+            <p class="label-inline">Have you had a stent placed in your heart?</p>
+          </div>
+          <div class="col-sm-3">
+            <label class="radio-inline" id="stent-yes">
+              <input type="radio" name="stentYoN" id="stentYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline" id="stent-no">
+              <input type="radio" name="stentYoN" id="stentNo" value="no"> No
+            </label>
+          </div>
+        </div>
+
+        <div class="stent-questions">
+
+          <div class="form-group row">
+            <div class="col-sm-9">
+              <p>If yes, what date was the stent placed?</p>
+            </div>
+            <div class="col-sm-3 float-label">
+                <i class="fa fa-asterisk" aria-hidden="true"></i>
+                <label for="delivery-date" class="sr-only">If yes, when was it placed? </label>
+                <input name="date" class="datepicker form-control picker__input" placeholder="Date Placed" type="text" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-9">
+              <p>What type of stent is it?</p>
+            </div>
+            <div class="col-sm-3 float-label">
+              <i class="fa fa-asterisk" aria-hidden="true"></i>
+              <label for="stent-type" class="sr-only">Reason for Visit</label>
+              <select name="stent-type" id="stent-type" class="form-control select-styled required">
+                  <option value="" disabled selected>Stent Type</option>
+                  <option id="bare-metal">Bare metal</option>
+                  <option id="drug-eluting">Drug-eluting</option>
+                  <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <h4>Pulmonary (Lung)</h4>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Do you have or have you had emphysema (COPD)?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="copd-yes">
+            <input type="radio" name="copdYoN" id="copdYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="copd-no">
+            <input type="radio" name="copdYoN" id="copdNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Do you have or have you had asthma?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="asthma-yes">
+            <input type="radio" name="asthmaYoN" id="asthmaYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="asthma-no">
+            <input type="radio" name="asthmaYoN" id="asthmaNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="asthma-questions">
+
+        <div class="form-group row">
+          <div class="col-sm-9">
+            <p class="label-inline">Have you ever been in an Intensive Care Unit (ICU) or needed a breathing tube due to asthma?</p>
+          </div>
+          <div class="col-sm-3">
+            <label class="radio-inline" id="icu-yes">
+              <input type="radio" name="icuYoN" id="icuYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline" id="icu-no">
+              <input type="radio" name="icuYoN" id="icuNo" value="no"> No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <p>How often is a rescue inhaler used?</p>
+          </div>
+          <div class="col-sm-4 float-label">
+            <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+            <label for="inhaler-frequency" class="sr-only">Rescue Inhaler Frequency</label>
+            <select name="inhaler-frequency" id="inhaler-frequency" class="form-control select-styled required">
+                <option value="day" selected>one or more times a day</option>
+                <option id="month">one or more times a month</option>
+                <option id="year">one or more times a year</option>
+                <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <p>Approximately how long ago was the last asthma attack?</p>
+          </div>
+          <div class="col-sm-4 float-label">
+            <!-- <i class="fa fa-asterisk" aria-hidden="true"></i> -->
+            <label for="last-asthma-attack" class="sr-only">Rescue Inhaler Frequency</label>
+            <select name="last-asthma-attack" id="last-asthma-attack" class="form-control select-styled required">
+                <option selected>one day ago or less</option>
+                <option>one week ago or less</option>
+                <option>one month ago or less</option>
+                <option>one year ago or less</option>
+                <option>five years ago or less</option>
+                <option>greater than five years ago</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Have you had pneumonia in the last six weeks?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="pneumonia-yes">
+            <input type="radio" name="pneumoniaYoN" id="pneumoniaYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="pneumonia-no">
+            <input type="radio" name="pneumoniaYoN" id="pneumoniaNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <p class="label-inline">Have you been diagnosed with Sleep Apnea?</p>
+        </div>
+        <div class="col-sm-3">
+          <label class="radio-inline" id="sleep-apnea-yes">
+            <input type="radio" name="sleep-apneaYoN" id="sleep-apneaYes" value="yes"> Yes
+          </label>
+          <label class="radio-inline" id="sleep-apnea-no">
+            <input type="radio" name="sleep-apneaYoN" id="sleep-apneaNo" value="no"> No
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

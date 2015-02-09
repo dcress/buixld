@@ -1,0 +1,152 @@
+// Create Profile Form
+// ---------------------
+
+// #uploadProfileImage{
+//  height: 0;
+//  overflow: hidden;
+// }
+
+fieldset {
+    /* sets to active in javascript for slide 'show'/'hide' */
+    // display: none;
+    display: block;
+    // opacity: 0;
+    width: 100%;
+}
+fieldset.active {
+    display: block;
+    // opacity: 1;
+}
+
+// fieldset.inactive {
+//   opacity: 0;
+// }
+
+#profile-form-container {
+    position: relative;
+    background-color: transparent;
+    h2 {
+        color: @brand-primary;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .img-responsive {
+        width: 130px;
+        height: 130px;
+    }
+    // Required Disclaimer
+    .required-note {
+        float: left;
+        width: auto;
+    }
+
+    fieldset {
+        background: @body-bg;
+        border: 0 none;
+    }
+
+    // Pickadate field calendar icon
+    i.fa-calendar {
+        position: absolute;
+        top: 9px;
+        left: 133px;
+        color: @gray-light;
+        font-size: 1.2em;
+    }
+
+    #create-profile-form {
+        .profile-form-fields {
+            background-color: @body-bg;
+            border: 1px solid @border-color;
+            .border-radius(3px);
+            padding: 10px 20px;
+            .has-error {
+                .jvFloat {
+                    .placeHolder.active {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+        .profile-form-save {
+            padding: @padding-xl-vertical 0;
+        }
+    }
+
+}
+
+
+
+// fieldset {
+//     .action-button {
+//         width: 10em;
+//     }
+// }
+
+// fieldset#event-registration-page-2,
+// fieldset#event-registration-page-3 {
+//     .fs-next{float:right;}
+//     .fs-previous{float:left;}
+// }
+
+// fieldset#event-registration-page-1 .action-button {
+//     display: block;
+//     margin: 0 auto;
+// }
+
+
+// // Hide all except first fieldset
+// #ce-reg-form fieldset:not(:first-of-type) {
+//     display: none;
+// }
+
+// Upload Profile Image
+.profile-image-upload-container{
+    margin-bottom: 20px;
+
+    img {
+        border: 2px solid @brand-primary;
+        .center-block();
+        margin-bottom: 10px;
+    }
+    #profile-ie-image {
+        display: none;
+    }
+}
+.change-image {
+    width: 20em;
+    .center-block();
+    a {
+    width: 100%;
+    }
+    input {
+        display: none;
+    }
+}
+
+// Add Phone button
+.add-phone {
+    display: block;
+    float: left;
+    // margin: 0 0 15px 15px;
+}
+// Remove Phone input field
+a.removePhone {
+    display: block;
+    float: right;
+    margin-right: 16em;
+    position: relative;
+    top: -3.3em;
+}
+
+// Disabled email field icon/trigger toggle
+.create-profile-email i.fa-pencil {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #666;
+    padding: 12px 25px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}

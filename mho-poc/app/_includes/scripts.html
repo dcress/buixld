@@ -1,0 +1,40 @@
+<!-- build:js(app) {{ page.base_url }}scripts/components.js -->
+<script src="{{ page.base_url }}_bower_components/jquery/jquery.js"></script>
+<script src="{{ page.base_url }}_bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{ page.base_url }}_bower_components/pickadate/lib/picker.js"></script>
+<script src="{{ page.base_url }}_bower_components/pickadate/lib/picker.date.js"></script>
+<script src="{{ page.base_url }}_bower_components/pickadate/lib/picker.time.js"></script>
+<script src="{{ page.base_url }}_bower_components/pickadate/lib/legacy.js"></script>
+<script src="{{ page.base_url }}_bower_components/jquery-easing/jquery.easing.js"></script>
+<script src="{{ page.base_url }}_bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{ page.base_url }}_bower_components/jquery-icheck/icheck.js"></script>
+<script src="{{ page.base_url }}_bower_components/mailcheck/src/mailcheck.min.js"></script>
+<script src="{{ page.base_url }}_bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="{{ page.base_url }}_bower_components/jquery-validation/dist/additional-methods.js"></script>
+<script src="{{ page.base_url }}_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="{{ page.base_url }}_bower_components/handlebars/handlebars.runtime.min.js"></script>
+<script src="{{ page.base_url }}_bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script src="{{ page.base_url }}scripts/lazy-load.js"></script>
+<script src="{{ page.base_url }}scripts/jQuery.headroom.js"></script>
+<script src="{{ page.base_url }}scripts/headroom.js"></script>
+<!-- endbuild -->
+
+<!-- <script src="{{ page.base_url }}scripts/form-slider.js"></script> -->
+
+<!-- build:js(app) {{ page.base_url }}scripts/main.js -->
+<script src="{{ page.base_url }}scripts/plugins.js"></script>
+<script src="{{ page.base_url }}scripts/main.js"></script>
+<script src="{{ page.base_url }}scripts/class-listing.js"></script>
+<!-- endbuild -->
+
+<!--[if IE]>
+<script src="{{ page.base_url }}scripts/ie.js"></script>
+<![endif]-->
+
+<script>
+  // FASTCLICK!!! for eliminating the ms delay for touch events
+  $(function() {
+      FastClick.attach(document.body);
+  });
+
+</script>
