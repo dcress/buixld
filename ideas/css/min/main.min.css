@@ -557,6 +557,7 @@ body.sub {
 }
 #challenge {
   text-align: center;
+  padding-bottom: 30px;
 }
 #challenge span {
   padding: 15px 5px;
