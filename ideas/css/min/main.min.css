@@ -189,8 +189,35 @@ footer .footer-column ul li a {
 footer .footer-column ul li a:hover {
   color: #29abe2;
 }
-.form-group {
-  position: relative;
+.modal-search .btn {
+  padding: 0;
+  font-size: 1.8em;
+  color: #CED8DA;
+}
+.modal-search .btn i {
+  color: #CED8DA;
+}
+#modal-search {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+}
+.form-icon {
+  position: absolute;
+  right: 0;
+}
+.input-blank {
+  border: none;
+  box-shadow: 0 0;
+  border-radius: 0;
+  font-size: 2.8em;
+  font-weight: 500;
+  height: 60px;
+  padding: 0;
+}
+.input-blank:active,
+.input-blank:focus {
+  border: none;
+  box-shadow: 0 0;
 }
 /*---------------------
   Navigation
@@ -450,6 +477,69 @@ footer .footer-column ul li a:hover {
   font-weight: 700;
   color: #333e43;
   margin-right: 2px;
+}
+/*---------------------
+	Modal
+----------------------*/
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.modal-brand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.modal-brand .logo {
+  max-width: 80px;
+  padding: 15px 0;
+}
+.modal .close {
+  font-size: 50px;
+  font-weight: 100;
+}
+.modal-header {
+  border: none;
+  padding-bottom: 0;
+}
+.modal-header .heading {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .modal-header .heading {
+    font-size: 1.7em;
+  }
+}
+.modal-full {
+  margin: 100px auto;
+  max-width: 480px;
+}
+.modal-full .modal-body {
+  padding-top: 0;
+}
+.modal-full .modal-content {
+  box-shadow: none;
+  border: none;
+}
+.modal-dialog {
+  width: auto;
+}
+.modal-footer {
+  border: none;
+  padding: 5px 15px;
+  text-align: left;
+}
+.modal-full,
+.modal-dialog {
+  max-width: 960px;
 }
 /*---------------------
 	Main elements
