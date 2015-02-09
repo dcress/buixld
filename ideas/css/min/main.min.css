@@ -189,63 +189,8 @@ footer .footer-column ul li a {
 footer .footer-column ul li a:hover {
   color: #29abe2;
 }
-/*---------------------
-	Main elements
-----------------------*/
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  padding: 0;
-  background: #ffffff;
-  color: #000000;
-  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-}
-@media (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1400px) {
-  body {
-    font-size: 18px;
-  }
-}
-img {
-  max-width: 100%;
-}
-/*---------------------
-	Typography
-----------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #44575f;
-}
-a {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: #29abe2;
-  text-decoration: none;
-}
-a:hover {
-  color: #115b7b;
-  pointer: default;
+.form-group {
+  position: relative;
 }
 /*---------------------
   Navigation
@@ -329,7 +274,7 @@ a:hover {
 }
 .video-content .slogan {
   font-size: 2.8em;
-  margin-top: 80px;
+  margin-top: 130px;
   margin-bottom: 40px;
   color: #fff;
   font-weight: 300;
@@ -340,7 +285,7 @@ a:hover {
   }
 }
 .video-content .btn {
-  margin: 15px;
+  margin: 0 15px 15px;
   width: 220px;
 }
 .video-absolute {
@@ -507,71 +452,60 @@ a:hover {
   margin-right: 2px;
 }
 /*---------------------
-	Modal
+	Main elements
 ----------------------*/
-.modal-backdrop {
-  background-color: #fff;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-.modal-backdrop.in {
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-.modal-brand {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-.modal-brand .logo {
-  max-width: 80px;
-  padding: 15px 0;
-}
-.modal .close {
-  font-size: 50px;
-  font-weight: 100;
-}
-.modal-header {
-  border: none;
-  padding-bottom: 0;
-}
-.modal-header .heading {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
 }
 @media (min-width: 768px) {
-  .modal-header .heading {
-    font-size: 1.7em;
+  body {
+    font-size: 16px;
   }
 }
-.modal-full {
-  margin: 100px auto;
-  max-width: 480px;
+@media (min-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
 }
-.modal-full .modal-body {
-  padding-top: 0;
+img {
+  max-width: 100%;
 }
-.modal-full .modal-content {
-  box-shadow: none;
-  border: none;
+/*---------------------
+	Typography
+----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #44575f;
 }
-.modal-dialog {
-  width: auto;
+a {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #29abe2;
+  text-decoration: none;
 }
-.modal-footer {
-  border: none;
-  padding: 5px 15px;
-  text-align: left;
-}
-.modal-dashboard .modal-full,
-.modal-dashboard .modal-dialog {
-  max-width: 1200px;
-}
-html.lt-ie9 .ip-header {
-  display: none;
-}
-html.lt-ie9 .video-absolute {
-  display: none;
+a:hover {
+  color: #115b7b;
+  pointer: default;
 }

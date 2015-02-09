@@ -1,0 +1,67 @@
+/*---------------------
+  Navigation
+----------------------*/
+.navbar-ideas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #fff;
+  border-bottom: 1px solid @border-color;
+
+  .navbar-brand {
+		height: 65px;
+		max-width: 145px;
+		padding: 15px;
+		padding-right: 40px;
+  }
+
+  .navbar-nav {
+  	border-left: 1px solid @border-color;
+  	float: right;
+  	padding-left: 15px;
+  }
+
+  .navbar-nav>li>a {
+    line-height: 35px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #B1BEC4;
+    font-weight: 500;
+
+    &.user {
+    	color: @brand-primary;
+    	font-weight: 700;
+
+    	// User profile image
+    	img {
+    		max-width: 35px;
+    		margin-left: 10px;
+    		border-radius: 50%
+    	}
+    }
+
+    &.search {
+
+	  	i {
+	  		font-size: 1.2em;
+	  		vertical-align: sub;
+	  		margin-right: 10px;
+	  	}
+	  }
+
+    &:hover, &:focus, &:active {
+    	cursor: pointer;
+    	background: none;
+    	color: darken(@brand-primary, 30%);
+    }
+  }
+
+
+
+  .navbar-toggle { margin-top: 14px; }
+  .navbar-toggle .icon-bar { background: @brand-primary; }
+
+} // .nav-trans
