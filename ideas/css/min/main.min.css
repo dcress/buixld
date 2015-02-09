@@ -451,6 +451,20 @@ footer .footer-column ul li a:hover {
   color: #333e43;
   margin-right: 2px;
 }
+body.sub {
+  background: #F0F0F0;
+}
+#share-progress .icon-share {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+#share-progress .icon-share svg {
+  width: 41px;
+}
+#share-progress .icon-share svg path {
+  fill: #4cb3e2;
+}
 /*---------------------
 	Main elements
 ----------------------*/
