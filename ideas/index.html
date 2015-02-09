@@ -103,8 +103,8 @@
 			<div class="video-content">
 				<div class="container-sm text-center">
 					<h1 class="slogan">It's your ideas that shape a heathier world</h1>
-					<button class="btn btn-primary">Share my !dea</button>
-					<button class="btn btn-primary">Search !deas</button>
+					<button class="btn btn-primary hidden-xs">Share my !dea</button>
+					<button class="btn btn-primary" data-toggle="modal" data-target=".modal-search">Search !deas</button>
 				</div>
 			</div>
 		</section>
@@ -603,7 +603,7 @@
 </div><!-- /.modal -->
 		<div class="modal fade modal-dashboard">
 	<div class="modal-brand">
-		<img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/>
+		<!-- <img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/> -->
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
     	<span aria-hidden="true">&times;</span>
     </button>
@@ -880,7 +880,7 @@
 </div><!-- /.modal -->
 		<div class="modal fade modal-search">
 	<div class="modal-brand">
-		<img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/>
+		<!-- <img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/> -->
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
@@ -889,19 +889,41 @@
 	<div class="modal-dialog modal-full">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="heading">Search</h2>
+				<h2 class="heading sr-only">Search for Ideas</h2>
 			</div>
 
 			<div class="modal-body">
-				<form id="sign-up">
-					<div class="form-stack">
+
+				<form id="modal-search">
+					<div class="row">
 						<div class="form-group">
-							<label class="sr-only" for="logInEmailAddress">Search</label>
-							<input type="text" class="form-control input-lg" id="longInEmailAddress" placeholder="Your email address">
+							<div class="col-sm-9">
+								<label class="sr-only" for="logInEmailAddress">Search for Ideas</label>
+								<i class="form-icon icon-search"></i>
+								<input type="text" class="form-control input-lg" id="longInEmailAddress" placeholder="Search for Ideas">
+							</div>
 						</div>
-					 </div><!-- /form-stack -->
-					<a href="user-profile.html" type="submit" class="btn btn-lg btn-full btn-primary">Search</a>
+						<div class="form-group">
+							<div class="col-sm-3">
+								<button href="" type="submit" class="btn btn-lg ">Search</button>
+							</div>
+						</div>
+					</div>
 				</form>
+
+				<div class="row">
+					<div class="col-sm-4">
+						<h3 class="sub-heading">Categories</h3>
+						<ul class="">
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h3 class="sub-heading">Trending Ideas</h3>
+					</div>
+					<div class="col-sm-4">
+						<h3 class="sub-heading">Recent Ideas</h3>
+					</div>
+				</div>
 			</div>
 
 			<div class="modal-footer">
