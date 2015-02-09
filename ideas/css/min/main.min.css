@@ -468,8 +468,27 @@ body.sub {
 #challenge {
   text-align: center;
 }
+#challenge span {
+  padding: 15px;
+  display: block;
+}
+#challenge p {
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
 #challenge .btn {
-  padding: 15px 45px;
+  padding: 10px 45px;
+  font-size: 1.08em;
+  margin-top: 10px;
+}
+#challenge i {
+  display: inline-block;
+  color: #fff;
+  background: #29abe2;
+  font-size: 40px;
+  padding: 15px;
+  border-radius: 100%;
+  margin-top: -20px;
 }
 /*---------------------
 	Main elements
