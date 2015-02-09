@@ -1,0 +1,71 @@
+/*---------------------
+	Modal
+----------------------*/
+// Background modal color
+.modal-backdrop { background-color: #fff; }
+.modal-backdrop.in {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+// Modal brand and close
+.modal-brand {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20px;
+	max-width: @screen-lg-min;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	.logo {
+		max-width: 80px;
+		padding: 15px 0;
+	}
+}
+
+// Close 'x'
+.modal .close {
+	font-size: 50px;
+	font-weight: 100;
+}
+
+
+// Modal header text
+.modal-header {
+	border: none;
+	padding-bottom: 0;
+
+	.heading {
+		font-size: 1.5em;
+		@media @sm { font-size: 1.7em; }
+		margin-bottom: 15px;
+	}
+}
+
+// Modal for additional contents
+.modal-full {
+	margin: 100px auto;
+	max-width: 480px;
+
+	.modal-body { padding-top: 0; }
+	.modal-content {
+		box-shadow: none;
+		border: none;
+	}
+}
+
+// Reset bootstrap fixed wifth for modal dialog
+.modal-dialog {width: auto;}
+
+// Footer content for modals
+.modal-footer {
+	border: none;
+	padding: 5px 15px;
+	text-align: left;
+}
+
+
+.modal-full,.modal-dialog {
+	max-width: @screen-md-min;
+}

@@ -1,0 +1,9 @@
+/*---------------------
+  IE
+----------------------*/
+html.lt-ie9 .ip-header {
+  display: none;
+}
+html.lt-ie9 .video-absolute {
+  display: none;
+}

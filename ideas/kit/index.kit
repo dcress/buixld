@@ -25,17 +25,22 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"><img src="img/logo-ideas-blue.svg" alt="HCA Ideas logo"/></a>
+						<a class="navbar-brand" href="/">
+							<img src="img/logo-ideas-blue.svg" alt="HCA Ideas logo" />
+						</a>
 					</div>
 
 					<!-- Nav menu -->
 					<div class="navbar-collapse collapse">
-
-						<ul class="nav navbar-nav">
+						<ul class="nav navbar-nav pull-left">
 							<li>
-								<a class="search" data-toggle="modal" data-target=".modal-search">Search for Ideas</a>
+								<a href="#" class="search" data-toggle="modal" data-target=".modal-search">
+									<i class="icon-search"></i>Search for Ideas</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
 							<li>
-								<a class="nav-mute" data-toggle="modal" data-target=".modal-dashboard">Dashboard</a>
+								<a href="#" class="nav-mute" data-toggle="modal" data-target=".modal-dashboard">Dashboard</a>
 							</li>
 							<li>
 								<a href="#" class="user">H! Rihanna <img class="user-img" src="img/user-rihana.jpg" alt="User Profile Image"/></a>
@@ -51,12 +56,13 @@
 			<div class="video-content">
 				<div class="container-sm text-center">
 					<h1 class="slogan">It's your ideas that shape a heathier world</h1>
-					<button class="btn btn-primary">Share my !dea</button>
-					<button class="btn btn-primary">Search !deas</button>
+					<button class="btn btn-primary hidden-xs">Share my !dea</button>
+					<button class="btn btn-primary" data-toggle="modal" data-target=".modal-search">Search !deas</button>
 				</div>
 			</div>
 		</section>
 
+		<![if !IE]>
 		<!-- Home video -->
 		<section class="video-absolute">
 			<video autoplay="true" height="100%" loop="loop" onended="this.play()">
@@ -66,6 +72,7 @@
 				You need an HTML5 enabled browser to view this video.
 			</video>
 		</section>
+		<![endif]>
 
 		<section id="ip-container" class="ip-container">
 			<!-- initial header -->
