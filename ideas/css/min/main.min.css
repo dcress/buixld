@@ -189,6 +189,12 @@ footer .footer-column ul li a {
 footer .footer-column ul li a:hover {
   color: #29abe2;
 }
+#challenge {
+  text-align: center;
+}
+#challenge .btn {
+  padding: 15px 45px;
+}
 /*---------------------
 	Main elements
 ----------------------*/
@@ -204,7 +210,7 @@ body {
   -ms-text-size-adjust: 100%;
   padding: 0;
   background: #ffffff;
-  color: #000000;
+  color: black;
   font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -246,6 +252,20 @@ a {
 a:hover {
   color: #115b7b;
   pointer: default;
+}
+.heading {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.sub-heading {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 1 em;
+}
+.descriptor {
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  font-size: 1.08em;
+  color: #bbbbbb;
 }
 /*---------------------
   Navigation
