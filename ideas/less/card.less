@@ -1,7 +1,17 @@
 /*---------------------
   Card
 ----------------------*/
-#featured {.section-padding;}
+
+// Card Skin
+.card-skin(@cat) {
+	.badge        { background-color: @cat; }
+	.progress-bar { background-color: @cat; }
+	.action:hover, .action:focus { background: @cat; }
+}
+.card.cat-a { .card-skin(@cat-a); }
+.card.cat-b { .card-skin(@cat-b); }
+.card.cat-c { .card-skin(@cat-c); }
+
 
 // Card Helpers
 @card-padding: 30px;
@@ -22,23 +32,13 @@
 	padding-right: @card-padding;
 	padding-bottom: 5px;
 	margin-bottom: 30px;
+	background: white;
 }
 
-// Skin elements
-.card.cat-a {
-	.badge        { background-color: @cat-a; }
-	.progress-bar { background-color: @cat-a; }
-}
 
-.card.cat-b {
-	.badge        { background-color: @cat-b; }
-	.progress-bar { background-color: @cat-b; }
-}
 
-.card.cat-c {
-	.badge        { background-color: @cat-c; }
-	.progress-bar { background-color: @cat-c; }
-}
+
+
 
 
 // Card header
@@ -70,7 +70,7 @@
 
 // Card body
 .card-body {
-	// padding-top: 40px;
+	padding-top: 40px;
 	padding-bottom: 20px;
 
 	// Catergory
@@ -123,7 +123,7 @@
 	// Remove extra padding
 	padding: 0;
 
-	a {
+	.action {
 		// Display
 		float: left;
 
@@ -189,6 +189,7 @@
 ----------------------*/
 // Cards with no header, action or footer
 .card-basic {
+	.card-body { padding-top: 0; }
 	padding-top: 25px;
 	padding-left: 20px;
 	padding-right: 20px;
