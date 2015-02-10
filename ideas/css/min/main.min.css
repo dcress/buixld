@@ -149,23 +149,16 @@ footer .footer-column {
   min-height: 50px;
 }
 footer .footer-column:first-child {
+  text-align: center;
   padding-left: 0;
 }
 footer .footer-column:last-child {
   padding-right: 0;
 }
 footer .footer-column .icon-ideas {
+  font-size: 6em;
+  color: #29abe2;
   text-align: center;
-  float: left;
-  width: 100%;
-  margin-top: -25px;
-}
-footer .footer-column .icon-ideas svg {
-  width: 50px;
-  height: 63px;
-}
-footer .footer-column .icon-ideas svg path {
-  fill: #01B2E4;
 }
 footer .footer-column p {
   font-size: .85em;
@@ -223,7 +216,7 @@ footer .footer-column ul li a:hover {
 }
 .category-list a .sub-heading {
   margin: 0;
-  padding: 25px;
+  padding: 23px 9px;
   display: inline-block;
 }
 .form-icon {
@@ -320,11 +313,6 @@ footer .footer-column ul li a:hover {
   background-position: 47% 20px;
   background-size: cover;
 }
-@media (min-width: 1280px) {
-  .video-wrap {
-    background-image: none;
-  }
-}
 .video-content {
   display: table-cell;
   vertical-align: middle;
@@ -356,9 +344,35 @@ footer .footer-column ul li a:hover {
 /*---------------------
   Card
 ----------------------*/
-#featured {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.card.cat-a .badge {
+  background-color: #9ccd6b;
+}
+.card.cat-a .progress-bar {
+  background-color: #9ccd6b;
+}
+.card.cat-a .action:hover,
+.card.cat-a .action:focus {
+  background: #9ccd6b;
+}
+.card.cat-b .badge {
+  background-color: #f06d42;
+}
+.card.cat-b .progress-bar {
+  background-color: #f06d42;
+}
+.card.cat-b .action:hover,
+.card.cat-b .action:focus {
+  background: #f06d42;
+}
+.card.cat-c .badge {
+  background-color: #9675cd;
+}
+.card.cat-c .progress-bar {
+  background-color: #9675cd;
+}
+.card.cat-c .action:hover,
+.card.cat-c .action:focus {
+  background: #9675cd;
 }
 .card {
   border: 1px solid #e7e7e7;
@@ -368,24 +382,7 @@ footer .footer-column ul li a:hover {
   padding-right: 30px;
   padding-bottom: 5px;
   margin-bottom: 30px;
-}
-.card.cat-a .badge {
-  background-color: #9ccd6b;
-}
-.card.cat-a .progress-bar {
-  background-color: #9ccd6b;
-}
-.card.cat-b .badge {
-  background-color: #f06d42;
-}
-.card.cat-b .progress-bar {
-  background-color: #f06d42;
-}
-.card.cat-c .badge {
-  background-color: #9675cd;
-}
-.card.cat-c .progress-bar {
-  background-color: #9675cd;
+  background: white;
 }
 .card-header {
   border-bottom: 1px solid #e7e7e7;
@@ -411,6 +408,7 @@ footer .footer-column ul li a:hover {
   color: #fff;
 }
 .card-body {
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 .card-body .card-cat {
@@ -457,7 +455,7 @@ footer .footer-column ul li a:hover {
 .card-action:after {
   clear: both;
 }
-.card-action a {
+.card-action .action {
   float: left;
   padding: 15px;
   text-align: center;
@@ -465,21 +463,21 @@ footer .footer-column ul li a:hover {
   color: #999;
   border-right: 1px solid #e7e7e7;
 }
-.card-action a:nth-child(1) {
+.card-action .action:nth-child(1) {
   width: 25.3%;
 }
-.card-action a:nth-child(2) {
+.card-action .action:nth-child(2) {
   width: 44.3%;
 }
-.card-action a:nth-child(3) {
+.card-action .action:nth-child(3) {
   width: 30.3%;
 }
-.card-action a:last-child {
+.card-action .action:last-child {
   border-right: none;
 }
-.card-action a:hover,
-.card-action a:focus,
-.card-action a:active {
+.card-action .action:hover,
+.card-action .action:focus,
+.card-action .action:active {
   cursor: pointer;
   background: #90a4ad;
   text-decoration: none;
@@ -515,6 +513,9 @@ footer .footer-column ul li a:hover {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 5px;
+}
+.card-basic .card-body {
+  padding-top: 0;
 }
 .card-basic.cat-a {
   border-top: 10px solid #9ccd6b;
@@ -641,8 +642,8 @@ body.sub {
 }
 .badge {
   border-radius: 5px;
-  padding: 15px 20px;
-  font-size: 36px;
+  padding: 14px 18px;
+  font-size: 34px;
 }
 .badge.cat-a {
   background-color: #9ccd6b;
@@ -688,6 +689,14 @@ img {
 }
 .ip-header {
   display: none;
+}
+.video-absolute {
+  display: none;
+}
+#featured {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F0F0F0;
 }
 /*---------------------
 	Typography
