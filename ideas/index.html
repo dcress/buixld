@@ -168,28 +168,27 @@
 
 				<!-- Challenge section -->
 				<section id="challenge">
+	<div class="container">
 
-	<i data-icon="l"></i>
+		<i data-icon="l"></i>
 
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-			<span class="descriptor">!dea Challenge of the Month</span>
-			<p>What are ways that we can improve the patient experience upon patient discharge?</p>
-			<a class="btn btn-primary" href="">I've got an !dea</a>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<span class="descriptor">!dea Challenge of the Month</span>
+				<p>What are ways that we can improve the patient experience upon patient discharge?</p>
+				<a class="btn btn-primary" href="">I've got an !dea</a>
+			</div>
 		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4 user-info">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4 user-info">
 				<img class="user-img" src="img/user-img.png">
 				<span class="descriptor date-asked">Asked by Jan Blaufuss on 1/30/2015</span>
 			</div>
 		</div>
 
+
 	</div>
-
-
-
 </section>
 
 				<!-- Featired Ideas -->
@@ -920,33 +919,92 @@
 
 			<div class="modal-body">
 
-				<form id="modal-search">
+				<form id="modal-search-form">
 					<div class="row">
 						<div class="form-group">
-							<div class="col-sm-10">
+							<div class="col-xs-10">
 								<label class="sr-only" for="logInEmailAddress">Search for Ideas</label>
 								<input type="text" class="form-control input-blank" id="longInEmailAddress" placeholder="Search for Ideas">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-2">
-								<button href="" type="submit" class="btn btn-blank"><i class="icon-search"></i><span class="sr-only">Search</span></button>
+							<div class="col-xs-2">
+								<button href="" type="submit" class="btn btn-blank pull-right"><i class="icon-search"></i><span class="sr-only">Search</span></button>
 							</div>
 						</div>
 					</div>
 				</form>
 
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-4 search-bucket">
 						<h3 class="sub-heading">Categories</h3>
-						<ul class="">
-						</ul>
+						<div class="category-list">
+							<a href="#" class="">
+								<div class="badge cat-a">
+									<i class="icon-stats"></i>
+								</div>
+								<span class="sub-heading">Financial Impact</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-b">
+									<i class="icon-shield"></i>
+								</div>
+								<span class="sub-heading">Quality &amp; Safety</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-c">
+									<i class="icon-trophy"></i>
+								</div>
+								<span class="sub-heading">Service Excellence</span>
+							</a>
+						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 search-bucket">
 						<h3 class="sub-heading">Trending Ideas</h3>
+
+						<!-- Card basic -->
+						<div class="card card-basic cat-b">
+							<div class="card-body">
+								<span class="card-cat">Financial Impact</span>
+								<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+								<div class="user-info">
+									<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+									<span class="user-name">Rihana Racket</span>
+									<span class="user-date">October 28, 2014</span>
+								</div>
+							</div>
+						</div> <!-- /card-basic -->
+
+						<!-- Card basic -->
+						<div class="card card-basic cat-a">
+							<div class="card-body">
+								<span class="card-cat">Quality &amp; Safety</span>
+								<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+								<div class="user-info">
+									<img class="user-img img-circle" src="img/user-img.png"/>
+									<span class="user-name">Tonya Waves</span>
+									<span class="user-date">October 28, 2014</span>
+								</div>
+							</div>
+						</div> <!-- /card-basic -->
+
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 search-bucket">
 						<h3 class="sub-heading">Recent Ideas</h3>
+						<!-- Card basic -->
+						<div class="card card-basic cat-c">
+							<div class="card-body">
+								<span class="card-cat">Service Excellence</span>
+								<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+								<div class="user-info">
+									<img class="user-img img-circle" src="img/user-img.png"/>
+									<span class="user-name">Janet Tulipface</span>
+									<span class="user-date">October 28, 2014</span>
+								</div>
+							</div>
+						</div> <!-- /card-basic -->
 					</div>
 				</div>
 			</div>
@@ -962,23 +1020,20 @@
 		<!-- End -->
 		<!-- jQuery -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
+<!-- jQuery ease -->
+<script src="bower_components/jquery.easing/js/jquery.easing.min.js" type="text/javascript"></script>
 <!-- Bootstrap -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-
 <!-- Custom -->
 <script src="js/min/custom.min.js" type="text/javascript"></script>
-
 <!-- SVG fallback -->
 <script src="bower_components/svgeezy/svgeezy.min.js"></script>
-
-
-<script src="bower_components/jquery.easing/js/jquery.easing.min.js" type="text/javascript"></script>
-
+<!-- Loading animation // IE no has
 <![if !IE]>
 <script src="js/classie.js"></script>
 <script src="js/pathLoader.js"></script>
 <script src="js/main.js"></script>
 <![endif]>
+ -->
 	</body>
 </html>

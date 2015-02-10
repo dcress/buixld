@@ -59,11 +59,18 @@
 @cat-a: #9CCD6B;
 @cat-b: #F06D42;
 @cat-c: #9675CD;
-@cat-d:;
-@cat-e:;
-@cat-f:;
 
 
+// Idea image
+.badge {
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 36px;
+
+	&.cat-a { background-color: @cat-a; }
+	&.cat-b { background-color: @cat-b; }
+	&.cat-c { background-color: @cat-c; }
+}
 
 
 /*---------------------
@@ -97,6 +104,18 @@ body {
 img { max-width: 100%; }
 
 
+
+
+//
+// TURN OFF LOAD ANIMATION
+//
+// Also commented out javascript
+//
+.ip-header { display: none; }
+
+
+
+
 /*---------------------
 	Typography
 ----------------------*/
@@ -121,7 +140,8 @@ a {
 
 .sub-heading {
 	font-family: @font-family-sans-serif;
-	font-size: 1 em;
+	font-size: 1.0em;
+	font-weight: 500;
 }
 
 .descriptor {

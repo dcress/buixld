@@ -70,7 +70,7 @@
 
 // Card body
 .card-body {
-	padding-top: 40px;
+	// padding-top: 40px;
 	padding-bottom: 20px;
 
 	// Catergory
@@ -153,14 +153,11 @@
 
 	} // a
 
-	// Like icon
 	.like {
 		padding: 15px 15px 10px;
 		font-size: 24px;
 	}
-
 	.comments {}
-
 	.views {}
 }
 
@@ -184,6 +181,21 @@
 		color: darken(#B1BEC4,50%);
 		margin-right: 2px;
 	}
+}
+
+
+/*---------------------
+  Card BASIC
+----------------------*/
+// Cards with no header, action or footer
+.card-basic {
+	padding-top: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	&.cat-a { border-top: 10px solid @cat-a; }
+	&.cat-b { border-top: 10px solid @cat-b; }
+	&.cat-c { border-top: 10px solid @cat-c; }
 }
 
 
