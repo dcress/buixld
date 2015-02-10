@@ -347,7 +347,7 @@ footer .footer-column ul li a:hover {
   float: right;
   border-radius: 20px;
   background: #4cb3e2;
-  padding: 0 12px;
+  padding: 2px 12px 0;
   font-size: 0.70em;
   font-weight: 500;
   line-height: 1.5em;
