@@ -24,6 +24,10 @@
 @import 'modal.less';
 @import 'sub.less';
 
+// Sections
+@import 'challenge.less';
+
+
 // Brand
 @brand-primary: #29ABE2;
 @brand-secondary: #394950;
@@ -113,5 +117,22 @@ a {
     color: darken(@brand-primary, 25%);
     pointer: default;
   }
+}
+
+.heading {
+	font-family: @font-family-sans-serif;
+	font-size: 1.3em;
+	font-weight: 500;
+}
+
+.sub-heading {
+	font-family: @font-family-sans-serif;
+	font-size: 1 em;
+}
+
+.descriptor {
+	font-family: @font-family-sans-serif;
+	font-size: .8em;
+	color: @body-font-color-light;
 }
 
