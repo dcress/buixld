@@ -141,6 +141,18 @@
   border-color: #fff;
   background-color: #fff;
 }
+.btn-border-gray {
+  background-color: transparent;
+  border: 1px solid #e4e7e8;
+  color: #e4e7e8;
+}
+.btn-border-gray:hover,
+.btn-border-gray:active,
+.btn-border-gray:focus {
+  color: #333;
+  border-color: #e4e7e8;
+  background-color: #e4e7e8;
+}
 footer .footer-column {
   width: 20%;
   float: left;
@@ -246,10 +258,6 @@ footer .footer-column ul li a:hover {
   Navigation
 ----------------------*/
 .navbar-ideas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   margin-bottom: 0;
   border-radius: 0;
   background-color: #fff;
@@ -602,6 +610,12 @@ body.sub {
 }
 #share-progress .icon-share svg path {
   fill: #4cb3e2;
+}
+/*---------------------
+	Deatial page
+----------------------*/
+.detail-header {
+  padding-top: 30px;
 }
 #challenge {
   text-align: center;

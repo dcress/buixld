@@ -7,7 +7,7 @@
   border-radius: 2px;
   letter-spacing: initial;
 
-  .transition(.3s); 
+  .transition(.3s);
 
   // Query
   @media @sm { font-size: 1.125em }
@@ -39,7 +39,7 @@
 	border-color: none;
 
 	&:hover, &:active, &:focus {
-		background-color: transparent;	
+		background-color: transparent;
 	}
 }
 
@@ -53,6 +53,20 @@
     color: #333;
     border-color: #fff;
     background-color: #fff;
+  }
+}
+
+// Border gray button
+@btn-border-gray: #E4E7E8;
+.btn-border-gray {
+	background-color: transparent;
+  border: 1px solid @btn-border-gray;
+  color: @btn-border-gray;
+
+	&:hover, &:active, &:focus {
+    color: #333;
+    border-color: @btn-border-gray;
+    background-color: @btn-border-gray;
   }
 }
 
