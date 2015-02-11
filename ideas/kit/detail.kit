@@ -8,7 +8,7 @@
 	<!-- Head -->
 	<!-- @import ../includes/head.kit -->
 
-	<body class="detail">
+	<body class="detail cat-a">
 	<!--[if lt IE 7]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -16,9 +16,34 @@
 		<!-- Nav -->
 		<!-- @import ../includes/navigation.kit -->
 
+		<!-- $cardIcon = a -->
+		<!-- $cardPercent = 50 -->
+
 		<section class="detail-header">
 			<div class="container-md">
-				<a href="index.html">Back to search results</a>
+
+				<!-- back -->
+				<a href="index.html" class="clearfix">Back to search results</a>
+
+				<!-- badge -->
+				<div class="badge badge-lg">
+					<i data-icon="<!-- $cardIcon -->"></i>
+				</div>
+
+				<!-- title -->
+				<div class="detail-title">
+					<header>
+						<h2 class="section-heading">Mobile Alert Messaging System</h2>
+					</header>
+
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="<!-- $cardPercent -->" aria-valuemin="0" aria-valuemax="100" style="width: <!-- $cardPercent -->%">
+							<span class="sr-only"><!-- $cardPercent -->% Complete</span>
+				  	</div>
+					</div>
+					<p><span class="percent"><!-- $cardPercent -->%</span> backed</p>
+				</div>
+
 			</div>
 		</section>
 
