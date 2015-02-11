@@ -1,202 +1,566 @@
 /*---------------------
   Card
 ----------------------*/
-
-// Card Skin
-.card-skin(@cat) {
-	.badge        { background-color: @cat; }
-	.progress-bar { background-color: @cat; }
-	.action:hover, .action:focus { background: @cat; }
+#featured {
+	.section-padding;
+	background: #F0F0F0;
 }
-.card.cat-a { .card-skin(@cat-a); }
-.card.cat-b { .card-skin(@cat-b); }
-.card.cat-c { .card-skin(@cat-c); }
-
 
 // Card Helpers
 @card-padding: 30px;
 
-.card-flush-hor() {
-	margin-left: -@card-padding;
-	margin-right: -@card-padding;
-	padding-left: @card-padding;
-	padding-right: @card-padding;
+.trending-header {
+	float: left;
+	width: 100%;
+	margin: 10px 0 30px;
+
+	h2 {
+		float: left;
+		padding: 0;
+		margin: 0 6px 0 0;
+
+		span {
+			color: @brand-action;
+		}
+
+	}
+	select {
+		width: auto;
+		background: transparent;
+		border: none;
+		color: @brand-action;
+		font-size: 1.3em;
+		font-weight: 500;
+		font-family: @font-family-sans-serif;
+		-webkit-appearance: none;
+		float: left;
+		padding: 2px 25px 0 0;
+		background: url(../../img/icon_down_chev.svg) no-repeat right center;
+		background-size: 26px auto;
+		outline: none;
+
+		&:active {
+			outline: none;
+		}
+		&:visited {
+			outline: none;
+		}
+
+		option {
+			background-color: red;
+		}
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+
+		.card-list-view,
+		.card-grid-view {
+			width: 26px;
+			height: 26px;
+			color: @gray-med;
+			float: left;
+			cursor: pointer;
+			.transition(.2s);
+			margin-left: 10px;
+
+			&:hover {
+				color: @brand-primary;
+			}
+
+			i {
+				font-size: 1.2em;
+			}
+		}
+		.active {
+			color: @brand-primary;
+		}
+	}
 }
 
-// Card base
-.card {
-	border: 1px solid @border-color;
-	border-radius: 4px;
-	padding-top: @card-padding;
-	padding-left: @card-padding;
-	padding-right: @card-padding;
-	padding-bottom: 5px;
-	margin-bottom: 30px;
-	background: white;
-}
-
-
-
-
-
-
-
-// Card header
-.card-header {
-	border-bottom: 1px solid @border-color;
-	.card-flush-hor();
-
-	// Idea image
-	.badge {
-		border-radius: 5px;
-		margin-bottom: -40px;
-		padding: 15px 20px;
-		font-size: 36px;
+// Grid card layout
+.card-grid {
+	.card-flush-hor() {
+		margin-left: -@card-padding;
+		margin-right: -@card-padding;
+		padding-left: @card-padding;
+		padding-right: @card-padding;
 	}
 
-	.status {
+	// Card base
+	.card {
+		border: 1px solid @border-color;
+		border-radius: 4px;
+		padding-top: @card-padding;
+		padding-left: @card-padding;
+		padding-right: @card-padding;
+		padding-bottom: 5px;
+		margin-bottom: 30px;
+		background: #fff;
+	}
+
+	// Skin elements
+	.card.cat-a {
+		.badge        { background-color: @cat-a; }
+		.progress-bar { background-color: @cat-a; }
+	}
+
+	.card.cat-b {
+		.badge        { background-color: @cat-b; }
+		.progress-bar { background-color: @cat-b; }
+	}
+
+	.card.cat-c {
+		.badge        { background-color: @cat-c; }
+		.progress-bar { background-color: @cat-c; }
+	}
+
+
+	// Card header
+	.card-header {
+		border-bottom: 1px solid @border-color;
+		.card-flush-hor();
+
+		// Idea image
+		.badge {
+			border-radius: 5px;
+			margin-bottom: -40px;
+			padding: 15px 20px;
+			font-size: 36px;
+			position: relative;
+
+			.in-action-dot {
+				border-radius: 50%;
+				width: 13px;
+				height: 13px;
+				border: 2px solid #fff;
+				background: @brand-action;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: -5px 0 0 -5px;
+
+				display: none;
+			}
+		}
+
+		.status {
+			float: right;
+			border-radius: 20px;
+			background: @brand-action;
+			padding: 2px 12px 0;
+
+			font-size: 0.70em;
+			font-weight: 500;
+			line-height: 1.5em;
+			color: #fff;
+
+			display: none;
+		}
+	}
+
+	// Show in-action indicators
+	.in-action .card-header .badge .in-action-dot,
+	.in-action .card-header .status {
+		display: block;
+	}
+
+
+	// Card body
+	.card-body {
+		padding-top: 40px;
+		padding-bottom: 20px;
+
+		// Catergory
+		.card-cat {
+			font-size: 1.08em;
+			font-weight: 500;
+			color: #A1B2BA;
+		}
+
+		// Title of Idea
+		.card-title {
+			font-size: 1.3em;
+			font-weight: 300;
+			color: #394950;
+			margin-top: 7px;
+			margin-bottom: 20px;
+		}
+	}
+
+	// Card user info
+	.card-body .user-info {
+
+		.user-img {
+			max-width: 30px;
+			margin-right: 5px;
+		}
+
+		.user-name {
+			font-size: 0.75em;
+			font-weight: 500;
+			color: #B1BEC4;
+			margin-right: 5px;
+		}
+
+		.user-date {
+			font-size: 0.75em;
+			font-weight: 500;
+			color: lighten(#B1BEC4, 15%);
+		}
+
+	}
+
+	// Action itesm in card
+	.card-action {
+		border-top: 1px solid @border-color;
+		border-bottom: 1px solid @border-color;
+		// Make border flush
+		.card-flush-hor();
+		.clearfix();
+		// Remove extra padding
+		padding: 0;
+
+		a {
+			// Display
+			float: left;
+
+			// Widths
+			&:nth-child(1) { width: 25.3%; }
+			&:nth-child(2) { width: 44.3%; }
+			&:nth-child(3) { width: 30.3%; }
+
+			// Format
+			text-align: center;
+			font-size: 0.8em;
+			color: #999;
+			height: 60px;
+
+			// Hooplah
+			border-right: 1px solid @border-color;
+			&:last-child { border-right: none; }
+
+			&:hover {
+				cursor: pointer;
+				text-decoration: none;
+				color: #fff;
+			}
+
+		} // a
+
+		// Like icon
+		.like {
+			padding: 16px 15px 10px;
+			font-size: 1.4em;
+		}
+
+		.comments {
+			padding: 21px 0;
+
+			span {
+				margin: 4px 0 0 9px;
+			}
+			i.o {
+				font-size: 1.8em;
+				vertical-align: baseline-middle;
+				vertical-align: -webkit-baseline-middle;
+
+				&:before {
+					line-height: 0;
+				}
+			}
+		}
+		.views {
+			padding: 20px 0px;
+
+			i.p {
+				font-size: 1.8em;
+				vertical-align: text-top;
+
+				&:before {
+					line-height: 0;
+				}
+			}
+			span {
+				margin: 5px 0 0;
+			}
+		}
+
+		
+		
+		
+	}
+
+	// Hover states for icons
+	.cat-a .card-action a:hover {background: @cat-a}
+	.cat-b .card-action a:hover {background: @cat-b}
+	.cat-c .card-action a:hover {background: @cat-c}
+
+
+	// Card footer
+	.card-footer {
+		padding-top: 10px;
+		font-weight: 500;
+		font-size: 0.75em;
+		color: #B1BEC4;
+		margin: 0;
+
+		.progress {
+			border-radius: 20px;
+			margin-bottom: 5px;
+			margin-top: 10px;
+			height: 15px;
+		}
+
+		.percent {
+			font-weight: 700;
+			color: darken(#B1BEC4,50%);
+			margin-right: 2px;
+		}
+	}
+}
+
+
+// List card layout
+.card-list {
+
+	// Override BS styles
+	.col-sm-6, 
+	.col-md-4 {
+		width: 100%;
+	}
+	.card-flush-hor() {
+		margin-left: -@card-padding;
+		margin-right: -@card-padding;
+		padding-left: @card-padding;
+		padding-right: @card-padding;
+	}
+
+	// Card base
+	.card {
+		border: 1px solid @border-color;
+		border-radius: 0 0 4px 4px;
+		margin-bottom: 20px;
+		background: #fff; 
+		float: left;
+		width: 100%;
+
+		> div {
+			float: left;
+		}
+	}
+
+	// Skin elements
+	.card.cat-a {
+		border-top: 3px solid @cat-a;
+
+		.badge        { background-color: @cat-a; }
+		.progress-bar { background-color: @cat-a; }
+	}
+
+	.card.cat-b {
+		border-top: 3px solid @cat-b;
+
+		.badge        { background-color: @cat-b; }
+		.progress-bar { background-color: @cat-b; }
+	}
+
+	.card.cat-c {
+		border-top: 3px solid @cat-c;
+
+		.badge        { background-color: @cat-c; }
+		.progress-bar { background-color: @cat-c; }
+	}
+
+
+	// Card header
+	.card-header {
+		margin: 12px 20px 12px 18px;
+
+		// Idea image
+		.badge {
+			border-radius: 5px;
+			padding: 15px 20px;
+			font-size: 36px;
+			position: relative;
+
+			.in-action-dot {
+				border-radius: 50%;
+				width: 13px;
+				height: 13px;
+				border: 2px solid #fff;
+				background: @brand-action;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: -5px 0 0 -5px;
+
+				display: none;
+			}
+		}
+
+		.status {
+			float: right;
+			border-radius: 20px;
+			background: @brand-action;
+			padding: 2px 12px 0;
+
+			font-size: 0.70em;
+			font-weight: 500;
+			line-height: 1.5em;
+			color: #fff;
+
+			display: none;
+		}
+	}
+	.status-list {
 		float: right;
 		border-radius: 20px;
 		background: @brand-action;
-		padding: 0 12px;
+		padding: 2px 12px 0;
 
 		font-size: 0.70em;
 		font-weight: 500;
 		line-height: 1.5em;
 		color: #fff;
-	}
-}
 
-
-// Card body
-.card-body {
-	padding-top: 40px;
-	padding-bottom: 20px;
-
-	// Catergory
-	.card-cat {
-		font-size: 1.08em;
-		font-weight: 500;
-		color: #A1B2BA;
+		display: none;
 	}
 
-	// Title of Idea
-	.card-title {
-		font-size: 1.3em;
-		font-weight: 300;
-		color: #394950;
-		margin-top: 7px;
-		margin-bottom: 20px;
-	}
-}
-
-// Card user info
-.card-body .user-info {
-
-	.user-img {
-		max-width: 30px;
-		margin-right: 5px;
+	// Show in-action indicators
+	.in-action .card-header .badge .in-action-dot,
+	.in-action .status-list {
+		display: block;
 	}
 
-	.user-name {
-		font-size: 0.75em;
-		font-weight: 500;
-		color: #B1BEC4;
-		margin-right: 5px;
-	}
 
-	.user-date {
-		font-size: 0.75em;
-		font-weight: 500;
-		color: lighten(#B1BEC4, 15%);
-	}
+	// Card body
+	.card-body {
+		margin-top: 20px;
 
-}
-
-// Action itesm in card
-.card-action {
-	border-top: 1px solid @border-color;
-	border-bottom: 1px solid @border-color;
-	// Make border flush
-	.card-flush-hor();
-	.clearfix();
-	// Remove extra padding
-	padding: 0;
-
-	.action {
-		// Display
-		float: left;
-
-		// Widths
-		&:nth-child(1) { width: 25.3%; }
-		&:nth-child(2) { width: 44.3%; }
-		&:nth-child(3) { width: 30.3%; }
-
-		// Format
-		padding: 15px;
-		text-align: center;
-		font-size: 0.8em;
-		color: #999;
-
-		// Hooplah
-		border-right: 1px solid @border-color;
-		&:last-child { border-right: none; }
-
-		// Hover
-		@hover-bg: #90A4AD;
-		&:hover, &:focus, &:active {
-			cursor: pointer;
-			background: @hover-bg;
-			text-decoration: none;
-			color: #fff;
+		// Catergory
+		.card-cat {
+			font-size: .8em;
+			font-weight: 500;
+			color: #A1B2BA;
 		}
 
-	} // a
-
-	.like {
-		padding: 15px 15px 10px;
-		font-size: 24px;
-	}
-	.comments {}
-	.views {}
-}
-
-// Card footer
-.card-footer {
-	padding-top: 10px;
-	font-weight: 500;
-	font-size: 0.75em;
-	color: #B1BEC4;
-	margin: 0;
-
-	.progress {
-		border-radius: 20px;
-		margin-bottom: 5px;
-		margin-top: 10px;
-		height: 15px;
+		// Title of Idea
+		.card-title {
+			font-size: 1.3em;
+			font-weight: 300;
+			color: #394950;
+			margin-top: 4px;
+		}
 	}
 
-	.percent {
-		font-weight: 700;
-		color: darken(#B1BEC4,50%);
-		margin-right: 2px;
+	// Card user info
+	.card-body .user-info {
+		float: right;
+		padding: 18px 20px 0;
+
+		.user-img {
+			max-width: 30px;
+			margin-right: 5px;
+		}
+
+		.user-name {
+			font-size: 0.75em;
+			font-weight: 500;
+			color: #B1BEC4;
+			margin-right: 5px;
+			display: none;
+		}
+
+		.user-date {
+			font-size: 0.75em;
+			font-weight: 500;
+			color: lighten(#B1BEC4, 15%);
+			display: none;
+		}
 	}
-}
+	.card-body .user-info-left {
+		float: left;
+	}
 
+	// Action itesm in card
+	.card-action {
+		// Make border flush
+		// Remove extra padding
+		padding: 0;
+		width: 22%;
 
-/*---------------------
-  Card BASIC
-----------------------*/
-// Cards with no header, action or footer
-.card-basic {
-	.card-body { padding-top: 0; }
-	padding-top: 25px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 5px;
-	&.cat-a { border-top: 10px solid @cat-a; }
-	&.cat-b { border-top: 10px solid @cat-b; }
-	&.cat-c { border-top: 10px solid @cat-c; }
+		a {
+			// Display
+			float: left;
+			width: 33%;
+
+			// Format
+			text-align: center;
+			font-size: 0.8em;
+			color: #999;
+			padding: 34px 0 24px;
+
+			&:hover {
+				cursor: pointer;
+				text-decoration: none;
+				color: #fff;
+			}
+
+			span {
+				display: none;
+			}
+			i {
+				font-size: 2.2em;
+			}
+
+		} // a
+
+		// Like icon
+		
+
+		
+		
+		
+	}
+
+	// Hover states for icons
+	.cat-a .card-action a:hover {background: @cat-a}
+	.cat-b .card-action a:hover {background: @cat-b}
+	.cat-c .card-action a:hover {background: @cat-c}
+
+	// Card footer
+	.card .card-footer {
+		margin: 29px 0 0;
+		padding: 0 20px 0 0;
+		font-weight: 500;
+		font-size: 0.75em;
+		color: #B1BEC4;
+		float: right;
+		width: 16%;
+
+		.progress {
+			border-radius: 20px;
+			margin-bottom: 5px;
+			margin-top: 10px;
+			height: 9px;
+
+		}
+		> p {
+			text-align: center;
+		}
+		.percent {
+			font-weight: 700;
+			color: darken(#B1BEC4,50%);
+			margin-right: 2px;
+			text-indent: center;
+
+		}
+	}
 }
 
 

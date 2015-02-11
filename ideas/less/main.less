@@ -55,6 +55,9 @@
 // Border
 @border-color: #e7e7e7;
 
+// Shades
+@gray-med: #999;
+
 // Category
 @cat-a: #9CCD6B;
 @cat-b: #F06D42;
@@ -133,6 +136,12 @@ a {
   &:hover {
     color: darken(@brand-primary, 25%);
     pointer: default;
+  }
+  &:active {
+    outline: none !important;
+  }
+  &:visited {
+    outline: none !important;
   }
 }
 

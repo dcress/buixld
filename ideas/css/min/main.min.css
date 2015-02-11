@@ -344,37 +344,81 @@ footer .footer-column ul li a:hover {
 /*---------------------
   Card
 ----------------------*/
-.card.cat-a .badge {
-  background-color: #9ccd6b;
+#featured {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F0F0F0;
 }
-.card.cat-a .progress-bar {
-  background-color: #9ccd6b;
+.trending-header {
+  float: left;
+  width: 100%;
+  margin: 10px 0 30px;
 }
-.card.cat-a .action:hover,
-.card.cat-a .action:focus {
-  background: #9ccd6b;
+.trending-header h2 {
+  float: left;
+  padding: 0;
+  margin: 0 6px 0 0;
 }
-.card.cat-b .badge {
-  background-color: #f06d42;
+.trending-header h2 span {
+  color: #4cb3e2;
 }
-.card.cat-b .progress-bar {
-  background-color: #f06d42;
+.trending-header select {
+  width: auto;
+  background: transparent;
+  border: none;
+  color: #4cb3e2;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  float: left;
+  padding: 2px 25px 0 0;
+  background: url(../../img/icon_down_chev.svg) no-repeat right center;
+  background-size: 26px auto;
+  outline: none;
 }
-.card.cat-b .action:hover,
-.card.cat-b .action:focus {
-  background: #f06d42;
+.trending-header select:active {
+  outline: none;
 }
-.card.cat-c .badge {
-  background-color: #9675cd;
+.trending-header select:visited {
+  outline: none;
 }
-.card.cat-c .progress-bar {
-  background-color: #9675cd;
+.trending-header select option {
+  background-color: red;
 }
-.card.cat-c .action:hover,
-.card.cat-c .action:focus {
-  background: #9675cd;
+.trending-header .left {
+  float: left;
 }
-.card {
+.trending-header .right {
+  float: right;
+}
+.trending-header .right .card-list-view,
+.trending-header .right .card-grid-view {
+  width: 26px;
+  height: 26px;
+  color: #999999;
+  float: left;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+}
+.trending-header .right .card-list-view:hover,
+.trending-header .right .card-grid-view:hover {
+  color: #29abe2;
+}
+.trending-header .right .card-list-view i,
+.trending-header .right .card-grid-view i {
+  font-size: 1.2em;
+}
+.trending-header .right .active {
+  color: #29abe2;
+}
+.card-grid .card {
   border: 1px solid #e7e7e7;
   border-radius: 4px;
   padding-top: 30px;
@@ -382,63 +426,99 @@ footer .footer-column ul li a:hover {
   padding-right: 30px;
   padding-bottom: 5px;
   margin-bottom: 30px;
-  background: white;
+  background: #fff;
 }
-.card-header {
+.card-grid .card.cat-a .badge {
+  background-color: #9ccd6b;
+}
+.card-grid .card.cat-a .progress-bar {
+  background-color: #9ccd6b;
+}
+.card-grid .card.cat-b .badge {
+  background-color: #f06d42;
+}
+.card-grid .card.cat-b .progress-bar {
+  background-color: #f06d42;
+}
+.card-grid .card.cat-c .badge {
+  background-color: #9675cd;
+}
+.card-grid .card.cat-c .progress-bar {
+  background-color: #9675cd;
+}
+.card-grid .card-header {
   border-bottom: 1px solid #e7e7e7;
   margin-left: -30px;
   margin-right: -30px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.card-header .badge {
+.card-grid .card-header .badge {
   border-radius: 5px;
   margin-bottom: -40px;
   padding: 15px 20px;
   font-size: 36px;
+  position: relative;
 }
-.card-header .status {
+.card-grid .card-header .badge .in-action-dot {
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  background: #4cb3e2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -5px 0 0 -5px;
+  display: none;
+}
+.card-grid .card-header .status {
   float: right;
   border-radius: 20px;
   background: #4cb3e2;
-  padding: 0 12px;
+  padding: 2px 12px 0;
   font-size: 0.70em;
   font-weight: 500;
   line-height: 1.5em;
   color: #fff;
+  display: none;
 }
-.card-body {
+.card-grid .in-action .card-header .badge .in-action-dot,
+.card-grid .in-action .card-header .status {
+  display: block;
+}
+.card-grid .card-body {
   padding-top: 40px;
   padding-bottom: 20px;
 }
-.card-body .card-cat {
+.card-grid .card-body .card-cat {
   font-size: 1.08em;
   font-weight: 500;
   color: #A1B2BA;
 }
-.card-body .card-title {
+.card-grid .card-body .card-title {
   font-size: 1.3em;
   font-weight: 300;
   color: #394950;
   margin-top: 7px;
   margin-bottom: 20px;
 }
-.card-body .user-info .user-img {
+.card-grid .card-body .user-info .user-img {
   max-width: 30px;
   margin-right: 5px;
 }
-.card-body .user-info .user-name {
+.card-grid .card-body .user-info .user-name {
   font-size: 0.75em;
   font-weight: 500;
   color: #B1BEC4;
   margin-right: 5px;
 }
-.card-body .user-info .user-date {
+.card-grid .card-body .user-info .user-date {
   font-size: 0.75em;
   font-weight: 500;
   color: #dde2e5;
 }
-.card-action {
+.card-grid .card-action {
   border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
   margin-left: -30px;
@@ -447,84 +527,279 @@ footer .footer-column ul li a:hover {
   padding-right: 30px;
   padding: 0;
 }
-.card-action:before,
-.card-action:after {
+.card-grid .card-action:before,
+.card-grid .card-action:after {
   content: " ";
   display: table;
 }
-.card-action:after {
+.card-grid .card-action:after {
   clear: both;
 }
-.card-action .action {
+.card-grid .card-action a {
   float: left;
-  padding: 15px;
   text-align: center;
   font-size: 0.8em;
   color: #999;
+  height: 60px;
   border-right: 1px solid #e7e7e7;
 }
-.card-action .action:nth-child(1) {
+.card-grid .card-action a:nth-child(1) {
   width: 25.3%;
 }
-.card-action .action:nth-child(2) {
+.card-grid .card-action a:nth-child(2) {
   width: 44.3%;
 }
-.card-action .action:nth-child(3) {
+.card-grid .card-action a:nth-child(3) {
   width: 30.3%;
 }
-.card-action .action:last-child {
+.card-grid .card-action a:last-child {
   border-right: none;
 }
-.card-action .action:hover,
-.card-action .action:focus,
-.card-action .action:active {
+.card-grid .card-action a:hover {
   cursor: pointer;
-  background: #90a4ad;
   text-decoration: none;
   color: #fff;
 }
-.card-action .like {
-  padding: 15px 15px 10px;
-  font-size: 24px;
+.card-grid .card-action .like {
+  padding: 16px 15px 10px;
+  font-size: 1.4em;
 }
-.card-footer {
+.card-grid .card-action .comments {
+  padding: 21px 0;
+}
+.card-grid .card-action .comments span {
+  margin: 4px 0 0 9px;
+}
+.card-grid .card-action .comments i.o {
+  font-size: 1.8em;
+  vertical-align: baseline-middle;
+  vertical-align: -webkit-baseline-middle;
+}
+.card-grid .card-action .comments i.o:before {
+  line-height: 0;
+}
+.card-grid .card-action .views {
+  padding: 20px 0px;
+}
+.card-grid .card-action .views i.p {
+  font-size: 1.8em;
+  vertical-align: text-top;
+}
+.card-grid .card-action .views i.p:before {
+  line-height: 0;
+}
+.card-grid .card-action .views span {
+  margin: 5px 0 0;
+}
+.card-grid .cat-a .card-action a:hover {
+  background: #9ccd6b;
+}
+.card-grid .cat-b .card-action a:hover {
+  background: #f06d42;
+}
+.card-grid .cat-c .card-action a:hover {
+  background: #9675cd;
+}
+.card-grid .card-footer {
   padding-top: 10px;
   font-weight: 500;
   font-size: 0.75em;
   color: #B1BEC4;
   margin: 0;
 }
-.card-footer .progress {
+.card-grid .card-footer .progress {
   border-radius: 20px;
   margin-bottom: 5px;
   margin-top: 10px;
   height: 15px;
 }
-.card-footer .percent {
+.card-grid .card-footer .percent {
   font-weight: 700;
   color: #333e43;
   margin-right: 2px;
 }
-/*---------------------
-  Card BASIC
-----------------------*/
-.card-basic {
-  padding-top: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 5px;
+.card-list .col-sm-6,
+.card-list .col-md-4 {
+  width: 100%;
 }
-.card-basic .card-body {
-  padding-top: 0;
+.card-list .card {
+  border: 1px solid #e7e7e7;
+  border-radius: 0 0 4px 4px;
+  margin-bottom: 20px;
+  background: #fff;
+  float: left;
+  width: 100%;
 }
-.card-basic.cat-a {
-  border-top: 10px solid #9ccd6b;
+.card-list .card > div {
+  float: left;
 }
-.card-basic.cat-b {
-  border-top: 10px solid #f06d42;
+.card-list .card.cat-a {
+  border-top: 3px solid #9ccd6b;
 }
-.card-basic.cat-c {
-  border-top: 10px solid #9675cd;
+.card-list .card.cat-a .badge {
+  background-color: #9ccd6b;
+}
+.card-list .card.cat-a .progress-bar {
+  background-color: #9ccd6b;
+}
+.card-list .card.cat-b {
+  border-top: 3px solid #f06d42;
+}
+.card-list .card.cat-b .badge {
+  background-color: #f06d42;
+}
+.card-list .card.cat-b .progress-bar {
+  background-color: #f06d42;
+}
+.card-list .card.cat-c {
+  border-top: 3px solid #9675cd;
+}
+.card-list .card.cat-c .badge {
+  background-color: #9675cd;
+}
+.card-list .card.cat-c .progress-bar {
+  background-color: #9675cd;
+}
+.card-list .card-header {
+  margin: 12px 20px 12px 18px;
+}
+.card-list .card-header .badge {
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 36px;
+  position: relative;
+}
+.card-list .card-header .badge .in-action-dot {
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  background: #4cb3e2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -5px 0 0 -5px;
+  display: none;
+}
+.card-list .card-header .status {
+  float: right;
+  border-radius: 20px;
+  background: #4cb3e2;
+  padding: 2px 12px 0;
+  font-size: 0.70em;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #fff;
+  display: none;
+}
+.card-list .status-list {
+  float: right;
+  border-radius: 20px;
+  background: #4cb3e2;
+  padding: 2px 12px 0;
+  font-size: 0.70em;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #fff;
+  display: none;
+}
+.card-list .in-action .card-header .badge .in-action-dot,
+.card-list .in-action .status-list {
+  display: block;
+}
+.card-list .card-body {
+  margin-top: 20px;
+}
+.card-list .card-body .card-cat {
+  font-size: .8em;
+  font-weight: 500;
+  color: #A1B2BA;
+}
+.card-list .card-body .card-title {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #394950;
+  margin-top: 4px;
+}
+.card-list .card-body .user-info {
+  float: right;
+  padding: 18px 20px 0;
+}
+.card-list .card-body .user-info .user-img {
+  max-width: 30px;
+  margin-right: 5px;
+}
+.card-list .card-body .user-info .user-name {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #B1BEC4;
+  margin-right: 5px;
+  display: none;
+}
+.card-list .card-body .user-info .user-date {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #dde2e5;
+  display: none;
+}
+.card-list .card-body .user-info-left {
+  float: left;
+}
+.card-list .card-action {
+  padding: 0;
+  width: 22%;
+}
+.card-list .card-action a {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: 0.8em;
+  color: #999;
+  padding: 34px 0 24px;
+}
+.card-list .card-action a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.card-list .card-action a span {
+  display: none;
+}
+.card-list .card-action a i {
+  font-size: 2.2em;
+}
+.card-list .cat-a .card-action a:hover {
+  background: #9ccd6b;
+}
+.card-list .cat-b .card-action a:hover {
+  background: #f06d42;
+}
+.card-list .cat-c .card-action a:hover {
+  background: #9675cd;
+}
+.card-list .card .card-footer {
+  margin: 29px 0 0;
+  padding: 0 20px 0 0;
+  font-weight: 500;
+  font-size: 0.75em;
+  color: #B1BEC4;
+  float: right;
+  width: 16%;
+}
+.card-list .card .card-footer .progress {
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  height: 9px;
+}
+.card-list .card .card-footer > p {
+  text-align: center;
+}
+.card-list .card .card-footer .percent {
+  font-weight: 700;
+  color: #333e43;
+  margin-right: 2px;
+  text-indent: center;
 }
 /*---------------------
 	Modal
@@ -722,6 +997,12 @@ a {
 a:hover {
   color: #115b7b;
   pointer: default;
+}
+a:active {
+  outline: none !important;
+}
+a:visited {
+  outline: none !important;
 }
 .heading {
   font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial, sans-serif;
