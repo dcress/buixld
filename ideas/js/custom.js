@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 });
 
-svgeezy.init('nocheck', 'png');
+// svgeezy.init('nocheck', 'png');
 
 
 /*---------------------
@@ -34,4 +34,18 @@ $(function() {
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
   });
+});
+
+// Toggle card and list view
+$(document).ready(function(){
+	$('.card-list-view').click(function(){
+		$('#featured').removeClass('card-grid').addClass('card-list');
+		$('.card-toggle').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.card-grid-view').click(function(){
+		$('#featured').removeClass('card-list').addClass('card-grid');
+		$('.card-toggle').removeClass('active');
+		$(this).addClass('active');
+	});
 });
