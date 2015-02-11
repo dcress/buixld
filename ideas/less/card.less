@@ -5,10 +5,10 @@
 	.section-padding;
 	background: #F0F0F0;
 }
-
-// Card Helpers
 @card-padding: 30px;
 
+
+// Section
 .trending-header {
 	float: left;
 	width: 100%;
@@ -80,16 +80,16 @@
 	}
 }
 
-// Grid card layout
-.card-grid {
-	.card-flush-hor() {
-		margin-left: -@card-padding;
-		margin-right: -@card-padding;
-		padding-left: @card-padding;
-		padding-right: @card-padding;
-	}
+// Card mixin
+.card-flush-hor() {
+	margin-left: -@card-padding;
+	margin-right: -@card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+}
 
-	// Card base
+
+.card-base(){
 	.card {
 		border: 1px solid @border-color;
 		border-radius: 4px;
@@ -100,23 +100,6 @@
 		margin-bottom: 30px;
 		background: #fff;
 	}
-
-	// Skin elements
-	.card.cat-a {
-		.badge        { background-color: @cat-a; }
-		.progress-bar { background-color: @cat-a; }
-	}
-
-	.card.cat-b {
-		.badge        { background-color: @cat-b; }
-		.progress-bar { background-color: @cat-b; }
-	}
-
-	.card.cat-c {
-		.badge        { background-color: @cat-c; }
-		.progress-bar { background-color: @cat-c; }
-	}
-
 
 	// Card header
 	.card-header {
@@ -162,13 +145,6 @@
 		}
 	}
 
-	// Show in-action indicators
-	.in-action .card-header .badge .in-action-dot,
-	.in-action .card-header .status {
-		display: block;
-	}
-
-
 	// Card body
 	.card-body {
 		padding-top: 40px;
@@ -211,7 +187,6 @@
 			font-weight: 500;
 			color: lighten(#B1BEC4, 15%);
 		}
-
 	}
 
 	// Action itesm in card
@@ -288,17 +263,7 @@
 				margin: 5px 0 0;
 			}
 		}
-
-		
-		
-		
 	}
-
-	// Hover states for icons
-	.cat-a .card-action a:hover {background: @cat-a}
-	.cat-b .card-action a:hover {background: @cat-b}
-	.cat-c .card-action a:hover {background: @cat-c}
-
 
 	// Card footer
 	.card-footer {
@@ -321,6 +286,14 @@
 			margin-right: 2px;
 		}
 	}
+} // Card base
+.card-base();
+
+
+// Show in-action indicators
+.in-action .card-header .badge .in-action-dot,
+.in-action .card-header .status {
+	display: block;
 }
 
 
@@ -328,7 +301,7 @@
 .card-list {
 
 	// Override BS styles
-	.col-sm-6, 
+	.col-sm-6,
 	.col-md-4 {
 		width: 100%;
 	}
@@ -344,7 +317,7 @@
 		border: 1px solid @border-color;
 		border-radius: 0 0 4px 4px;
 		margin-bottom: 20px;
-		background: #fff; 
+		background: #fff;
 		float: left;
 		width: 100%;
 
@@ -357,22 +330,22 @@
 	.card.cat-a {
 		border-top: 3px solid @cat-a;
 
-		.badge        { background-color: @cat-a; }
-		.progress-bar { background-color: @cat-a; }
+		// .badge        { background-color: @cat-a; }
+		// .progress-bar { background-color: @cat-a; }
 	}
 
 	.card.cat-b {
 		border-top: 3px solid @cat-b;
 
-		.badge        { background-color: @cat-b; }
-		.progress-bar { background-color: @cat-b; }
+		// .badge        { background-color: @cat-b; }
+		// .progress-bar { background-color: @cat-b; }
 	}
 
 	.card.cat-c {
 		border-top: 3px solid @cat-c;
 
-		.badge        { background-color: @cat-c; }
-		.progress-bar { background-color: @cat-c; }
+		// .badge        { background-color: @cat-c; }
+		// .progress-bar { background-color: @cat-c; }
 	}
 
 
@@ -520,12 +493,6 @@
 
 		} // a
 
-		// Like icon
-		
-
-		
-		
-		
 	}
 
 	// Hover states for icons
@@ -561,6 +528,13 @@
 
 		}
 	}
+} // end card list
+
+
+// Card Basic
+.card-basic {
+	padding-top: 0;
+	.card-body { padding-top: 25px; }
 }
 
 
