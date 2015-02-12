@@ -100,10 +100,10 @@
 
 				
 		<section class="detail-header">
-			<div class="container-md">
+			<div class="container">
 
 				<!-- back -->
-				<a href="index.html" class="clearfix">Back to search results</a>
+				<a class="back" href="index.html" class="clearfix">&lt; Back to search results</a>
 
 				<!-- badge -->
 				<div class="badge badge-lg">
@@ -117,13 +117,128 @@
 					</header>
 
 					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-							<span class="sr-only">50% Complete</span>
+						<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+							<span class="sr-only">70% Complete</span>
 				  	</div>
 					</div>
-					<p><span class="percent">50%</span> backed</p>
+					<p><span class="percent">70%</span> backed</p>
 				</div>
 
+			</div>
+		</section>
+
+		<section class="detail-content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Main -->
+					<div class="col-md-8">
+						<section class="detail-img space-btm" style="background-image:url(img/bg-man.jpg)">
+						</section>
+					</div>
+
+					<!-- Aside -->
+					<div class="col-md-4">
+
+						<!-- User card -->
+						<div class="card-grid">
+							<div class="card card-user">
+	<!-- DEV: Toggle "In Action" indicators with the "in-action" class || Dev: Category styles are determined by the "cat-a/cat-b/cat-c/etc..." class.  -->
+	<div class="card-header">
+		<img src="img/user-rihana.jpg"/>
+	</div>
+	<div class="card-body">
+		<div class="user-info-left">
+			<div class="status-list">
+			</div>
+			<span class="card-cat">February 2, 2015</span>
+			<h3 class="card-title">Rihana Fenty</h3>
+		</div>
+		<div class="user-info">
+			<span class="user-name">Senior UX Designer</span>
+			<span class="user-date">
+				<a href="#">HCA IT&amp;S</a>
+			</span>
+		</div>
+	</div>
+</div> <!-- /card -->
+						</div>
+
+						<!-- Action thing -->
+						<div class="detail-action card-grid">
+							<div class="card">
+								<div class="card-action">
+									<a href="#" class="like">
+										<i data-icon="d" class="d"></i>
+									</a>
+									<a href="#" class="comments">
+										<i data-icon="o" class="o"></i>
+										<span>43 comments</span>
+									</a>
+									<a href="#" class="views">
+										<i data-icon="p" class="p"></i>
+										<span>187 views</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card -->
+						<div class="card-grid">
+																																			<div class="cat-b">
+	<div class="card in-action">
+		<!-- DEV: Toggle "In Action" indicators with the "in-action" class || Dev: Category styles are determined by the "cat-a/cat-b/cat-c/etc..." class.  -->
+		<div class="card-header">
+			<div class="badge">
+				<div class="in-action-dot"></div>
+				<i data-icon="b"></i>
+			</div>
+			<div class="status">
+				<span>In Action</span>
+			</div>
+		</div>
+		<div class="card-body">
+			<div class="user-info-left">
+				<div class="status-list">
+					<!-- <span>In Action</span> -->
+				</div>
+				<span class="card-cat">Quality and Safety</span>
+				<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			</div>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a href="#" class="like">
+				<i data-icon="d" class="d"></i>
+			</a>
+			<a href="#" class="comments">
+				<i data-icon="o" class="o"></i>
+				<span>43 comments</span>
+			</a>
+			<a href="#" class="views">
+				<i data-icon="p" class="p"></i>
+				<span>187 views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+			<span class="sr-only">10% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">10%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+						</div>
+
+					</div> <!-- /aside -->
+
+				</div>
 			</div>
 		</section>
 
@@ -167,6 +282,15 @@
 						<li>
 							<a href="#click">Search Ideas</a>
 						</li>
+						<li>
+							<a href="#click">Press Room</a>
+						</li>
+						<li>
+							<a href="#click">Investor Relations</a>
+						</li>
+						<li>
+							<a href="#click">Contact Us</a>
+						</li>
 					</ul>
 				</div><!-- /.footer-column -->
 
@@ -207,6 +331,129 @@
 		</div>
 	</div>
 </footer> <!-- /footer -->
+
+		<div class="modal fade modal-search">
+	<div class="modal-brand">
+		<!-- <img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/> -->
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="modal-dialog modal-full">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="heading sr-only">Search for Ideas</h2>
+			</div>
+
+			<div class="modal-body">
+
+				<form id="modal-search-form">
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-10">
+								<label class="sr-only" for="logInEmailAddress">Search for Ideas</label>
+								<input type="text" class="form-control input-blank" id="longInEmailAddress" placeholder="Search for Ideas">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-2">
+								<button href="" type="submit" class="btn btn-blank pull-right"><i class="icon-search"></i><span class="sr-only">Search</span></button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-4 search-bucket">
+						<h3 class="sub-heading">Categories</h3>
+						<div class="category-list">
+							<a href="#" class="">
+								<div class="badge cat-a">
+									<i class="icon-stats"></i>
+								</div>
+								<span class="sub-heading">Financial Impact</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-b">
+									<i class="icon-shield"></i>
+								</div>
+								<span class="sub-heading">Quality &amp; Safety</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-c">
+									<i class="icon-trophy"></i>
+								</div>
+								<span class="sub-heading">Service Excellence</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 search-bucket card-grid">
+						<h3 class="sub-heading">Trending Ideas</h3>
+
+						<!-- Card basic -->
+												<div class="cat-a">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+						<!-- Card basic -->
+												<div class="cat-b">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+
+					<div class="col-sm-4 search-bucket card-grid">
+						<h3 class="sub-heading">Recent Ideas</h3>
+
+						<!-- Card basic -->
+												<div class="cat-c">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+			</div>
+
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 		<!-- End -->
 		<!-- jQuery -->

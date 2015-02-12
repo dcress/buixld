@@ -17,13 +17,13 @@
 		<!-- @import ../includes/navigation.kit -->
 
 		<!-- $cardIcon = a -->
-		<!-- $cardPercent = 50 -->
+		<!-- $cardPercent = 70 -->
 
 		<section class="detail-header">
-			<div class="container-md">
+			<div class="container">
 
 				<!-- back -->
-				<a href="index.html" class="clearfix">Back to search results</a>
+				<a class="back" href="index.html" class="clearfix">&lt; Back to search results</a>
 
 				<!-- badge -->
 				<div class="badge badge-lg">
@@ -47,8 +47,62 @@
 			</div>
 		</section>
 
+		<section class="detail-content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Main -->
+					<div class="col-md-8">
+						<section class="detail-img space-btm" style="background-image:url(img/bg-man.jpg)">
+						</section>
+					</div>
+
+					<!-- Aside -->
+					<div class="col-md-4">
+
+						<!-- User card -->
+						<div class="card-grid">
+							<!-- @import ../includes/card-user.kit -->
+						</div>
+
+						<!-- Action thing -->
+						<div class="detail-action card-grid">
+							<div class="card">
+								<div class="card-action">
+									<a href="#" class="like">
+										<i data-icon="d" class="d"></i>
+									</a>
+									<a href="#" class="comments">
+										<i data-icon="o" class="o"></i>
+										<span>43 comments</span>
+									</a>
+									<a href="#" class="views">
+										<i data-icon="p" class="p"></i>
+										<span>187 views</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card -->
+						<div class="card-grid">
+							<!-- $cardCat = cat-b -->
+							<!-- $cardAction = in-action -->
+							<!-- $cardIcon = b -->
+							<!-- $cardPercent = 10 -->
+							<!-- @import ../includes/card.kit -->
+						</div>
+
+					</div> <!-- /aside -->
+
+				</div>
+			</div>
+		</section>
+
 		<!-- Footer -->
 		<!-- @import ../includes/footer.kit -->
+
+		<!-- @import ../includes/modal-search.kit -->
 
 		<!-- End -->
 		<!-- @import ../includes/end.kit -->

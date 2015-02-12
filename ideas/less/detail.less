@@ -1,29 +1,62 @@
 /*---------------------
 	Deatial page
 ----------------------*/
-
 .detail-header {
-	padding-top: 30px;
+	position: relative;
+	margin: 0;
+	z-index: -1;
+
 	font-weight: 500;
 	font-size: 0.75em;
-	color: #B1BEC4;
-	margin: 0;
+	color: #fff;
+
+	@media @sm {
+		z-index: 0;
+		color: #B1BEC4;
+	}
+
+	.back {
+		color: #fff;
+		@media @sm { color: @link-color; }
+		display: block;
+		padding-top: 26px;
+		padding-bottom: 12px;
+	}
 
 	.section-heading {
 		font-weight: 100;
 		font-size: 2.8em;
+		margin-top: 10px;
+		margin-bottom: 15px;
+
+		// Colors!
+		color: #fff;
+		@media @sm { color: initial; }
+
 	}
 
 	.badge {
-		font-size: 24px;
-		padding: 10px 12px;
-		margin-top: 10px;
-		float: none;
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		top: 0;
+
 		@media @sm {
-			float: left;
-			margin-top: 20px;
-			margin-right: 20px;
+			bottom: -25px;
+			right: initial;
+			top: initial;
+			z-index: 0;
+			display: inline-block;
+			border-radius: 5px;
+			padding: 30px;
+			font-size: 64px;
+			line-height: 0.6em;
 		}
+
+		// float: left;
+		// margin-top: 20px;
+		// margin-right: 20px;
+		// margin-bottom: -30px;
 	}
 
 	.progress { margin-bottom: 5px; }
@@ -35,4 +68,38 @@
 		padding-left: 3px;
 	}
 
+	.detail-title {
+		margin: 0;
+		@media @sm { margin-left: 140px; }
+	}
+
 }
+
+
+.detail-content {
+	padding: 60px 0;
+	background: #F0F0F0;
+}
+
+.detail-img {
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	border-radius: 3px;
+}
+
+
+
+.detail-action .card {
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: none;
+	border-bottom: none;
+
+}
+
+
+
+
+
