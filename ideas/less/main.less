@@ -23,9 +23,11 @@
 @import 'card.less';
 @import 'modal.less';
 @import 'sub.less';
+@import 'detail.less';
 
 // Sections
 @import 'challenge.less';
+@import 'how-ideas-work.less';
 
 
 // Brand
@@ -64,7 +66,7 @@
 @cat-c: #9675CD;
 
 
-// Idea image
+// Badge
 .badge {
 	border-radius: 5px;
 	padding: 14px 18px;
@@ -75,6 +77,36 @@
 	&.cat-c { background-color: @cat-c; }
 }
 
+.badge-lg {
+	border-radius: 5px;
+	padding: 25px 30px;
+	font-size: 64px;
+}
+
+
+// Progress bar
+.progress {
+	border-radius: 25px;
+	box-shadow: 0 0;
+	height: 12px;
+
+	.progress-bar {
+		box-shadow: 0 0;
+		border-radius: 25px;
+	}
+}
+
+// Colorer
+.colorer(@color){
+	.progress-bar { background-color: @color; }
+	.badge        { background-color: @color; }
+	.card-action a:hover { background-color: @color; }
+	.card-basic { border-top: 8px solid @color; }
+}
+
+.cat-a { .colorer(@cat-a); }
+.cat-b { .colorer(@cat-b); }
+.cat-c { .colorer(@cat-c); }
 
 /*---------------------
 	Main elements
@@ -116,10 +148,7 @@ img { max-width: 100%; }
 //
 .ip-header { display: none; }
 .video-absolute { display: none; }
-#featured {
-	.section-padding;
-	background: #F0F0F0;
-}
+
 
 
 
@@ -133,14 +162,9 @@ a {
   color: @brand-primary;
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     color: darken(@brand-primary, 25%);
     pointer: default;
-  }
-  &:active {
-    outline: none !important;
-  }
-  &:visited {
     outline: none !important;
   }
 }
@@ -161,5 +185,6 @@ a {
 	font-family: @font-family-sans-serif;
 	font-size: .8em;
 	color: @body-font-color-light;
+	display: block;
 }
 

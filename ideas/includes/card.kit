@@ -1,17 +1,23 @@
-<!-- Card -->
-<div class="col-sm-6 col-md-4">
-	<div class="card <!-- $cardCat -->">
+<div class="col-sm-6 col-md-4 <!-- $cardCat -->">
+	<div class="card <!-- $cardAction -->">
+		<!-- DEV: Toggle "In Action" indicators with the "in-action" class || Dev: Category styles are determined by the "cat-a/cat-b/cat-c/etc..." class.  -->
 		<div class="card-header">
 			<div class="badge">
-				<i data-icon="<!-- $cardIcon -->"></i>
+				<div class="in-action-dot"></div>
+				<i data-icon="a"></i>
 			</div>
 			<div class="status">
 				<span>In Action</span>
 			</div>
 		</div>
 		<div class="card-body">
-			<span class="card-cat">Quality and Safety</span>
-			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info-left">
+				<div class="status-list">
+					<span>In Action</span>
+				</div>
+				<span class="card-cat">Quality and Safety</span>
+				<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			</div>
 			<div class="user-info">
 				<img class="user-img" src="img/user-img.png"/>
 				<span class="user-name">Penelope Rothkowitz</span>
@@ -19,20 +25,22 @@
 			</div>
 		</div>
 		<div class="card-action">
-			<a href="#" class="action like">
-				<i data-icon="d"></i>
+			<a href="#" class="like">
+				<i data-icon="d" class="d"></i>
 			</a>
-			<a href="#" class="action comments">
+			<a href="#" class="comments">
+				<i data-icon="o" class="o"></i>
 				<span>43 comments</span>
 			</a>
-			<a href="#" class="action views">
+			<a href="#" class="views">
+				<i data-icon="p" class="p"></i>
 				<span>187 views</span>
 			</a>
 		</div>
 		<div class="card-footer">
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="<!-- $cardPercent -->" aria-valuemin="0" aria-valuemax="100" style="width: <!-- $cardPercent -->%">
-				<span class="sr-only"><!-- $cardPercent -->% Complete</span>
+			<span class="sr-only"><!-- $cardPercent -->% Complete</span>
 			  </div>
 			</div>
 			<p><span class="percent"><!-- $cardPercent -->%</span> backed</p>
