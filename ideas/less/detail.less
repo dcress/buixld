@@ -1,6 +1,8 @@
 /*---------------------
 	Deatial page
 ----------------------*/
+
+// Detai; header
 .detail-header {
 	position: relative;
 	margin: 0;
@@ -15,14 +17,18 @@
 		color: #B1BEC4;
 	}
 
+	// Back
 	.back {
-		color: #fff;
-		@media @sm { color: @link-color; }
-		display: block;
+
+		a {
+			color: #fff;
+			@media @sm { color: @link-color; }
+		}
 		padding-top: 26px;
 		padding-bottom: 12px;
 	}
 
+	// Type
 	.section-heading {
 		font-weight: 100;
 		font-size: 2.8em;
@@ -32,9 +38,9 @@
 		// Colors!
 		color: #fff;
 		@media @sm { color: initial; }
-
 	}
 
+	// Big badge
 	.badge {
 		position: absolute;
 		z-index: -1;
@@ -52,15 +58,10 @@
 			font-size: 64px;
 			line-height: 0.6em;
 		}
-
-		// float: left;
-		// margin-top: 20px;
-		// margin-right: 20px;
-		// margin-bottom: -30px;
 	}
 
-	.progress { margin-bottom: 5px; }
 
+	.progress { margin-bottom: 5px; }
 	.percent {
 		font-weight: 700;
 		color: darken(#B1BEC4,50%);
@@ -76,11 +77,15 @@
 }
 
 
+// Main content for detail page
+@detail-bg: #F0F0F0;
 .detail-content {
 	padding: 60px 0;
-	background: #F0F0F0;
+	background: @detail-bg;
 }
 
+
+// Detail image
 .detail-img {
 	height: 300px;
 	width: 100%;
@@ -90,14 +95,61 @@
 }
 
 
+// Detail information with tabs
+.detail-info {
 
+	margin-bottom: 30px;
+
+	// Header
+	header h2 { margin-bottom: 5px; }
+	header .descriptor { font-style: italic; }
+
+	.tab-info {
+		margin-top: 20px;
+	}
+
+	.tab-pane {
+		margin-top: 20px;
+	}
+
+	.tab-pane p {
+		color: @gray-med;
+		font-size: 0.9em;
+		font-weight: 500;
+	}
+
+	.tab-pane .tags { margin-top: 20px; }
+	.tab-pane .btn {
+		padding: 12px 20px;
+		font-size: 0.8em;
+		font-weight: 500;
+		background: darken(@detail-bg, 8%);
+		color: darken(@detail-bg, 25%);
+		margin: 10px 10px 0 0;
+	}
+
+	// Delete - just was annoying me
+	.well .sub-heading { margin-top: 5px;}
+	.well p { margin-bottom: 5px;}
+
+}
+
+
+
+// Action in aside
 .detail-action .card {
 	padding-top: 0;
 	padding-bottom: 0;
 	border-top: none;
 	border-bottom: none;
 
+	.card-action .words {
+		display: none;
+		@media @lg { display: inline; }
+	}
 }
+
+
 
 
 

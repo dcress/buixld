@@ -197,6 +197,12 @@
 		// Remove extra padding
 		padding: 0;
 
+		.words {
+			display: none;
+			@media @lg {
+				display: inline;}
+		}
+
 		a {
 			// Display
 			float: left;
@@ -204,8 +210,8 @@
 
 			// Widths
 			&:nth-child(1) { width: 25.3%; }
-			&:nth-child(2) { width: 44.3%; }
-			&:nth-child(3) { width: 30.3%; }
+			&:nth-child(2) { width: 41.3%; }
+			&:nth-child(3) { width: 33.3%; }
 
 			// Format
 			text-align: center;
@@ -233,10 +239,10 @@
 		}
 
 		.comments {
-			padding: 21px 0;
+			padding: 20px 0;
 
 			span {
-				margin: 4px 0 0 9px;
+				margin: 3px 0 0 5px;
 			}
 			i.o {
 				font-size: 1.8em;
@@ -262,6 +268,7 @@
 			span {
 				margin: 5px 0 0;
 			}
+			.number { margin-left: 4px; }
 		}
 	}
 
