@@ -15,6 +15,7 @@
 {% include modals/sc-reset-password-modal3.html %}
 {% include modals/sc-reset-password-modal3.html %}
 {% include modals/healthcheck-modal.html %}
+{% include modals/prototype-disclaimer-modal.html %}
 
 
 <!-- EMULATION BORDERS - Activated WHEN USER IS PROXYING FOR ANOTHER USER. these can be included anywhere on page. -->
@@ -23,6 +24,15 @@
 
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navigation-main">
+
+  <div class="prototype-disclaimer">
+    <a href="#" data-toggle="modal" data-target=".prototype-disclaimer-modal">
+      <i class="fa fa-exclamation-triangle"></i>
+      <span class="disclaimer-text">Prototype Alpha Disclaimer</span>
+    </a>
+  </div>
+
+
     <div class="navbar-fixed-holder">
 
             <!-- triggers the panel -->
@@ -39,6 +49,8 @@
         <!-- <a class="navbar-brand pull-left" href="{{ page.base_url }}home/"><img src="{{ page.base_url }}img/mho-logo-sm-retina.png" alt="MyHealthONE logo" width="200" height="29"></a> -->
         <!-- <button class="btn" data-toggle="modal" data-target="#default-modal">Modal Test</button> -->
         {% endif %}
+
+
         <div class="navbar-tools" id="tools">
           {% if page.url contains '/support-console' %}
             <div class="panel healthcheck-icon">
@@ -308,6 +320,18 @@
                         </ul>
                     </div>
                 </li>
+
+                <div class="disclaimer-menu-text">
+
+                  <i class="fa fa-exclamation-triangle"></i><span>Prototype Alpha Disclaimer</span>
+
+                  <p>Please note that this is a PROTOTYPE alpha version of the MyHealthOne portal which is
+                  still undergoing final development & testing before the official release.</p>
+
+                  <p>This PROTOTYPE version’s content is flat file based and not live data. The content/copy/imagery it for placement only and should be used referenced to as such. Many features, functions, interactions, layout, colors, icons, verbiage are not guarantee of what the final product will have.  Therefore, all PROTOTYPE features and all content found on it are provided on an “as is” and “as available” basis. MyHealthOne does not give any guarantees, whether express or implied, as to the suitability or usability of the
+                  portal, its software or any of its content. </p>
+
+                </div>
 
 
 
