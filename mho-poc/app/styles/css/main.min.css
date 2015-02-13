@@ -680,126 +680,6 @@ footer a:hover {
     display: none;
   }
 }
-.ce-occurrences .crm-date-calendar {
-  margin: 0 auto;
-}
-.ce-screenings .carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  font-size: 44px;
-  color: #000;
-}
-.ce-screenings .carousel-control.left,
-.ce-screenings .carousel-control.right {
-  background-image: none;
-  width: 0;
-  top: 25px;
-}
-.ce-screenings .radio {
-  padding-left: 0;
-}
-.ce-screenings .radio input[type="radio"] {
-  display: block;
-  float: none;
-  margin: 20px auto 0;
-}
-.ce-screenings .radio input[type="radio"]:hover {
-  cursor: pointer;
-}
-.ce-screenings .carousel-control.left {
-  left: -60px;
-}
-.ce-screenings .carousel-control.right {
-  right: -30px;
-}
-#ce-reg-form {
-  position: relative;
-  width: 100%;
-}
-#ce-reg-form fieldset {
-  border: 0 none;
-  width: 100%;
-  top: 0;
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-#ce-reg-form fieldset:not(:first-of-type) {
-  display: none;
-}
-.add-guest {
-  display: block;
-  margin-bottom: 15px;
-}
-.add-phone,
-.removePhone,
-.removeGuest {
-  width: 100%;
-  margin-bottom: 15px;
-}
-.add-phone i,
-.removePhone i,
-.removeGuest i {
-  margin-right: 5px;
-}
-.ce-form-notify {
-  color: #999999;
-  height: 2.7em;
-  vertical-align: middle;
-}
-.datefield {
-  border: 1px solid #ccc;
-  background: #FFF;
-  border-radius: 4px;
-  display: block;
-}
-.datefield * {
-  display: inline-block;
-}
-.datefield input {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: 1.7em;
-}
-.datefield input#year {
-  width: 2.5em;
-}
-.datefield input:focus {
-  outline: none;
-}
-.ce-checkout-date-calendar .crm-date-calendar {
-  margin: 0 auto;
-}
-.ce-checkout-cost {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.ce-cost-review i {
-  margin-right: 5px;
-}
-.ce-checkout-help {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: #999999;
-  padding: 10px 0;
-}
-.ce-checkout-additional-info {
-  color: #555555;
-}
-.ce-checkout-additional-info .crm-sub-heading {
-  color: #999999;
-}
-.ce-checkout-location p {
-  margin: 0;
-}
-.crm-confirmation-number .crm-sub-heading {
-  padding: 0;
-  margin: 0;
-}
 .ce-result-title h3 {
   margin-top: 0;
 }
@@ -1104,6 +984,126 @@ label {
   .crm-aside-cta {
     display: none ;
   }
+}
+.ce-occurrences .crm-date-calendar {
+  margin: 0 auto;
+}
+.ce-screenings .carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 44px;
+  color: #000;
+}
+.ce-screenings .carousel-control.left,
+.ce-screenings .carousel-control.right {
+  background-image: none;
+  width: 0;
+  top: 25px;
+}
+.ce-screenings .radio {
+  padding-left: 0;
+}
+.ce-screenings .radio input[type="radio"] {
+  display: block;
+  float: none;
+  margin: 20px auto 0;
+}
+.ce-screenings .radio input[type="radio"]:hover {
+  cursor: pointer;
+}
+.ce-screenings .carousel-control.left {
+  left: -60px;
+}
+.ce-screenings .carousel-control.right {
+  right: -30px;
+}
+#ce-reg-form {
+  position: relative;
+  width: 100%;
+}
+#ce-reg-form fieldset {
+  border: 0 none;
+  width: 100%;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+#ce-reg-form fieldset:not(:first-of-type) {
+  display: none;
+}
+.add-guest {
+  display: block;
+  margin-bottom: 15px;
+}
+.add-phone,
+.removePhone,
+.removeGuest {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.add-phone i,
+.removePhone i,
+.removeGuest i {
+  margin-right: 5px;
+}
+.ce-form-notify {
+  color: #999999;
+  height: 2.7em;
+  vertical-align: middle;
+}
+.datefield {
+  border: 1px solid #ccc;
+  background: #FFF;
+  border-radius: 4px;
+  display: block;
+}
+.datefield * {
+  display: inline-block;
+}
+.datefield input {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 1.7em;
+}
+.datefield input#year {
+  width: 2.5em;
+}
+.datefield input:focus {
+  outline: none;
+}
+.ce-checkout-date-calendar .crm-date-calendar {
+  margin: 0 auto;
+}
+.ce-checkout-cost {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.ce-cost-review i {
+  margin-right: 5px;
+}
+.ce-checkout-help {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #999999;
+  padding: 10px 0;
+}
+.ce-checkout-additional-info {
+  color: #555555;
+}
+.ce-checkout-additional-info .crm-sub-heading {
+  color: #999999;
+}
+.ce-checkout-location p {
+  margin: 0;
+}
+.crm-confirmation-number .crm-sub-heading {
+  padding: 0;
+  margin: 0;
 }
 a:hover {
   cursor: pointer;
@@ -9420,6 +9420,18 @@ i.disabled {
   left: 90%;
   margin-left: -20px;
 }
+#accordion .disclaimer-menu-text {
+  color: #555555;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+#accordion .disclaimer-menu-text i {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
 #navigation-main {
   border-left: 1px solid #444;
 }
@@ -9439,6 +9451,23 @@ i.disabled {
 }
 #navigation-main.headroom--unpinned {
   -webkit-transform: translateY(-100%);
+}
+#navigation-main .prototype-disclaimer {
+  position: absolute;
+  z-index: 1;
+  margin-left: 40%;
+  color: #6aa3d5;
+}
+#navigation-main .prototype-disclaimer a {
+  color: #6aa3d5;
+}
+#navigation-main .prototype-disclaimer a:hover {
+  text-decoration: none;
+}
+#navigation-main .prototype-disclaimer i {
+  padding-right: 5px;
+  line-height: 32px;
+  color: #6aa3d5;
 }
 #navigation-main .navbar-tools {
   float: right;
@@ -9652,6 +9681,9 @@ i.disabled {
 @media (max-width: 768px) {
   #navigation-main .navbar-tools {
     margin-right: 20px;
+  }
+  .prototype-disclaimer .disclaimer-text {
+    display: none;
   }
 }
 .navbar {
@@ -9873,6 +9905,12 @@ body.main-nav-open .menu-slider {
 }
 #accordion .panel-heading a:hover i {
   border-color: #FFFFFF;
+}
+.prototype-disclaimer-modal .modal-body {
+  padding: 25px;
+}
+.prototype-disclaimer-modal i.fa-exclamation-triangle {
+  padding-right: 5px;
 }
 /*-----------------------------------
   ------- Dashboard Menu Styles ------
