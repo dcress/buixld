@@ -7,6 +7,17 @@
 	* Version: v1.0
   *
 */
+body.docs section > header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body.docs section > header:after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 50px;
+  background-color: #29abe2;
+}
 /*---------------------
 	Reset
 ----------------------*/
@@ -359,7 +370,7 @@ footer .footer-column ul li a:hover {
 }
 .navbar-ideas .navbar-brand {
   height: 65px;
-  max-width: 145px;
+  max-width: 160px;
   padding: 15px;
   padding-right: 40px;
 }
@@ -367,6 +378,9 @@ footer .footer-column ul li a:hover {
   border-left: 1px solid #e7e7e7;
   float: right;
   padding-left: 15px;
+}
+.navbar-ideas .nav-search {
+  padding-right: 15px;
 }
 .navbar-ideas .navbar-nav > li > a {
   line-height: 40px;
@@ -406,7 +420,7 @@ footer .footer-column ul li a:hover {
 ----------------------*/
 .video-wrap {
   display: table;
-  height: 70%;
+  height: 80%;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -418,7 +432,7 @@ footer .footer-column ul li a:hover {
 .video-content {
   display: table-cell;
   vertical-align: middle;
-  background: rgba(9, 45, 58, 0.4);
+  background: rgba(9, 45, 58, 0.2);
 }
 .video-content .slogan {
   font-size: 2.8em;
@@ -1015,7 +1029,7 @@ body.sub {
 }
 @media (min-width: 768px) {
   .detail-header .section-heading {
-    color: initial;
+    color: #44575f;
   }
 }
 .detail-header .badge {
@@ -1026,9 +1040,9 @@ body.sub {
 }
 @media (min-width: 768px) {
   .detail-header .badge {
-    bottom: -25px;
-    right: initial;
-    top: initial;
+    bottom: -18px;
+    right: auto;
+    top: auto;
     z-index: 0;
     display: inline-block;
     border-radius: 5px;
@@ -1059,10 +1073,12 @@ body.sub {
   background: #f0f0f0;
 }
 .detail-img {
-  height: 300px;
+  max-height: 350px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.detail-img img {
   width: 100%;
-  background-size: cover;
-  background-position: center center;
   border-radius: 3px;
 }
 .detail-info {

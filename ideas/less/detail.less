@@ -37,7 +37,7 @@
 
 		// Colors!
 		color: #fff;
-		@media @sm { color: initial; }
+		@media @sm { color: @font-heading-color; }
 	}
 
 	// Big badge
@@ -48,9 +48,9 @@
 		top: 0;
 
 		@media @sm {
-			bottom: -25px;
-			right: initial;
-			top: initial;
+			bottom: -18px;
+			right: auto;
+			top: auto;
 			z-index: 0;
 			display: inline-block;
 			border-radius: 5px;
@@ -87,11 +87,13 @@
 
 // Detail image
 .detail-img {
-	height: 300px;
-	width: 100%;
-	background-size: cover;
-	background-position: center center;
+	max-height: 350px;
 	border-radius: 3px;
+	overflow: hidden;
+	img {
+		width: 100%;
+		border-radius: 3px;
+	}
 }
 
 

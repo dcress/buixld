@@ -8,9 +8,6 @@
 	background: #fff;
 }
 
-.ip-header h1 {
-	margin: 0;
-}
 
 .ip-logo,
 .ip-loader {
@@ -144,7 +141,6 @@
 }
 
 /* Content animations */
-.loaded .ip-main h2,
 .loaded .ip-main .browser,
 .loaded .ip-main .browser .box,
 .loaded .codrops-demos {
