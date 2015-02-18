@@ -2,32 +2,66 @@
 	Deatial page
 ----------------------*/
 
+// Detai; header
 .detail-header {
-	padding-top: 30px;
+	position: relative;
+	margin: 0;
+	z-index: -1;
+
 	font-weight: 500;
 	font-size: 0.75em;
-	color: #B1BEC4;
-	margin: 0;
+	color: #fff;
 
+	@media @sm {
+		z-index: 0;
+		color: #B1BEC4;
+	}
+
+	// Back
+	.back {
+
+		a {
+			color: #fff;
+			@media @sm { color: @link-color; }
+		}
+		padding-top: 26px;
+		padding-bottom: 12px;
+	}
+
+	// Type
 	.section-heading {
 		font-weight: 100;
 		font-size: 2.8em;
+		margin-top: 10px;
+		margin-bottom: 15px;
+
+		// Colors!
+		color: #fff;
+		@media @sm { color: initial; }
 	}
 
+	// Big badge
 	.badge {
-		font-size: 24px;
-		padding: 10px 12px;
-		margin-top: 10px;
-		float: none;
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		top: 0;
+
 		@media @sm {
-			float: left;
-			margin-top: 20px;
-			margin-right: 20px;
+			bottom: -25px;
+			right: initial;
+			top: initial;
+			z-index: 0;
+			display: inline-block;
+			border-radius: 5px;
+			padding: 30px;
+			font-size: 64px;
+			line-height: 0.6em;
 		}
 	}
 
-	.progress { margin-bottom: 5px; }
 
+	.progress { margin-bottom: 5px; }
 	.percent {
 		font-weight: 700;
 		color: darken(#B1BEC4,50%);
@@ -35,4 +69,89 @@
 		padding-left: 3px;
 	}
 
+	.detail-title {
+		margin: 0;
+		@media @sm { margin-left: 140px; }
+	}
+
 }
+
+
+// Main content for detail page
+@detail-bg: #F0F0F0;
+.detail-content {
+	padding: 60px 0;
+	background: @detail-bg;
+}
+
+
+// Detail image
+.detail-img {
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	border-radius: 3px;
+}
+
+
+// Detail information with tabs
+.detail-info {
+
+	margin-bottom: 30px;
+
+	// Header
+	header h2 { margin-bottom: 5px; }
+	header .descriptor { font-style: italic; }
+
+	.tab-info {
+		margin-top: 20px;
+	}
+
+	.tab-pane {
+		margin-top: 20px;
+	}
+
+	.tab-pane p {
+		color: @gray-med;
+		font-size: 0.9em;
+		font-weight: 500;
+	}
+
+	.tab-pane .tags { margin-top: 20px; }
+	.tab-pane .btn {
+		padding: 12px 20px;
+		font-size: 0.8em;
+		font-weight: 500;
+		background: darken(@detail-bg, 8%);
+		color: darken(@detail-bg, 25%);
+		margin: 10px 10px 0 0;
+	}
+
+	// Delete - just was annoying me
+	.well .sub-heading { margin-top: 5px;}
+	.well p { margin-bottom: 5px;}
+
+}
+
+
+
+// Action in aside
+.detail-action .card {
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: none;
+	border-bottom: none;
+
+	.card-action .words {
+		display: none;
+		@media @lg { display: inline; }
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+/*---------------------
+	//tabs.less
+----------------------*/
+.tab-blank {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	> li {
+		display: inline-block;
+		padding: 10px 0;
+		margin-right: 30px;
+		margin-bottom: 10px;
+
+		&.active {
+			text-decoration: none;
+			border-bottom: 1px solid @link-color;
+
+			a {
+				color: @link-color;
+				text-decoration: none;
+			}
+		}
+
+		> a {
+			color: @gray-med;
+			&:hover {
+				text-decoration: none;
+				color: @link-color;
+			}
+		}
+	}
+
+	.tab-pane { margin-top: 20px; }
+}

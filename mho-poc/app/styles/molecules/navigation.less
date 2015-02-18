@@ -1,5 +1,20 @@
 // Top Navbar - overrides of BS3
 
+
+#accordion .disclaimer-menu-text {
+  color: @gray;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  i {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    border: none;
+  }
+}
+
 #navigation-main {
     // Tool Icons in Navigation bar
     border-left: 1px solid #444;
@@ -21,6 +36,26 @@
     }
     &.headroom--unpinned {
         -webkit-transform: translateY(-100%);
+    }
+
+    .prototype-disclaimer {
+      position: absolute;
+      z-index: 1;
+      margin-left: 40%;
+      color: lighten(@brand-primary, 10%);
+
+      a {
+        color: lighten(@brand-primary, 10%);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      i {
+        padding-right: 5px;
+        line-height: 32px;
+        color: lighten(@brand-primary, 10%);
+      }
     }
 
     .navbar-tools {
@@ -214,6 +249,13 @@
 
     #navigation-main .navbar-tools {
         margin-right: 20px;
+    }
+
+    #navigation-main .prototype-disclaimer {
+      margin-left: 30%;
+      .disclaimer-text {
+        display: none;
+      }
     }
 
 }
@@ -482,7 +524,17 @@ body.main-nav-open .menu-slider {
     }
 }
 
+//modals
+//
+.prototype-disclaimer-modal {
+  .modal-body {
+    padding: 25px;
+  }
 
+  i.fa-exclamation-triangle {
+    padding-right: 5px;
+  }
+}
 
 
 
