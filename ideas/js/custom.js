@@ -52,15 +52,15 @@ $(document).ready(function(){
 
 
 
+
+
 /*---------------------
   Flexslider stuff
 ----------------------*/
 $(window).load(function() {
     $('.flexslider').flexslider({
-    	animation: 'fade',
-      controlsContainer: '.flexslider',
-    	controlNav: true,
-			directionNav: false,
+    	prevText: "",
+    	nextText: "",
     });
   });
 
