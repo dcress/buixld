@@ -9767,7 +9767,7 @@ body.main-nav-open .navbar-default.navbar-fixed-top {
 .menu-slider {
   background: #2c2c2e;
   position: fixed;
-  overflow-x: scroll;
+  overflow-x: hidden;
   width: 55px;
   height: 100%;
   top: 0;
