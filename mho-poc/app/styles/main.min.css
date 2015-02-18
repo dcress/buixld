@@ -9446,6 +9446,18 @@ i.disabled {
   left: 90%;
   margin-left: -20px;
 }
+#accordion .disclaimer-menu-text {
+  color: #555555;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+#accordion .disclaimer-menu-text i {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
 #navigation-main {
   border-left: 1px solid #444;
 }
@@ -9465,6 +9477,23 @@ i.disabled {
 }
 #navigation-main.headroom--unpinned {
   -webkit-transform: translateY(-100%);
+}
+#navigation-main .prototype-disclaimer {
+  position: absolute;
+  z-index: 1;
+  margin-left: 40%;
+  color: #6aa3d5;
+}
+#navigation-main .prototype-disclaimer a {
+  color: #6aa3d5;
+}
+#navigation-main .prototype-disclaimer a:hover {
+  text-decoration: none;
+}
+#navigation-main .prototype-disclaimer i {
+  padding-right: 5px;
+  line-height: 32px;
+  color: #6aa3d5;
 }
 #navigation-main .navbar-tools {
   float: right;
@@ -9679,6 +9708,12 @@ i.disabled {
 @media (max-width: 768px) {
   #navigation-main .navbar-tools {
     margin-right: 20px;
+  }
+  #navigation-main .prototype-disclaimer {
+    margin-left: 30%;
+  }
+  #navigation-main .prototype-disclaimer .disclaimer-text {
+    display: none;
   }
 }
 .navbar {
@@ -9899,6 +9934,12 @@ body.main-nav-open .menu-slider {
 }
 #accordion .panel-heading a:hover i {
   border-color: #FFFFFF;
+}
+.prototype-disclaimer-modal .modal-body {
+  padding: 25px;
+}
+.prototype-disclaimer-modal i.fa-exclamation-triangle {
+  padding-right: 5px;
 }
 /*-----------------------------------
   ------- Dashboard Menu Styles ------
