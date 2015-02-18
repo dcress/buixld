@@ -12,6 +12,7 @@
 @import '../bower_components/bootstrap/less/variables.less';
 @import '../bower_components/bootstrap/less/mixins.less';
 @import '../bower_components/flexslider/flexslider.less';
+@import 'docs.less';
 
 @import 'reset.less';
 @import 'helpers.less';
@@ -24,6 +25,9 @@
 @import 'card.less';
 @import 'modal.less';
 @import 'sub.less';
+@import 'detail.less';
+@import 'submit.less';
+@import 'tabs.less';
 
 // Sections
 @import 'challenge.less';
@@ -66,17 +70,53 @@
 @cat-c: #9675CD;
 
 
-// Idea image
+// Badge
 .badge {
 	border-radius: 5px;
-	padding: 14px 18px;
-	font-size: 34px;
+	padding: 20px;
+	font-size: 38px;
+	line-height: 0.6em;
 
-	&.cat-a { background-color: @cat-a; }
-	&.cat-b { background-color: @cat-b; }
-	&.cat-c { background-color: @cat-c; }
+	&.cat-a {}
 }
 
+
+// Progress bar
+.progress {
+	border-radius: 25px;
+	box-shadow: 0 0;
+	height: 12px;
+
+	.progress-bar {
+		box-shadow: 0 0;
+		border-radius: 25px;
+	}
+}
+
+// Colorer
+.colorer(@color){
+	.progress-bar { background-color: @color; }
+	.badge        { background-color: @color; }
+	.card-action a:hover { background-color: @color; }
+	.card-basic { border-top: 8px solid @color; }
+
+	.detail-header {
+		.progress-bar { background-color: darken(@color, 25%); }
+		background-color: @color;
+		@media @sm {
+			background-color: inherit;
+			.progress-bar { background-color: @color; }
+		}
+	}
+
+} // colorer
+.cat-a { .colorer(@cat-a); }
+.cat-b { .colorer(@cat-b); }
+.cat-c { .colorer(@cat-c); }
+
+.badge.cat-a { background-color: @cat-a; }
+.badge.cat-b { background-color: @cat-b; }
+.badge.cat-c { background-color: @cat-c; }
 
 /*---------------------
 	Main elements
@@ -118,10 +158,7 @@ img { max-width: 100%; }
 //
 .ip-header { display: none; }
 .video-absolute { display: none; }
-#featured {
-	.section-padding;
-	background: #F0F0F0;
-}
+
 
 
 
@@ -135,14 +172,9 @@ a {
   color: @brand-primary;
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     color: darken(@brand-primary, 25%);
     pointer: default;
-  }
-  &:active {
-    outline: none !important;
-  }
-  &:visited {
     outline: none !important;
   }
 }

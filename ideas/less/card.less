@@ -5,10 +5,10 @@
 	.section-padding;
 	background: #F0F0F0;
 }
-
-// Card Helpers
 @card-padding: 30px;
 
+
+// Section
 .trending-header {
 	float: left;
 	width: 100%;
@@ -80,16 +80,17 @@
 	}
 }
 
-// Grid card layout
-.card-grid {
-	.card-flush-hor() {
-		margin-left: -@card-padding;
-		margin-right: -@card-padding;
-		padding-left: @card-padding;
-		padding-right: @card-padding;
-	}
+// Card mixin
+.card-flush-hor() {
+	margin-left: -@card-padding;
+	margin-right: -@card-padding;
+	padding-left: @card-padding;
+	padding-right: @card-padding;
+}
 
-	// Card base
+
+// Card base
+.card-grid {
 	.card {
 		border: 1px solid @border-color;
 		border-radius: 4px;
@@ -101,23 +102,6 @@
 		background: #fff;
 	}
 
-	// Skin elements
-	.card.cat-a {
-		.badge        { background-color: @cat-a; }
-		.progress-bar { background-color: @cat-a; }
-	}
-
-	.card.cat-b {
-		.badge        { background-color: @cat-b; }
-		.progress-bar { background-color: @cat-b; }
-	}
-
-	.card.cat-c {
-		.badge        { background-color: @cat-c; }
-		.progress-bar { background-color: @cat-c; }
-	}
-
-
 	// Card header
 	.card-header {
 		border-bottom: 1px solid @border-color;
@@ -125,10 +109,7 @@
 
 		// Idea image
 		.badge {
-			border-radius: 5px;
 			margin-bottom: -40px;
-			padding: 15px 20px;
-			font-size: 36px;
 			position: relative;
 
 			.in-action-dot {
@@ -162,16 +143,9 @@
 		}
 	}
 
-	// Show in-action indicators
-	.in-action .card-header .badge .in-action-dot,
-	.in-action .card-header .status {
-		display: block;
-	}
-
-
 	// Card body
 	.card-body {
-		padding-top: 40px;
+		padding-top: 35px;
 		padding-bottom: 20px;
 
 		// Catergory
@@ -211,7 +185,6 @@
 			font-weight: 500;
 			color: lighten(#B1BEC4, 15%);
 		}
-
 	}
 
 	// Action itesm in card
@@ -224,14 +197,21 @@
 		// Remove extra padding
 		padding: 0;
 
+		.words {
+			display: none;
+			@media @lg {
+				display: inline;}
+		}
+
 		a {
 			// Display
 			float: left;
+			.transition(0s);
 
 			// Widths
 			&:nth-child(1) { width: 25.3%; }
-			&:nth-child(2) { width: 44.3%; }
-			&:nth-child(3) { width: 30.3%; }
+			&:nth-child(2) { width: 41.3%; }
+			&:nth-child(3) { width: 33.3%; }
 
 			// Format
 			text-align: center;
@@ -244,6 +224,7 @@
 			&:last-child { border-right: none; }
 
 			&:hover {
+				.transition(0.2s);
 				cursor: pointer;
 				text-decoration: none;
 				color: #fff;
@@ -258,10 +239,10 @@
 		}
 
 		.comments {
-			padding: 21px 0;
+			padding: 20px 0;
 
 			span {
-				margin: 4px 0 0 9px;
+				margin: 3px 0 0 5px;
 			}
 			i.o {
 				font-size: 1.8em;
@@ -287,18 +268,9 @@
 			span {
 				margin: 5px 0 0;
 			}
+			.number { margin-left: 4px; }
 		}
-
-		
-		
-		
 	}
-
-	// Hover states for icons
-	.cat-a .card-action a:hover {background: @cat-a}
-	.cat-b .card-action a:hover {background: @cat-b}
-	.cat-c .card-action a:hover {background: @cat-c}
-
 
 	// Card footer
 	.card-footer {
@@ -321,14 +293,23 @@
 			margin-right: 2px;
 		}
 	}
-}
+
+	// Card Basic
+	.card-basic {
+		padding-top: 0;
+		.card-body { padding-top: 25px; }
+	}
+} // card-grid
+
+
+
 
 
 // List card layout
 .card-list {
 
 	// Override BS styles
-	.col-sm-6, 
+	.col-sm-6,
 	.col-md-4 {
 		width: 100%;
 	}
@@ -344,7 +325,7 @@
 		border: 1px solid @border-color;
 		border-radius: 0 0 4px 4px;
 		margin-bottom: 20px;
-		background: #fff; 
+		background: #fff;
 		float: left;
 		width: 100%;
 
@@ -354,26 +335,9 @@
 	}
 
 	// Skin elements
-	.card.cat-a {
-		border-top: 3px solid @cat-a;
-
-		.badge        { background-color: @cat-a; }
-		.progress-bar { background-color: @cat-a; }
-	}
-
-	.card.cat-b {
-		border-top: 3px solid @cat-b;
-
-		.badge        { background-color: @cat-b; }
-		.progress-bar { background-color: @cat-b; }
-	}
-
-	.card.cat-c {
-		border-top: 3px solid @cat-c;
-
-		.badge        { background-color: @cat-c; }
-		.progress-bar { background-color: @cat-c; }
-	}
+	.card.cat-a { border-top: 3px solid @cat-a; }
+	.card.cat-b { border-top: 3px solid @cat-b; }
+	.card.cat-c { border-top: 3px solid @cat-c; }
 
 
 	// Card header
@@ -498,6 +462,7 @@
 			// Display
 			float: left;
 			width: 33%;
+			.transition(0s);
 
 			// Format
 			text-align: center;
@@ -506,6 +471,7 @@
 			padding: 34px 0 24px;
 
 			&:hover {
+				.transition(0.2s);
 				cursor: pointer;
 				text-decoration: none;
 				color: #fff;
@@ -520,12 +486,6 @@
 
 		} // a
 
-		// Like icon
-		
-
-		
-		
-		
 	}
 
 	// Hover states for icons
@@ -561,8 +521,21 @@
 
 		}
 	}
+} // end card list
+
+
+
+.card-user {
+	img {
+		border-radius: 50%;
+		margin-bottom: -20px;
+	}
 }
 
 
 
-
+// Show in-action indicators
+.in-action .card-header .badge .in-action-dot,
+.in-action .card-header .status {
+	display: block;
+}
