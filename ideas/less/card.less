@@ -88,10 +88,10 @@
 	padding-right: @card-padding;
 }
 
-
 // Card base
 .card-grid {
 	.card {
+		clear: both;
 		border: 1px solid @border-color;
 		border-radius: 4px;
 		padding-top: @card-padding;
@@ -207,6 +207,7 @@
 			// Display
 			float: left;
 			.transition(0s);
+			background-color: none;
 
 			// Widths
 			&:nth-child(1) { width: 25.3%; }
@@ -223,7 +224,7 @@
 			border-right: 1px solid @border-color;
 			&:last-child { border-right: none; }
 
-			&:hover {
+			&:hover, &.liked {
 				.transition(0.2s);
 				cursor: pointer;
 				text-decoration: none;

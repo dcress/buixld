@@ -8,32 +8,28 @@
 	<!-- Head -->
 	<head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HCA | Ideas</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>HCA Ideas</title>
 	<meta name="description" content="HCA Ideas and Innovations site" />
 	<meta name="keywords" content="Ideas, Innovations, HCA, Healthcare" />
 	<meta name="author" content="Eric Motil, Dan Cress" />
-
-	<link rel="icon" type="image/png" href="img/logo-ideas-color.png">
-
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="img/logo-ideas-color.png" />
 	<!-- Modernizr -->
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<!-- Bootstrap -->
-	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<!-- Custom -->
-	<link href="css/min/main.min.css" rel="stylesheet" type="text/css" media="screen">
-
+	<link href="css/min/main.min.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Typekit -->
 	<script src="//use.typekit.net/soa3cfv.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-
 	<!-- Load svg plugin -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/effect1.css" />
-
 	<!-- Icon font -->
-	<link href="https://fontastic.s3.amazonaws.com/5jcggHNj5ezH6KbcFKyevF/icons.css" rel="stylesheet">
+	<link href="https://fontastic.s3.amazonaws.com/5jcggHNj5ezH6KbcFKyevF/icons.css" rel="stylesheet" />
 
 	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -49,6 +45,7 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie.css" />
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
@@ -78,18 +75,19 @@
 
 			<!-- Nav menu -->
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-left">
-					<li>
-						<a href="#" class="search" data-toggle="modal" data-target=".modal-search">
-							<i class="icon-search"></i>Search for Ideas</a>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav pull-right">
+
+				<ul class="nav navbar-nav pull-right nav-user">
 					<!-- <li>
 						<a href="#" class="nav-mute" data-toggle="modal" data-target=".modal-dashboard">Dashboard</a>
 					</li> -->
 					<li>
-						<a href="#" class="user">H! Rihanna <img class="user-img" src="img/user-rihana.jpg" alt="User Profile Image"/></a>
+						<a href="#" class="user">Hi Rihanna <img class="user-img" src="img/user-rihana.jpg" alt="User Profile Image"/></a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right nav-search">
+					<li>
+						<a href="#" class="search" data-toggle="modal" data-target=".modal-search">
+							<i class="icon-search"></i>Search for ideas</a>
 					</li>
 				</ul>
 			</div>
@@ -159,8 +157,89 @@
 							<p>Praesent nec nisl a purus blandit viverra. Nullam cursus lacinia erat. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Curabitur blandit mollis lacus.</p>
 						</section>
 					</div>
-					<div class="col-sm-4">
-						
+					<div class="col-sm-4 card-grid">
+						<div class="card card-user">
+	<!-- DEV: Toggle "In Action" indicators with the "in-action" class || Dev: Category styles are determined by the "cat-a/cat-b/cat-c/etc..." class.  -->
+	<div class="card-header">
+		<img src="img/user-rihana.jpg"/>
+	</div>
+	<div class="card-body">
+		<div class="user-info-left">
+			<div class="status-list">
+			</div>
+			<span class="card-cat">February 2, 2015</span>
+			<h3 class="card-title">Rihana Fenty</h3>
+		</div>
+		<div class="user-info">
+			<span class="user-name">Senior UX Designer</span>
+			<span class="user-date">
+				<a href="#">HCA IT&amp;S</a>
+			</span>
+		</div>
+	</div>
+</div> <!-- /card -->
+																														<div class="cat-a">
+	<div class="card in-action">
+		<!-- DEV: Toggle "In Action" indicators with the "in-action" class || Dev: Category styles are determined by the "cat-a/cat-b/cat-c/etc..." class.  -->
+		<div class="card-header">
+			<div class="badge">
+				<div class="in-action-dot"></div>
+				<i data-icon="a"></i>
+			</div>
+			<!-- <div class="status">
+				<span>In Action</span>
+			</div> -->
+		</div>
+		<div class="card-body">
+			<div class="user-info-left">
+				<div class="status-list">
+					<!-- <span>In Action</span> -->
+				</div>
+				<span class="card-cat">Quality and Safety</span>
+				<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			</div>
+			<div class="user-info">
+				<img class="user-img" src="img/user-img.png"/>
+				<span class="user-name">Penelope Rothkowitz</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+		<div class="card-action">
+			<a href="#" class="post_control like">
+				<i data-icon="d" class="d"></i>
+			</a>
+			<a href="#" class="comments">
+				<i data-icon="o" class="o"></i>
+				<span class="number">43</span> <span class="words">comments</span>
+			</a>
+			<a href="detail.html" class="views">
+				<i data-icon="p" class="p"></i>
+				<span class="number">187</span> <span class="words">views</span>
+			</a>
+		</div>
+		<div class="card-footer">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+			<span class="sr-only">20% Complete</span>
+			  </div>
+			</div>
+			<p><span class="percent">20%</span> backed</p>
+		</div>
+	</div>
+</div> <!-- /card -->
+						<div class="cat-a">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
 					</div>
 				</div>
 			</div>
@@ -206,6 +285,15 @@
 						<li>
 							<a href="#click">Search Ideas</a>
 						</li>
+						<li>
+							<a href="#click">Press Room</a>
+						</li>
+						<li>
+							<a href="#click">Investor Relations</a>
+						</li>
+						<li>
+							<a href="#click">Contact Us</a>
+						</li>
 					</ul>
 				</div><!-- /.footer-column -->
 
@@ -213,10 +301,13 @@
 					<p>Quick Links</p>
 					<ul>
 						<li>
+							<a href="#click">About Strategic Innovations</a>
+						</li>
+						<li>
 							<a href="#click">Terms</a>
 						</li>
 						<li>
-							<a href="#click">Curstomer Service</a>
+							<a href="#click">Customer Service</a>
 						</li>
 						<li>
 							<a href="#click">FAQs</a>
@@ -247,6 +338,130 @@
 	</div>
 </footer> <!-- /footer -->
 
+		<!-- Modal -->
+		<div class="modal fade modal-search">
+	<div class="modal-brand">
+		<!-- <img class="logo" src="img/logo-ideas-blue.svg" alt="HCA Ideas Logo"/> -->
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="modal-dialog modal-full">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="heading sr-only">Search for Ideas</h2>
+			</div>
+
+			<div class="modal-body">
+
+				<form id="modal-search-form">
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-10">
+								<label class="sr-only" for="searchMain">Search for ideas</label>
+								<input type="text" class="form-control input-blank" id="longInEmailAddress" placeholder="Search for ideas">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-2">
+								<button href="" type="submit" class="btn btn-blank pull-right"><i class="icon-search"></i><span class="sr-only">Search</span></button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-4 search-bucket">
+						<h3 class="sub-heading">Categories</h3>
+						<div class="category-list">
+							<a href="#" class="">
+								<div class="badge cat-a">
+									<i class="icon-stats"></i>
+								</div>
+								<span class="sub-heading">Financial Impact</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-b">
+									<i class="icon-shield"></i>
+								</div>
+								<span class="sub-heading">Quality &amp; Safety</span>
+							</a>
+
+							<a href="#" class="">
+								<div class="badge cat-c">
+									<i class="icon-trophy"></i>
+								</div>
+								<span class="sub-heading">Service Excellence</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 search-bucket card-grid">
+						<h3 class="sub-heading">Trending Ideas</h3>
+
+						<!-- Card basic -->
+												<div class="cat-a">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+						<!-- Card basic -->
+												<div class="cat-b">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+
+					<div class="col-sm-4 search-bucket card-grid">
+						<h3 class="sub-heading">Recent Ideas</h3>
+
+						<!-- Card basic -->
+												<div class="cat-c">
+	<div class="card card-basic">
+		<div class="card-body">
+			<span class="card-cat">Category of Idea</span>
+			<h3 class="card-title">Cras justo odio dapidus ac facilties in egestas.</h3>
+			<div class="user-info">
+				<img class="user-img img-circle" src="img/user-rihana.jpg"/>
+				<span class="user-name">Rihana Racket</span>
+				<span class="user-date">October 28, 2014</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+			</div>
+
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 		<!-- End -->
 		<!-- jQuery -->
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -268,6 +483,9 @@
 
 <!-- SVG fallback -->
 <script src="bower_components/svgeezy/svgeezy.min.js"></script>
+
+<!-- Respond -->
+<script src="bower_components/respond/dest/respond.min.js" type="text/javascript"></script>
 
 <!-- <![if !IE]>
 <script src="js/classie.js"></script>
