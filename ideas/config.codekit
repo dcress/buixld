@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18493",
+"creatorBuild": "18270",
 "files": {
 	"\/bower_components\/bootstrap\/css\/bootstrap.css": {
 		"fileType": 16,
@@ -2023,6 +2023,545 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/bin\/prettify.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/bin\/prettify.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/bin\/min\/prettify.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/bin\/run_prettify.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/bin\/run_prettify.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/bin\/min\/run_prettify.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/CHANGES.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/CHANGES.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/examples\/quine.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/examples\/quine.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/README-zh-Hans.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/README-zh-Hans.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/README.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/README.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/README.md",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-apollo.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-apollo.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-apollo-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-basic.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-basic.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-basic-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-clj.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-clj.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-clj-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-css.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-css.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-css-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-dart.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-dart.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-dart-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-erlang.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-erlang.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-erlang-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-go.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-go.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-go-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-hs.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-hs.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-hs-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-lisp.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-lisp.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-lisp-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-llvm.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-llvm.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-llvm-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-lua.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-lua.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-lua-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-matlab.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-matlab.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-matlab-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-ml.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-ml.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-ml-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-mumps.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-mumps.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-mumps-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-n.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-n.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-n-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-pascal.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-pascal.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-pascal-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-proto.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-proto.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-proto-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-r.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-r.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-r-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-rd.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-rd.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-rd-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-scala.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-scala.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-scala-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-sql.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-sql.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-sql-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-tcl.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-tcl.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-tcl-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-tex.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-tex.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-tex-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-vb.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-vb.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-vb-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-vhdl.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-vhdl.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-vhdl-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-wiki.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-wiki.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-wiki-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-xq.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-xq.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-xq-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/lang-yaml.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/lang-yaml.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/lang-yaml-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/prettify.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/prettify.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/src\/prettify.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/prettify.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/prettify-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/src\/run_prettify.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/run_prettify.js",
+		"outputAbbreviatedPath": "\/bower_components\/google-code-prettify\/src\/min\/run_prettify-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/google-code-prettify\/styles\/demo.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/demo.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/desert.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/desert.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/doxy.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/doxy.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/ideas.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/ideas.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/sons-of-obsidian.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/sons-of-obsidian.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/google-code-prettify\/styles\/sunburst.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/google-code-prettify\/styles\/sunburst.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/html5shiv\/dist\/html5shiv-printshiv.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/html5shiv-printshiv.js",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/min\/html5shiv-printshiv-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/html5shiv\/dist\/html5shiv-printshiv.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/html5shiv-printshiv.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/min\/html5shiv-printshiv.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/html5shiv\/dist\/html5shiv.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/html5shiv.js",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/min\/html5shiv-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/html5shiv\/dist\/html5shiv.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/html5shiv.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/dist\/min\/html5shiv.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/html5shiv\/Gruntfile.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/min\/Gruntfile-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/html5shiv\/readme.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5shiv\/readme.md",
+		"outputAbbreviatedPath": "\/bower_components\/html5shiv\/readme.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/bower_components\/jquery.easing\/js\/jquery.easing.compatibility.js": {
 		"fileType": 64,
@@ -4600,6 +5139,135 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/respond\/cross-domain\/example.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/cross-domain\/example.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/respond\/cross-domain\/respond-proxy.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/cross-domain\/respond-proxy.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/respond\/cross-domain\/respond.proxy.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/cross-domain\/respond.proxy.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/cross-domain\/min\/respond.proxy-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/dest\/respond.matchmedia.addListener.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/dest\/respond.matchmedia.addListener.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/dest\/min\/respond.matchmedia.addListener.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/dest\/respond.matchmedia.addListener.src.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/dest\/respond.matchmedia.addListener.src.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/dest\/min\/respond.matchmedia.addListener.src-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/dest\/respond.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/dest\/respond.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/dest\/min\/respond.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/dest\/respond.src.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/dest\/respond.src.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/dest\/min\/respond.src-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/Gruntfile.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/min\/Gruntfile-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/README.md",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/respond\/src\/matchmedia.addListener.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/src\/matchmedia.addListener.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/src\/min\/matchmedia.addListener-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/src\/matchmedia.polyfill.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/src\/matchmedia.polyfill.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/src\/min\/matchmedia.polyfill-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/respond\/src\/respond.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/respond\/src\/respond.js",
+		"outputAbbreviatedPath": "\/bower_components\/respond\/src\/min\/respond-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/svgeezy\/readme.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -4634,29 +5302,11 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/css\/demo.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/demo.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/effect1.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/effect1.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/css\/effect2.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/effect2.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -4693,6 +5343,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/normalize.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dashboard.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dashboard.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/detail.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/detail.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -4786,6 +5454,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/BUIXLD_Low_Res-10.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 219860,
+		"inputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-10.JPG",
+		"outputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-10.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/BUIXLD_Low_Res-32.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 171194,
+		"inputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-32.JPG",
+		"outputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-32.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/BUIXLD_Low_Res-34.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 284250,
+		"inputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-34.JPG",
+		"outputAbbreviatedPath": "\/img\/BUIXLD_Low_Res-34.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/credits.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -4798,6 +5499,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/dashboard_master_sprite_2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111959,
+		"inputAbbreviatedPath": "\/img\/dashboard_master_sprite_2x.png",
+		"outputAbbreviatedPath": "\/img\/dashboard_master_sprite_2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo-ideas-blue.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4805,17 +5517,6 @@
 		"initialSize": 1734,
 		"inputAbbreviatedPath": "\/img\/logo-ideas-blue.png",
 		"outputAbbreviatedPath": "\/img\/logo-ideas-blue.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/logo-ideas-color.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 17050,
-		"inputAbbreviatedPath": "\/img\/logo-ideas-color.jpg",
-		"outputAbbreviatedPath": "\/img\/logo-ideas-color.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4857,12 +5558,30 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3398,
+		"initialSize": 3837,
 		"inputAbbreviatedPath": "\/img\/user-rihana.jpg",
 		"outputAbbreviatedPath": "\/img\/user-rihana.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/includes\/apex\/apex-end.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/apex\/apex-end.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/apex\/apex-head.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/apex\/apex-head.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/includes\/card-basic.kit": {
 		"fileType": 2048,
@@ -4870,6 +5589,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/card-basic.kit",
 		"outputAbbreviatedPath": "\/includes\/card-basic.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/card-user.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/card-user.kit",
+		"outputAbbreviatedPath": "\/includes\/card-user.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -4924,6 +5652,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/head.kit",
 		"outputAbbreviatedPath": "\/includes\/head.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/header-fancy.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/header-fancy.kit",
+		"outputAbbreviatedPath": "\/includes\/header-fancy.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/hero-video.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/hero-video.kit",
+		"outputAbbreviatedPath": "\/includes\/hero-video.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -5036,6 +5782,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/min\/min\/custom.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/min\/custom.min-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/min\/custom.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/modernizr.custom.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -5058,23 +5815,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/whatever.js": {
+	"\/js\/tags.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/whatever.js",
-		"outputAbbreviatedPath": "\/js\/min\/whatever-min.js",
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/js\/tags.js",
+		"outputAbbreviatedPath": "\/js\/min\/tags-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
-	"\/kit\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
+	"\/kit\/detail.kit": {
+		"fileType": 2048,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/kit\/detail.kit",
+		"outputAbbreviatedPath": "\/kit\/detail.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -5087,15 +5844,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
-	"\/kit\/sub.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/kit\/sub.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/kit\/sub.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -5104,6 +5852,15 @@
 		"outputAbbreviatedPath": "\/kit\/sub.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/kit\/submit.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/submit.kit",
+		"outputAbbreviatedPath": "\/submit.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
 		},
 	"\/less\/buttons.less": {
 		"allowInsecureImports": 0,
@@ -5155,6 +5912,46 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/less\/challenge.less",
 		"outputAbbreviatedPath": "\/css\/challenge.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/detail.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/detail.less",
+		"outputAbbreviatedPath": "\/css\/detail.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/docs.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/docs.less",
+		"outputAbbreviatedPath": "\/css\/docs.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -5285,6 +6082,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/keyframes.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/keyframes.less",
+		"outputAbbreviatedPath": "\/css\/keyframes.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/less\/main.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -5405,6 +6222,58 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/submit.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/submit.less",
+		"outputAbbreviatedPath": "\/css\/submit.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/tabs.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/tabs.less",
+		"outputAbbreviatedPath": "\/css\/tabs.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sub.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -5413,11 +6282,20 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/submit.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/submit.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
 	],
-"lastSavedByUser": "David Jahns",
+"lastSavedByUser": "Daniel Cress",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -5463,10 +6341,6 @@
 			},
 		"empty_constructor_needs_parens": {
 			"active": 0,
-			"flagValue": -1
-			},
-		"ensure_comprehensions": {
-			"active": 1,
 			"flagValue": -1
 			},
 		"indentation": {
@@ -5560,10 +6434,6 @@
 		"space_operators": {
 			"active": 0,
 			"flagValue": -1
-			},
-		"spacing_after_comma": {
-			"active": 1,
-			"flagValue": -1
 			}
 		},
 	"coffeeMinifyOutput": 1,
@@ -5620,10 +6490,6 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"browserify": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"camelcase": {
 			"active": 0,
 			"flagValue": -1
@@ -5646,10 +6512,6 @@
 			},
 		"dojo": {
 			"active": 0,
-			"flagValue": -1
-			},
-		"elision": {
-			"active": 1,
 			"flagValue": -1
 			},
 		"eqeqeq": {
@@ -5704,10 +6566,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"jasmine": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"jquery": {
 			"active": 1,
 			"flagValue": -1
@@ -5751,10 +6609,6 @@
 		"maxstatements": {
 			"active": 0,
 			"flagValue": 4
-			},
-		"mocha": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"mootools": {
 			"active": 0,
@@ -5821,10 +6675,6 @@
 			"flagValue": -1
 			},
 		"prototypejs": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"qunit": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6052,7 +6902,6 @@
 	"slimAutoOutputPathStyle": 0,
 	"slimCompileOnly": 1,
 	"slimLogicless": 0,
-	"slimOutputFormat": 0,
 	"slimOutputStyle": 1,
 	"slimRailsCompatible": 0,
 	"stylusAutoOutputPathEnabled": 1,
@@ -6077,9 +6926,8 @@
 	"typescriptMinifyOutput": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
-	"typescriptPreserveConstEnums": 0,
+	"typescriptNoResolve": 0,
 	"typescriptRemoveComments": 0,
-	"typescriptSuppressImplicitAnyIndexErrors": 0,
 	"typescriptTargetECMAVersion": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
@@ -6116,10 +6964,6 @@
 			"flagValue": -1
 			},
 		"dead_code": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"drop_console": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6163,10 +7007,6 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"keep_fargs": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -6179,16 +7019,8 @@
 			"active": 1,
 			"flagValue": 32000
 			},
-		"negate_iife": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"properties": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"pure_getters": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"quote-keys": {
