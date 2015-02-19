@@ -424,13 +424,13 @@ body.docs section > header:after {
 }
 .like:focus i {
   display: block;
-  -webkit-animation: likethumb .5s;
+  -webkit-animation: likethumb 0.5s ease-in-out;
   /* Safari 4+ */
-  -moz-animation: likethumb .5s;
+  -moz-animation: likethumb 0.5s ease-in-out;
   /* Fx 5+ */
-  -o-animation: likethumb .5s;
+  -o-animation: likethumb 0.5s ease-in-out;
   /* Opera 12+ */
-  animation: likethumb .5s;
+  animation: likethumb 0.5s ease-in-out;
   /* IE 10+, Fx 29+ */
   color: #fff;
 }
